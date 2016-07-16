@@ -1,7 +1,6 @@
 1、JianDan app
    可复用知识点
    项目虽小，五脏俱全，学习这个项目，你将学到
-
     Android Studio开发Android的基本配置
     对MD风格的Theme兼容
     对Volley网络请求库的封装和自定义
@@ -16,5 +15,22 @@
     对网络状态的实时检测
     对UIL的个性化设置、封装和基本使用
     使用LeakCanary检测内存泄露
+    volley universal-image-loader greendao butterknife eventbus 框架学习
+
+
+2、SimpleNews 笔记
+   mvp模式运用
+   okhttp网络请求封装
+   Fragment v4 v7jar包控件运用(RecycleView,TabLayout,CardView,侧滑)
+   gson glide图片加载运用
+   工具类(json对象转化，log,ImageLoader,okhttp,Tools)
+
+3、superCleanMaster app
+   知识点
+   内存加速
+   缓存清理
+   自启管理
+   软件管理
+   设备信息
 
 
