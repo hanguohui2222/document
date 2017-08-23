@@ -15,6 +15,7 @@
     </style>
 
     <style name="AmigoActivityTheme" parent="@style/Theme.Amigo.Light">
+        <item name="amigoactionBarStyle">@style/LightActionBarStyle</item>
     </style>
 
     <style name="CheckboxStyle" parent="@android:style/Widget.Holo.Light.CompoundButton.CheckBox">
@@ -24,6 +25,7 @@
     <style name="CardDetailActivityTheme" parent="AmigoActivityTheme">
         <item name="colorPrimary">@color/card_detail_activity_actionbar_color</item>
         <item name="colorPrimaryDark">@color/card_detail_activity_actionbar_color</item>
+        <item name="amigoactionBarStyle">@style/LightActionBarStyle</item>
     </style>
 
     <style name="CardTheme">
@@ -95,11 +97,13 @@
     </style>
 
     <style name="LightActionBarStyle" parent="@style/Widget.Amigo.Light.ActionBar.Solid">
-
+        <item name="amigobackground">@color/actionbar_color</item>
+        <item name="amigobackgroundStacked">@color/actionbar_color</item>
     </style>
 
     <style name="MainActionBarStyle" parent="@style/Widget.Amigo.Light.ActionBar.Solid">
-
+        <item name="amigobackground">@color/main_action_bar_color</item>
+        <item name="amigobackgroundStacked">@color/main_action_bar_color</item>
     </style>
 
     <style name="SlideTransitionStyle" parent="@android:style/Animation.Activity">
