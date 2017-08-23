@@ -236,4 +236,7 @@ public class Constants {
     public static final String URI_END_TAG = "<gns>";//副文本中uri后缀增加标签，表示gionee secretary
     public static final int URI_END_TAG_LENGTH = 5;
     //added by luorw for GNSPR #101691 20170822 end
+
+
+    public static final String LOCK_TO_APP_ENABLED = "lock_to_app_enabled";
 }

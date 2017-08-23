@@ -21,6 +21,7 @@ import com.gionee.secretary.ui.activity.CalendarActivity;
 import com.gionee.secretary.utils.DisplayUtils;
 import com.gionee.secretary.utils.LogUtils;
 import com.gionee.secretary.utils.OSTimer;
+import com.gionee.secretary.utils.SystemUtils;
 import com.gionee.secretary.utils.Timeout;
 import com.youju.statistics.YouJuAgent;
 
@@ -79,7 +80,7 @@ public class SplashActivity extends AmigoActivity {
      * @return
      */
     private boolean showSystemPermissionAlert() {
-        String alertEnable = "";//SystemProperties.get(Constants.SYSTEM_PERMISSION_ALERT_SUPPORT);
+        String alertEnable = SystemUtils.getProperty(Constants.SYSTEM_PERMISSION_ALERT_SUPPORT,"yes");;
         LogUtils.i("luorwtest", "alert = " + alertEnable);
         if ("yes".equals(alertEnable)) {
             return true;

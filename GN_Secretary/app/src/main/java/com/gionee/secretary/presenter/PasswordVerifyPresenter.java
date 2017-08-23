@@ -12,6 +12,8 @@ import com.gionee.secretary.ui.viewInterface.IPasswordVerifyView;
 import com.gionee.secretary.module.settings.PasswordModel;
 import com.gionee.secretary.utils.LogUtils;
 
+import static com.gionee.secretary.constants.Constants.LOCK_TO_APP_ENABLED;
+
 /**
  * Created by liyy on 16-12-2.
  */
@@ -38,7 +40,7 @@ public class PasswordVerifyPresenter {
         isClosePw = intent.getBooleanExtra(Constants.EXTRA_CLOSE_PASSWORD_SWITCH, false);
         mPasswordVerifyView.initActionBar(isClosePw);
 
-        mLockToAppEnabled = false;//Settings.System.getInt(mContext.getContentResolver(), Settings.System.LOCK_TO_APP_ENABLED, 0) != 0;
+        mLockToAppEnabled = Settings.System.getInt(mContext.getContentResolver(), LOCK_TO_APP_ENABLED, 0) != 0;
         final ActivityManager am = (ActivityManager) mContext.getSystemService(Context.ACTIVITY_SERVICE);
         isInLockTask = am.isInLockTaskMode();
     }

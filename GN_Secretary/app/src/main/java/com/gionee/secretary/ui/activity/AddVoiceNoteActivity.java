@@ -1524,15 +1524,18 @@ public class AddVoiceNoteActivity extends PasswordBaseActivity implements IMscRe
     }
 
     private void showNotificationForVoice() {
-        Notification notification = new Notification.Builder(this)
-                .setSmallIcon(R.drawable.stat_sys_voice)
-                .setTicker("语音转文字已启动")
-                .setWhen(System.currentTimeMillis())
-                .build();
-        notification.flags |= Notification.FLAG_ONGOING_EVENT;
         Intent intent = new Intent(this, AddVoiceNoteActivity.class);
         intent.putExtra("fromNotificarion", true);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        Notification notification = new Notification.Builder(this)
+                .setSmallIcon(R.drawable.stat_sys_voice)
+                .setTicker("语音转文字已启动")
+                .setContentTitle("语音转文字")
+                .setContentText("语音转文字已启动")
+                .setContentIntent(pendingIntent)
+                .setWhen(System.currentTimeMillis())
+                .build();
+        notification.flags |= Notification.FLAG_ONGOING_EVENT;
         //notification.setLatestEventInfo(mContext, "语音转文字", "语音转文字已启动", pendingIntent);
         mNotificationManager.notify(NOTIFICATION_VOICE_ID, notification);
     }
