@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="70dp"
+        android:background="@color/card_detail_activity_background_color">
+        <!--
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="#ffffff"
+                style="@style/DetailCardTheme"
+                android:layout_alignParentTop="true">-->
+        <FrameLayout
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/card_detail_self_margin_horizontal"
+            android:layout_marginRight="@dimen/card_detail_self_margin_horizontal"
+            android:layout_marginTop="@dimen/card_detail_self_margin_vertical_top"
+            android:background="@drawable/card_bg">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:minHeight="@dimen/card_detail_self_action_height"
+                        android:paddingLeft="@dimen/card_detail_self_title_margin_horizontal"
+                        android:paddingRight="@dimen/card_detail_self_title_margin_horizontal"
+                        android:textColor="@color/list_text_color"
+                        android:textSize="@dimen/card_detail_self_title_textsize" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false">
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/description"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/card_detail_schedule_description_leading"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/card_detail_self_title_margin_horizontal"
+                            android:paddingRight="@dimen/card_detail_self_title_margin_horizontal"
+                            android:scrollbars="vertical"
+                            android:textColor="@color/list_text_color"
+                            android:textSize="@dimen/card_detail_schedule_description_textsize" />
+                    </ScrollView>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/content_line" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                        android:paddingRight="@dimen/card_detail_self_content_margin_horizontal"
+                        android:visibility="gone">
+
+                        <amigoui.widget.AmigoSwitch
+                            android:id="@+id/wholeday"
+                            android:layout_width="@dimen/newschedule_icon_wholeday_width"
+                            android:layout_height="@dimen/newschedule_icon_wholeday_height"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/allday_selector"
+                            android:enabled="false"
+                            android:textIsSelectable="false"
+                            android:thumb="@null"
+                            android:track="@null" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/starttime_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/card_detail_self_item_spacing_vertical"
+                        android:layout_weight="1"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                        android:paddingRight="@dimen/card_detail_self_content_margin_horizontal">
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/detail_startdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textColor="#cc000000"
+                            android:textSize="@dimen/list_textsize_large"
+                            android:visibility="gone" />
+
+                        <amigoui.widget.AmigoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/schedule_start_time"
+                            android:textColor="@color/card_detail_self_content_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/detail_starttime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/card_detail_self_content_value_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/endtime_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                        android:layout_weight="1"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                        android:paddingRight="@dimen/card_detail_self_content_margin_horizontal">
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/detail_enddate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textColor="#cc000000"
+                            android:textSize="@dimen/list_textsize_large"
+                            android:visibility="gone" />
+
+                        <amigoui.widget.AmigoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/schedule_end_time"
+                            android:textColor="@color/card_detail_self_content_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/detail_endtime"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/card_detail_self_content_value_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/remind_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                        android:paddingRight="@dimen/card_detail_self_content_margin_horizontal">
+
+                        <amigoui.widget.AmigoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/remind"
+                            android:textColor="@color/card_detail_self_content_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/remind"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/card_detail_self_content_value_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/recycle_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                        android:focusable="true"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                        android:paddingRight="@dimen/card_detail_self_content_margin_horizontal">
+
+                        <amigoui.widget.AmigoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/period"
+                            android:textColor="@color/card_detail_self_content_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/remindperiod"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/card_detail_self_content_value_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/address_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                        android:paddingRight="@dimen/card_detail_self_content_margin_horizontal"
+                        android:visibility="gone">
+
+                        <amigoui.widget.AmigoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/address_text"
+                            android:textColor="@color/card_detail_self_content_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/address"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="80dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical|right"
+                            android:maxLines="1"
+                            android:textColor="@color/card_detail_self_content_value_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/travel_mode_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                        android:paddingRight="@dimen/card_detail_self_content_margin_horizontal"
+                        android:visibility="gone">
+
+                        <amigoui.widget.AmigoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/travel_type"
+                            android:textColor="@color/card_detail_self_content_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/tripmode"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/card_detail_self_content_value_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                        <!--<ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/amigo_btn_check_off_pressed_light" />-->
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/divider_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                        android:background="@drawable/content_line" />
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/navig_self"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_detail_self_action_height"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:maxLines="1"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:textColor="@color/card_detail_self_action_text_color"
+                        android:textSize="@dimen/card_detail_self_action_textsize"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </FrameLayout>
+        <!--    </android.support.v7.widget.CardView>-->
+
+    </RelativeLayout>
+</ScrollView>

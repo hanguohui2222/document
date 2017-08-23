@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_detail_activity_background_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/train_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/card_detail_self_margin_horizontal"
+            android:paddingRight="@dimen/card_detail_self_margin_horizontal"
+            android:paddingTop="@dimen/card_detail_self_margin_vertical_top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="80dp"
+                android:background="@drawable/card_bg"
+                android:divider="@drawable/divider_vertical"
+                android:paddingBottom="@dimen/card_detail_ticket_weather_padding_vertical"
+                android:paddingTop="@dimen/card_detail_ticket_weather_padding_vertical"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:id="@+id/start_city_weather_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/card_detail_self_title_margin_horizontal"
+                    android:paddingRight="12dp">
+
+                    <LinearLayout
+                        android:id="@+id/starting_tv_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/starting_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/null_value"
+                            android:textColor="@color/weather_card_detail_station_name_color"
+                            android:textSize="@dimen/card_detail_ticket_weather_place_textsize" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true">
+
+                            <amigoui.widget.AmigoTextView
+                                android:id="@+id/starting_temp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/null_value"
+                                android:textColor="@color/weather_card_detail_station_temperature_color"
+                                android:textSize="@dimen/card_detail_ticket_weather_detail_textsize" />
+
+                            <amigoui.widget.AmigoTextView
+                                android:id="@+id/starting_city_weather_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="@string/null_value"
+                                android:textColor="@color/weather_card_detail_station_temperature_color"
+                                android:textSize="@dimen/card_detail_ticket_weather_detail_textsize" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/starting_city_weather_img"
+                        android:layout_width="@dimen/card_detail_ticket_weather_icon_dimen"
+                        android:layout_height="@dimen/card_detail_ticket_weather_icon_dimen"
+                        android:layout_alignParentRight="true"
+
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/unknown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/end_city_weather_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/card_detail_self_title_margin_horizontal"
+                    android:paddingRight="12dp">
+
+                    <LinearLayout
+                        android:id="@+id/ending_tv_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/ending_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/null_value"
+                            android:textColor="@color/weather_card_detail_station_name_color"
+                            android:textSize="@dimen/card_detail_ticket_weather_place_textsize" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true">
+
+                            <amigoui.widget.AmigoTextView
+                                android:id="@+id/ending_temp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/null_value"
+                                android:textColor="@color/weather_card_detail_station_temperature_color"
+                                android:textSize="@dimen/card_detail_ticket_weather_detail_textsize" />
+
+                            <amigoui.widget.AmigoTextView
+                                android:id="@+id/ending_city_weather_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="@string/null_value"
+                                android:textColor="@color/weather_card_detail_station_temperature_color"
+                                android:textSize="@dimen/card_detail_ticket_weather_detail_textsize" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ending_city_weather_img"
+                        android:layout_width="@dimen/card_detail_ticket_weather_icon_dimen"
+                        android:layout_height="@dimen/card_detail_ticket_weather_icon_dimen"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/unknown" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/card_detail_ticket_base_multicard_spacing"
+                android:background="@drawable/card_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/card_detail_self_item_spacing_vertical"
+                        android:layout_marginTop="@dimen/card_detail_self_item_spacing_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                        android:paddingRight="@dimen/card_detail_self_content_margin_horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <amigoui.widget.AmigoTextView
+                                android:id="@+id/start_station"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:gravity="left"
+                                android:singleLine="true"
+                                android:textColor="@color/train_card_detail_start_station_color"
+                                android:textSize="@dimen/card_detail_ticket_train_station_textsize" />
+
+                            <amigoui.widget.AmigoTextView
+                                android:id="@+id/time_detail_start"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/train_card_detail_start_station_color"
+                                android:textSize="26dp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <amigoui.widget.AmigoTextView
+                                android:id="@+id/train_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/card_detail_ticket_train_trainno_spacing"
+                                android:textColor="@color/train_card_detail_train_number_color"
+                                android:textSize="@dimen/card_detail_ticket_train_trainno_textsize" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/train_des" />
+
+                            <amigoui.widget.AmigoTextView
+                                android:id="@+id/time_start"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/card_detail_ticket_train_time_spacing"
+                                android:gravity="center"
+                                android:textColor="@color/train_card_detail_time_start_color"
+                                android:textSize="@dimen/card_detail_ticket_train_time_textsize" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:orientation="vertical">
+
+                            <amigoui.widget.AmigoTextView
+                                android:id="@+id/end_station"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:gravity="right"
+                                android:singleLine="true"
+                                android:textColor="@color/train_card_detail_end_station_color"
+                                android:textSize="@dimen/card_detail_ticket_train_station_textsize" />
+
+                            <amigoui.widget.AmigoTextView
+                                android:id="@+id/time_detail_arrive"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/train_card_detail_start_station_color"
+                                android:textSize="26dp"
+                                android:visibility="gone" />
+
+                            <amigoui.widget.AmigoTextView
+                                android:id="@+id/time_arrive"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/train_card_detail_time_start_color"
+                                android:textSize="14dp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:background="@drawable/content_line"
+                        android:visibility="gone" />
+
+                    <!--修改乘客，座位号显示效果-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                        android:paddingRight="@dimen/card_detail_self_content_margin_horizontal">
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/passenger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/passenger"
+                            android:textColor="@color/card_detail_self_content_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/seat_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                            android:textColor="@color/train_card_detail_seat_no_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/service_tel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                            android:textColor="@color/train_card_detail_service_tel_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/order_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                            android:textColor="@color/train_card_detail_order_no_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                        <amigoui.widget.AmigoTextView
+                            android:id="@+id/price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                            android:textColor="@color/train_card_detail_price_color"
+                            android:textSize="@dimen/card_detail_self_content_textsize" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/card_detail_self_content_margin_bottom"
+                        android:background="@drawable/content_line" />
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/time_table"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center|center"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/card_detail_self_action_text_color"
+                        android:textSize="@dimen/card_detail_self_action_textsize" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/content_line" />
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/navig_start_station"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_detail_self_action_height"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:ellipsize="end"
+                        android:gravity="center|center"
+                        android:maxLines="1"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:singleLine="true"
+                        android:textColor="@color/card_detail_self_action_text_color"
+                        android:textSize="@dimen/card_detail_self_action_textsize" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/web_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <WebView
+            android:id="@+id/web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></WebView>
+
+        <amigoui.widget.AmigoProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

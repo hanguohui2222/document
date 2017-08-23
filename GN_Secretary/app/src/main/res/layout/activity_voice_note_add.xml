@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/add_voice_note_background">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_background">
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:text="@string/giveup"
+            android:textColor="@color/app_name_color"
+            android:textSize="18sp" />
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="@color/app_name_color"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <com.gionee.secretary.widget.ListenerInputView
+        android:id="@+id/listenerInputView"
+        android:layout_width="2dp"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/create_time_title"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_below="@id/top_bar"
+        android:background="@null"
+        android:editable="false"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:textColor="#99000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/divider_img1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/create_time_title"
+        android:background="#d4d4d4" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/note_remind_time_layout"
+        android:layout_below="@id/divider_img1">
+
+        <com.gionee.secretary.widget.NoteEditText
+            android:id="@+id/note_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@null"
+            android:gravity="top"
+            android:hint="@string/input_content_tips"
+            android:lineSpacingExtra="10dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical"
+            android:textColor="#dd000000"
+            android:textColorHint="#66000000"
+            android:textSize="16sp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/note_remind_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:layout_above="@+id/layout_footer"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="53dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/remind_icon" />
+
+        <TextView
+            android:id="@+id/note_remind_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="#81675a"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/divider_img"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@+id/layout_footer"
+        android:background="#d4d4d4" />
+
+    <LinearLayout
+        android:id="@+id/layout_footer"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentBottom="true"
+        android:background="#fafafa"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginRight="114dp">
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/action_bill"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:text="@string/bill"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:textColor="@color/tv_note_bottom_color"
+            android:textSize="10sp"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/footer_todo_icon" />
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/action_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:text="@string/picture"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:textColor="@color/tv_note_bottom_color"
+            android:textSize="10sp"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/footer_camera" />
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/action_reminder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:text="@string/remind"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:textColor="@color/tv_note_bottom_color"
+            android:textSize="10sp"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/footer_reminder"
+            />
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/action_record"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:text="@string/record"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:textColor="@color/tv_note_bottom_color"
+            android:textSize="10sp"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/footer_record"
+            />
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/control_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/start_voice"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:background="@drawable/start_voice" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/tips_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="56dp"
+            android:orientation="horizontal"
+            android:paddingRight="115dp">
+
+            <ImageView
+                android:id="@+id/tips_bill"
+                android:layout_width="@dimen/tips_item_width"
+                android:layout_height="@dimen/tips_item_height"
+                android:layout_weight="1"
+                android:src="@drawable/tips_bill"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/tips_camera"
+                android:layout_width="@dimen/tips_item_width"
+                android:layout_height="@dimen/tips_item_height"
+                android:layout_weight="1"
+                android:src="@drawable/tips_camera"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/tips_reminder"
+                android:layout_width="@dimen/tips_item_width"
+                android:layout_height="@dimen/tips_item_height"
+                android:layout_weight="1"
+                android:src="@drawable/tips_reminder"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/tips_voice_record"
+                android:layout_width="@dimen/tips_item_width"
+                android:layout_height="@dimen/tips_item_height"
+                android:layout_weight="1"
+                android:src="@drawable/tips_voice_recording"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/tips_voice_input"
+            android:layout_width="@dimen/tips_item_width"
+            android:layout_height="@dimen/tips_item_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="90dp"
+            android:layout_marginRight="26dp"
+            android:src="@drawable/tips_voice_input"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/tips_point"
+        android:layout_width="@dimen/tips_point_dimen"
+        android:layout_height="@dimen/tips_point_dimen"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="72dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/tips_information"
+        android:visibility="gone" />
+</RelativeLayout>

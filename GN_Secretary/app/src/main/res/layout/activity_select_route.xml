@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_select_route"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gionee.secretary.ui.activity.SelectRouteActivity">
+
+    <FrameLayout
+        android:id="@+id/select_route_frame_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/select_route_btn_start_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/navi_select_route_brief_padding_bottom"
+            android:layout_marginLeft="@dimen/navi_select_route_brief_padding_horizontal"
+            android:layout_marginRight="@dimen/navi_select_route_brief_padding_horizontal"
+            android:layout_marginTop="@dimen/navi_select_route_brief_padding_bottom"
+            android:background="@drawable/map_startnavi_bg"
+            android:elevation="0dp"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/start_navigation"
+            android:textColor="#ffffff" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/select_route_layout_brief"
+        android:background="#c2c2c2" />
+
+    <LinearLayout
+        android:id="@+id/select_route_layout_brief"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navi_select_route_brief_layout_height"
+        android:layout_above="@id/select_route_frame_button"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/navi_select_route_brief_padding_horizontal"
+        android:paddingRight="@dimen/navi_select_route_brief_padding_horizontal"></LinearLayout>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/select_route_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/select_route_layout_brief"
+        android:layout_alignParentTop="true"></com.amap.api.maps.MapView>
+
+    <RelativeLayout
+        android:id="@+id/layout_bus_route_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/navi_select_route_bus_result_background"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_bus_route_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/navi_select_route_bus_result_background"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</RelativeLayout>

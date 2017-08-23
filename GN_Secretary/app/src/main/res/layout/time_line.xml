@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_card_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/card_point" />
+
+    <ImageView
+        android:id="@+id/iv_card_up_line"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/iv_card_point"
+        android:background="@drawable/card_line" />
+
+    <ImageView
+        android:id="@+id/iv_card_down_line"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iv_card_point"
+        android:background="@drawable/card_line" />
+
+    <!--<ImageView
+        android:id="@+id/iv_card_point"
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/fl_card_time"
+        android:background="#d1d1d1"
+        />-->
+
+</RelativeLayout>

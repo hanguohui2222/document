@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gionee.secretary"
+    android:versionCode="010031143"
+    android:versionName="1.0.31.bb">
+
+    <uses-sdk
+        android:minSdkVersion="22"
+        android:targetSdkVersion="23">
+
+    </uses-sdk>
+
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="com.ted.sdk.yellow.provider.permission.WRITE" />
+    <uses-permission android:name="com.ted.sdk.yellow.provider.permission.READ" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <!-- GiONEE yanjc <20160604> add, begin -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- GiONEE yanjc <20160604> add, end -->
+    <application
+        android:name=".SecretaryApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/secretary"
+        android:supportsRtl="true"
+        android:theme="@style/AmigoActivityTheme">
+        <meta-data
+            android:name="AmigoAlarmAlignPermissioin"
+            android:value="5F03F209561FE3DC4E1681C90A042127804694E86D15EA3D25C176DD3FC8CE47" />
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="6be23ccc316d67036f39c01ec70de06f" />
+        <meta-data
+            android:name="com.ted.sdk.appkey"
+            android:value="d946585803c6223ff2f84367c1ba7771" />
+        <meta-data
+            android:name="TD_CHANNEL"
+            android:value="20500100" />
+        <meta-data
+            android:name="YJ_APP_ID"
+            android:value="FAC4239A442C2D1BD07C196EA2C78B66" />
+        <meta-data
+            android:name="YJ_CHANNEL_ID"
+            android:value="gionee_rom" />
+
+        <service android:name="com.amap.api.location.APSService"></service>
+        <!--CloudServiceSdk  start-->
+        <activity
+            android:name=".view.SplashActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/LaunchTheme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--CloudServiceSdk end-->
+        <activity
+            android:name=".ui.activity.SelfCreateScheduleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="com.gionee.selfcreateschedule" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.SettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SettingPasswordActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.VerifyPassWordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified" />
+
+        <activity
+            android:name=".ui.activity.ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".ui.activity.AddAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <receiver android:name=".receiver.SmsReceiver">
+            <intent-filter android:priority="800">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.DeskClockReceiver">
+            <!--点击全屏界面关闭按钮-->
+            <intent-filter>
+                <action android:name="com.android.deskclock.action.ALARM_SNOOZE_OR_CLOSE" />
+            </intent-filter>
+            <!--点击弹出框关闭按钮-->
+            <intent-filter>
+                <action android:name="com.android.deskclock.inten.HEAD_UP_STOP" />
+            </intent-filter>
+            <!--翻转手机关闭按钮-->
+            <!--<intent-filter>-->
+            <!--<action android:name="com.android.deskclock.action.OVERTURN"/>-->
+            <!--</intent-filter>-->
+        </receiver>
+        <receiver android:name=".receiver.VoiceBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.gionee.broadcast.refresh" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gionee.broadcast.start" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+
+        </receiver>
+
+        <service
+            android:name=".service.SmsParseService"
+            android:exported="true"></service>
+        <service
+            android:name=".service.VoiceBroadcastService"
+            android:exported="true"></service>
+        <service
+            android:name=".service.CreateProcessService"></service>
+        <service android:name=".service.VoiceService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.gionee.secreary.voice" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.gionee.secretary.ui.activity.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <!-- GiONEE yanjc <20160604> add, begin -->
+        <activity
+            android:name=".voice.MscRecorderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <!-- GiONEE yanjc <20160604> add, end -->
+
+        <activity
+            android:name=".ui.activity.CardDetailsActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/CardDetailActivityTheme">
+            <intent-filter>
+                <action android:name="com.gionee.secretary.carddetail" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.CalendarActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"></activity>
+        <!--<activity
+            android:name=".view.VoiceNoteListActivity"
+            android:screenOrientation="portrait">
+        </activity>-->
+        <activity
+            android:name=".ui.activity.AddVoiceNoteActivity"
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.gionee.secretary.voicenote" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.NoteDetailActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <provider
+            android:name=".db.SecretaryProvider"
+            android:authorities="secretary"
+            android:exported="true"
+            android:multiprocess="false"></provider>
+        <receiver android:name=".receiver.RebootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.intent.action.REBOOT"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".WidgetProvider"
+            android:priority="65535">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="amigo.intent.action.chameleon.POWER_SAVING_MODE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gionee.secretary.UPDATEDATA" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gionee.secretary.HIDESCHEDLE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="gn_calendar_datechange" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gionee.secretary.refresh.mainui" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gionee.intent.action.theme.change" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.gionee.intent.category.theme.V2" />
+                <category android:name="com.gionee.intent.category.theme.V3" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_config" />
+        </receiver>
+        <receiver
+            android:name=".receiver.RemindReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gionee.secretary.remind.INTELLIGENT_ALERT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gionee.secretary.remind.NORMAL_ALERT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gionee.secretary.remind.NOTE_ALERT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gionee.secretary.password.FREEZE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gionee.remind.refresh" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.RemindService">
+        </service>
+        <service android:name=".service.InitAlarmsService" />
+        <service android:name=".service.SnoozeAlarmsService" />
+
+        <!-- add for gionee_account_login start -->
+        <activity
+            android:name="com.gionee.account.sdk.activity.AssistActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver android:name="com.gionee.account.sdk.receiver.GNAccountReceiver">
+            <intent-filter android:priority="65535">
+                <action android:name="com.gionee.account.broadcast.loginresult" />
+            </intent-filter>
+        </receiver>
+        <!-- add for gionee_account_login end -->
+        <activity
+            android:name=".ui.activity.AddressRemarkActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.gionee.secretary.ui.activity.SelectAddressActivity"
+            android:screenOrientation="portrait" />
+        <!-- Gionee <gn_by_sw> <zhengyt> <2017-07-12> add for #186558 begin -->
+        <activity
+            android:name="com.gionee.secretary.ui.activity.SelectRouteActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/NavigationTheme" />
+        <!-- Gionee <gn_by_sw> <zhengyt> <2017-07-12> add for #186558 end -->
+
+        <activity android:name="com.gionee.secretary.ui.activity.SelectRouteDetailActivity" />
+        <activity
+            android:name="com.gionee.secretary.ui.activity.NavigationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NavigationTheme" />
+
+        <!-- GiONEE luorw <20170307> add for ami_transfer begin -->
+        <service android:name=".service.AmiTransferService">
+            <intent-filter>
+                <action android:name="dataghost.intent.action.AGENT" />
+            </intent-filter>
+        </service>
+        <!-- GiONEE luorw <20170307> add for ami_transfer end -->
+
+  <!-- leakcanary by hangh
+       <service
+            android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"
+            android:process=":leakcanary"
+            android:enabled="false"
+            />
+        <service
+            android:name="com.squareup.leakcanary.DisplayLeakService"
+            android:enabled="false"
+            />
+        <activity
+            android:theme="@style/leak_canary_LeakCanary.Base"
+            android:name="com.squareup.leakcanary.internal.DisplayLeakActivity"
+            android:enabled="false"
+            android:label="@string/leak_canary_display_activity_label"
+            android:icon="@drawable/leak_canary_icon"
+            android:taskAffinity="com.squareup.leakcanary"
+            >
+        </activity>
+        <activity
+            android:theme="@style/leak_canary_Theme.Transparent"
+            android:name="com.squareup.leakcanary.internal.RequestStoragePermissionActivity"
+            android:taskAffinity="com.squareup.leakcanary"
+            android:enabled="false"
+            android:icon="@drawable/leak_canary_icon"
+            android:label="@string/leak_canary_storage_permission_activity_label"
+            />-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.gionee.secretary.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"/>
+        </provider>
+    </application>
+
+</manifest>

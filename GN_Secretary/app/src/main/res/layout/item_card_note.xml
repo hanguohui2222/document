@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><!--  <LinearLayout
+    android:id="@+id/item_card"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="344dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/card_bg"
+    >  --><!--android:layout_marginBottom="4dp"-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/voice_note_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/search_divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/title"
+        android:src="@color/card_detail_self_divider_color"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/note_type"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@+id/search_divider_line"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="@string/note_bar"
+        android:textColor="@color/add_voice_note_actionbar_button_title_color"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:id="@+id/note_frame"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_type"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"></FrameLayout>
+
+</RelativeLayout><!--  </LinearLayout>  -->

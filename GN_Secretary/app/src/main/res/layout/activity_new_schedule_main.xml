@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:fillViewport="true"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FDFDFD"
+            android:focusable="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FDFDFD"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/newschedule_item_padding_horizontal"
+                android:paddingRight="@dimen/newschedule_item_paddingright_horizontal">
+
+                <amigoui.widget.AmigoEditText
+                    android:id="@+id/title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#F5F5F5"
+                    android:ellipsize="end"
+                    android:focusable="true"
+                    android:hint="@string/please_input_title"
+                    android:paddingLeft="@dimen/newschedule_textinput_padding"
+                    android:paddingRight="@dimen/newschedule_textinput_padding"
+                    android:textColorHint="#66000000" />
+
+                <com.gionee.secretary.widget.DescriptionEdittext
+                    android:id="@+id/description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#F5F5F5"
+                    android:focusable="true"
+                    android:gravity="top"
+                    android:hint="@string/description"
+                    android:inputType="textMultiLine"
+                    android:maxLines="10"
+                    android:minHeight="116dp"
+                    android:paddingLeft="@dimen/newschedule_textinput_padding"
+                    android:paddingRight="@dimen/newschedule_textinput_padding"
+                    android:paddingTop="8dp"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:scrollbars="vertical"
+                    android:textColorHint="#66000000" />
+
+                <ImageButton
+                    android:id="@+id/tips_point"
+                    android:layout_width="@dimen/tips_point_dimen"
+                    android:layout_height="@dimen/tips_point_dimen"
+                    android:layout_alignBottom="@id/description"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:background="@null"
+                    android:src="@drawable/tips_information"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <amigoui.widget.AmigoSwitch
+                android:id="@+id/wholeday"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_height"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/newschedule_item_padding_horizontal"
+                android:paddingRight="@dimen/newschedule_item_paddingright_horizontal"
+                android:text="@string/allday"
+                android:textSize="@dimen/list_textsize_large" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="@dimen/newschedule_textinput_padding"
+                android:background="#33828282"
+                />
+
+            <LinearLayout
+                android:id="@+id/starttime_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_height"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/newschedule_item_padding_horizontal"
+                android:paddingRight="@dimen/newschedule_item_paddingright_horizontal">
+
+                <amigoui.widget.AmigoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/schedule_start_time"
+                    android:textColor="@color/list_text_color"
+                    android:textSize="@dimen/list_textsize_large" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:singleLine="true"
+                    android:textColor="@color/list_text_color_small"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:textSize="@dimen/list_textsize_small" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@drawable/gn_datetime_to"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="@dimen/newschedule_textinput_padding"
+                android:background="#33828282"
+                />
+
+            <LinearLayout
+                android:id="@+id/endtime_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_height"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/newschedule_item_padding_horizontal"
+                android:paddingRight="@dimen/newschedule_item_paddingright_horizontal">
+
+                <amigoui.widget.AmigoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/schedule_end_time"
+                    android:textColor="@color/list_text_color"
+                    android:textSize="@dimen/list_textsize_large" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/end_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:singleLine="true"
+                    android:textColor="@color/list_text_color_small"
+                    android:textSize="@dimen/list_textsize_small" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@drawable/gn_datetime_to"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="@dimen/newschedule_textinput_padding"
+                android:background="#33828282"
+                />
+
+            <LinearLayout
+                android:id="@+id/remind_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_height"
+                android:background="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/newschedule_item_padding_horizontal"
+                android:paddingRight="@dimen/newschedule_item_paddingright_horizontal">
+
+                <amigoui.widget.AmigoTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="@string/remind"
+                    android:textColor="@color/list_text_color"
+                    android:textSize="@dimen/list_textsize_large" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/remind"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:text="@string/on_time"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:textColor="@color/list_text_color_small"
+                    android:textSize="@dimen/list_textsize_small" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@drawable/gn_datetime_to"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="@dimen/newschedule_textinput_padding"
+                android:background="#33828282"
+                />
+
+            <LinearLayout
+                android:id="@+id/recycle_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_height"
+                android:background="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/newschedule_item_padding_horizontal"
+                android:paddingRight="@dimen/newschedule_item_paddingright_horizontal">
+
+                <amigoui.widget.AmigoTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="@string/period"
+                    android:textColor="@color/list_text_color"
+                    android:textSize="@dimen/list_textsize_large" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/recycle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:text="@string/once"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:textColor="@color/list_text_color_small"
+                    android:textSize="@dimen/list_textsize_small" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@drawable/gn_datetime_to"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="@dimen/newschedule_textinput_padding"
+                android:background="#33828282"
+                />
+
+            <LinearLayout
+                android:id="@+id/address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_height"
+                android:background="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/newschedule_item_padding_horizontal"
+                android:paddingRight="@dimen/newschedule_item_paddingright_horizontal"
+                android:visibility="visible">
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:hint="@string/add_address"
+                    android:textColor="@color/list_text_color"
+                    android:textColorHint="@color/list_text_color"
+                    android:textSize="@dimen/list_textsize_large" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:padding="8dp"
+                    android:src="@drawable/location" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="@dimen/newschedule_textinput_padding"
+                android:background="#33828282"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/tips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_bg"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/tips_touch_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:background="#000000"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/tips_display_layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/tips_item_width"
+                android:layout_height="@dimen/tips_item_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/tips_place" />
+
+            <ImageView
+                android:layout_width="@dimen/tips_item_width"
+                android:layout_height="@dimen/tips_item_height"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/tips_allday_schedule" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</FrameLayout>

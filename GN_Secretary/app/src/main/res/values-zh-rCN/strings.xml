@@ -1,0 +1,276 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">secretary</string>
+    <string name="secretary">商务秘书</string>
+    <string name="time_picker_cancel">取消</string>
+    <string name="time_picker_setting">设置</string>
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+    <string name="searching">定位中，稍后再试...</string>
+    <string name="no_endpoint">终点未设置</string>
+    <string name="footer_normal">点击或上拉加载更多</string>
+    <string name="footer_loading">正在加载数据...</string>
+    <string name="footer_end">已经全部加载</string>
+    <string name="footer_failed">加载失败,点击重试</string>
+    <string name="clear_tips_history">清除历史记录</string>
+
+    <string name="bank_return_money">应还金额:</string>
+    <string name="bank_return_date">到期还款日:</string>
+    <string name="bank_credit_bill">信用卡账单</string>
+    <string name="bank_loan_bill">贷款账单</string>
+    <string name="hotel_tel_number">酒店电话</string>
+    <string name="ticket_number">票号:</string>
+    <string name="order_number">订单号</string>
+    <string name="more">更多</string>
+    <string name="start_delivery">已发货</string>
+    <string name="on_the_way">运输中</string>
+    <string name="sign_delivery">已签收</string>
+    <string name="add_city">请添加城市</string>
+    <string name="empty_weather">N/A</string>
+    <string name="dressing">建议穿着舒适服装</string>
+    <string name="no_schedule">还没有日程</string>
+    <string name="add_schedule">点击下面“添加”建立日程吧</string>
+    <string name="kuaidn">快递鸟提供数据支持</string>
+
+    <string name="back">back</string>
+    <string name="clear_record">清除历史记录</string>
+    <string name="business_secretary">商务秘书</string>
+    <string name="settings">设置</string>
+    <string name="open_pw">开启密码保护</string>
+    <string name="input_pw">请录入密码</string>
+    <string name="confirm_pw">确认密码</string>
+    <string name="write_pw">请输入密码</string>
+    <string name="again_pw">密码错误，请重新输入</string>
+    <string name="pw_error_count">"密码错误，还可以输入<xliff:g id="COUNT">%d</xliff:g> 次"</string>
+    <string name="cool_time">密码输入错误超过5次，请等待1分钟后重试</string>
+    <string name="get_back_passwork">找回密码</string>
+    <string name="reset_pw">重置密码</string>
+    <string name="error_pw">密码不一致，请再次输入</string>
+    <string name="close_pw">密码保护已关闭</string>
+    <string name="close_pw_error">密码保护关闭失败</string>
+    <string name="pw_protect">密码保护</string>
+    <string name="pw_tip">开启密码保护可以设置商务秘书独立密码，保护应用内信息安全。</string>
+    <string name="open_pw_now">立即开启</string>
+    <string name="open_pw_later">以后再说</string>
+
+    <string name="search">搜索</string>
+    <string name="add">添加</string>
+    <string name="voice">语音</string>
+    <string name="voice_note">语音备忘</string>
+    <string name="calendar">日历</string>
+    <string name="note">便签</string>
+    <string name="air_ticket">机票</string>
+    <string name="start_time">出发时间</string>
+    <string name="arrival_time">到达时间</string>
+    <string name="start_place">出发地</string>
+    <string name="arrival_place">到达地</string>
+    <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+    <string name="giveup">舍弃</string>
+    <string name="save">保存</string>
+    <string name="please_input_title">标题</string>
+    <string name="allday">全天事件</string>
+    <string name="remind">提醒</string>
+    <string name="on_time">准时</string>
+    <string name="once">一次</string>
+    <string name="please_input_address">请输入地点</string>
+    <string name="address">东直门</string>
+    <string name="travel_type">出行方式</string>
+    <string name="description">内容</string>
+    <string name="period">周期</string>
+    <string name="account">账号:</string>
+    <string name="bill_month">账单月份:</string>
+
+    <string name="month">2016年5月</string>
+    <string name="today">今天</string>
+    <string name="day">日</string>
+    <string name="one">一</string>
+    <string name="two">二</string>
+    <string name="three">三</string>
+    <string name="four">四</string>
+    <string name="five">五</string>
+    <string name="six">六</string>
+    <string name="null_money">--.--元</string>
+    <string name="null_value">--</string>
+    <string name="destination">目的地</string>
+    <string name="detail">详情</string>
+    <string name="ticket_certificate">取票凭证:</string>
+    <string name="movie_order">电影票订票</string>
+
+    <!-- lunar -->
+    <string name="gn_day_lunar">农历</string>
+    <string name="gn_get_lunar_fail">获取阴历失败</string>
+    <string name="gn_day_Monday">星期一</string>
+    <string name="gn_day_Tuesday">星期二</string>
+    <string name="gn_day_Wednesday">星期三</string>
+    <string name="gn_day_Thursday">星期四</string>
+    <string name="gn_day_Friday">星期五</string>
+    <string name="gn_day_Saturday">星期六</string>
+    <string name="gn_day_Sunday">星期天</string>
+    
+    <string name="widget_title">商务秘书</string>
+    <string name="no_remind">无提醒</string>
+     <string name="totle_day">全天</string>
+      <string name="no_richeng">暂无日程</string>
+    <string name="delete_recurring_event_title">"确定删除“<xliff:g id="EVENTTITLE">%s</xliff:g>”吗？"</string>
+    <string name="gn_edit_event_label" >"确定修改“<xliff:g id="EVENTTITLE">%s</xliff:g>”吗？"</string>
+
+    <string name="message_title">系统提示</string>
+    <string name="network_setting_content">欢迎使用商务秘书。\n为保证所有功能使用正常，应用会通过WLAN或移动数据连接网络，读取位置信息，读取短信信息。\n确定继续使用？</string>
+    <string name="network_setting_nolonger_warn">不再提示</string>
+    <string name="exit">退出</string>
+    <string name="ok">继续</string>
+
+<string name="multiple_select_all">全部选择</string>
+    <string name="cancel_multiple_select_all">取消全选</string>
+    <string name="multi_select_title">已选中 <xliff:g id="number">%1$s</xliff:g> 个</string>
+    
+    <!-- GiONEE yanjc <20160604> add, begin -->
+    <string name="voice_bianlubianxie">边录边写</string>
+    <string name="voice_caiyanglie">采样率</string>
+    <string name="voice_caiyanglie_eight">8K</string>
+    <string name="voice_caiyanglie_sixteen">16K</string>
+    <!-- GiONEE yanjc <20160604> add, end -->
+    <string name="match_fail">无匹配结果</string>
+
+    <string name="voice_note_tips">点击下面的添加按钮可以快速新建便签哦</string>
+    <string name="voice_note_float_txt">锁屏时,长按“音量+”\n可以快速添加语音备忘</string>
+    <string name="gn_change_endtime_fail">结束时间必须超过开始时间</string>
+    <string name="gn_change_starttime_fail">开始时间必须小于结束时间</string>
+    <string name="add_new_schedule">添加新日程</string>
+    <string name="add_new_speeh">添加语音备忘</string>
+
+    <string name="not_found_map">"位置功能需要高德地图的支持,手机里没有检测到高德地图,要下载吗？"</string>
+    <string name="savesuccess">"保存成功"</string>
+    <string name="updatesuccess">"更新成功"</string>
+    <string name="inputtitle">"请输入标题 !"</string>
+    <string name="remind_later">"稍后提醒"</string>
+    <string name="time_between">" 至 "</string>
+    <string name="location_failed">"定位失败"</string>
+    <string name="not_found_pay">"手机里未安装支付宝,要下载吗？"</string>
+    <string name="delete_voice_note">"确定删除所选备忘录吗?"</string>
+    <string name="not_found_app_message_title">提示</string>
+    <string name="download">下载</string>
+    <string name="no_network">网络异常,请检查网络连接!</string>
+    <string name="click_load">点击重试</string>
+        <string name="texttoolong">字数已达上限</string>
+
+    <string name="login">登录</string>
+    <string name="login_user">账户</string>
+    <string name="loginout">退出</string>
+    <string name="loginout_key">preferences_loginout</string>
+    <string name="login_tips">登录后可快速找回密码</string>
+
+    <string name="error_version_not_support">版本不支持</string>
+    <string name="login_cancel">登录取消</string>
+    <!--added by luorw for reconstruction code 20161201 begin -->
+    <string name="on_time_at_ten">准时(10:00)</string>
+    <string name="not_remind">无需提醒</string>
+    <string name="smart_remind">智能提醒</string>
+    <string name="ten_min_ago">10分钟前</string>
+    <string name="half_hour_ago">30分钟前</string>
+    <string name="one_hour_ago">1小时前</string>
+    <string name="on_time_remind">准时提醒</string>
+    <string name="defined_time">自定义时间</string>
+    <string name="defined_time_remind">自定义提醒</string>
+    <string name="one_day_ago">1天前</string>
+    <string name="give_up_msg">舍弃将不会保存该日程，是否舍弃?</string>
+    <string name="delete_schedule_or_not">确定删除所选日程吗?</string>
+    <string name="click_search">点击搜索</string>
+    <string name="click_add">点击添加</string>
+    <string name="click_calender">点击日历</string>
+    <string name="click_voice_note">点击语音备忘</string>
+    <string name="click_notification">点击日程通知</string>
+    <string name="click_delete_schedule">点击删除日程</string>
+    <string name="click_edit_schedule">点击编辑日程</string>
+    <string name="click_find_password">点击找回密码</string>
+    <string name="click_share">点击分享</string>
+    <string name="click_change_ring">点击更改铃声</string>
+    <string name="click_note_bill">点击备忘内复选框</string>
+    <string name="click_note_camera">点击备忘内相机</string>
+    <string name="click_note_alert">点击备忘内提醒</string>
+    <string name="click_note_record">点击备忘内录音</string>
+
+    <string name="delete_success">删除成功</string>
+    <!--added by luorw for reconstruction code 20161201 end -->
+    <string name="setting_password_validate_tips">"要想密码开启后生效需要开启应用访问权限"</string>
+    <string name="schedule">日程</string>
+    <string name="new_add">新建</string>
+    <string name="note_bar">备忘</string>
+    <string name="send_file">分享</string>
+    <string name="address_text">地点</string>
+    <string name="address_remark">备注</string>
+    <string name="drive_car">开车</string>
+    <string name="new_schedule">新日程</string>
+    <string name="delete_address">删除地点</string>
+    <string name="remark_description">备注说明</string>
+    <string name="defined_day">天</string>
+    <string name="defined_hour">小时</string>
+    <string name="select_image">照片图库</string>
+    <string name="select_camera">拍照</string>
+    <string name="set_password_login_amigo_account_tip">1、建议绑定amigo帐号，若遗忘密码，可以通过绑定的amigo帐号重置密码。\n 2、在未绑定amigo帐号的情况下忘记密码，密码无法重置，将无法进入商务秘书，只能通过恢复出厂设置以重新使用。</string>
+    <string name="never_forget_password">我不会忘记密码</string>
+    <string name="bind_amigo_account">绑定帐号</string>
+    <string name="can_not_reset_password">很遗憾，因未绑定amigo帐号，无法重置。\n 若想要继续使用商务秘书，你可以将手机恢复出厂设置，但您说有数据将被抹去！</string>
+    <string name="lock_to_app_toast" msgid="7570091317001980053">"要取消固定此屏幕，请同时按住“电源”和“音量+”键。"</string>
+
+    <string name="bill">待办</string>
+    <string name="picture">图片</string>
+    <string name="record">录音</string>
+
+    <string name="train_ticket">火车票</string>
+    <string name="navigation">导航到</string>
+    <string name="time_table">列车时刻表</string>
+    <string name="card_detail_title">详情</string>
+    <string name="alipay">支付宝还款</string>
+    <string name="alipay_uninstall">支付宝还款(未安装)</string>
+    <string name="colon">：</string>
+    <string name="card_not_exist">卡片不存在。</string>
+
+    <string name="remind_title_flight">飞机</string>
+    <string name="time_takeoff">出发时间</string>
+    <string name="time_arrive">到达时间</string>
+    <string name="departure">出发地</string>
+    <string name="flight">航班</string>
+    <string name="passenger">乘客</string>
+    <string name="ticket_no">票号</string>
+    <string name="ticket_src">票源</string>
+    <string name="service_no">客服电话：</string>
+    <string name="tips">提示</string>
+    <string name="navigate_to">导航到</string>
+    <string name="check_online">网上值机</string>
+
+    <string name="remind_title_train">火车</string>
+    <string name="time_to_repay">今天到期还款</string>
+
+    <string-array name="travel_method_entry">
+        <item>无</item>
+        <item>步行</item>
+        <item>开车</item>
+        <item>出租车</item>
+        <item>公共交通</item>
+    </string-array>
+    <string-array name="travel_method_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string name="travel_default_method_value">2</string>
+
+
+
+    <string name="travel_method_setting">出行设置</string>
+    <string name="travel_method">出行方式</string>
+    <string name="default_travel_method">默认出行方式</string>
+    <string name="remind_setting">闹铃提醒</string>
+    <string name="schedule_remind">日程提醒</string>
+    <string name="intelligent_remind_summary">关闭后将屏蔽日程和备忘的所有闹铃提醒。</string>
+    <string name="function_setting">功能设置</string>
+    <string name="display_express_status">显示快递状态</string>
+    <string name="express_status_summary">每天显示您的快递信息。</string>
+    <string name="travel_method_drive">开车</string>
+    <string name="broadcast_setting">播报提醒</string>
+    <string name="broadcast_summary">关闭后将不会进行日程播报。</string>
+    <string name="default_broadcast_time">播报时间</string>
+    <string name="default_broadcast_time_summary">默认早上8:00</string>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/card_detail_actionbar_icon_dimen"
+        android:layout_height="@dimen/card_detail_actionbar_icon_dimen"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/back_icon"
+        android:tint="#cc000000"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/card_detail_actionbar_title_margin_left"
+        android:layout_toRightOf="@id/btn_back"
+        android:textColor="#cc000000"
+        android:textSize="18dp"
+        android:visibility="gone" />
+
+    <RadioGroup
+        android:id="@+id/select_route_tab_mode"
+        android:layout_width="@dimen/navi_select_route_toolbar_tab_width"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/select_route_mode_drive"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/navi_select_route_toolbar_icon_dimen"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/travelmode_drive_selector" />
+
+        <RadioButton
+            android:id="@+id/select_route_mode_transfer"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/navi_select_route_toolbar_icon_dimen"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/travelmode_transfer_selector" />
+
+        <RadioButton
+            android:id="@+id/select_route_mode_walk"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/navi_select_route_toolbar_icon_dimen"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/travelmode_walk_selector" />
+    </RadioGroup>
+
+</RelativeLayout>

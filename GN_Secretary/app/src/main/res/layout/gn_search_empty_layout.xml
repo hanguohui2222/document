@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_stub"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/gn_empty_icon_text_space"
+        android:drawableTop="@drawable/amigo"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/gn_empty_view_margin_top"
+        android:text="@string/match_fail"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/gn_empty_text_color"
+        android:textSize="@dimen/gn_empty_text_size" />
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/card_detail_actionbar_icon_dimen"
+        android:layout_height="@dimen/card_detail_actionbar_icon_dimen"
+        android:layout_gravity="center_vertical"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/back_icon"
+        android:visibility="gone" />
+
+    <amigoui.widget.AmigoTextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/card_detail_actionbar_title_margin_left"
+        android:layout_weight="1"
+        android:gravity="center_vertical|left"
+        android:text="@string/settings"
+        android:textColor="#99000000"
+        android:textSize="18sp" />
+</LinearLayout>

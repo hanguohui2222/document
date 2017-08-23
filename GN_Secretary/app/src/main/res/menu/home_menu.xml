@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/search"
+        android:showAsAction="ifRoom"
+        android:title="@string/search" />
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/add"
+        android:showAsAction="ifRoom"
+        android:title="@string/add" />
+    <item
+        android:id="@+id/voice"
+        android:icon="@drawable/voice"
+        android:showAsAction="ifRoom"
+        android:title="@string/voice"
+        android:visible="false" />
+    <item
+        android:id="@+id/calendar"
+        android:icon="@drawable/calendar"
+        android:showAsAction="ifRoom"
+        android:title="@string/calendar" />
+    <item
+        android:id="@+id/voice_note"
+        android:icon="@drawable/voice"
+        android:showAsAction="ifRoom"
+        android:title="@string/voice_note" />
+
+</menu>

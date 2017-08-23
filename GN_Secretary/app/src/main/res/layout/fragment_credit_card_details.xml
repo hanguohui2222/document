@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_detail_activity_background_color">
+    <!--    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentTop="true">-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/card_detail_self_margin_horizontal"
+        android:layout_marginRight="@dimen/card_detail_self_margin_horizontal"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/card_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <amigoui.widget.AmigoTextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/card_detail_self_action_height"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="@dimen/card_detail_self_title_margin_horizontal"
+                android:textColor="@color/card_detail_self_title_color"
+                android:textSize="@dimen/card_detail_self_title_textsize"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/content_line" />
+
+            <LinearLayout
+                android:id="@+id/account_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_detail_self_margin_vertical_top"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                android:paddingRight="@dimen/card_detail_self_content_margin_horizontal">
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/account"
+                    android:textColor="@color/card_detail_self_content_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/accounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/card_detail_bank_value_margin_left"
+                    android:text="@string/null_value"
+                    android:textColor="@color/card_detail_self_content_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bills_month_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal">
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/tv_bills_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/bill_month"
+                    android:textColor="@color/card_detail_self_content_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/bills_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/card_detail_bank_value_margin_left"
+                    android:text="@string/null_value"
+                    android:textColor="@color/card_detail_self_content_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/repay_time_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                android:paddingRight="@dimen/card_detail_self_content_margin_horizontal">
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/tv_repay_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/bank_return_date"
+                    android:textColor="@color/card_detail_self_content_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/repay_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/card_detail_bank_value_margin_left"
+                    android:text="@string/null_value"
+                    android:textColor="@color/card_detail_self_content_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/money_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_detail_self_content_margin_bottom"
+                android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                android:gravity="left"
+                android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                android:paddingRight="@dimen/card_detail_self_content_margin_horizontal">
+
+                <amigoui.widget.AmigoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|center"
+                    android:text="@string/bank_return_money"
+                    android:textColor="@color/card_detail_self_content_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="@dimen/card_detail_bank_value_margin_left"
+                    android:text="@string/null_money"
+                    android:textColor="@color/credit_card_detail_payment_value_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/content_line" />
+
+            <amigoui.widget.AmigoTextView
+                android:id="@+id/alipay"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center|center"
+                android:textColor="@color/card_detail_self_action_text_color"
+                android:textSize="@dimen/card_detail_self_action_textsize"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+    <!--    </android.support.v7.widget.CardView>-->
+
+</RelativeLayout>

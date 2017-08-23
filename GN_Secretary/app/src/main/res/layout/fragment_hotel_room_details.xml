@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_detail_activity_background_color">
+    <!--    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            card_view:cardBackgroundColor="#ffffff"
+            style="@style/DetailCardTheme">-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/card_detail_self_margin_horizontal"
+        android:layout_marginRight="@dimen/card_detail_self_margin_horizontal"
+        android:layout_marginTop="@dimen/card_detail_self_margin_vertical_top"
+        android:background="@drawable/card_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <amigoui.widget.AmigoTextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/card_detail_self_action_height"
+                android:gravity="center_vertical|left"
+                android:textColor="@color/hotel_card_detail_title_color"
+                android:textSize="@dimen/card_detail_self_title_textsize"
+                android:visibility="gone" />
+
+            <amigoui.widget.AmigoTextView
+                android:id="@+id/hotel_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/card_detail_self_action_height"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="@dimen/card_detail_self_title_margin_horizontal"
+                android:paddingRight="@dimen/card_detail_self_title_margin_horizontal"
+                android:textColor="@color/hotel_card_detail_hotel_name_color"
+                android:textSize="@dimen/card_detail_self_title_textsize" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/content_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/card_detail_self_content_margin_bottom"
+                android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                android:paddingRight="@dimen/card_detail_self_content_margin_horizontal"
+                android:paddingTop="@dimen/card_detail_self_content_margin_top">
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/hotel_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/hotel_card_detail_hotel_address_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/time_checkin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                    android:textColor="@color/hotel_card_detail_time_checkin_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/time_checkout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                    android:textColor="@color/hotel_card_detail_time_checkout_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize"
+                    android:visibility="visible" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/room_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                    android:textColor="@color/hotel_card_detail_room_type_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize"
+                    android:visibility="visible" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/room_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                    android:textColor="@color/hotel_card_detail_room_no_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize"
+                    android:visibility="gone" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/room_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                    android:textColor="@color/hotel_card_detail_room_username_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/room_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                    android:textColor="@color/hotel_card_detail_room_count_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize"
+                    android:visibility="visible" />
+
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/service_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                    android:autoLink="phone"
+                    android:textColor="@color/hotel_card_detail_service_tel_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/content_line" />
+
+            <amigoui.widget.AmigoTextView
+                android:id="@+id/navig_hotel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_detail_self_action_height"
+                android:background="?android:attr/selectableItemBackground"
+                android:ellipsize="end"
+                android:gravity="center_vertical|center_horizontal"
+                android:maxLines="1"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:textColor="@color/hotel_card_detail_navig_hotel_color"
+                android:textSize="@dimen/card_detail_self_action_textsize" />
+
+        </LinearLayout>
+    </FrameLayout>
+    <!--    </android.support.v7.widget.CardView>-->
+
+</RelativeLayout>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="12dp"
+    android:background="@color/card_detail_activity_background_color"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/card_detail_self_margin_horizontal"
+    android:paddingRight="@dimen/card_detail_self_margin_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:background="@drawable/card_bg"
+        android:divider="@drawable/divider_vertical"
+        android:paddingBottom="@dimen/card_detail_ticket_weather_padding_vertical"
+        android:paddingTop="@dimen/card_detail_ticket_weather_padding_vertical"
+        android:showDividers="middle">
+
+        <RelativeLayout
+            android:id="@+id/start_city_weather_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/card_detail_self_title_margin_horizontal"
+            android:paddingRight="12dp">
+
+            <LinearLayout
+                android:id="@+id/starting_tv_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/starting_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/null_value"
+                    android:textColor="@color/weather_card_detail_station_name_color"
+                    android:textSize="@dimen/card_detail_ticket_weather_place_textsize" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/starting_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/null_value"
+                        android:textColor="@color/weather_card_detail_station_temperature_color"
+                        android:textSize="@dimen/card_detail_ticket_weather_detail_textsize" />
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/starting_city_weather_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/null_value"
+                        android:textColor="@color/weather_card_detail_station_temperature_color"
+                        android:textSize="@dimen/card_detail_ticket_weather_detail_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/starting_city_weather_img"
+                android:layout_width="@dimen/card_detail_ticket_weather_icon_dimen"
+                android:layout_height="@dimen/card_detail_ticket_weather_icon_dimen"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/unknown" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/end_city_weather_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/card_detail_self_title_margin_horizontal"
+            android:paddingRight="12dp">
+
+            <LinearLayout
+                android:id="@+id/ending_tv_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/ending_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/null_value"
+                    android:textColor="@color/weather_card_detail_station_name_color"
+                    android:textSize="@dimen/card_detail_ticket_weather_place_textsize" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/ending_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/null_value"
+                        android:textColor="@color/weather_card_detail_station_temperature_color"
+                        android:textSize="@dimen/card_detail_ticket_weather_detail_textsize" />
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/ending_city_weather_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/null_value"
+                        android:textColor="@color/weather_card_detail_station_temperature_color"
+                        android:textSize="@dimen/card_detail_ticket_weather_detail_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ending_city_weather_img"
+                android:layout_width="@dimen/card_detail_ticket_weather_icon_dimen"
+                android:layout_height="@dimen/card_detail_ticket_weather_icon_dimen"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/unknown" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/card_detail_ticket_base_multicard_spacing"
+        android:background="@drawable/card_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/card_detail_self_item_spacing_vertical"
+            android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+            android:paddingRight="@dimen/card_detail_self_content_margin_horizontal"
+            android:paddingTop="@dimen/card_detail_self_item_spacing_vertical">
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/start_station"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:textColor="@color/flight_card_detail_start_station_name_color"
+                    android:textSize="@dimen/card_detail_ticket_air_place_textsize" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/time_detail_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:textColor="@color/flight_card_detail_time_takeoff_color"
+                    android:textSize="@dimen/card_detail_ticket_air_time_textsize" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/date_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:textColor="@color/flight_card_detail_date_color"
+                    android:textSize="@dimen/card_detail_ticket_air_date_textsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/flight_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/card_detail_ticket_air_flightnum_spacing"
+                    android:textColor="@color/flight_card_detail_ticket_no_color"
+                    android:textSize="@dimen/card_detail_ticket_air_flightnum_textsize" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/flight" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/end_station"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/flight_card_detail_end_station_name_color"
+                    android:textSize="@dimen/card_detail_ticket_air_place_textsize" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/time_detail_arrive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="@color/flight_card_detail_time_arrive_color"
+                    android:textSize="@dimen/card_detail_ticket_air_time_textsize" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/date_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/flight_card_detail_date_color"
+                    android:textSize="@dimen/card_detail_ticket_air_date_textsize" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--上面是我写的-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="16px"-->
+        <!--android:layout_marginLeft="26dp"-->
+        <!--android:layout_marginRight="26dp"-->
+        <!--android:background="@drawable/content_line"-->
+        <!--android:visibility="gone"/>-->
+
+        <!--修改乘客，座位号显示效果-->
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/passenger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_detail_self_content_leading"
+            android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+            android:paddingRight="@dimen/card_detail_self_content_margin_horizontal"
+            android:textColor="@color/card_detail_self_content_color"
+            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/seat_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_detail_self_content_leading"
+            android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+            android:paddingRight="@dimen/card_detail_self_content_margin_horizontal"
+            android:textColor="@color/card_detail_self_content_color"
+            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/order_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_detail_self_content_leading"
+            android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+            android:paddingRight="@dimen/card_detail_self_content_margin_horizontal"
+            android:textColor="@color/card_detail_self_content_color"
+            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/ticket_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_detail_self_content_leading"
+            android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+            android:paddingRight="@dimen/card_detail_self_content_margin_horizontal"
+            android:textColor="@color/card_detail_self_content_color"
+            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/service_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_detail_self_content_leading"
+            android:autoLink="phone"
+            android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+            android:paddingRight="@dimen/card_detail_self_content_margin_horizontal"
+            android:textColor="@color/flight_card_detail_service_tel_color"
+            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/service_website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_detail_self_content_leading"
+            android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+            android:paddingRight="@dimen/card_detail_self_content_margin_horizontal"
+            android:textColor="@color/card_detail_self_content_highlight_color"
+            android:textSize="@dimen/card_detail_self_content_textsize" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_detail_self_content_margin_bottom"
+            android:background="@drawable/content_line" />
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/navig_start_station"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_detail_self_action_height"
+            android:background="?android:attr/selectableItemBackground"
+            android:ellipsize="end"
+            android:gravity="center|center"
+            android:maxLines="1"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="@string/navigate_to"
+            android:textColor="@color/card_detail_self_action_text_color"
+            android:textSize="@dimen/card_detail_self_action_textsize" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@color/navi_select_route_brief_time_select_color"/>
+    <item android:state_selected="false" android:drawable="@color/navi_select_route_brief_time_unselect_color"/>
+</selector>

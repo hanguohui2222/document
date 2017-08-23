@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="remind_period">
+        <item>一次</item>
+        <item>每日</item>
+        <item>每周</item>
+        <item>每月</item>
+        <item>每年</item>
+    </string-array>
+    <string-array name="delete_repeating_labels">
+        <item>"删除此事件及所有将来事件"</item>
+        <item>"删除所有事件"</item>
+    </string-array>
+    <string-array name="modify_repeating_labels">
+        <item>"更改此事件和所有将来事件"</item>
+        <item>"更改所有事件"</item>
+    </string-array>
+    <string-array name="morning_tips">
+        <item>美好的一天开始了!</item>
+        <item>一天之计在于晨！</item>
+        <item>天亮了，小金来播报！</item>
+        <item>早安，小金天气预报！</item>
+        <item>早上好！</item>
+    </string-array>
+    <string-array name="afternoon_tips">
+        <item>下午好，小金来播报！</item>
+        <item>下午好，小金天气预报！</item>
+        <item>下午好！</item>
+    </string-array>
+    <string-array name="evening_tips">
+        <item>晚上好，小金来播报！</item>
+        <item>晚上好，小金天气预报！</item>
+        <item>晚上好！</item>
+    </string-array>
+</resources>

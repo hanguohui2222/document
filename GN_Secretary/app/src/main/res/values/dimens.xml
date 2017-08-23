@@ -1,0 +1,131 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- DateTimePicker -->
+    <dimen name="time_picker_title_height">52dp</dimen>
+    <dimen name="time_picker_title_margin_left">30dp</dimen>
+    <dimen name="time_picker_title_margin_right">30dp</dimen>
+    <dimen name="time_picker_textsize">20sp</dimen>
+
+    <dimen name="list_textsize_large">18sp</dimen>
+    <dimen name="list_textsize_small">12sp</dimen>
+    <dimen name="list_height">56dp</dimen>
+
+    <dimen name="gn_empty_icon_text_space">4dp</dimen>
+    <dimen name="gn_empty_view_margin_top">100dip</dimen>
+    <dimen name="gn_empty_text_size">16sp</dimen>
+
+    <!--Tips-->
+    <dimen name="tips_item_height">32dp</dimen>
+    <dimen name="tips_item_width">72dp</dimen>
+    <dimen name="tips_point_dimen">32dp</dimen>
+
+
+    <!--NewSchedule-->
+    <dimen name="newschedule_title_height">44dp</dimen>
+    <dimen name="newschedule_icon_place_dimen">40dp</dimen>
+    <dimen name="newschedule_icon_wholeday_height">27dp</dimen>
+    <dimen name="newschedule_icon_wholeday_width">47dp</dimen>
+    <dimen name="newschedule_item_height">56dp</dimen>
+    <dimen name="newschedule_item_padding_horizontal">16dp</dimen>
+    <dimen name="newschedule_item_paddingright_horizontal">14dp</dimen>
+    <dimen name="newschedule_textinput_padding">12dp</dimen>
+
+
+    <!--NewVoiceNote-->
+    <dimen name="action_icon_dimen">32dp</dimen>
+    <dimen name="action_fab_icon_dimen">62dp</dimen>
+
+    <!--Card base details-->
+    <dimen name="card_detail_time_size">14dp</dimen>
+    <dimen name="self_create_schedule_title_size">51dp</dimen>
+    <dimen name="card_detail_actionbar_icon_dimen">50dp</dimen>
+    <dimen name="card_detail_actionbar_title_margin_left">20dp</dimen>
+    <dimen name="card_detail_actionbar_title_textsize">18sp</dimen>
+    <dimen name="card_detail_self_margin_horizontal">8dp</dimen>
+    <dimen name="card_detail_self_margin_vertical_top">16dp</dimen>
+    <dimen name="card_detail_self_title_margin_horizontal">20dp</dimen>
+    <dimen name="card_detail_self_title_textsize">18sp</dimen>
+    <dimen name="card_detail_self_subheading_textsize">18sp</dimen>
+    <dimen name="card_detail_self_content_margin_horizontal">20dp</dimen>
+    <dimen name="card_detail_self_content_margin_top">18dp</dimen>
+    <dimen name="card_detail_self_content_leading">12dp</dimen>
+    <dimen name="card_detail_self_content_margin_bottom">20dp</dimen>
+    <dimen name="card_detail_self_content_textsize">16sp</dimen>
+    <dimen name="card_detail_self_item_spacing_vertical">18dp</dimen>
+    <dimen name="card_detail_self_action_height">50dp</dimen>
+    <dimen name="card_detail_self_action_textsize">18sp</dimen>
+    <dimen name="card_detail_self_divider_title_thickness">0.5dp</dimen>
+    <dimen name="card_detail_self_divider_action_thickness">0.4dp</dimen>
+    <dimen name="card_detail_bottombar_height">54dp</dimen>
+    <dimen name="card_detail_bottombar_icon_dimen">32dp</dimen>
+
+    <!--Card Schedule details-->
+    <dimen name="card_detail_schedule_description_textsize">12sp</dimen>
+    <dimen name="card_detail_schedule_description_leading">12dp</dimen>
+    <!--Card Ticket details-->
+    <dimen name="card_detail_ticket_base_multicard_spacing">16dp</dimen>
+    <dimen name="card_detail_ticket_weather_padding_vertical">16dp</dimen>
+    <dimen name="card_detail_ticket_weather_icon_dimen">30dp</dimen>
+    <dimen name="card_detail_ticket_weather_icon_margin_right">12dp</dimen>
+    <dimen name="card_detail_ticket_weather_place_textsize">18sp</dimen>
+    <dimen name="card_detail_ticket_weather_detail_textsize">12sp</dimen>
+    <dimen name="card_detail_ticket_air_icon_height">24dp</dimen>
+    <dimen name="card_detail_ticket_air_icon_width">65dp</dimen>
+    <dimen name="card_detail_ticket_air_brief_spacing">10dp</dimen>
+    <dimen name="card_detail_ticket_air_flightnum_spacing">5dp</dimen>
+    <dimen name="card_detail_ticket_air_flightnum_textsize">12sp</dimen>
+    <dimen name="card_detail_ticket_air_place_textsize">12sp</dimen>
+    <dimen name="card_detail_ticket_air_time_textsize">24sp</dimen>
+    <dimen name="card_detail_ticket_air_date_textsize">12sp</dimen>
+    <dimen name="card_detail_ticket_train_station_textsize">24sp</dimen>
+    <dimen name="card_detail_ticket_train_time_textsize">12sp</dimen>
+    <dimen name="card_detail_ticket_train_trainno_textsize">12sp</dimen>
+    <dimen name="card_detail_ticket_train_toindicate_height">5dp</dimen>
+    <dimen name="card_detail_ticket_train_toindicate_width">60dp</dimen>
+    <dimen name="card_detail_ticket_train_trainno_spacing">5dp</dimen>
+    <dimen name="card_detail_ticket_train_time_spacing">8dp</dimen>
+    <dimen name="card_detail_ticket_train_content_margin_top">32dp</dimen>
+
+    <!--Card Bank details-->
+    <dimen name="card_detail_bank_value_margin_left">5dp</dimen>
+
+    <!--Card Express details-->
+    <dimen name="card_detail_express_progress_margin_top">18dp</dimen>
+    <dimen name="card_detail_express_progress_margin_horizontal">32dp</dimen>
+    <dimen name="card_detail_express_progress_segment_width">100dp</dimen>
+    <dimen name="card_detail_express_progress_text_textsize">14sp</dimen>
+    <dimen name="card_detail_express_progress_text_leading_horizontal">80dp</dimen>
+    <dimen name="card_detail_express_progress_icon_dimen">18dp</dimen>
+    <dimen name="card_detail_express_dotindicate_dimen">6dp</dimen>
+    <dimen name="card_detail_express_item_textsize">16sp</dimen>
+    <dimen name="card_detail_express_item_leading">18dp</dimen>
+
+    <!--Navi-->
+    <dimen name="navi_select_route_toolbar_icon_dimen">32dp</dimen>
+    <dimen name="navi_select_route_toolbar_height">56dp</dimen>
+    <dimen name="navi_select_route_toolbar_tab_width">200dp</dimen>
+    <dimen name="navi_select_route_brief_layout_height">60dp</dimen>
+    <dimen name="navi_select_route_brief_drive_time_textsize">18dp</dimen>
+    <dimen name="navi_select_route_brief_drive_distance_textsize">12dp</dimen>
+    <dimen name="navi_select_route_brief_drive_description_textsize">12sp</dimen>
+    <dimen name="navi_select_route_brief_walk_time_textsize">18sp</dimen>
+    <dimen name="navi_select_route_brief_walk_distance_textsize">18sp</dimen>
+    <dimen name="navi_select_route_brief_walk_description_textsize">14sp</dimen>
+    <dimen name="navi_select_route_brief_padding_top">14dp</dimen>
+    <dimen name="navi_select_route_brief_padding_bottom">9dp</dimen>
+    <dimen name="navi_select_route_brief_padding_horizontal">10dp</dimen>
+    <dimen name="navi_select_route_startnavi_height">44dp</dimen>
+    <dimen name="navi_select_route_startnavi_textsize">16sp</dimen>
+    <dimen name="navi_select_route_bus_result_item_margin_vertical">10dp</dimen>
+    <dimen name="navi_select_route_bus_result_item_padding">16dp</dimen>
+    <dimen name="navi_select_route_bus_result_title_textsize">16sp</dimen>
+    <dimen name="navi_select_route_bus_result_desc_textsize">14sp</dimen>
+
+
+    <dimen name="status_bar_height">24dp</dimen>
+
+
+</resources>

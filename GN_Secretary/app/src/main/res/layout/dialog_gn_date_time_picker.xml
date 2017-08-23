@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/picker_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/time_picker_title_height"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/picker_date_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/time_picker_light_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/picker_date_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/time_picker_unselected_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/picker_date_lunar_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/time_picker_unselected_color"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/picker_time_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/time_picker_selected_bg"
+            android:gravity="center"
+            android:textColor="@color/time_picker_selected_color"
+            android:textSize="@dimen/time_picker_textsize" />
+    </LinearLayout>
+
+
+    <amigoui.widget.AmigoDatePicker
+        android:id="@+id/gn_date_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:calendarViewShown="false"
+        android:spinnersShown="true"
+        android:visibility="gone">
+
+    </amigoui.widget.AmigoDatePicker>
+
+    <amigoui.widget.AmigoTimePicker
+        android:id="@+id/gn_time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+    </amigoui.widget.AmigoTimePicker>
+</LinearLayout>

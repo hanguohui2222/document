@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/actionbar_color"
+    android:orientation="horizontal">
+
+    <amigoui.widget.AmigoTextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:text="@string/giveup"
+        android:textColor="@color/new_self_creat_actionbar_cancel_button_color"
+        android:background="?android:attr/actionBarItemBackground"
+        android:textSize="18sp" />
+
+    <amigoui.widget.AmigoTextView
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:text="@string/save"
+        android:textColor="@color/new_self_creat_actionbar_save_gray_button_color"
+        android:background="?android:attr/actionBarItemBackground"
+        android:textSize="18sp" />
+
+</RelativeLayout>
+

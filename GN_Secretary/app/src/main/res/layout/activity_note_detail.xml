@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/add_voice_note_background">
+
+    <amigoui.widget.AmigoEditText
+        android:id="@+id/create_time_title"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        android:editable="false"
+        android:gravity="center_vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:text="@string/null_value"
+        android:textColor="@color/edit_voice_note_time_title"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/divider_img1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/create_time_title"
+        android:background="#d4d4d4" />
+
+    <ProgressBar
+        android:id="@+id/content_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/content_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/note_remind_time_layout"
+        android:layout_below="@id/divider_img1">
+
+        <amigoui.widget.AmigoEditText
+            android:id="@+id/note_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:editable="false"
+            android:focusable="false"
+            android:gravity="top"
+            android:lineSpacingExtra="10dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical"
+            android:textColor="#dd000000"
+            android:textSize="16sp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/note_remind_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/remind_icon" />
+
+        <TextView
+            android:id="@+id/note_remind_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#81675a"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="gray">#FFA9A7A7</color>
+
+    <color name="actionbar_color">#efefef</color>
+    <color name="actionbar_cancel_btn_color">#ffffff</color>
+
+    <!-- DateTimePicker -->
+    <color name="time_picker_selected_color">#ff9000</color>
+    <color name="time_picker_unselected_color">#666666</color>
+    <!-- GiONEE yanjc 20160105 moidfy, begin -->
+    <color name="default_accent_color">#b78a74</color>
+    <!-- GiONEE yanjc 20160105 moidfy, end -->
+    <color name="list_text_color">#cc000000</color>
+    <color name="list_text_color_small">#66000000</color>
+
+    <color name="multi_select_title">#99000000</color>
+    <color name="note_add_line">#dcdcdc</color>
+    <color name="new_schedule_address_bg">#eaeaea</color>
+    <color name="emptyPassword">#66000000</color>
+    <color name="wholeday_text">#ff9000</color>
+    <color name="statusbar_color">#ffefefef</color>
+    <color name="actionbar_bg">#eeffffff</color>
+
+
+    <!--voice-->
+    <color name="add_voice_note_background">#fafafa</color>
+    <color name="add_voice_note_actionbar_button_color">#99000000</color>
+    <color name="add_voice_note_actionbar_button_title_color">#dd000000</color>
+    <color name="add_voice_note_actionbar_button_date_color">#66000000</color>
+    <color name="add_voice_note_actionbar_button_content_color">#80000000</color>
+    <color name="edit_voice_note_time_title">#99000000</color>
+    <color name="add_voice_note_actionbar_cancel_button_color">#99000000</color>
+    <color name="add_voice_note_actionbar_save_button_color">#99000000</color>
+    <color name="add_voice_note_actionbar_save_gray_button_color">#99000000</color>
+    <color name="add_voice_note_actionbar_time_record">#2f4c79</color>
+
+    <!-- empty_content color-->
+    <color name="gn_empty_text_color">#33000000</color>
+
+    <!-- main color-->
+    <color name="main_background">#fafafa</color>
+
+    <color name="app_name_color">#99000000</color>
+
+    <color name="main_title_first_color">#000000</color>
+    <color name="main_title_second_color">#00000000</color>
+    <color name="main_card_date_color">#000000</color>
+    <color name="main_card_week_color">#000000</color>
+    <color name="main_card_lunar_color">#99000000</color>
+    <color name="main_card_time_before_color">#50000000</color>
+    <color name="main_card_time_after_color">#80000000</color>
+
+    <!-- card_item_type_self color-->
+    <color name="main_self_card_title_color">#cc000000</color>
+    <color name="new_self_creat_actionbar_cancel_button_color">#99000000</color>
+    <color name="new_self_creat_actionbar_save_button_color">#99000000</color>
+    <color name="new_self_creat_actionbar_save_gray_button_color">#99000000</color>
+
+    <!-- card_item_type_bank color-->
+    <color name="main_bank_card_title_color">#cc000000</color>
+    <color name="main_bank_card_payment_color">#cc000000</color>
+    <color name="main_bank_card_payment_value_color">#ff9000</color>
+    <color name="main_bank_card_bank_color">#99000000</color>
+    <color name="main_bank_card_account_color">#99000000</color>
+    <color name="main_bank_card_payment_date_color">#dd000000</color>
+    <color name="main_bank_card_payment_date_value_color">#66000000</color>
+    <color name="main_bank_card_playment_value_tips">#99000000</color>
+
+    <!-- card_item_type_train color-->
+    <color name="main_train_card_order_number_color">#cc000000</color>
+    <color name="main_train_card_order_number_value_color">#80000000</color>
+    <color name="main_train_card_start_address_color">#ff934b</color>
+    <color name="main_train_card_train_number_color">#80000000</color>
+    <color name="main_train_card_end_address_color">#ff934b</color>
+    <color name="main_train_card_date_and_time_color">#66000000</color>
+    <color name="main_train_card_train_seat_color">#66000000</color>
+    <color name="main_train_card_start_time">#dd000000</color>
+    <color name="main_train_card_end_time">#dd000000</color>
+    <color name="main_train_card_start_date">#99000000</color>
+    <color name="main_train_card_end_date">#99000000</color>
+
+    <!-- card_item_type_flight color-->
+    <color name="main_flight_card_ticket_color">#cc000000</color>
+    <color name="main_flight_card_ticket_value_color">#cc000000</color>
+    <color name="main_flight_card_start_time_color">#000000</color>
+    <color name="main_flight_card_start_address_color">#000000</color>
+    <color name="main_flight_card_start_date_color">#99000000</color>
+    <color name="main_flight_card_flight_number_color">#80000000</color>
+    <color name="main_flight_card_end_time_color">#000000</color>
+    <color name="main_flight_card_end_address_color">#000000</color>
+    <color name="main_flight_card_end_date_color">#99000000</color>
+    <color name="main_flight_card_ticket_number">#80000000</color>
+
+    <!-- card_item_type_movie color-->
+    <color name="main_movie_card_cinema_name_color">#99000000</color>
+    <color name="main_movie_card_movie_name_color">#000000</color>
+    <color name="main_movie_card_movie_date_color">#99000000</color>
+    <color name="main_movie_card_movie_week_color">#99000000</color>
+    <color name="main_movie_card_movie_time_color">#99000000</color>
+    <color name="main_movie_card_cell_num_color">#ff934b</color>
+    <color name="main_movie_card_seat_num_color">#ff934b</color>
+
+    <!-- card_item_type_hotel color-->
+    <color name="main_hotel_card_hotel_name_color">#cc000000</color>
+    <color name="main_hotel_card_user_name_color">#cc000000</color>
+    <color name="main_hotel_card_bed_type_color">#99000000</color>
+    <color name="main_hotel_card_date_color">#ff934b</color>
+    <color name="main_hotel_card_week_color">#cc000000</color>
+    <color name="main_hotel_card_tel_color">#cc000000</color>
+    <color name="main_hotel_card_tel_num_color">#80000000</color>
+    <color name="main_hotel_card_hotel_address">#99000000</color>
+
+    <!-- card_item_type_express color-->
+    <color name="main_express_card_company_name_color">#cc000000</color>
+    <color name="main_express_card_order_num_color">#cc000000</color>
+    <color name="main_express_card_start_color">#dd000000</color>
+    <color name="main_express_card_status_no_color">#99000000</color>
+    <color name="main_express_card_status_ok_color">#dd000000</color>
+    <color name="main_express_card_on_the_way_color">#cc000000</color>
+    <color name="main_express_card_end_color">#cc000000</color>
+    <color name="main_express_delivery_datetime_color">#99000000</color>
+    <color name="main_express_card_delivery_reason_color">#99000000</color>
+    <color name="main_express_card_delivery_info_color">#99000000</color>
+    <color name="main_express_card_more_order_color">#5e9ae4</color>
+
+    <!--detail card_type_base color-->
+    <color name="card_detail_activity_actionbar_color">#2f4c79</color>
+    <color name="card_detail_activity_statusbar_color">#2f4c79</color>
+    <color name="card_detail_activity_background_color">#f5f5f5</color>
+    <color name="card_detail_self_background_color">#ffffff</color>
+    <color name="card_detail_self_divider_color">#c2c2c2</color>
+    <color name="card_detail_self_title_color">#000000</color>
+    <color name="card_detail_self_name_color">#000000</color>
+    <color name="card_detail_self_content_color">#cc000000</color>
+    <color name="card_detail_self_content_value_color">#66000000</color>
+    <color name="card_detail_self_content_highlight_color">#ff9000</color>
+    <color name="card_detail_self_action_text_color">#4f98ed</color>
+
+
+    <!-- detail card_type_bank color-->
+    <color name="credit_card_detail_title_color">#cc000000</color>
+    <color name="credit_card_detail_payment_color">#000000</color>
+    <color name="credit_card_detail_payment_value_color">#ff9000</color>
+    <color name="credit_card_detail_account_color">#000000</color>
+    <color name="credit_card_detail_account_value_color">#aa000000</color>
+    <color name="credit_card_detail_bills_month_color">#aa000000</color>
+    <color name="credit_card_detail_bills_month_value_color">#aa000000</color>
+    <color name="credit_card_detail_payment_date_color">#aa000000</color>
+    <color name="credit_card_detail_payment_date_value_color">#aa000000</color>
+    <color name="credit_card_detail_alipay_color">#aa000000</color>
+
+    <!-- detail card_type_flight color-->
+    <color name="flight_card_detail_title_color">#cc000000</color>
+    <color name="flight_card_detail_title_flight_color">#80000000</color>
+    <color name="flight_card_detail_start_station_name_color">#cc000000</color>
+    <color name="flight_card_detail_end_station_name_color">#cc000000</color>
+    <color name="flight_card_detail_address_start_color">#cc000000</color>
+    <color name="flight_card_detail_address_destination_color">#cc000000</color>
+    <color name="flight_card_detail_takeoff_color">#dd000000</color>
+    <color name="flight_card_detail_time_takeoff_color">#000000</color>
+    <color name="flight_card_detail_time_arrive_color">#000000</color>
+    <color name="flight_card_detail_date_color">#cc000000</color>
+    <color name="flight_card_detail_flightnum_color">#80000000</color>
+    <color name="flight_card_detail_passenger_color">#aa000000</color>
+    <color name="flight_card_detail_ticket_no_color">#aa000000</color>
+    <color name="flight_card_detail_ticket_src_color">#aa000000</color>
+    <color name="flight_card_detail_service_tel_color">#aa000000</color>
+    <color name="flight_card_detail_service_tel_highlight_color">#ff9000</color>
+    <color name="flight_card_detail_info_color">#aa000000</color>
+    <color name="flight_card_detail_navig_start_station_color">#aa000000</color>
+
+    <!-- detail card_type_train color-->
+    <color name="train_card_detail_title_color">#cc000000</color>
+    <color name="train_card_detail_start_station_color">#000000</color>
+    <color name="train_card_detail_end_station_color">#000000</color>
+    <color name="train_card_detail_time_start_color">#80000000</color>
+    <color name="train_card_detail_time_arrive_color">#80000000</color>
+    <color name="train_card_detail_train_number_color">#80000000</color>
+    <color name="train_card_detail_passenger_color">#aa000000</color>
+    <color name="train_card_detail_seat_no_color">#aa000000</color>
+    <color name="train_card_detail_service_tel_color">#feb07c</color>
+    <color name="train_card_detail_order_no_color">#aa000000</color>
+    <color name="train_card_detail_price_color">#aa000000</color>
+    <color name="train_card_detail_navig_start_station_color">#aa000000</color>
+    <color name="train_card_detail_time_table_color">#aa000000</color>
+
+    <!-- detail card_type_movie color-->
+    <color name="movie_card_detail_title_color">#000000</color>
+    <color name="movie_card_detail_movie_name_color">#000000</color>
+    <color name="movie_card_detail_time_color">#aa000000</color>
+    <color name="movie_card_detail_cinema_color">#aa000000</color>
+    <color name="movie_card_detail_seat_no_color">#aa000000</color>
+    <color name="movie_card_detail_customer_service_tel">#aa000000</color>
+    <color name="movie_card_detail_ticket_certificate_color">#aa000000</color>
+    <color name="movie_card_detail_ticket_certificate_highlight_color">#ff9000</color>
+    <color name="movie_card_detail_navig_cinema_color">#487ccc</color>
+
+    <!-- detail card_type_hotel color-->
+    <color name="hotel_card_detail_title_color">#cc000000</color>
+    <color name="hotel_card_detail_hotel_name_color">#000000</color>
+    <color name="hotel_card_detail_time_checkin_color">#aa000000</color>
+    <color name="hotel_card_detail_time_checkout_color">#aa000000</color>
+    <color name="hotel_card_detail_room_type_color">#aa000000</color>
+    <color name="hotel_card_detail_room_username_color">#aa000000</color>
+    <color name="hotel_card_detail_room_count_color">#aa000000</color>
+    <color name="hotel_card_detail_room_no_color">#aa000000</color>
+    <color name="hotel_card_detail_service_tel_color">#aa000000</color>
+    <color name="hotel_card_detail_service_tel_highlight_color">#ff9000</color>
+    <color name="hotel_card_detail_hotel_address_color">#aa000000</color>
+    <color name="hotel_card_detail_navig_hotel_color">#4f98ed</color>
+
+    <!-- detail card_type_express color-->
+    <color name="express_card_detail_express_company_color">#cc000000</color>
+    <color name="express_card_detail_express_num_color">#cc000000</color>
+    <color name="express_card_detail_start_color">#cc000000</color>
+    <color name="express_card_detail_on_the_way_color">#cc000000</color>
+    <color name="express_card_detail_end_color">#cc000000</color>
+    <color name="express_card_detail_track_reason_color">#aa000000</color>
+    <color name="express_card_detail_no_network_color">#aa000000</color>
+    <color name="express_card_detail_click_load_color">#ff9000</color>
+    <color name="express_card_detail_third_tips_color">#99000000</color>
+
+    <!-- detail card_type_weather color-->
+    <color name="weather_card_detail_station_name_color">#000000</color>
+    <color name="weather_card_detail_station_temperature_color">#99000000</color>
+
+
+    <!-- password color-->
+    <color name="password_text_color">#cc000000</color>
+    <color name="password_input_text_color">#ff9000</color>
+
+    <!-- calender color-->
+    <color name="calender_page_title">#cc000000</color>
+    <color name="calender_item_number">#000000</color>
+    <color name="calender_item_remarks">#cc000000</color>
+    <color name="calender_item_number_first_or_end">#99000000</color>
+    <color name="calender_item_number_remarks_first_or_end">#ff934b</color>
+    <color name="month_item_number_selected">#000000</color>
+    <color name="month_item_remarks_selected">#000000</color>
+    <color name="calendar_weekend">#ff9000</color>
+
+    <!-- search color-->
+    <color name="search_view_background">#fffafafa</color>
+    <color name="search_highlight_color">#FF9000</color>
+    <color name="search_history_text_color">#cc000000</color>
+    <color name="search_date_tag_color">#99000000</color>
+    <!-- addressList color-->
+    <color name="address_list_first_line_color">#cc000000</color>
+    <color name="address_list_second_line_color">#66000000</color>
+
+    <color name="tv_schdule_active_color">#4f98ed</color>
+    <color name="tv_schdule_gray_color">#99000000</color>
+    <color name="tv_note_active_color">#4f98ed</color>
+    <color name="tv_note_gray_color">#99000000</color>
+    <color name="tv_note_bottom_color">#6b5b4e</color>
+    <color name="main_action_bar_color">#000000</color>
+
+    <!--Navi-->
+    <color name="navi_select_route_brief_time_select_color">#487ccc</color>
+    <color name="navi_select_route_brief_time_unselect_color">#aa000000</color>
+    <color name="navi_select_route_brief_tab_indicator">#487ccc</color>
+    <color name="navi_select_route_bus_result_background">#f5f5f5</color>
+    <color name="navi_select_route_bus_result_title">#dd000000</color>
+    <color name="navi_select_route_bus_result_desc">#aa000000</color>
+</resources>

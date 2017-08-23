@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/navi_select_route_bus_result_item_margin_vertical"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="@dimen/navi_select_route_bus_result_item_padding">
+
+    <TextView
+        android:id="@+id/select_route_bus_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/navi_select_route_bus_result_title"
+        android:textSize="@dimen/navi_select_route_bus_result_title_textsize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/select_route_bus_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/navi_select_route_bus_result_desc"
+        android:textSize="@dimen/navi_select_route_bus_result_desc_textsize" />
+
+</LinearLayout>

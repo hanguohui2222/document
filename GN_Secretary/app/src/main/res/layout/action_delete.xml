@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/actionbar_color"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/cancel_btn"
+        style="@style/Gn_ActionBar_Button_Theme"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center_vertical"
+        android:text="@string/giveup"
+        android:textColor="@color/add_voice_note_actionbar_cancel_button_color"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/note_save_btn"
+        style="@style/Gn_ActionBar_Button_Theme"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:text="@string/save"
+        android:textColor="@color/add_voice_note_actionbar_save_gray_button_color"
+        android:textSize="18sp" />
+</RelativeLayout>

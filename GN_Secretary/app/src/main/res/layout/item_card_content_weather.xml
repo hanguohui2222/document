@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="5dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardBackgroundColor="#ffffff"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="0.6dp"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardUseCompatPadding="false"
+    card_view:contentPaddingBottom="16dp"
+    card_view:contentPaddingLeft="8dp"
+    card_view:contentPaddingRight="8dp"
+    card_view:contentPaddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:text="@string/add_city"
+            android:textColor="#cc000000"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/iv_weather_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="18dp"
+            android:src="@drawable/sunny_cloudy" />
+
+        <TextView
+            android:id="@+id/tv_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_address"
+            android:paddingTop="10dp"
+            android:text="@string/empty_weather"
+            android:textColor="#cc000000"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_weather"
+            android:layout_below="@id/tv_address"
+            android:layout_toRightOf="@+id/tv_weather"
+            android:paddingLeft="5dp"
+            android:textColor="#cc000000"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tv_dressing_umbrella"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_temp"
+            android:paddingTop="10dp"
+            android:text="@string/dressing"
+            android:textColor="#66000000"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

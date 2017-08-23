@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/calendar_schedule"
+        android:icon="@drawable/menu_calendar_schedule"
+        android:showAsAction="ifRoom"
+        android:title="@string/schedule" />
+    <item
+        android:id="@+id/calendar_new_add"
+        android:icon="@drawable/menu_calendar_add"
+        android:showAsAction="ifRoom"
+        android:title="@string/new_add" />
+    <item
+        android:id="@+id/calendar_note"
+        android:icon="@drawable/menu_calendar_note"
+        android:showAsAction="ifRoom"
+        android:title="@string/note_bar" />
+</menu>

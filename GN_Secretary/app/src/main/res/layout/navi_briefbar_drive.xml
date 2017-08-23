@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/navi_briefbar_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navi_select_route_brief_layout_height"
+        app:tabIndicatorColor="@color/navi_select_route_brief_tab_indicator"
+        app:tabSelectedTextColor="@color/navi_select_route_brief_time_select_color" />
+
+</LinearLayout>

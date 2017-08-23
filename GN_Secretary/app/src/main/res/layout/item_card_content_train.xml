@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <view
+                android:id="@+id/tv_start_station"
+                class="com.gionee.secretary.utils.TextViewSnippet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="@string/null_value"
+                android:textColor="@color/main_train_card_start_time"
+                android:textSize="20sp" />
+
+            <!--
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/main_train_card_start_time"
+                android:textSize="24sp"
+                android:text="@string/null_value"
+                android:layout_marginTop="6dp"
+                />
+                -->
+
+            <TextView
+                android:id="@+id/tv_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/null_value"
+                android:textColor="@color/main_train_card_start_date"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_train_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/null_value"
+                android:textColor="@color/main_train_card_train_number_color"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_flight"
+                android:layout_width="60dp"
+                android:layout_height="11dp"
+                android:layout_toRightOf="@+id/iv_left_line"
+                android:src="@drawable/train_des" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <view
+                android:id="@+id/tv_end_station"
+                class="com.gionee.secretary.utils.TextViewSnippet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:gravity="center"
+                android:text="@string/null_value"
+                android:textColor="@color/main_train_card_end_time"
+                android:textSize="20sp" />
+
+            <!--
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/main_train_card_end_time"
+                android:textSize="24sp"
+                android:text="@string/null_value"
+                android:gravity="center"
+                android:layout_marginTop="6dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/main_flight_card_end_date_color"
+                android:gravity="center"
+                android:layout_marginTop="6dp"
+                android:text="@string/null_value"
+                />
+                -->
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_order_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/order_number"
+        android:textColor="@color/main_train_card_order_number_value_color"
+        android:textSize="14sp" />
+
+</LinearLayout>

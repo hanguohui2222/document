@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_detail_activity_background_color">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="@dimen/card_detail_self_margin_horizontal"
+        android:layout_marginRight="@dimen/card_detail_self_margin_horizontal"
+        android:layout_marginTop="@dimen/card_detail_self_margin_vertical_top"
+        android:background="@drawable/card_bg">
+
+        <ScrollView
+            android:id="@+id/express_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/card_detail_self_action_height"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/card_detail_self_title_margin_horizontal"
+                    android:paddingRight="@dimen/card_detail_self_title_margin_horizontal">
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/tv_express_company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/card_detail_self_title_color"
+                        android:textSize="@dimen/card_detail_self_title_textsize" />
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/tv_express_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/card_detail_self_title_color"
+                        android:textSize="@dimen/card_detail_self_title_textsize" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/content_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/card_detail_express_progress_margin_top"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_start"
+                        android:layout_width="@dimen/card_detail_express_progress_icon_dimen"
+                        android:layout_height="@dimen/card_detail_express_progress_icon_dimen"
+                        android:src="@drawable/express_past" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_detail_express_progress_segment_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/express_line" />
+
+                    <ImageView
+                        android:id="@+id/iv_on_the_way"
+                        android:layout_width="@dimen/card_detail_express_progress_icon_dimen"
+                        android:layout_height="@dimen/card_detail_express_progress_icon_dimen"
+                        android:src="@drawable/express_past" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_detail_express_progress_segment_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/express_line" />
+
+                    <ImageView
+                        android:id="@+id/iv_end"
+                        android:layout_width="@dimen/card_detail_express_progress_icon_dimen"
+                        android:layout_height="@dimen/card_detail_express_progress_icon_dimen"
+                        android:src="@drawable/express_past" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/tv_start"
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="@string/start_delivery"
+                        android:textColor="@color/express_card_detail_start_color"
+                        android:textSize="@dimen/card_detail_express_progress_text_textsize" />
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/tv_on_the_way"
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="@string/on_the_way"
+                        android:textColor="@color/express_card_detail_on_the_way_color"
+                        android:textSize="@dimen/card_detail_express_progress_text_textsize" />
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/tv_end"
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sign_delivery"
+                        android:textColor="@color/express_card_detail_end_color"
+                        android:textSize="@dimen/card_detail_express_progress_text_textsize" />
+                </LinearLayout>
+
+                <com.gionee.secretary.widget.ListViewForScrollView
+                    android:id="@+id/tracklist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/card_detail_express_item_leading"
+                    android:layout_marginTop="@dimen/card_detail_express_item_leading"
+                    android:divider="@null"
+                    android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                    android:paddingRight="@dimen/card_detail_self_content_margin_horizontal" />
+
+                <amigoui.widget.AmigoTextView
+                    android:id="@+id/track_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/card_detail_express_item_leading"
+                    android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                    android:paddingRight="@dimen/card_detail_self_content_margin_horizontal"
+                    android:textColor="@color/express_card_detail_track_reason_color"
+                    android:textSize="@dimen/card_detail_self_content_textsize"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_no_network"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone">
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/no_network"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/no_network"
+                        android:textColor="@color/express_card_detail_no_network_color"
+                        android:textSize="@dimen/card_detail_self_content_textsize" />
+
+                    <amigoui.widget.AmigoTextView
+                        android:id="@+id/click_load"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/no_network"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:text="@string/click_load"
+                        android:textColor="@color/express_card_detail_click_load_color"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <amigoui.widget.AmigoProgressBar
+                    android:id="@+id/pg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone" />
+
+                <amigoui.widget.AmigoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/card_detail_express_item_leading"
+                    android:layout_marginTop="@dimen/card_detail_self_content_leading"
+                    android:paddingLeft="@dimen/card_detail_self_content_margin_horizontal"
+                    android:text="@string/kuaidn"
+                    android:textColor="@color/express_card_detail_third_tips_color"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</RelativeLayout>

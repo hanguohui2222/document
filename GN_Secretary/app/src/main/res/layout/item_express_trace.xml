@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/card_detail_self_item_spacing_vertical">
+
+    <ImageView
+        android:id="@+id/dot"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="7dp"
+        android:src="@drawable/dot" />
+
+    <TextView
+        android:id="@+id/track_acceptstation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@id/dot"
+        android:ellipsize="end"
+        android:textColor="#aa000000"
+        android:textSize="@dimen/card_detail_self_content_textsize" />
+
+    <TextView
+        android:id="@+id/track_accepttime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/track_acceptstation"
+        android:layout_below="@id/track_acceptstation"
+        android:textColor="#aa000000"
+        android:textSize="@dimen/card_detail_self_content_textsize" />
+
+</RelativeLayout>
+
+
+
