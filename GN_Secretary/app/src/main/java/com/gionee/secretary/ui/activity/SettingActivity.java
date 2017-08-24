@@ -198,7 +198,7 @@ public class SettingActivity extends PasswordPreferenceBaseActivity implements I
 
     @Override
     public boolean onPreferenceChange(AmigoPreference preference, Object newValue) {
-        return false; //mSettingPresenter.onPreferenceChange(preference, newValue);
+        return mSettingPresenter.onPreferenceChange(preference, newValue);
     }
 
     @Override
