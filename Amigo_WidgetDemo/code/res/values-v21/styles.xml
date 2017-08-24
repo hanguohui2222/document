@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme for API 21+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml and res/values-v21/styles.xml on API 21+ devices.
+    -->
+    <style name="AppBaseTheme" parent="@style/Theme.Amigo.Light">
+        <!-- API 21 theme customizations can go here. -->
+        <item name="amigoactionBarStyle">@style/Widget.Amigo.Light.ActionBar.Solid.Narrow</item>
+        <item name="android:actionBarTabBarStyle">@style/Widget.Amigo.ActionBar.TabBar.Narrow</item>
+        <item name="android:actionMenuTextColor">@color/action_menu_text_color</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+    
+    <style name="Widget.Amigo.ActionBar.TabBar.Narrow">
+        <!-- <item name="amigotabheight">@dimen/amigo_actionbar_tabbar_height</item> -->
+        <item name="amigobackgroundStacked">@color/amibo_actionbar_background_test</item>
+        <!-- <item name="amigobackground">@android:color/transparent</item> -->
+        <item name="android:background">@color/amibo_actionbar_background_test</item>
+    </style>
+    
+    <style name="Widget.Amigo.Light.ActionBar.Solid.Narrow">
+        <item name="amigotabheight">@dimen/amigo_actionbar_tabbar_height</item>
+        <item name="amigobackgroundStacked">@color/amibo_actionbar_background_test</item>
+        <!-- <item name="amigobackground">@android:color/transparent</item> -->
+        <item name="amigobackground">@color/amibo_actionbar_background_test</item>
+        <item name="amigobackgroundSplit">@android:color/transparent</item>
+    </style>
+    
+    <style name="OptionsMenuAsUpTheme" parent="@style/Theme.Amigo.Light">
+        <!-- API 21 theme customizations can go here. -->
+        <item name="amigoactionBarStyle">@style/Widget.Amigo.Light.ActionBar.Solid.OptionsMenuAsUp</item>
+    </style>
+
+    <style name="Widget.Amigo.Light.ActionBar.Solid.OptionsMenuAsUp">
+        <item name="amigoOptionsMenuAsUp">true</item>
+    </style>
+    
+    <style name="NarrowTabBar" parent="@style/Theme.Amigo.Light">
+        <item name="amigotabheight">@dimen/amigo_actionbar_tabbar_height</item>
+        <item name="amigoactionBarStyle">@style/RedActionBarStyle</item>
+    </style>
+    
+    <style name="White_ActionBar_Theme" parent="@style/Theme.Amigo.Light">
+        <item name="amigoactionBarStyle">@style/WhiteActionBarStyle</item>
+    </style>
+    
+     <style name="RedActionBarStyle" parent="@style/Widget.Amigo.Light.ActionBar.Solid">
+         <item name="amigobackground">@color/test_red</item>
+         <item name="amigobackgroundStacked">@color/test_red</item>
+    </style>
+    
+    <style name="WhiteActionBarStyle" parent="@style/Widget.Amigo.Light.ActionBar.Solid">
+         <item name="amigobackground">@color/amigo_actionbar_tabtext_color_light</item>
+    </style>
+    
+</resources>

@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     This file defines the base public resources exported by the
+     platform, which must always exist.
+-->
+<!-- Gionee <zhangxx> <2013-06-20> add for amigoframework. -->
+<resources>
+
+    <!--
+       We don't want to publish private symbols in amigo.R as part of the
+       SDK.  Instead, put them here.
+    -->
+    <eat-comment />
+
+    <public id="0x7f010000" name="amigoswitchStyle" type="attr" />
+    <public id="0x7f010001" name="amigonumberPickerStyle" type="attr" />
+    <public id="0x7f010002" name="amigodatePickerStyle" type="attr" />
+    <public id="0x7f010003" name="amigotimePickerStyle" type="attr" />
+    <public id="0x7f010004" name="amigothumb" type="attr" />
+    <public id="0x7f010005" name="amigotrack" type="attr" />
+    <public id="0x7f010006" name="amigotextOn" type="attr" />
+    <public id="0x7f010007" name="amigotextOff" type="attr" />
+    <public id="0x7f010008" name="amigothumbTextPadding" type="attr" />
+    <public id="0x7f010009" name="amigoswitchMinWidth" type="attr" />
+    <public id="0x7f01000a" name="amigoswitchPadding" type="attr" />
+    <public id="0x7f01000b" name="amigosolidColor" type="attr" />
+    <public id="0x7f01000c" name="amigoselectionDivider" type="attr" />
+    <public id="0x7f01000d" name="amigoselectionDividerHeight" type="attr" />
+    <public id="0x7f01000e" name="amigoselectionDividersDistance" type="attr" />
+    <public id="0x7f01000f" name="amigointernalMinHeight" type="attr" />
+    <public id="0x7f010010" name="amigointernalMaxHeight" type="attr" />
+    <public id="0x7f010011" name="amigointernalMinWidth" type="attr" />
+    <public id="0x7f010012" name="amigointernalMaxWidth" type="attr" />
+    <public id="0x7f010013" name="amigointernalLayout" type="attr" />
+    <public id="0x7f010014" name="amigovirtualButtonPressedDrawable" type="attr" />
+    <public id="0x7f010015" name="amigoselectionSrc" type="attr" />
+    <public id="0x7f010016" name="amigobackground" type="attr" />
+    <public id="0x7f010017" name="amigostartYear" type="attr" />
+    <public id="0x7f010018" name="amigoendYear" type="attr" />
+    <public id="0x7f010019" name="amigospinnersShown" type="attr" />
+    <public id="0x7f01001a" name="amigocalendarViewShown" type="attr" />
+    <public id="0x7f01001b" name="amigominDate" type="attr" />
+    <public id="0x7f01001c" name="amigomaxDate" type="attr" />
+    <public id="0x7f01001d" name="amigoframeListBackground" type="attr" />
+    <public id="0x7f01001e" name="amigoframeListTopBackground" type="attr" />
+    <public id="0x7f01001f" name="amigoframeListMiddleBackground" type="attr" />
+    <public id="0x7f010020" name="amigoframeListBottomBackground" type="attr" />
+    <public id="0x7f010021" name="amigoicon" type="attr" />
+    <public id="0x7f010022" name="amigokey" type="attr" />
+    <public id="0x7f010023" name="amigotitle" type="attr" />
+    <public id="0x7f010024" name="amigosummary" type="attr" />
+    <public id="0x7f010025" name="amigoorder" type="attr" />
+    <public id="0x7f010026" name="amigofragment" type="attr" />
+    <public id="0x7f010027" name="amigolayout" type="attr" />
+    <public id="0x7f010028" name="amigowidgetLayout" type="attr" />
+    <public id="0x7f010029" name="amigoenabled" type="attr" />
+    <public id="0x7f01002a" name="amigoselectable" type="attr" />
+    <public id="0x7f01002b" name="amigodependency" type="attr" />
+    <public id="0x7f01002c" name="amigopersistent" type="attr" />
+    <public id="0x7f01002d" name="amigodefaultValue" type="attr" />
+    <public id="0x7f01002e" name="amigoshouldDisableView" type="attr" />
+    <public id="0x7f01002f" name="amigosummaryOn" type="attr" />
+    <public id="0x7f010030" name="amigosummaryOff" type="attr" />
+    <public id="0x7f010031" name="amigoswitchTextOn" type="attr" />
+    <public id="0x7f010032" name="amigoswitchTextOff" type="attr" />
+    <public id="0x7f010033" name="amigodisableDependentsState" type="attr" />
+    <public id="0x7f010034" name="amigoid" type="attr" />
+    <public id="0x7f010035" name="amigobreadCrumbTitle" type="attr" />
+    <public id="0x7f010036" name="amigobreadCrumbShortTitle" type="attr" />
+    <public id="0x7f010037" name="amigoorderingFromXml" type="attr" />
+    <public id="0x7f010038" name="amigodialogTitle" type="attr" />
+    <public id="0x7f010039" name="amigodialogMessage" type="attr" />
+    <public id="0x7f01003a" name="amigodialogIcon" type="attr" />
+    <public id="0x7f01003b" name="amigopositiveButtonText" type="attr" />
+    <public id="0x7f01003c" name="amigonegativeButtonText" type="attr" />
+    <public id="0x7f01003d" name="amigodialogLayout" type="attr" />
+    <public id="0x7f01003e" name="amigoentries" type="attr" />
+    <public id="0x7f01003f" name="amigoentryValues" type="attr" />
+    <public id="0x7f010040" name="amigoringtoneType" type="attr" />
+    <public id="0x7f010041" name="amigoshowDefault" type="attr" />
+    <public id="0x7f010042" name="amigoshowSilent" type="attr" />
+    <public id="0x7f010043" name="amigostreamType" type="attr" />
+    <public id="0x7f010044" name="amigofullDark" type="attr" />
+    <public id="0x7f010045" name="amigotopDark" type="attr" />
+    <public id="0x7f010046" name="amigocenterDark" type="attr" />
+    <public id="0x7f010047" name="amigobottomDark" type="attr" />
+    <public id="0x7f010048" name="amigofullBright" type="attr" />
+    <public id="0x7f010049" name="amigotopBright" type="attr" />
+    <public id="0x7f01004a" name="amigocenterBright" type="attr" />
+    <public id="0x7f01004b" name="amigobottomBright" type="attr" />
+    <public id="0x7f01004c" name="amigobottomMedium" type="attr" />
+    <public id="0x7f01004d" name="amigocenterMedium" type="attr" />
+    <public id="0x7f01004e" name="amigolistLayout" type="attr" />
+    <public id="0x7f01004f" name="amigomultiChoiceItemLayout" type="attr" />
+    <public id="0x7f010050" name="amigosingleChoiceItemLayout" type="attr" />
+    <public id="0x7f010051" name="amigolistItemLayout" type="attr" />
+    <public id="0x7f010052" name="amigoprogressLayout" type="attr" />
+    <public id="0x7f010053" name="amigohorizontalProgressLayout" type="attr" />
+    <public id="0x7f010054" name="amigotextAppearanceMediumSecond" type="attr" />
+    <public id="0x7f010055" name="amigotextAppearanceMediumSecondInverse" type="attr" />
+    <!-- AmigoActionBar -->
+    <public id="0x7f010056" name="amigonavigationMode" type="attr" />
+    <public id="0x7f010057" name="amigodisplayOptions" type="attr" />
+    <public id="0x7f010058" name="amigosubtitle" type="attr" />
+    <public id="0x7f010059" name="amigotitleTextStyle" type="attr" />
+    <public id="0x7f01005a" name="amigosubtitleTextStyle" type="attr" />
+    <public id="0x7f01005b" name="amigologo" type="attr" />
+    <public id="0x7f01005c" name="amigodivider" type="attr" />
+    <public id="0x7f01005d" name="amigobackgroundStacked" type="attr" />
+    <public id="0x7f01005e" name="amigobackgroundSplit" type="attr" />
+    <public id="0x7f01005f" name="amigocustomNavigationLayout" type="attr" />
+    <public id="0x7f010060" name="amigoheight" type="attr" />
+    <public id="0x7f010061" name="amigohomeLayout" type="attr" />
+    <public id="0x7f010062" name="amigoprogressBarStyle" type="attr" />
+    <public id="0x7f010063" name="amigoindeterminateProgressStyle" type="attr" />
+    <public id="0x7f010064" name="amigoprogressBarPadding" type="attr" />
+    <public id="0x7f010065" name="amigoitemPadding" type="attr" />
+    <public id="0x7f010066" name="amigoactionBarStyle" type="attr" />
+    <!-- autocomplete text view -->
+    <public id="0x7f010067" name="amigocompletionHint" type="attr" />
+    <public id="0x7f010068" name="amigocompletionHintView" type="attr" />
+    <public id="0x7f010069" name="amigocompletionThreshold" type="attr" />
+    <public id="0x7f01006a" name="amigodropDownSelector" type="attr" />
+    <public id="0x7f01006b" name="amigodropDownVerticalOffset" type="attr" />
+    <public id="0x7f01006c" name="amigodropDownHorizontalOffset" type="attr" />
+    <public id="0x7f01006d" name="amigodropDownAnchor" type="attr" />
+    <public id="0x7f01006e" name="amigodropDownWidth" type="attr" />
+    <public id="0x7f01006f" name="amigodropDownHeight" type="attr" />
+    <!-- Gionee <fenglp> <2013-07-10> add for CR00812456 begin -->
+    <!-- for alertdialogstyle -->
+    <public id="0x7f010070" name="amigoalertDialogStyle" type="attr" />
+
+    <!-- Gionee <daizhimin> <2013-07-11> add for CR00833379 begin -->
+    <!-- AmigoSpinner -->
+    <public id="0x7f010071" name="amigospinnerMode" type="attr" />
+    <public id="0x7f010072" name="amigospinnerStyle" type="attr" />
+    <public id="0x7f010073" name="amigoprompt" type="attr" />
+    <!-- Gionee <daizhimin> <2013-07-11> add for CR00833379 end -->
+
+
+    <!-- Gionee <xuhz> <2013-07-25> add for CR00833450 begin -->
+    <public id="0x7f010074" name="amigogroupIndicator" type="attr" />
+    <public id="0x7f010075" name="amigochildIndicator" type="attr" />
+    <public id="0x7f010076" name="amigoindicatorLeft" type="attr" />
+    <public id="0x7f010077" name="amigoindicatorRight" type="attr" />
+    <public id="0x7f010078" name="amigochildIndicatorLeft" type="attr" />
+    <public id="0x7f010079" name="amigochildIndicatorRight" type="attr" />
+    <public id="0x7f01007a" name="amigochildDivider" type="attr" />
+    <public id="0x7f01007b" name="amigoExpandableListViewStyle" type="attr" />
+    <!-- Gionee <xuhz> <2013-07-25> add for CR00833450 end -->
+
+
+    <!-- Gionee <daizhimin> <2013-07-29> add for CR00833379 begin -->
+    <public id="0x7f01007c" name="amigooptionMenuListBackground" type="attr" />
+    <public id="0x7f01007d" name="amigooptionMenuMoreBg" type="attr" />
+    <public id="0x7f01007e" name="amigooptionMenuBg" type="attr" />
+    <!-- Gionee <daizhimin> <2013-07-29> add for CR00833379 end -->
+
+
+    <!-- Gionee <gaoj> <2013-12-06> add for CR00967353 begin -->
+    <public id="0x7f01007f" name="selectableMenuItemBackground" type="attr" />
+    <!-- Gionee <gaoj> <2013-12-06> add for CR00967353 end -->
+
+
+    <!-- shaozj begin -->
+    <public id="0x7f010080" name="amigoDialogPostiveBtnColor" type="attr" />
+    <public id="0x7f010081" name="amigotabheight" type="attr" />
+    <!-- shaozj begin -->
+    <!-- weidong begin -->
+    <public id="0x7f010082" name="amigoButtonHeight" type="attr" />
+    <public id="0x7f010083" name="amigoOptionsMenuAsUp" type="attr" />
+    <!-- weidong end -->
+    <!-- gionee maxw add begin -->
+    <public id="0x7f010084" name="amigoselectiontopDivider" type="attr" />
+    <public id="0x7f010085" name="amigoselectionbottomDivider" type="attr" />
+    <!-- gionee maxw add end -->
+    <public id="0x7f010086" name="amigoStrongHintDialogLayout" type="attr" />
+
+    <!-- gionee maxw add begin -->
+    <public id="0x7f010087" name="amigoSearchViewStyle" type="attr" />
+    <public id="0x7f010088" name="amigoTextColor" type="attr" />
+    <public id="0x7f010089" name="amigoHintColor" type="attr" />
+    <public id="0x7f01008a" name="amigoBackground" type="attr" />
+    <public id="0x7f01008b" name="amigoVoiceIcon" type="attr" />
+    <!-- gionee maxw add end -->
+
+
+    <!-- Gionee <weidong> <2015-3-6> add for CR01450327 begin -->
+    <public id="0x7f01008c" name="amigoDialogBackground" type="attr" />
+    <!-- Gionee <weidong> <2015-3-6> add for CR01450327 begin -->
+
+
+    <!-- gionee maxw add begin -->
+    <public id="0x7f01008d" name="amigoTouchingLetterFontSize" type="attr" />
+    <public id="0x7f01008e" name="amigoEnableSectionColor" type="attr" />
+    <public id="0x7f01008f" name="amigoDisableSectionColor" type="attr" />
+    <public id="0x7f010090" name="amigoShowingLetterColor" type="attr" />
+    <public id="0x7f010091" name="amigoTouchingLeftOffset" type="attr" />
+    <public id="0x7f010092" name="amigoSectionFontSize" type="attr" />
+    <!-- gionee maxw add end -->
+    <public id="0x7f010093" name="amigoDialogOtherBtnTxtColor" type="attr" />
+    <public id="0x7f010094" name="amigodatePickerDialogStyle" type="attr" />
+    <public id="0x7f010095" name="amigo_dialog_content_text_color" type="attr" />
+    <public id="0x7f010096" name="amigoDialogWindowBackground" type="attr" />
+    <public id="0x7f010097" name="amigo_spinner_item_text_color" type="attr" />
+    
+    <public id="0x7f010098" name="amigoForceTouchPannelBackgroundColor" type="attr" />
+    <public id="0x7f010099" name="amigoForceTouchMenuItemBackgroundColor" type="attr" />
+    <public id="0x7f01009a" name="amigoDarkTheme" type="attr" />
+    <public id="0x7f01009b" name="amigoAutoMaticGridViewStyle" type="attr" />
+    <public id="0x7f01009c" name="amigoAutoLine" type="attr" />
+    <public id="0x7f01009d" name="amigoAutoColumn" type="attr" />
+    <public id="0x7f01009e" name="amigoAutoButton" type="attr" />
+    <public id="0x7f01009f" name="amigoAutoButtonVisible" type="attr" />
+    <public id="0x7f0100a0" name="amigoNumberPickerTextStyle" type="attr" />
+    <public id="0x7f0100a1" name="amigo_maxLength" type="attr" />
+    <public id="0x7f0100a2" name="amigoGroupDivider" type="attr" />
+    <public id="0x7f0100a3" name="amigodefaultResult" type="attr" />
+    <public id="0x7f0100a4" name="amigoCategoryBtnText" type="attr"/>
+    <public id="0x7f0100a5" name="amigoShowPreferenceArrow" type="attr"/>
+    <public id="0x7f0100a6" name="amigoListViewStyle" type="attr"/>
+    <public id="0x7f0100a7" name="amigo_list_divider_padding_start" type="attr"/>
+    <public id="0x7f0100a8" name="amigo_list_divider_padding_end" type="attr"/>
+    <public id="0x7f0100a9" name="amigo_list_show_bottom_item" type="attr"/>
+    <public id="0x7f0100aa" name="amigoButtonStyle" type="attr"/>
+    <public id="0x7f0100ab" name="amigoAutoIndent" type="attr"/>
+    <public id="0x7f0100ac" name="amigoTimeDayPickerLayout" type="attr" />
+    <public id="0x7f0100ad" name="amigoTimeDayPickerStyle" type="attr" />
+    <public id="0x7f0100ae" name="amigoTimeDayPickerStartYear" type="attr" />
+    <public id="0x7f0100af" name="amigoTimeDayPickerEndYear" type="attr" />
+    <public id="0x7f0100b0" name="amigoMinDate" type="attr" />
+    <public id="0x7f0100b1" name="amigoMaxDate" type="attr" />
+    <public id="0x7f0100b2" name="amigo_button_style" type="attr" />
+    <public id="0x7f0100b3" name="amigoUnselectedTextSize" type="attr" />
+    <public id="0x7f0100b4" name="amigoMarginEnd" type="attr" />
+    <public id="0x7f0100b5" name="amigoQRCodeIcon" type="attr" />
+    <public id="0x7f0100b6" name="amigowidth" type="attr" />
+    <public id="0x7f0100b7" name="amigomostDisplayItemCount" type="attr" />
+    
+    <public id="0x7f020000" name="amigo_numberpicker_selection_left" type="drawable" />
+    <public id="0x7f020001" name="amigo_numberpicker_selection_center" type="drawable" />
+    <public id="0x7f020002" name="amigo_numberpicker_selection_right" type="drawable" />
+    <public id="0x7f020003" name="amigo_numberpicker_left" type="drawable" />
+    <public id="0x7f020004" name="amigo_numberpicker_center" type="drawable" />
+    <public id="0x7f020005" name="amigo_numberpicker_right" type="drawable" />
+    <public id="0x7f020006" name="amigo_switch_select" type="drawable" />
+    <public id="0x7f020007" name="amigo_switch_on" type="drawable" />
+    <public id="0x7f020008" name="amigo_switch_off" type="drawable" />
+    <public id="0x7f020009" name="amigo_text_select_handle_top_left" type="drawable" />
+    <public id="0x7f02000a" name="amigo_text_select_handle_top_right" type="drawable" />
+    <public id="0x7f02000b" name="amigo_text_toolbar_center" type="drawable" />
+    <public id="0x7f02000c" name="amigo_text_toolbar_left" type="drawable" />
+    <public id="0x7f02000d" name="amigo_text_toolbar_right" type="drawable" />
+    <public id="0x7f02000e" name="amigo_text_toolbar_single" type="drawable" />
+    <public id="0x7f02000f" name="amigo_text_toolbar_position_arrow_above" type="drawable" />
+    <public id="0x7f020010" name="amigo_text_toolbar_position_arrow_below" type="drawable" />
+    <public id="0x7f020011" name="amigo_transparent" type="drawable" />
+    <public id="0x7f020012" name="amigo_dialog_full_light" type="drawable" />
+    <public id="0x7f020013" name="amigo_dialog_top_light" type="drawable" />
+    <public id="0x7f020014" name="amigo_dialog_middle_light" type="drawable" />
+    <public id="0x7f020015" name="amigo_dialog_bottom_light" type="drawable" />
+    <!-- Gionee <daizhimin> <2013-07-04> add for CR00833379 begin -->
+    <public id="0x7f020016" name="amigo_cab_background_bottom_light" type="drawable" />
+    <!-- Gionee <daizhimin> <2013-07-04> add for CR00833379 end -->
+    <public id="0x7f020017" name="amigo_expandlist_group_bg_light" type="drawable" />
+    <!-- for ActionBar -->
+    <!-- shaozj <public type="drawable" name="amigo_intellegent_call_show" id="0x7f020018"/> -->
+    <!-- shaozj <public type="drawable" name="amigo_intellegent_call_drag" id="0x7f020019"/> -->
+    <!-- shaozj <public type="drawable" name="amigo_btn_recom" id="0x7f02001a"/> -->
+    <!-- Gionee <fenglp> <2013-07-31> add for CR00812456 begin -->
+    <public id="0x7f02001b" name="amigo_searchview_background" type="drawable" />
+    <public id="0x7f02001c" name="amigo_searchview_icon_1" type="drawable" />
+    <public id="0x7f02001d" name="amigo_searchview_icon_2" type="drawable" />
+    <public id="0x7f02001e" name="amigo_searchview_icon_3" type="drawable" />
+    <!-- Gionee <fenglp> <2013-07-31> add for CR00812456 end -->
+    <!-- Gionee <fenglp> <2013-08-02> add for CR00812456 begin -->
+    <!-- shaozj <public type="drawable" name="amigo_btn_loading" id="0x7f02001f"/> -->
+    <!-- shaozj <public type="drawable" name="amigo_btn_loading_bg" id="0x7f020020"/> -->
+    <!-- Gionee <fenglp> <2013-08-02> add for CR00812456 end -->
+
+    <public id="0x7f020021" name="amigo_switch_track_on" type="drawable" />
+    <public id="0x7f020022" name="amigo_switch_track_off" type="drawable" />
+    <!-- shaozj <public type="drawable" name="amigo_switch_track_sign_on" id="0x7f020023"/> -->
+    <!-- shaozj <public type="drawable" name="amigo_switch_track_sign_off" id="0x7f020024"/> -->
+    <public id="0x7f020025" name="amigo_switch_thumb_dot_on" type="drawable" />
+    <public id="0x7f020026" name="amigo_switch_thumb_dot_off" type="drawable" />
+
+    <!-- Gionee <gaoj> <2013-08-27> add for CR00833450 begin -->
+    <public id="0x7f020027" name="amigo_expandlist_group_normal_bg" type="drawable" />
+    <public id="0x7f020028" name="amigo_list_selector_light" type="drawable" />
+    <public id="0x7f020029" name="amigo_expander_open_dark" type="drawable" />
+    <!-- Gionee <gaoj> <2013-08-27> add for CR00833450 end -->
+
+
+    <!-- gionee maxw add begin -->
+    <public id="0x7f02002a" name="amigo_search_icon" type="drawable" />
+    <public id="0x7f02002b" name="amigo_voice_icon" type="drawable" />
+    <!-- gionee maxw add end -->
+
+
+    <!-- Gionee <gaoj> <2013-9-2> add for CR00882129 begin -->
+    <public id="0x7f020030" name="amigo_listview_delete_bg" type="drawable" />
+    <public id="0x7f020031" name="amigo_listview_delete_top_bg" type="drawable" />
+    <!-- Gionee <gaoj> <2013-9-2> add for CR00882129 end -->
+    <public id="0x7f020032" name="amigo_searchview_background_submit" type="drawable" />
+    <!-- Gionee <lihq> <2013-10-25> add for CR00873172 begin -->
+    <public id="0x7f020033" name="amigo_bg_decorator_adapter" type="drawable" />
+    <!-- Gionee <lihq> <2013-10-25> add for CR00873172 begin -->
+
+
+    <!-- Gionee <lihq> <2013-12-20> add for CR00873172 begin -->
+    <!-- shaozj <public type="drawable" name="amigo_magicbar_trans_bar" id="0x7f020034"/> -->
+    <!-- Gionee <lihq> <2013-12-20> add for CR00873172 end -->
+
+
+    <!-- Gionee <lihq> <2013-12-16> add for CR00873172 begin -->
+    <!-- shaozj <public type="drawable" name="amigo_alert_dialog_title_divider_light" id="0x7f020035"/> -->
+    <public id="0x7f020036" name="amigo_scrollbar_handle_holo_light" type="drawable" />
+    <!-- Gionee <lihq> <2013-12-16> add for CR00873172 begin -->
+
+
+    <!-- Gionee <lihq> <2014-03-24> add for CR00873172 begin -->
+    <public id="0x7f020037" name="amigo_window_background_light" type="drawable" />
+    <public id="0x7f020038" name="amigo_window_background_dark" type="drawable" />
+    <!-- <public type="drawable" name="amigo_magic_menu_close_icon" id="0x7f020039" /> -->
+    <!-- Gionee <lihq> <2014-03-24> add for CR00873172 begin -->
+    <public id="0x7f02003a" name="amigo_ripple_transparent" type="drawable" />
+
+    <!-- gionee maxw add begin -->
+    <public id="0x7f02003b" name="amigo_numberpicker_divider_top" type="drawable" />
+    <public id="0x7f02003c" name="amigo_numberpicker_divider_down" type="drawable" />
+    <!-- gionee maxw add end -->
+    <!-- weidong begin -->
+    <public id="0x7f02003d" name="amigo_strong_hint_dialog_info" type="drawable" />
+    <!-- weidong end -->
+    <public id="0x7f02003e" name="amigo_magic_menu_close_icon" type="drawable" />
+    <public id="0x7f02003f" name="amigo_magicbar_gradient" type="drawable" />
+    
+    <public id="0x7f020040" name="amigo_forcetouch_menu_icon" type="drawable" />
+    <public id="0x7f020041" name="amigo_forcetouch_menu_bg" type="drawable" />
+    <public id="0x7f020042" name="amigo_forcetouch_menu_color" type="drawable" />
+    <public id="0x7f020043" name="amigo_forcetouch_menu_item_bg" type="drawable" />
+    <public id="0x7f020044" name="amigo_forcetouch_menu_item_bottom_bg" type="drawable" />
+    <public id="0x7f020045" name="amigo_forcetouch_menu_item_bottom_press_bg" type="drawable" />
+    <public id="0x7f020046" name="amigo_forcetouch_menu_item_top_bg" type="drawable" />
+    <public id="0x7f020047" name="amigo_forcetouch_menu_item_top_press_bg" type="drawable" />
+    <public id="0x7f020048" name="amigo_forcetouch_menu_single_item_bg" type="drawable" />
+    <public id="0x7f020049" name="amigo_forcetouch_menu_single_item_press_bg" type="drawable" />
+    <public id="0x7f02004a" name="amigo_forcetouch_sms_menu_bg" type="drawable" />
+    <public id="0x7f02004b" name="amigo_forcetouch_indicator" type="drawable" />
+    <public id="0x7f02004c" name="amigo_forcetouch_preview_bg" type="drawable" />
+    <public id="0x7f02004e" name="amigo_forcetouch_submenu_close" type="drawable" />
+    <public id="0x7f020050" name="amigo_actionbar_item_background_material" type="drawable" />
+    <public id="0x7f020051" name="amigo_forcetouch_menu_item_normal_bg" type="drawable" />
+    <public id="0x7f020052" name="amigo_forcetouch_preview_menu_item_bg" type="drawable" />
+    
+    <!-- gionee maxw add begin -->
+    <public id="0x7f020053" name="amigo_ic_clear_dark" type="drawable" />
+    <!-- gionee maxw add end -->
+    <public id="0x09020054" name="amigo_radio_btn_auto_paged_gridview" type="drawable" />
+    
+    <!-- <public id="0x7f020055" name="amigo_global_theme_button_bg_selector" type="drawable" />
+    <public id="0x7f020056" name="amigo_global_theme_checkbox_bg_selector" type="drawable" />
+    <public id="0x7f020057" name="amigo_global_theme_switch_bg_selector" type="drawable" />
+    <public id="0x7f020058" name="amigo_global_theme_actionbar_bg" type="drawable" />
+    <public id="0x7f020059" name="amigo_global_theme_actionbar_home_as_up" type="drawable" />
+    
+    <public id="0x7f02005a" name="amigo_global_theme_magicbar_bg" type="drawable" />
+    <public id="0x7f02005b" name="amigo_global_theme_magicbar_listview_bg" type="drawable" />
+    <public id="0x7f02005c" name="amigo_global_theme_magicbar_more_icon" type="drawable" />
+    <public id="0x7f02005d" name="amigo_global_theme_magicbar_close_icon" type="drawable" />
+    <public id="0x7f02005e" name="amigo_global_theme_main_bg" type="drawable" />
+    <public id="0x7f02005f" name="amigo_global_theme_actionbar_tab_indicator" type="drawable" />
+    <public id="0x7f020060" name="amigo_global_theme_dialog_bg" type="drawable" />
+    <public id="0x7f020061" name="amigo_global_theme_main_bg_small" type="drawable" />
+    <public id="0x7f020062" name="amigo_global_theme_radiobutton_bg_selector" type="drawable" />
+    <public id="0x7f020063" name="amigo_global_theme_search_voice_icon" type="drawable" />
+    <public id="0x7f020064" name="amigo_global_theme_search_close_icon_selector" type="drawable" />
+    <public id="0x7f020065" name="amigo_global_theme_input_background" type="drawable" />
+    <public id="0x7f020066" name="amigo_global_theme_input_circle_background" type="drawable" />
+    <public id="0x7f020067" name="amigo_global_theme_big_progress_horizontal" type="drawable" />
+    <public id="0x7f020068" name="amigo_global_theme_big_progressbar_thumb" type="drawable" /> -->
+    <public id="0x7f020069" name="amigo_list_divider_bg" type="drawable" />
+    <public id="0x7f02006a" name="amigo_switch_thumb_selector" type="drawable" />
+    <public id="0x7f02006b" name="amigo_switch_track_selector" type="drawable" />
+    <public id="0x7f02006c" name="amigo_btn_round_corner_default_bg_ripple" type="drawable" />
+    <public id="0x7f02006d" name="amigo_switch_thumb_material_anim" type="drawable" />
+    
+    
+    <public id="0x7f030000" name="amigo_action_bar_view" type="layout" />
+    <public id="0x7f030001" name="amigo_alert_dialog_title" type="layout" />
+    <public id="0x7f030002" name="amigo_date_picker" type="layout" />
+    <public id="0x7f030003" name="amigo_date_picker_dialog" type="layout" />
+    <public id="0x7f030004" name="amigo_number_picker" type="layout" />
+    <public id="0x7f030005" name="amigo_time_picker" type="layout" />
+    <public id="0x7f030006" name="amigo_time_picker_dialog" type="layout" />
+    <public id="0x7f030007" name="amigo_alert_dialog_progress" type="layout" />
+    <public id="0x7f030008" name="amigo_progress_dialog" type="layout" />
+    <public id="0x7f030009" name="amigo_text_toolbar" type="layout" />
+    <public id="0x7f03000a" name="amigo_preference" type="layout" />
+    <public id="0x7f03000b" name="amigo_preference_list_fragment" type="layout" />
+    <public id="0x7f03000c" name="amigo_preference_header_item" type="layout" />
+    <public id="0x7f03000d" name="amigo_preference_list_content" type="layout" />
+    <public id="0x7f03000e" name="amigo_preference_list_content_single" type="layout" />
+    <public id="0x7f03000f" name="amigo_seekbar_dialog" type="layout" />
+    <public id="0x7f030010" name="amigo_preference_widget_seekbar" type="layout" />
+    <public id="0x7f030011" name="amigo_alert_dialog_light" type="layout" />
+    <public id="0x7f030012" name="amigo_select_dialog" type="layout" />
+    <public id="0x7f030013" name="amigo_select_dialog_multichoice" type="layout" />
+    <public id="0x7f030014" name="amigo_select_dialog_singlechoice" type="layout" />
+    <public id="0x7f030015" name="amigo_select_dialog_item" type="layout" />
+    <!-- Gionee <daizhimin> <2013-07-04> add for CR00833379 begin -->
+    <!-- Gionee <gaoj> <2013-12-04> modify for CR00967353 begin -->
+    <!--
+    <public type="layout" name="amigo_magicbar_one_menuitem" id="0x7f030016" />
+    <public type="layout" name="amigo_magicbar_two_menuitem" id="0x7f030017" />
+    <public type="layout" name="amigo_magicbar_three_menuitem" id="0x7f030018" />
+    <public type="layout" name="amigo_magicbar_four_menuitem" id="0x7f030019" />
+    -->
+    <!-- Gionee <gaoj> <2013-12-04> modify for CR00967353 begin -->
+    <!-- Gionee <daizhimin> <2013-07-04> add for CR00833379 end -->
+    <!-- for ActionBar -->
+    <public id="0x7f03001a" name="amigo_screen_action_bar" type="layout" />
+    <public id="0x7f03001b" name="amigo_action_bar_title_item" type="layout" />
+    <public id="0x7f03001c" name="amigo_simple_dropdown_hint" type="layout" />
+    <!-- Gionee <fenglp> <2013-07-10> add for CR00812456 begin -->
+    <!-- for ContextMenu -->
+    <public id="0x7f03001d" name="amigo_list_menu_item_layout" type="layout" />
+    <public id="0x7f03001e" name="amigo_expanded_menu_layout" type="layout" />
+    <public id="0x7f03001f" name="amigo_list_menu_item_icon" type="layout" />
+    <public id="0x7f030020" name="amigo_list_menu_item_radio" type="layout" />
+    <public id="0x7f030021" name="amigo_list_menu_item_checkbox" type="layout" />
+    <public id="0x7f030022" name="amigo_list_content_simple" type="layout" />
+    <public id="0x7f030023" name="amigo_expandable_list_content" type="layout" />
+    <!-- Gionee <fenglp> <2013-07-10> add for CR00812456 end -->
+    <!-- Gionee <fenglp> <2013-07-15> add for CR00812456 end -->
+    <public id="0x7f030024" name="amigo_action_mode_close_item" type="layout" />
+    <public id="0x7f030025" name="amigo_action_bar_home" type="layout" />
+    <public id="0x7f030026" name="amigo_screen_action_bar_overlay" type="layout" />
+    <!-- Gionee <fenglp> <2013-07-15> add for CR00812456 end -->
+    <public id="0x7f030027" name="amigo_magicbar_listview_item" type="layout" />
+    <!-- Gionee <fenglp> <2013-07-31> add for CR00812456 begin -->
+    <public id="0x7f030028" name="amigo_search_view" type="layout" />
+    <!-- Gionee <fenglp> <2013-07-31> add for CR00812456 end -->
+    <!-- Gionee <fenglp> <2013-08-05> add for CR00812456 begin -->
+    <public id="0x7f030029" name="amigo_search_dropdown_item_icons_2line" type="layout" />
+    <public id="0x7f03002a" name="amigo_preference_checkbox_and_click" type="layout" />
+    <public id="0x7f03002b" name="amigo_preference_widget_checkbox" type="layout" />
+    <!-- Gionee <fenglp> <2013-08-05> add for CR00812456 end -->
+    <public id="0x7f03002c" name="amigo_screen_dialog" type="layout" />
+
+    <!-- Gionee <zhangxx> <2013-08-14> modify for CR00857086 begin -->
+    <public id="0x7f03002d" name="amigo_preference_widget_switch" type="layout" />
+    <public id="0x7f03002e" name="amigo_preference_dialog_edittext" type="layout" />
+    <!-- Gionee <zhangxx> <2013-08-14> modify for CR00857086 end -->
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 begin -->
+    <public id="0x7f03002f" name="amigo_resolve_list_item_dark" type="layout" />
+    <public id="0x7f030030" name="amigo_resolve_list_item_light" type="layout" />
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 end -->
+
+
+    <!-- Gionee <gaoj> <2013-12-04> modify for CR00967353 begin -->
+    <public id="0x7f030031" name="amigo_magicbar_menu_item" type="layout" />
+    <!-- Gionee <gaoj> <2013-12-04> modify for CR00967353 end -->
+    <public id="0x7f030032" name="amigo_edit_mode_btn" type="layout" />
+    <public id="0x7f030033" name="amigo_action_bar_up_container" type="layout" />
+
+    <!-- gionee maxw add begin -->
+    <public id="0x7f030034" name="amigo_expandable_list_group_wrapper" type="layout" />
+    <!-- gionee maxw add end -->
+    <!-- weidong begin -->
+    <public id="0x7f030035" name="amigo_simple_spinner_item" type="layout" />
+    <public id="0x7f030036" name="amigo_simple_spinner_dropdown_item" type="layout" />
+    <public id="0x7f030037" name="amigo_strong_hint_dialog" type="layout" />
+
+    <!-- gionee maxw add begin -->
+    <public id="0x7f030038" name="amigo_actionbar_menu_item" type="layout" />
+    <!-- gionee maxw add end -->
+    <!-- Gionee <weidong> <2015-01-20> modify for CR01439592 begin -->
+    <public id="0x7f030039" name="amigo_preference_checkbox_and_click_right_btn" type="layout" />
+    <!-- Gionee <weidong> <2015-01-20> modify for CR01439592 end -->
+    <!-- weidong end -->
+    <public id="0x7f03003a" name="amigo_datetime_picker" type="layout" />
+    <public id="0x7f03003b" name="amigo_resolver_grid" type="layout" />
+    <public id="0x7f03003c" name="amigo_divider" type="layout" />
+    <public id="0x7f03003e" name="amigo_multichoice_select_action_mode_layout" type="layout" />
+    <public id="0x7f03003f" name="amigo_forcetouch_menu_item" type="layout" />
+    <public id="0x7f030040" name="amigo_forcetouch_sms_menu_item" type="layout" />
+    <public id="0x7f030041" name="amigo_forcetouch_preview_layout" type="layout" />
+    <public id="0x7f030042" name="amigo_forcetouch_submenu_item" type="layout" />
+    <public id="0x7f030043" name="amigo_forcetouch_menu" type="layout" />
+    <public id="0x09030045" name="amigo_resolver_grid_auto_paged" type="layout" />
+    <!-- <public id="0x7f030046" name="amigo_global_theme_select_dialog_multichoice" type="layout" />
+    <public id="0x7f030047" name="amigo_global_theme_select_dialog_singlechoice" type="layout" /> -->
+    <public id="0x7f030048" name="amigo_preference_widget_button_category" type="layout" />
+    <public id="0x7f030049" name="amigo_list_content" type="layout" />
+    <public id="0x7f03004a" name="amigo_timeday_picker" type="layout" />
+    <public id="0x7f03004b" name="amigo_timeday_picker_dialog" type="layout" />
+    
+    <public id="0x7f040000" name="amigo_editor_toolbar_text_color" type="color" />
+    <!-- Gionee <fenglp> <2013-08-02> add for CR00812456 begin -->
+    <public id="0x7f040001" name="amigo_loading_button_text_color" type="color" />
+    <!-- Gionee <fenglp> <2013-08-02> add for CR00812456 end -->
+
+
+    <!-- Gionee <gaoj> <2013-9-13> add for CR00899138 begin -->
+    <public id="0x7f040002" name="amigo_button_text_color" type="color" />
+    <!-- Gionee <gaoj> <2013-9-13> add for CR00899138 end -->
+
+
+    <!-- Gionee <gaoj> <2013-9-27> add for CR00899138 begin -->
+    <public id="0x7f040003" name="amigo_datepicker_bg_light" type="color" />
+    <!-- Gionee <gaoj> <2013-9-27> add for CR00899138 end -->
+
+
+    <!-- Gionee <lihq> <2013-12-05> add for CR00873172 start -->
+    <public id="0x7f040004" name="amigo_alert_dialog_text_light" type="color" />
+    <!-- Gionee <lihq> <2013-12-05> add for CR00873172 end -->
+
+
+    <!-- gionee maxw add begin -->
+    <public id="0x7f040005" name="amigo_edit_text_background_color" type="color" />
+    <public id="0x7f040006" name="amigo_edit_text_background_color_dark" type="color" />
+    <!-- gionee maxw add end -->
+
+
+    <!-- gionee liushuai add begin -->
+    <public id="0x7f040007" name="amigo_content_color_primary_on_backgroud_c1" type="color" />
+    <public id="0x7f040008" name="amigo_content_color_secondary_on_backgroud_c2" type="color" />
+    <public id="0x7f040009" name="amigo_content_color_thirdly_on_backgroud_c3" type="color" />
+    <public id="0x7f04000a" name="amigo_content_color_primary_on_appbar_t1" type="color" />
+    <public id="0x7f04000b" name="amigo_content_color_secondary_on_appbar_t2" type="color" />
+    <public id="0x7f04000c" name="amigo_content_color_thirdly_on_appbar_t3" type="color" />
+    <public id="0x7f04000d" name="amigo_content_olor_forthly_on_appbar_t4" type="color" />
+    <public id="0x7f04000e" name="amigo_accent_color_g1" type="color" />
+    <public id="0x7f04000f" name="amigo_switch_thumb" type="color" />
+    <!-- gionee liushuai add end -->
+
+
+    <!-- gionee maxw add begin -->
+    <public id="0x7f040010" name="amigo_expandablelist_group_divider" type="color" />
+    <!-- gionee maxw add end -->
+    <public id="0x7f040011" name="amigo_actionbar_tabtext_color_light" type="color" />
+    <public id="0x7f040012" name="amigo_actionbar_tabtext_color_dark" type="color" />
+    <public id="0x7f040013" name="amigo_forcetouch_menu_press_color" type="color" />
+    <public id="0x7f040014" name="amigo_bright_foreground_primary_dark" type="color" />
+    <public id="0x7f040015" name="amigo_forcetouch_menu_press_tint_color" type="color" />
+    <!-- Gionee <weidong> <2016-04-22> modify for CR01683201 begin -->
+    <public id="0x7f040016" name="amigo_dialog_bg_color" type="color" />
+    <public id="0x7f040017" name="amigo_window_background_color" type="color" />
+    <public id="0x7f040018" name="amigo_magicbar_bg_color" type="color" />
+    <public id="0x7f040019" name="amigo_actionbar_sub_title_color_dark" type="color" />
+    <public id="0x7f04001a" name="amigo_actionbar_title_color_dark" type="color" />
+    <public id="0x7f04001b" name="amigo_white" type="color" />
+    <public id="0x7f04001c" name="amigo_actionbar_background_color_dark_normal" type="color" />
+    <public id="0x7f04001d" name="amigo_actionbar_background_color_light_normal" type="color" />
+    <!-- Gionee <weidong> <2016-04-22> modify for CR01683201 end -->
+    <public id="0x7f04001e" name="amigo_global_theme_magicbar_text_color_selector" type="color" />
+    <public id="0x7f04001f" name="amigo_global_theme_actionbar_title_color" type="color" />
+    <public id="0x7f040020" name="amigo_global_theme_actionbar_subtitle_color" type="color" />
+    <public id="0x7f040021" name="amigo_global_theme_actionbar_tabtext_unselected_color" type="color" />
+    <!-- <public id="0x7f040022" name="amigo_global_theme_actionbar_bg" type="color" /> -->
+    
+    <public id="0x7f040022" name="amigo_global_theme_button_text_color_selector" type="color"/>
+    <public id="0x7f040023" name="amigo_global_theme_dialog_title_color" type="color"/>
+    
+    <public id="0x7f040024" name="amigo_global_theme_dialog_positive_btn_color_selector" type="color"/>
+    <public id="0x7f040025" name="amigo_global_theme_dialog_message_color" type="color"/>
+    <public id="0x7f040026" name="amigo_global_theme_dialog_neutral_btn_color" type="color"/>
+    <public id="0x7f040027" name="amigo_global_theme_actionbar_bg" type="color"/>
+    <public id="0x7f040028" name="amigo_number_picker_change_disable_color" type="color" />
+    <public id="0x7f040029" name="amigo_divider_line_color" type="color" />
+    <public id="0x7f04002a" name="amigo_button_stroke_color" type="color" />
+    <public id="0x7f04002b" name="amigo_color_category_divider" type="color" />
+    <public id="0x7f04002c" name="amigo_action_menu_text" type="color" />
+    <public id="0x7f04002d" name="amigo_alert_dialog_button_text_color" type="color" />
+    
+    <!-- for ActionBar -->
+    <public id="0x7f050000" name="amigo_action_bar_stacked_tab_max_width" type="dimen" />
+    <!-- Gionee <xuhz> <2013-07-19> add for CR00838236 begin -->
+    <!-- String for Smart Guider -->
+    <public id="0x7f050001" name="amigo_smart_full_btn_bottom_margin" type="dimen" />
+    <!-- Gionee <xuhz> <2013-07-19> add for CR00838236 end -->
+
+
+    <!-- Gionee <daizhimin> <2013-07-30> add for CR00833379 begin -->
+    <public id="0x7f050002" name="amigo_magicbar_item_height" type="dimen" />
+    <public id="0x7f050003" name="amigo_magicbar_list_item_height" type="dimen" />
+    <public id="0x7f050004" name="amigo_magicbar_title_mode_height" type="dimen" />
+    <public id="0x7f050005" name="amigo_magicbar_item_padding_land" type="dimen" />
+    <public id="0x7f050006" name="amigo_magicbar_item3_padding_land" type="dimen" />
+    <!-- Gionee <daizhimin> <2013-07-30> add for CR00833379 end -->
+    <!-- Gionee <fenglp> <2013-07-31> add for CR00812456 begin -->
+    <public id="0x7f050007" name="amigo_search_view_preferred_width" type="dimen" />
+    <public id="0x7f050008" name="amigo_dropdownitem_icon_width" type="dimen" />
+    <public id="0x7f050009" name="amigo_dropdownitem_text_padding_left" type="dimen" />
+    <!-- Gionee <fenglp> <2013-07-31> add for CR00812456 end -->
+    <!-- Gionee <fenglp> <2013-08-02> add for CR00812456 begin -->
+    <public id="0x7f05000a" name="amigo_loading_button_small_size" type="dimen" />
+    <!-- Gionee <fenglp> <2013-08-02> add for CR00812456 end -->
+
+
+    <!-- Gionee <daizhimin> <2013-08-05> add for CR00833379 begin -->
+    <public id="0x7f05000b" name="amigo_temp_pading" type="dimen" />
+    <!-- Gionee <daizhimin> <2013-08-05> add for CR00833379 end -->
+
+
+    <!-- Gionee <daizhimin> <2013-08-06> add for CR00833379 begin -->
+    <public id="0x7f05000c" name="amigo_magicbar_max_listview_height" type="dimen" />
+    <public id="0x7f05000d" name="amigo_magicbar_listview_left_right_margin" type="dimen" />
+    <public id="0x7f05000e" name="amigo_magicbar_listview_bottom_margin" type="dimen" />
+    <!-- Gionee <daizhimin> <2013-08-06> add for CR00833379 end -->
+
+
+    <!-- Gionee <gaoj> <2013-9-11> add for CR00899138 begin -->
+    <public id="0x7f05000f" name="amigo_magicbar_title_bottom_padding" type="dimen" />
+    <public id="0x7f050010" name="amigo_magicbar_listview_top_margin" type="dimen" />
+    <!-- Gionee <gaoj> <2013-9-11> add for CR00899138 end -->
+
+
+    <!-- Gionee <gaoj> <2013-9-16> add for CR00899138 begin -->
+    <public id="0x7f050011" name="amigo_alert_dialog_list_maxheight" type="dimen" />
+    <!-- Gionee <gaoj> <2013-9-16> add for CR00899138 end -->
+
+
+    <!-- Gionee <gaoj> <2013-9-27> add for CR00899138 begin -->
+    <public id="0x7f050012" name="amigo_datepicker_vertical" type="dimen" />
+    <public id="0x7f050013" name="amigo_datepicker_horizontal" type="dimen" />
+    <!-- Gionee <gaoj> <2013-9-27> add for CR00899138 end -->
+
+
+    <!-- Gionee <gaoj> <2013-11-01> added for CR00833450 begin -->
+    <public id="0x7f050014" name="amigo_expandablelistview_child_item" type="dimen" />
+    <public id="0x7f050015" name="amigo_expandablelistview_item_padding" type="dimen" />
+    <!-- Gionee <gaoj> <2013-11-01> added for CR00833450 end -->
+
+
+    <!-- Gionee <gaoj> <2013-11-07> add for CR00943435 begin -->
+    <public id="0x7f050016" name="amigo_edit_text_margin_bottom" type="dimen" />
+    <public id="0x7f050017" name="amigo_edit_text_margin_left" type="dimen" />
+    <!-- Gionee <gaoj> <2013-11-07> add for CR00943435 end -->
+    <!-- weidong begin -->
+    <public id="0x7f050018" name="amigo_preferencePreferredItemHeight" type="dimen" />
+    <public id="0x7f050019" name="amigo_context_menu_list_maxheight" type="dimen" />
+    <!-- weidong end -->
+
+
+    <!-- maxw add begin -->
+    <public id="0x7f05001a" name="alphabetindex_max_touchble_width" type="dimen" />
+    <!-- maxw add end -->
+    <public id="0x7f05001b" name="amigo_actionbar_tabtext_text_size" type="dimen" />
+    <public id="0x7f05001c" name="amigo_forcetouch_preview_radius" type="dimen" />
+    <!-- Gionee <weidong> <2016-04-22> modify for CR01683201 begin -->
+    <public id="0x7f05001d" name="amigo_actionbar_elevation" type="dimen" />
+    <public id="0x7f05001e" name="amigo_action_bar_title_text_size" type="dimen" />
+    <public id="0x7f05001f" name="amigo_actionbar_sub_title_text_size" type="dimen" />
+    <!-- Gionee <weidong> <2016-04-22> modify for CR01683201 end -->
+    <public id="0x7f050020" name="amigo_edittext_padding_lr" type="dimen" />
+    <public id="0x7f050021" name="amigo_edittext_padding_tb" type="dimen" />
+    <public id="0x7f050022" name="amigo_global_theme_actionbar_elevation" type="dimen" />
+    <public id="0x7f050023" name="amigo_list_item_margin_left" type="dimen" />
+    <public id="0x7f050024" name="amigo_divider_height" type="dimen" />
+    <public id="0x7f050025" name="amigo_single_alert_dialog_list_maxheight" type="dimen" />
+    <public id="0x7f050026" name="amigo_expandable_list_item_content_margin_right" type="dimen" />
+    <public id="0x7f050027" name="amigo_alert_dialog_msg_margin_top" type="dimen" />
+    <public id="0x7f050028" name="amigo_alert_dialog_msg_margin_bottom" type="dimen" />
+    <public id="0x7f050029" name="amigo_alert_dialog_msg_min_height" type="dimen" />
+    <public id="0x7f05002a" name="amigo_list_item_margin_top_bottom" type="dimen" />
+    <public id="0x7f05002b" name="amigo_magicbar_bottom_padding" type="dimen" />
+    <public id="0x7f05002c" name="amigo_magicbar_icon_bg_height" type="dimen" />
+    <public id="0x7f05002d" name="amigo_timeday_picker_vertical" type="dimen" />
+    <public id="0x7f05002e" name="amigo_timeday_picker_horizontal" type="dimen" />
+    <public id="0x7f05002f" name="amigo_round_corner_button__corner_radius" type="dimen" />
+    <public id="0x7f050030" name="amigo_magicbar_icon_and_text_padding" type="dimen" />
+    <public id="0x7f050031" name="amigo_searchview_edittext_margin_end" type="dimen" />
+    
+    <public id="0x7f070000" name="amigo_preferences_prefer_dual_pane" type="bool" />
+    <!-- for ActionBar -->
+    <public id="0x7f070001" name="amigo_action_bar_embed_tabs" type="bool" />
+    <!-- Gionee <fenglp> <2013-07-10> add for CR00812456 begin -->
+    <public id="0x7f070002" name="amigo_config_showMenuShortcutsWhenKeyboardPresent" type="bool" />
+    <!-- Gionee <fenglp> <2013-07-10> add for CR00812456 end -->
+    <!-- Gionee <fenglp> <2013-08-05> add for CR00812456 begin -->
+    <public id="0x7f070003" name="amigo_action_bar_expanded_action_views_exclusive" type="bool" />
+    <!-- Gionee <fenglp> <2013-08-05> add for CR00812456 end -->
+
+    <public id="0x7f080000" name="Theme.Amigo.Light" type="style" />
+    <public id="0x7f080001" name="Theme.Amigo.Light.NoActionBar" type="style" />
+    <public id="0x7f080002" name="Theme.Amigo.Light.NoActionBar.Fullscreen" type="style" />
+    <public id="0x7f080003" name="Theme.Amigo.Light.Dialog" type="style" />
+    <public id="0x7f080004" name="Theme.Amigo.Light.Dialog.Alert" type="style" />
+    <public id="0x7f080005" name="Theme.Amigo.Dialog.Alert.FullScreen" type="style" />
+    <public id="0x7f080006" name="Widget.Amigo.Light.ActionBar" type="style" />
+    <public id="0x7f080007" name="Widget.Amigo.Light.ActionBar.Solid" type="style" />
+    <public id="0x7f080008" name="Widget.Amigo.Light.ActionBar.Solid.Inverse" type="style" />
+    <public id="0x7f080009" name="TextAppearance.Amigo.Large" type="style" />
+    <public id="0x7f08000a" name="TextAppearance.Amigo.Medium" type="style" />
+    <public id="0x7f08000b" name="TextAppearance.Amigo.MediumSecond" type="style" />
+    <public id="0x7f08000c" name="TextAppearance.Amigo.Small" type="style" />
+    <public id="0x7f08000d" name="TextAppearance.Amigo.Large.Inverse" type="style" />
+    <public id="0x7f08000e" name="TextAppearance.Amigo.Medium.Inverse" type="style" />
+    <public id="0x7f08000f" name="TextAppearance.Amigo.MediumSecond.Inverse" type="style" />
+    <public id="0x7f080010" name="TextAppearance.Amigo.Small.Inverse" type="style" />
+    <public id="0x7f080011" name="TextAppearance.Amigo.Light.Large" type="style" />
+    <public id="0x7f080012" name="TextAppearance.Amigo.Light.Medium" type="style" />
+    <public id="0x7f080013" name="TextAppearance.Amigo.Light.MediumSecond" type="style" />
+    <public id="0x7f080014" name="TextAppearance.Amigo.Light.Small" type="style" />
+    <public id="0x7f080015" name="TextAppearance.Amigo.Light.Large.Inverse" type="style" />
+    <public id="0x7f080016" name="TextAppearance.Amigo.Light.Medium.Inverse" type="style" />
+    <public id="0x7f080017" name="TextAppearance.Amigo.Light.MediumSecond.Inverse" type="style" />
+    <public id="0x7f080018" name="TextAppearance.Amigo.Light.Small.Inverse" type="style" />
+    <public id="0x7f080019" name="Theme.Amigo.Dark" type="style" />
+    <public id="0x7f08001a" name="Theme.Amigo.Dark.NoActionBar" type="style" />
+    <public id="0x7f08001b" name="Theme.Amigo.Dark.NoActionBar.Fullscreen" type="style" />
+    <public id="0x7f08001c" name="Theme.Amigo.Dark.Dialog" type="style" />
+    <public id="0x7f08001d" name="Theme.Amigo.Dark.Dialog.Alert" type="style" />
+    <public id="0x7f08001e" name="Widget.Amigo.Dark.ActionBar" type="style" />
+    <public id="0x7f08001f" name="Widget.Amigo.Dark.ActionBar.Solid" type="style" />
+
+    <!-- Gionee <gaoj> <2013-9-27> add for CR00899138 begin -->
+    <public id="0x7f080020" name="Theme.Amigo.Dialog.Date.Picker" type="style" />
+    <!-- Gionee <gaoj> <2013-9-27> add for CR00899138 end -->
+    <public id="0x7f080021" name="Widget.Amigo.ActionBar.TabBar" type="style" />
+    <!-- weidong begin -->
+    <public id="0x7f080022" name="AmigoAlertDialog.Light" type="style" />
+    <public id="0x7f080023" name="Widget.Amigo.ActionButton.CloseMode" type="style" />
+    <public id="0x7f080024" name="Theme.Amigo.Light.Dialog.StrongHint" type="style" />
+    <public id="0x7f080025" name="Theme.Amigo.Light.SplashLight" type="style" />
+    <!-- weidong end -->
+
+
+    <!-- maxw add begin -->
+    <public id="0x7f080026" name="AmigoAlphabetIndexViewStyle" type="style" />
+    <!-- maxw add end -->
+    <public id="0x7f080027" name="Animation.Amigo.Dialog" type="style" />
+    <public id="0x7f080028" name="NoAnimation.Amigo.Dialog" type="style" />
+    <public id="0x7f080029" name="amigoAutoMaticGridViewDefaultStyle" type="style" />
+    <public id="0x7f08002a" name="Widget.Amigo.Light.Button" type="style" />
+    <public id="0x7f08002b" name="AmigoM2017ButoonStyle" type="style" />
+    <public id="0x7f08002c" name="AmigoAlertDialog.M2017" type="style" />
+    <public id="0x7f08002d" name="Theme.Amigo.Light.Dialog.M2017" type="style" />
+    <public id="0x7f08002f" name="AmigoWidgetListView" type="style" />
+    <public id="0x7f080030" name="AmigoTimeDayPickerStyle" type="style" />
+    <public id="0x7f080031" name="AmigoSearchViewRightBtnStyle" type="style" />
+    
+    <public id="0x7f090000" name="amigo_time_picker_dialog_title" type="string" />
+    <public id="0x7f090001" name="amigo_date_picker_dialog_title" type="string" />
+    <public id="0x7f090002" name="amigo_date_time_done" type="string" />
+    <public id="0x7f090003" name="amigo_copy" type="string" />
+    <public id="0x7f090004" name="amigo_paste" type="string" />
+    <public id="0x7f090005" name="amigo_cut" type="string" />
+    <public id="0x7f090006" name="amigo_selectAll" type="string" />
+    <public id="0x7f090007" name="amigo_select" type="string" />
+    <public id="0x7f090008" name="amigo_inputMethod" type="string" />
+    <public id="0x7f090009" name="amigo_action_bar_up_description" type="string" />
+    <public id="0x7f09000a" name="amigo_action_bar_home_description" type="string" />
+
+    <!-- Gionee <xuhz> <2013-07-19> add for CR00838236 begin -->
+    <!-- String for Smart Guider -->
+    <public id="0x7f09000b" name="amigo_smart_full_btn_label" type="string" />
+    <!-- Gionee <xuhz> <2013-07-19> add for CR00838236 end -->
+
+
+    <!-- Gionee <zhangxx> <2013-08-14> modify for CR00857086 begin -->
+    <public id="0x7f09000c" name="amigo_capital_on" type="string" />
+    <public id="0x7f09000d" name="amigo_capital_off" type="string" />
+    <!-- Gionee <zhangxx> <2013-08-14> modify for CR00857086 end -->
+    <!-- weidong begin -->
+    <public id="0x7f09000e" name="amigo_cancel" type="string" />
+    <public id="0x7f09000f" name="amigo_edit_mode_rightbtn_txt" type="string" />
+    <public id="0x7f090010" name="amigo_edit_mode_leftbtn_txt" type="string" />
+    <public id="0x7f090011" name="amigo_strong_warning" type="string" />
+    <!-- weidong end -->
+    <public id="0x7f090012" name="amigo_ok" type="string" />
+    <public id="0x7f090013" name="unit_year" type="string" />
+    <public id="0x7f090014" name="unit_month" type="string" />
+    <public id="0x7f090015" name="unit_day" type="string" />
+    <public id="0x7f090016" name="unit_hour" type="string" />
+    <public id="0x7f090017" name="unit_minute" type="string" />
+    <public id="0x7f090018" name="amigo_actionbar_magic_item_close" type="string" />
+    <public id="0x7f090019" name="amigo_actionbar_magic_item_more" type="string" />
+    <public id="0x7f09001a" name="amigo_whichApplication" type="string" />
+    <public id="0x7f09001b" name="amigo_chooseActivity" type="string" />
+    <public id="0x7f09001c" name="amigo_multichoice_select_text" type="string" />
+    <public id="0x7f09001d" name="amigo_multichoice_cancel_select_all" type="string" />
+    <public id="0x7f09001e" name="amigo_multichoice_select_all" type="string" />
+    <public id="0x7f09001f" name="amigo_noApplications" type="string" />
+
+    <!--  Gionee <dual_weixin> <liuran> <Dec 29, 2015> add for  begin -->
+    <public id="0x7f090020" name="clone_suffix" type="string" />
+    <!--  Gionee <dual_weixin> <liuran> <Dec 29, 2015> add for  end -->
+
+    <public id="0x7f090021" name="amigo_lunar_calendar" type="string" />
+    <public id="0x7f090022" name="amigo_today" type="string" />
+    <public id="0x7f090023" name="amigo_colon" type="string" />
+
+    <!-- Gionee <fenglp> <2013-07-31> add for CR00812456 begin -->
+    <public id="0x7f0a0000" name="amigo_searchview_text" type="anim" />
+    <public id="0x7f0a0001" name="amigo_searchview_zoom" type="anim" />
+    <!-- Gionee <fenglp> <2013-07-31> add for CR00812456 end -->
+
+
+    <!-- Gionee <lihq> <2014-04-11> modify for CR00873172 end -->
+    <public id="0x7f0a0002" name="amigo_decelerate_interpolator" type="anim" />
+    <!-- Gionee <lihq> <2014-04-11> modify for CR00873172 end -->
+    <public id="0x7f0a0003" name="amigo_disabled_anim_material" type="anim" />
+        
+    <public id="0x7f060000" name="amigo_config_maxResolverActivityColumns" type="integer" />
+    <public id="0x7f060001" name="amigo_toolbar_item_padding_left_and_right" type="integer" />
+    <public id="0x7f060002" name="amigo_disabled_alpha_animation_duration" type="integer" /> 
+    
+    <public id="0x7f0b0000" name="amigo_action_menu_presenter" type="id"/>
+    <public id="0x7f0b0001" name="amigo_action_bar_title" type="id"/>
+    <public id="0x7f0b0002" name="amigo_action_bar_subtitle" type="id"/>
+    <public id="0x7f0b0003" name="amigo_action_bar_back" type="id"/>
+    <public id="0x7f0b0004" name="amigo_action_bar_icon" type="id"/>
+    <public id="0x7f0b0005" name="amigo_alert_dialog_title" type="id"/>
+    <public id="0x7f0b0006" name="amigo_dialog_cancel_icon" type="id"/>
+    <public id="0x7f0b0007" name="amigo_alert_dialog_icon" type="id"/>
+    <public id="0x7f0b0008" name="amigo_message" type="id"/>
+    <public id="0x7f0b0009" name="amigo_pickers" type="id"/>
+    <public id="0x7f0b000a" name="amigo_month_day_layout" type="id"/>
+    <public id="0x7f0b000b" name="amigo_calendar_view" type="id"/>
+    <public id="0x7f0b000c" name="amigo_day" type="id"/>
+    <public id="0x7f0b000d" name="amigo_numberpicker_input" type="id"/>
+    <public id="0x7f0b000e" name="amigo_month" type="id"/>
+    <public id="0x7f0b000f" name="amigo_year" type="id"/>
+    <public id="0x7f0b0010" name="amigo_datePicker" type="id"/>
+    <public id="0x7f0b0011" name="amigo_timePicker" type="id"/>
+    <public id="0x7f0b0012" name="amigo_increment" type="id"/>
+    <public id="0x7f0b0013" name="amigo_decrement" type="id"/>
+    <public id="0x7f0b0014" name="amigo_progress" type="id"/>
+    <public id="0x7f0b0015" name="amigo_progress_number" type="id"/>
+    <public id="0x7f0b0016" name="amigo_progress_percent" type="id"/>
+    <public id="0x7f0b0017" name="amigo_hour" type="id"/>
+    <public id="0x7f0b0018" name="amigo_minute" type="id"/>
+    <public id="0x7f0b0019" name="amigo_amPm" type="id"/>
+    <public id="0x7f0b001a" name="amigo_toolbar_group" type="id"/>
+    <public id="0x7f0b001b" name="amigo_toolbar_position_arrow" type="id"/>
+    <public id="0x7f0b001c" name="amigo_title" type="id"/>
+    <public id="0x7f0b001d" name="amigo_icon" type="id"/>
+    <public id="0x7f0b001e" name="amigo_checkbox" type="id"/>
+    <public id="0x7f0b001f" name="amigo_edittext_container" type="id"/>
+    <public id="0x7f0b0020" name="amigo_list_footer" type="id"/>
+    <public id="0x7f0b0021" name="amigo_prefs_frame" type="id"/>
+    <public id="0x7f0b0022" name="amigo_headers" type="id"/>
+    <public id="0x7f0b0023" name="amigo_prefs" type="id"/>
+    <public id="0x7f0b0024" name="amigo_button_bar" type="id"/>
+    <public id="0x7f0b0025" name="amigo_back_button" type="id"/>
+    <public id="0x7f0b0026" name="amigo_skip_button" type="id"/>
+    <public id="0x7f0b0027" name="amigo_next_button" type="id"/>
+    <public id="0x7f0b0028" name="amigo_seekbar" type="id"/>
+    <public id="0x7f0b0029" name="amigo_switchWidget" type="id"/>
+    <public id="0x7f0b002a" name="amigo_contentPanel" type="id"/>
+    <public id="0x7f0b002b" name="amigo_topPanel" type="id"/>
+    <public id="0x7f0b002c" name="amigo_buttonPanel" type="id"/>
+    <public id="0x7f0b002d" name="amigo_customPanel" type="id"/>
+    <public id="0x7f0b002e" name="amigo_custom" type="id"/>
+    <public id="0x7f0b002f" name="amigo_titleDivider" type="id"/>
+    <public id="0x7f0b0030" name="amigo_titleDividerTop" type="id"/>
+    <public id="0x7f0b0031" name="amigo_cancel" type="id"/>
+    <public id="0x7f0b0032" name="amigo_title_template" type="id"/>
+    <public id="0x7f0b0033" name="amigo_alertTitle" type="id"/>
+    <public id="0x7f0b0034" name="amigo_scrollView" type="id"/>
+    <public id="0x7f0b0035" name="amigo_button1" type="id"/>
+    <public id="0x7f0b0036" name="amigo_button2" type="id"/>
+    <public id="0x7f0b0037" name="amigo_button3" type="id"/>
+    <public id="0x7f0b0038" name="amigo_text1" type="id"/>
+    <public id="0x7f0b0039" name="amigo_magic_bar_bg" type="id"/>
+    <public id="0x7f0b003a" name="amigo_overlap" type="id"/>
+    <public id="0x7f0b003b" name="amigo_magic_bar" type="id"/>
+    <public id="0x7f0b003c" name="amigo_magicbar_shadow" type="id"/>
+    <public id="0x7f0b003d" name="amigo_magicbar_tab" type="id"/>
+    <public id="0x7f0b003e" name="amigo_icon0" type="id"/>
+    <public id="0x7f0b003f" name="amigo_icon1" type="id"/>
+    <public id="0x7f0b0040" name="amigo_icon2" type="id"/>
+    <public id="0x7f0b0041" name="amigo_icon3" type="id"/>
+    <public id="0x7f0b0042" name="amigo_icon4" type="id"/>
+    <public id="0x7f0b0043" name="amigo_divider" type="id"/>
+    <public id="0x7f0b0044" name="amigo_listview" type="id"/>
+    <public id="0x7f0b0045" name="amigo_magic_listpublic_textview" type="id"/>
+    <public id="0x7f0b0046" name="amigo_magic_listpublic_checkbox" type="id"/>
+    <public id="0x7f0b0047" name="amigo_action_bar_container" type="id"/>
+    <public id="0x7f0b0048" name="amigo_action_bar" type="id"/>
+    <public id="0x7f0b0049" name="amigo_up" type="id"/>
+    <public id="0x7f0b004a" name="amigo_action_bar_intellgent_container" type="id"/>
+    <public id="0x7f0b004b" name="amigo_content" type="id"/>
+    <public id="0x7f0b004c" name="amigo_shortcut" type="id"/>
+    <public id="0x7f0b004d" name="amigo_action_bar_overlay_layout" type="id"/>
+    <public id="0x7f0b004e" name="amigo_action_context_bar" type="id"/>
+    <public id="0x7f0b004f" name="amigo_split_action_bar" type="id"/>
+    <public id="0x7f0b0050" name="amigo_action_mode_close_button" type="id"/>
+    <public id="0x7f0b0051" name="amigo_home" type="id"/>
+    <public id="0x7f0b0052" name="amigo_empty_view" type="id"/>
+    <public id="0x7f0b0053" name="amigo_search_button" type="id"/>
+    <public id="0x7f0b0054" name="amigo_search_src_text" type="id"/>
+    <public id="0x7f0b0055" name="amigo_search_edit_frame" type="id"/>
+    <public id="0x7f0b0056" name="amigo_search_plate" type="id"/>
+    <public id="0x7f0b0057" name="amigo_search_background" type="id"/>
+    <public id="0x7f0b0058" name="amigo_search_go_btn" type="id"/>
+    <public id="0x7f0b0059" name="amigo_search_close_btn" type="id"/>
+    <public id="0x7f0b005a" name="amigo_search_voice_btn" type="id"/>
+    <public id="0x7f0b005c" name="amigo_edit_query" type="id"/>
+    <public id="0x7f0b005d" name="amigo_resolver_grid" type="id"/>
+    <public id="0x7f0b005e" name="amigo_button_always" type="id"/>
+    <public id="0x7f0b005f" name="amigo_button_once" type="id"/>
+    <public id="0x7f0b0060" name="amigo_actionbar_container_stub" type="id"/>
+    <public id="0x7f0b0061" name="amigo_substance_bar" type="id"/>
+    <public id="0x7f0b0062" name="amigo_time_picker" type="id"/>
+    <public id="0x7f0b0063" name="amigo_search_bar" type="id"/>
+    <public id="0x7f0b0064" name="amigo_magicbar_backgroud" type="id"/>
+    <public id="0x7f0b0065" name="amigo_expandable_list_group_divider" type="id"/>
+    <public id="0x7f0b0066" name="amigo_preference_title_layout" type="id"/>
+    <public id="0x7f0b0067" name="amigo_right_button" type="id"/>
+    <public id="0x7f0b0068" name="amigo_multichoice_selectedCount" type="id"/>
+    <public id="0x7f0b0069" name="amigo_multichoice_selectall" type="id"/>
+    <public id="0x7f0b006a" name="tabHost" type="id"/>
+    <public id="0x7f0b006b" name="title_tv" type="id"/>
+    <public id="0x7f0b006c" name="amigo_customView" type="id" />
+    <public id="0x7f0b006d" name="amigo_menuIcon" type="id" />
+    <public id="0x7f0b006e" name="amigo_menuTitle" type="id" />
+    <public id="0x7f0b006f" name="amigo_forcetouch_custom_view" type="id" />
+    <public id="0x7f0b0070" name="amigo_forcetouch_indicator" type="id" />
+    <public id="0x7f0b0071" name="amigo_submenuIcon" type="id" />
+    <public id="0x7f0b0072" name="amigo_submenuIcon_layout" type="id" />
+    <public id="0x7f0b0073" name="amigo_magic_listitem_textview" type="id" />
+    <public id="0x7f0b0074" name="amigo_magic_listitem_checkbox" type="id" />
+    <public id="0x7f0b0075" name="amigo_lunar_mode_rl" type="id" />
+    <public id="0x7f0b0076" name="amigo_lunar_mode_cb" type="id" />
+    <public id="0x7f0b0077" name="amigo_auto_matic" type="id" />
+    <public id="0x7f0b0078" name="amigo_parentPanel" type="id" />
+    <public id="0x7f0b0079" name="amigo_button_item" type="id" />
+    <public id="0x7f0b007a" name="amigo_category_divider" type="id" />
+    <public id="0x7f0b007b" name="amigo_preference_divider" type="id" />
+    <public id="0x7f0b007c" name="amigo_preference_bottom_line" type="id" />
+    <public id="0x7f0b007d" name="amigo_preference_result" type="id" />
+    <public id="0x7f0b007e" name="amigo_preference_arrow" type="id" />
+    <public id="0x7f0b007f" name="amigo_btn3_divider" type="id" />
+    <public id="0x7f0b0080" name="amigo_magicbar_tab_divider" type="id"/>
+    <public id="0x7f0b0081" name="amigo_btn2_divider" type="id"/>
+    <public id="0x7f0b0082" name="amigo_dialog_multichoice_divider" type="id"/>
+    <public id="0x7f0b0083" name="amigo_dialog_button1" type="id"/>
+    <public id="0x7f0b0084" name="amigo_dialog_button2" type="id"/>
+    <public id="0x7f0b0085" name="amigo_dialog_button3" type="id"/>
+    <public id="0x7f0b0086" name="amigo_expandable_divider" type="id"/>
+    <public id="0x7f0b0087" name="amigo_dialog_singlechoice_divider" type="id"/>
+    <public id="0x7f0b0088" name="amigo_category_btn" type="id"/>
+    <public id="0x7f0b0089" name="amigo_category_btn_container" type="id"/>
+    <public id="0x7f0b008a" name="amigo_tail_icon" type="id"/>
+    <public id="0x7f0b008b" name="amigo_internalEmpty" type="id"/>
+    <public id="0x7f0b008c" name="amigo_checkbox_key_tag" type="id"/>
+    <public id="0x7f0b008d" name="amigo_timeday_frame" type="id"/>
+    <public id="0x7f0b008e" name="amigo_day_spinner" type="id"/>
+    <public id="0x7f0b008f" name="amigo_time_spinner" type="id"/>
+    <public id="0x7f0b0090" name="amigo_lunar_switch" type="id"/>
+    <public id="0x7f0b0091" name="amigo_time_day_spinner" type="id"/>
+    <public id="0x7f0b0092" name="amigo_menu_list" type="id"/>
+    <public id="0x7f0b0093" name="amigo_menu_scrollview" type="id"/>
+    <public id="0x7f0b0094" name="amigo_qr_code_btn" type="id"/>
+</resources>

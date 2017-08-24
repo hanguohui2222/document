@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Amigo.Light.Translucent">
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        
+        <item name="android:textColorPrimary">@color/amigo_primary_text_dark</item>
+        <item name="android:textColorSecondary">@color/amigo_secondary_text_dark</item>
+        <item name="android:textColorTertiary">@color/amigo_tertiary_text_dark</item>
+        <item name="android:textColorPrimaryInverse">@color/amigo_primary_text_light</item>
+        <item name="android:textColorSecondaryInverse">@color/amigo_secondary_text_light</item>
+        <item name="android:textColorTertiaryInverse">@color/amigo_tertiary_text_light</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/amigo_primary_text_disable_only_dark</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/amigo_primary_text_disable_only_light</item>
+        <item name="android:textColorPrimaryNoDisable">@color/amigo_primary_text_nodisable_dark</item>
+        <item name="android:textColorSecondaryNoDisable">@color/amigo_secondary_text_nodisable_dark</item>
+        <item name="android:textColorPrimaryInverseNoDisable">@color/amigo_primary_text_nodisable_light</item>
+        <item name="android:textColorSecondaryInverseNoDisable">@color/amigo_secondary_text_nodisable_light</item>
+        <item name="android:textColorHint">@color/amigo_hint_foreground_dark</item>
+        <item name="android:textColorHintInverse">@color/amigo_hint_foreground_light</item>
+        <item name="android:textColorHighlight">@color/amigo_highlighted_text_dark</item>
+        <item name="android:textColorLink">@color/amigo_bright_foreground_yellow</item>
+        <!-- @hide android 2.3 have not these attrs -->
+        <item name="android:textColorHighlightInverse">@color/amigo_highlighted_text_light</item>
+        <item name="android:textColorLinkInverse">@color/amigo_bright_foreground_yellow</item>
+        <item name="android:textColorAlertDialogListItem">@color/amigo_primary_text_dark</item>
+        <item name="android:editTextStyle">@style/Widget.Amigo.EditText.Translucent</item>
+        
+        <item name="android:buttonStyle">@style/Widget.Amigo.Light.Button.Translucent</item>
+        <item name="android:buttonStyleSmall">@style/Widget.Amigo.Light.Button.Small.Translucent</item>
+        <item name="android:borderlessButtonStyle">@style/Widget.Amigo.Light.Button.Borderless.Translucent</item>
+        <item name="amigoactionBarStyle">@style/Widget.Amigo.Light.ActionBar.Solid.Translucent</item>
+        <item name="amigooptionMenuBg">@color/amigo_translucent_background</item>
+        <item name="amigooptionMenuListBackground">@color/amigo_translucent_background</item>
+        <item name="android:actionModeBackground">@color/amigo_translucent_background</item>
+        <item name="android:actionModeSplitBackground">@color/amigo_translucent_background</item>
+        <item name="android:actionBarTabBarStyle">@style/Widget.Amigo.ActionBar.TabBar.Translucent</item>
+        <item name="android:listPopupWindowStyle">@style/Widget.Amigo.Light.ListPopupWindow.Translucent</item>
+        <item name="android:popupMenuStyle">@style/Widget.Amigo.Light.ListPopupWindow.Translucent</item>
+        <item name="android:panelBackground">@color/amigo_translucent_background</item>
+        <item name="amigoalertDialogStyle">@style/AmigoAlertDialog</item>
+        <item name="android:dialogTheme">@style/Theme.Amigo.Light.Dialog.Translucent</item>
+        <item name="android:alertDialogTheme">@style/Theme.Amigo.Light.Dialog.Alert.Translucent</item>
+        <item name="android:dropDownSpinnerStyle">@style/Widget.Amigo.Light.Spinner.DropDown.Translucent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="amigo_dialog_content_text_color">@color/amigo_text_color_light</item>
+        <item name="amigo_spinner_item_text_color">@color/amigo_bright_foreground_primary_light</item>
+        <item name="android:actionMenuTextColor">@color/amigo_text_color_light</item>
+        <item name="amigodatePickerDialogStyle">@style/Theme.Amigo.Dialog.Date.Picker.Translucent</item>
+        <item name="amigoEnableSectionColor">@color/amigo_content_color_secondary_on_backgroud_c2_translucent</item>
+        <item name="amigoDisableSectionColor">@color/amigo_content_color_thirdly_on_backgroud_c3_translucent</item>
+        <item name="android:colorForeground">@color/amigo_bright_foreground_tertiary_light</item>
+        <item name="amigoListItemStyleLevel1">@style/AmigoListItemLevel1.Translucent</item>
+        <item name="amigoListItemStyleLevel2">@style/AmigoListItemLevel2.Translucent</item>
+        <item name="amigoForceTouchPannelBackgroundColor">@color/amigo_translucent_background</item>
+        <item name="amigoForceTouchMenuItemBackgroundColor">@color/amigo_translucent_background</item>
+    </style>
+    
+    <style name="Theme.Amigo.Light.Dialog.Translucent">
+        <item name="android:colorControlNormal">@color/amigo_bright_foreground_tertiary_light</item>
+        <item name="amigo_dialog_content_text_color">@color/amigo_text_color_light</item>
+        <item name="amigoDialogOtherBtnTxtColor">@color/amigo_text_color_light</item>
+        <item name="amigoDialogBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/amigo_translucent_background</item>
+        <item name="android:borderlessButtonStyle">@style/Widget.Amigo.Light.Button.Borderless.Translucent</item>
+    </style>
+    
+    <style name="Theme.Amigo.Light.Dialog.Alert.Translucent">
+        <item name="android:colorControlNormal">@color/amigo_bright_foreground_tertiary_light</item>
+        <item name="amigo_dialog_content_text_color">@color/amigo_text_color_light</item>
+        <item name="amigoDialogOtherBtnTxtColor">@color/amigo_text_color_light</item>
+        <item name="amigoDialogBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/amigo_translucent_background</item>
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+    
+    </style>
+    
+    <style name="Theme.Amigo.Dialog.Date.Picker.Translucent" parent="@style/Theme.Amigo.Light.Dialog.Alert.Translucent">
+        <!-- Gionee <lihq> <2014-04-22> modify for CR00873172 begin -->
+        <!-- <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item> -->
+        <!-- Gionee <lihq> <2014-04-22> modify for CR00873172 end -->
+        <!-- Text styles -->
+        <item name="amigoalertDialogStyle">@style/AmigoDatePickerDialog</item>
+    </style> 
+    
+    <style name="Widget.Amigo.Light.ActionBar.Solid.Tranlucent">
+        <item name="amigobackgroundStacked">@color/amigo_translucent_background</item>
+        <item name="amigobackground">@color/amigo_translucent_background</item>
+        <item name="amigobackgroundSplit">@android:color/transparent</item>
+    </style>
+    
+    <style name="FloatActivity.Translucent" parent="@style/Theme.Amigo.Light.Translucent">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+</resources>

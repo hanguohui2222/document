@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+  <string name="amigo_app_name">AmigoUI</string>  
+  <string name="amigo_capital_on">PÅ</string>  
+  <string name="amigo_capital_off">AV</string>  
+  <string name="amigo_time_picker_dialog_title">Still klokken</string>  
+  <string name="amigo_date_picker_dialog_title">Angi dato</string>  
+  <string name="amigo_date_time_done">Utført</string>  
+  <string name="amigo_copy">Kopi</string>  
+  <string name="amigo_paste">Lim inn</string>  
+  <string name="amigo_cut">Klipp ut</string>  
+  <string name="amigo_selectAll">Merk alle</string>  
+  <string name="amigo_select">Velg</string>  
+  <string name="amigo_inputMethod">Metode inndata</string>  
+  <string name="amigo_back_button_label">Tilbake</string>  
+  <string name="amigo_next_button_label">Neste</string>  
+  <string name="amigo_skip_button_label">Hopp over</string>  
+  <string name="amigo_ok">OK</string>  
+  <string name="amigo_cancel">Avbryt</string>  
+  <string name="amigo_yes">OK</string>  
+  <string name="amigo_no">Avbryt</string>  
+  <string name="amigo_action_mode_done">Utført</string>  
+  <string name="amigo_action_bar_home_description">Gå til startsiden</string>  
+  <string name="amigo_action_bar_up_description">Gå opp</string>  
+  <string name="amigo_smart_full_btn_label">OK</string>  
+  <string name="amigo_activity_resolver_use_always">Alltid</string>  
+  <string name="amigo_activity_resolver_use_once">Bare én gang</string>  
+  <string name="amigo_noApplications">Ingen apper kan utføre denne handlingen.</string>  
+  <string name="amigo_system_label">Android-system</string>  
+  <!--Gionee liangjb 20141118 add for CR01403012 begin-->
+  <string name="amigo_whichApplication">Fullfør tiltak ved bruk av</string>  
+  <!--Gionee liangjb 20141118 add for CR01403012 end-->  
+  <string name="amigo_chooseActivity">Velg en handling</string>
+  <string name="amigo_actionbar_magic_item_more">Mer</string>  
+  <string name="amigo_actionbar_magic_item_close">Lukk</string>  
+  <string name="amigo_edit_mode_leftbtn_txt">Avbryt</string>  
+  <string name="amigo_edit_mode_rightbtn_txt">Ok</string>  
+  <string name="amigo_strong_warning">Sterk advarsel</string>
+  <string name="amigo_multichoice_select_text">%1$s element valgt</string>
+  <string name="amigo_multichoice_select_all">Velg alle</string>
+  <string name="amigo_multichoice_cancel_select_all">Avbryt valgt</string>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="amigo_app_name">AmigoUI</string>
+    
+    <string name="amigo_capital_on">ဖြင့္သည္</string>
+    <string name="amigo_capital_off">ပိတ္သည္</string>
+    
+    <string name="amigo_time_picker_dialog_title">အခၽိန္ကိုသတ္မွတ္မည္</string>
+    <string name="amigo_date_picker_dialog_title">ေန႔ရက္ကိုသတ္မွတ္မည္</string>
+    <string name="amigo_date_time_done">Done</string>
+
+    <string name="amigo_copy">ကူးယူသည္</string>
+    <string name="amigo_paste">ကပ္ယူသည္</string>
+    <string name="amigo_cut">ျဖတ္​သည္​</string>
+    <string name="amigo_selectAll">အားလံုးကို​ေ႐ြးခ်ယ္​သည္​</string>
+    <string name="amigo_select">ေရြးခၽယ္မည္</string>
+    <string name="amigo_inputMethod">စာရိုက္စနစ္</string>
+    
+    <!--  Strings for possible PreferenceActivity Back/Next buttons -->
+    <string name="amigo_back_button_label">ေနာက္သို႕</string>
+    <string name="amigo_next_button_label">ေရွ့သို႔</string>
+    <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
+    <string name="amigo_skip_button_label">ေက်ာ္သည္</string>    
+    
+    <string name="amigo_ok">OK</string>
+    <string name="amigo_cancel">"ျငင္းပယ္သည္"</string>
+    <string name="amigo_yes">OK</string>
+    <string name="amigo_no">"ျငင္းပယ္သည္"</string>
+
+    <string name="amigo_action_mode_done">ျပီးျပီ</string>
+	<string name="amigo_action_bar_home_description">မူလေနရာသို႕သြားပါ</string>
+	<string name="amigo_action_bar_up_description">အေပၚသို႕တတ္ပါ</string>
+	
+	<!-- Gionee <xuhz> <2013-07-19> add for CR00838236 begin -->
+	<!-- String for Smart Guider -->
+    <string name="amigo_smart_full_btn_label">OK</string>
+	<!-- Gionee <xuhz> <2013-07-19> add for CR00838236 end -->
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 begin -->
+    <string name="amigo_activity_resolver_use_always">အျမဲတမ္း</string>
+    <string name="amigo_activity_resolver_use_once">တစ္ခါတည္းသာ</string>
+
+    <!-- Text to display when there are no activities found to display in the
+         activity chooser. See the "Select an action" title. -->
+    <string name="amigo_noApplications">ယင္းလုပ္ငန္းေဆာင္ရြက္ရန္ပရိုဂရမ္မရွိပါ</string>
+    <string name="amigo_system_label">Androidစနစ္</string>
+    <string name="amigo_whichApplication">လုပ္​ေဆာင္မႈျပီးေျမာက္အသံုးျပဳျခင္း</string>
+    <string name="amigo_chooseActivity">လုပ္​​ေဆာင္​မႈ​ေ႐ြးပါ</string>
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 end -->
+    <!-- shaozj begin-->
+    <string name="amigo_actionbar_magic_item_more">ပို၍</string>
+    <string name="amigo_actionbar_magic_item_close">ပိတ္သည္</string>
+    <!-- shaozj end-->
+    <!-- weidong begin -->
+    <string name="amigo_edit_mode_leftbtn_txt">"ျငင္းပယ္သည္"</string>
+    <string name="amigo_edit_mode_rightbtn_txt">သိမ္းဆည္းသည္</string>
+    <string name="amigo_strong_warning">ျပင္းထန္စြာ သတိေပး</string>
+
+    <string name="amigo_multichoice_select_text">%1$s ေရြးခ်ယ္</string>
+    <string name="amigo_multichoice_select_all">အကုန္ေရြးခ်ယ္</string>
+    <string name="amigo_multichoice_cancel_select_all">"အကုန္မေရြးခ်ယ္"</string>
+    <!-- weidong end -->
+    <string name="clone_suffix"> ကူးသည္ </string>
+    <string name="amigo_loading">လုပ္ေဆာင္ေနသည္\u2026</string>
+</resources>

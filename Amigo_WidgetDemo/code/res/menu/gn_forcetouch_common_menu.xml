@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/title1"
+        android:icon="@drawable/amigo_forcetouch_menu_icon"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/title1">
+    </item>
+    <item
+        android:id="@+id/title2"
+        android:icon="@drawable/gn_magic_menu_delete"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/title2"/>
+    <item
+        android:id="@+id/title3"
+        android:icon="@drawable/gn_magic_menu_cut"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/title3"/>
+    <item
+        android:id="@+id/title4"
+        android:icon="@drawable/gn_magic_menu_share"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/title4"/>
+
+</menu>

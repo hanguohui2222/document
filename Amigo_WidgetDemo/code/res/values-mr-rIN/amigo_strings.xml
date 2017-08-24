@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="amigo_app_name">अमिगो UI</string>
+    <string name="amigo_capital_on">ऑन</string>
+    <string name="amigo_capital_off">ऑफ</string>
+    <string name="amigo_time_picker_dialog_title">वेळ सेट करा</string>
+    <string name="amigo_date_picker_dialog_title">दिनांक सेट करा</string>
+    <string name="amigo_date_time_done">पूर्ण झाले</string>
+    <string name="amigo_copy">कॉपी</string>
+    <string name="amigo_paste">पेस्ट</string>
+    <string name="amigo_cut">कट</string>
+    <string name="amigo_selectAll">सर्व निवडा</string>
+    <string name="amigo_select">निवड करा</string>
+    <string name="amigo_inputMethod">इनपुट पद्धती</string>
+    <string name="amigo_back_button_label">परत जा</string>
+    <string name="amigo_next_button_label">पुढचे</string>
+    <string name="amigo_skip_button_label">स्किप</string>
+    <string name="amigo_ok">ओके</string>
+    <string name="amigo_cancel">रद्द करा</string>
+    <string name="amigo_yes">ओके</string>
+    <string name="amigo_no">रद्द करा</string>
+    <string name="amigo_action_mode_done">पूर्ण झाले</string>
+    <string name="amigo_action_bar_home_description">नेव्हीगेट होम</string>
+    <string name="amigo_action_bar_up_description">नेव्हीगेट अप</string>
+    <string name="amigo_smart_full_btn_label">ओके</string>
+    <string name="amigo_activity_resolver_use_always">नेहमीच</string>
+    <string name="amigo_activity_resolver_use_once">फक्त एकदांच</string>
+    <string name="amigo_noApplications">कुठलेही ऐप ही क्रिया करू शकनार नाही.</string>
+    <string name="amigo_system_label">अँड्रॉईड सिस्टम</string>
+    <string name="amigo_whichApplication">याचा वापर करून कार्य पूर्ण करा.</string>
+    <string name="amigo_chooseActivity">एक ऍक्शन निवडा.</string>
+    <string name="amigo_actionbar_magic_item_more">अधिक</string>
+    <string name="amigo_actionbar_magic_item_close">बंद करा</string>
+    <string name="amigo_edit_mode_leftbtn_txt">रद्द करा</string>
+    <string name="amigo_edit_mode_rightbtn_txt">ओके</string>
+    <string name="amigo_strong_warning">कडक इशारा</string>
+    <string name="amigo_multichoice_select_text">%1$s आयटम निवडले</string>
+    <string name="amigo_multichoice_select_all">सर्व निवडा</string>
+    <string name="amigo_multichoice_cancel_select_all">निवड रद्द करा</string>
+</resources>

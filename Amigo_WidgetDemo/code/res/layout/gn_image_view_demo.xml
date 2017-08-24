@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip"
+    android:paddingTop="20dip" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:tint="#ff0000"
+        android:src="@drawable/amigo_ic_ab_back_dark" />
+
+    <ImageView
+        android:id="@+id/imageButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:tint="#00ff00"
+        android:src="@drawable/amigo_ic_ab_back_dark" />
+    
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:tint="#0000ff"
+        android:scaleType="fitXY"
+        android:src="@drawable/amigo_ic_ab_back_dark" />
+</LinearLayout>

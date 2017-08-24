@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="amigo_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
+
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 begin -->
+    <!-- Maximum number of grid columns permitted in the ResolverActivity
+         used for picking activities to handle an intent. -->
+    <!-- Gionee <hanbj> <20110406> modify for CR00986146 begin -->
+    <integer name="amigo_config_maxResolverActivityColumns">3</integer>
+    <!-- Gionee <hanbj> <20110406> modify for CR00986146 end -->
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 end -->
+</resources>

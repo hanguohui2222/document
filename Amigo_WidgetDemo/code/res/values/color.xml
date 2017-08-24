@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+    <color name="yellow">#FFF000</color>
+    <color name="gray">#A6A6A0</color>
+    <color name="orange">#ff9900</color>
+    <!--Gionee liuwei 2013-11-16 add for CR00953486 begin -->
+    <!--<color name="tab_indicator_color">#FFC000</color>-->
+    <color name="tab_indicator_color">#D5D6D7</color>
+    <!--Gionee liuwei 2013-11-16 add for CR00953486 end -->
+    <color name="deepcolor">#faaa5f</color>
+    <color name="shadowcolor">#444444</color>
+    <color name="naming">#ABABAB</color>
+    <color name="red">#FF0000</color>
+    <color name="background">#272727</color>
+    <color name="orange_yellow">#9b9ba0</color>
+    <color name="white">#ffffff</color>
+    <color name="green">#00ff00</color>
+	<!-- Gionee xiongjiaxin 2012-7-17 added for CR00651726 start -->
+	<color name="black">#000000</color>
+    <!-- Gionee xiongjiaxin 2012-7-17 added for CR00651726 end -->
+    <drawable name="semi_black">#80000000</drawable>
+
+    <color name="remote_connect_text">#FFe78018</color>
+    <color name="remote_disconnect_text">#FF901821</color>
+
+    <color name="category_text_color">#444444</color>
+    <color name="category_small_text_color">#666666</color>
+    <color name="storage_info_text_color">#8a653d</color>
+    <color name="tab_item_color">#ffffffff</color>
+    <!-- Gionee <lilg><2014-02-26> modify for CR01085554 begin -->
+    <color name="listview_empty_color">#cdd0d3</color>
+    <!-- Gionee <lilg><2014-02-26> modify for CR01085554 end -->
+    <color name="multi_select_title">#ffffffff</color>
+    
+    <!-- Gionee <lilg><2014-01-06> add for CR01007903 begin -->
+    <color name="gn_storage_info_text_color">#444444</color>
+    <!-- Gionee <lilg><2014-01-06> add for CR01007903 end -->
+    
+    <!-- Gionee <lilg><2014-01-06> add for CR01067075 begin -->
+    <color name="amigo_actionbar_title_color_light_selected">#ffffff</color>
+    <color name="amigo_actionbar_title_color_light_normal">#30ffffff</color>
+    <!-- Gionee <lilg><2014-01-06> add for CR01067075 end -->
+    <color name="amibo_actionbar_background_test">#22000000</color>
+    <color name="test_red">#ff900000</color>
+</resources>

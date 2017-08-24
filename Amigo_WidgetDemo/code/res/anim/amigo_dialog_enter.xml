@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Gionee <lihq> <2014-04-21> modify for CR00873172 begin-->
+<!-- <set xmlns:android="http://schemas.android.com/apk/res/android" android:interpolator="@anim/amigo_overshoot_interpolator">
+  <translate android:fromYDelta="100%p" android:toYDelta="0" android:duration="@integer/amigo_longAnimTime" /> 
+  </set> -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@anim/amigo_decelerate_interpolator" >
+
+    <translate
+        android:duration="300"
+        android:fromYDelta="80%p"
+        android:toYDelta="0" />
+
+</set>
+<!-- Gionee <lihq> <2014-04-21> modify for CR00873172 end-->

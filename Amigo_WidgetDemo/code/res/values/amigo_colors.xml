@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources>
+    <!--Gionee <lihq> <2014-03-24> modify for CR00873172 begin-->
+    <drawable name="amigo_window_background_light">#fafafa</drawable>
+    <drawable name="amigo_window_background_dark">#ff222222</drawable>
+    <!--Gionee <lihq> <2014-03-24> modify for CR00873172 end-->
+    
+    <!--shaozj <color name="amigo_bright_foreground_primary_dark">#222222</color> -->
+    <color name="amigo_bright_foreground_primary_dark">#cc000000</color>
+    <color name="amigo_dim_foreground_primary_dark">#50222222</color>
+    
+    <color name="amigo_bright_foreground_primary_light">#ffffffff</color>
+    <color name="amigo_dim_foreground_primary_light">#50ffffff</color>
+    
+    <!--Gionee <lihq> <2013-12-20> modify for CR00873172 begin-->
+    <color name="amigo_bright_foreground_secondary_dark">#66000000</color>
+    <color name="amigo_dim_foreground_secondary_dark">#50888888</color>
+    <!--Gionee <lihq> <2013-12-20> modify for CR00873172 end-->
+
+    <color name="amigo_bright_foreground_secondary_light">#ccffffff</color>
+    <color name="amigo_dim_foreground_secondary_light">#20ffffff</color>
+    
+    <color name="amigo_bright_foreground_tertiary_dark">#33000000</color>
+    <color name="amigo_dim_foreground_tertiary_dark">#888888</color>    
+    
+    <color name="amigo_bright_foreground_tertiary_light">#50ffffff</color>
+    <color name="amigo_dim_foreground_tertiary_light">#aaaaaa</color>    
+    
+    <color name="amigo_bright_foreground_yellow">#ffff9000</color>
+    <color name="amigo_dim_foreground_yellow">#66ff9000</color>
+    
+    <color name="amigo_hint_foreground_light">#aaaaaa</color>
+    <color name="amigo_hint_foreground_dark">#aaaaaa</color>    
+    
+    <color name="amigo_highlighted_text_light">#80ff9000</color>
+    <color name="amigo_highlighted_text_dark">#80ff9000</color>
+    
+    <color name="amigo_alert_dialog_title">#cc6600</color>
+    <color name="amigo_alert_dialog_title_divider">#cc6600</color>
+    
+    <color name="amigo_alert_dialog_title_light">#ff9000</color>
+    <color name="amigo_alert_dialog_title_divider_light">#ff9000</color>
+    <!-- search view text color -->
+    <color name="amigo_searchview_text_color">#222222</color>
+    <!-- Editor Toolbar text color -->
+    <color name="amigo_editor_toolbar_text_color">#3d3d3d</color>
+    <!-- actionbar text color -->
+    <color name="amigo_actionbar_title_color_light">#ffffffff</color>
+    <!-- Gionee <zhangxx> <2014-06-03> modify for CR01273833 begin -->
+    <color name="amigo_actionbar_title_color_dark">#99000000</color>
+    <!-- Gionee <zhangxx> <2014-06-03> modify for CR01273833 end -->
+    <color name="amigo_actionbar_sub_title_color_dark">#50000000</color>
+    <!-- switch text color -->
+    <color name="amigo_switch_text_color">#ffffffff</color>
+    <!-- Gionee <fenglp> <2013-08-02> add for CR00812456 begin -->
+    <color name="amigo_loading_button_text_color">#ff9000</color>
+    <!-- Gionee <fenglp> <2013-08-02> add for CR00812456 end -->
+
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 begin -->
+    <color name="amigo_transparent">#00000000</color>    
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 end -->
+    <color name="amigo_translucent_background">#50000000</color>
+    <!-- Gionee <gaoj> <2013-9-13> add for CR00899138 begin -->
+    <color name="amigo_button_text_color">#ffffff</color>
+    <!--  Gionee <gaoj> <2013-9-13> add for CR00899138 end-->
+
+    <!--Gionee <gaoj> <2013-9-27> add for CR00899138 begin-->
+    <color name="amigo_datepicker_bg_light">#fcfcfc</color>
+    <color name="amigo_numberpicker_enable">#222222</color>
+    <!--Gionee <gaoj> <2013-9-27> add for CR00899138 end-->
+    
+    <!--Gionee <lihq> <2013-12-05> add for CR00873172 start-->
+    <color name="amigo_alert_dialog_button_text_color">#ff9000</color>
+    <!--Gionee <lihq> <2013-12-05> add for CR00873172 end-->
+    
+    <!--Gionee <lihq> <2014-03-20> add for CR00873172 start-->
+    <color name="amigo_actionbar_tabtext_color_light">#66000000</color>
+    <color name="amigo_actionbar_tabtext_color_dark">#99000000</color>
+    <!--Gionee <lihq> <2014-03-20> add for CR00873172 end-->
+
+    <!-- shaozj begin -->
+    <color name="amigo_actionbar_background_color_light_normal">#f2f2f2</color>
+    <!-- shaozj end -->
+    <!-- weidong begin -->
+    <color name="amigo_primary_text_default_material_light">#cc000000</color>
+    <item name="amigo_disabled_alpha_material_light" format="float" type="dimen">0.5</item>
+    <color name="amigo_multiple_bg_color">#404040</color>
+    <color name="amigo_button_disabled_bg_color">#10808080</color>
+    <!-- weidong end -->
+    <!-- maxw add begin -->
+    <color name="amigo_edit_text_background_color">#10000000</color>
+    <color name="amigo_edit_text_background_color_dark">#20ffffff</color>
+    <!-- maxw add end-->
+    <color name="amigo_content_color_primary_on_backgroud_c1">#CC000000</color>
+    <color name="amigo_content_color_secondary_on_backgroud_c2">#66000000</color>
+    <color name="amigo_content_color_thirdly_on_backgroud_c3">#33000000</color>
+    
+    <color name="amigo_content_color_secondary_on_backgroud_c2_translucent">#50FFFFFF</color>
+    <color name="amigo_content_color_thirdly_on_backgroud_c3_translucent">#20FFFFFF</color>
+    
+    <color name="amigo_content_color_primary_on_appbar_t1">#99000000</color>
+    <color name="amigo_content_color_secondary_on_appbar_t2">#ccffffff</color>
+    <color name="amigo_content_color_thirdly_on_appbar_t3">#50ffffff</color>
+    <color name="amigo_content_olor_forthly_on_appbar_t4">#20ffffff</color>
+    
+    <color name="amigo_accent_color_g1">#ff9000</color>
+    
+    <color name="amigo_switch_thumb_normal">#ffffffff</color>
+    <color name="amigo_switch_thumb_disabled">#ffbdbdbd</color>
+    
+    <!-- gionee maxw add begin  -->
+    <color name="amigo_expandablelist_group_divider">#33000000</color>
+    <!-- gionee maxw add end  -->
+    <!-- Gionee <weidong><2015-1-24> modify for CR01435305 begin -->
+    <color name="amigo_adaptive_color">#50808080</color>
+    <!-- Gionee <weidong><2015-1-24> modify for CR01435305 end -->
+    <color name="amigo_text_color_light">#FFFFFF</color>
+    <color name="amigo_btn_background_disabled">#20808080</color>
+    
+    <color name="amigo_forcetouch_menu_press_color">#20808080</color>
+    <!-- use to generate amigo_forcetouch_menu_press_color in tint mode -->
+    <color name="amigo_forcetouch_menu_press_tint_color">#FF808080</color>
+    <color name="amigo_forcetouch_preview_bg_color">#ffffffff</color>
+    
+    <!-- Gionee <weidong> <2016-05-04> modify for CR01683201 begin -->
+    <color name="amigo_dialog_bg_color">#fdfdfd</color>
+    <color name="amigo_window_background_color">#fafafa</color>
+    <color name="amigo_magicbar_bg_color">#fdfdfd</color>
+    <color name="amigo_white">#ffffff</color>
+    <color name="amigo_actionbar_background_color_dark_normal">#0f0f0f</color>
+    <!-- Gionee <weidong> <2016-05-04> modify for CR01683201 begin -->
+    
+    <color name="amigo_global_theme_actionbar_title_color">#ffffecd1</color>
+    <color name="amigo_global_theme_actionbar_subtitle_color">#50ffecd1</color>
+    <color name="amigo_global_theme_actionbar_tabtext_unselected_color">#50ffecd1</color>
+    <color name="amigo_global_theme_actionbar_bg">#efefef</color>
+    <color name="amigo_global_theme_dialog_title_color">#edce8a</color>
+    <color name="amigo_global_theme_dialog_positive_btn_color_selector">#1a1a1a</color>
+    <color name="amigo_global_theme_dialog_neutral_btn_color">#1a1a1a</color>
+    <color name="amigo_global_theme_dialog_message_color">#ffecd1</color>
+    <color name="amigo_global_theme_C3_color">#33ffecd1</color>
+    <color name="amigo_global_theme_C1_color">#ffecd1</color>
+    <color name="amigo_button_stroke_color">#4D828282</color>
+    <color name="amigo_button_disable_stroke_color">#26828282</color>
+    <color name="amigo_button_normal_bg_color">#f5f5f5</color>
+    <color name="amigo_primary_text_disable_material_light">#33000000</color>
+    <color name="amigo_list_divider_color">#33828282</color>
+    <color name="amigo_color_category_divider">#eaeaea</color>
+    <color name="amigo_divider_line_color">#33828282</color>
+    <color name="amigo_number_picker_change_disable_color">#80ffffff</color>
+    <color name="amigo_magicbar_tab_divider">@color/amigo_list_divider_color</color>
+    <color name="amigo_category_btn_text_color">#ff6e6e6e</color>
+    <color name="amigo_category_btn_bg_color">#05000000</color>
+    
+    <color name="amigo_magicbar_bg_full_color">#fafbfbfb</color>
+    
+    <item name="amigo_highlight_alpha_material_light" format="float" type="dimen">0.12</item>
+    <color name="amigo_searchview_edittext_bg_color">#0d000000</color>
+    <color name="amigo_searchview_right_btn_text_color">#99000000</color>
+</resources>
+

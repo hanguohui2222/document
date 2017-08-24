@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/amigo_dialog_shadow_bg"
+    android:insetBottom="@dimen/amigo_magicbar_bg_corner"
+    android:insetLeft="@dimen/amigo_magicbar_start_end_padding"
+    android:insetRight="@dimen/amigo_magicbar_start_end_padding" >
+
+</inset>

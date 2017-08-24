@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources>
+    <style name="Theme.Amigo.Dark" parent="@android:style/Theme.Holo">
+        <!-- Gionee <lihq> <2014-01-06> add for CR00873172 begin -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- Gionee <lihq> <2014-01-06> add for CR00873172 end -->
+        <!--shaozj <item name="android:windowAnimationStyle">@style/Animation.Amigo.Activity</item> --> 
+        <!--Gionee <lihq> <2014-03-24> modify for CR00873172 begin-->
+        <!-- <item name="android:windowBackground">@drawable/amigo_background_dark</item> -->
+        <item name="android:windowBackground">@drawable/amigo_screen_background_selector_dark</item>
+        <!--Gionee <lihq> <2014-03-24> modify for CR00873172 end-->
+        <item name="android:textColorPrimary">@color/amigo_primary_text_dark</item>
+        <item name="android:textColorSecondary">@color/amigo_secondary_text_dark</item>
+        <item name="android:textColorTertiary">@color/amigo_tertiary_text_dark</item>
+        <item name="android:textColorPrimaryInverse">@color/amigo_primary_text_light</item>
+        <item name="android:textColorSecondaryInverse">@color/amigo_secondary_text_light</item>
+        <item name="android:textColorTertiaryInverse">@color/amigo_tertiary_text_light</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/amigo_primary_text_disable_only_dark</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/amigo_primary_text_disable_only_light</item>
+        <item name="android:textColorPrimaryNoDisable">@color/amigo_primary_text_nodisable_dark</item>
+        <item name="android:textColorSecondaryNoDisable">@color/amigo_secondary_text_nodisable_dark</item>
+        <item name="android:textColorPrimaryInverseNoDisable">@color/amigo_primary_text_nodisable_light</item>
+        <item name="android:textColorSecondaryInverseNoDisable">@color/amigo_secondary_text_nodisable_light</item>
+        <item name="android:textColorHint">@color/amigo_hint_foreground_dark</item>
+        <item name="android:textColorHintInverse">@color/amigo_hint_foreground_light</item>
+        <item name="android:textColorHighlight">@color/amigo_highlighted_text_dark</item>
+        <item name="android:textColorLink">@color/amigo_bright_foreground_yellow</item>
+        <!-- @hide android 2.3 have not these attrs -->
+        <item name="android:textColorHighlightInverse">@color/amigo_highlighted_text_light</item>
+        <item name="android:textColorLinkInverse">@color/amigo_bright_foreground_yellow</item>
+        <item name="android:textColorAlertDialogListItem">@color/amigo_primary_text_dark</item>
+        
+        <item name="android:textAppearanceLarge">@style/TextAppearance.Amigo.Large</item>
+        <item name="android:textAppearanceMedium">@style/TextAppearance.Amigo.Medium</item>
+        <item name="amigotextAppearanceMediumSecond">@style/TextAppearance.Amigo.MediumSecond</item>
+        <item name="android:textAppearanceSmall">@style/TextAppearance.Amigo.Small</item>
+        <item name="android:textAppearanceLargeInverse">@style/TextAppearance.Amigo.Large.Inverse</item>
+        <item name="android:textAppearanceMediumInverse">@style/TextAppearance.Amigo.Medium.Inverse</item>
+        <item name="amigotextAppearanceMediumSecondInverse">@style/TextAppearance.Amigo.MediumSecond.Inverse</item>
+        <item name="android:textAppearanceSmallInverse">@style/TextAppearance.Amigo.Small.Inverse</item>  
+        <!-- EditText styles -->
+        <!-- maxw modify begin
+            <item name="android:editTextBackground">@drawable/amigo_edit_text</item>
+        -->
+        <item name="android:editTextBackground">@color/amigo_edit_text_background_color_dark</item>
+        <!-- maxw modify end -->        
+        <item name="android:editTextColor">@color/amigo_edit_text</item>
+        <!-- Text selection handle attributes -->
+        <item name="android:textSelectHandleLeft">@drawable/amigo_text_select_handle_left</item>
+        <item name="android:textSelectHandleRight">@drawable/amigo_text_select_handle_right</item>
+        <item name="android:textSelectHandle">@drawable/amigo_text_select_handle_middle</item>
+        <item name="android:textCursorDrawable">@drawable/amigo_text_cursor_light</item>    
+        <!-- Button styles -->
+        <item name="android:buttonStyle">@style/Widget.Amigo.Dark.Button</item>
+        <item name="android:buttonStyleSmall">@style/Widget.Amigo.Dark.Button.Small</item>
+        <item name="android:selectableItemBackground">@drawable/amigo_item_background_dark</item>
+        <item name="android:borderlessButtonStyle">@style/Widget.Amigo.Dark.Button.Borderless</item>        
+        <!-- radio button style -->
+        <item name="android:listChoiceIndicatorSingle">@drawable/amigo_btn_radio_dark</item>
+        <!-- check box style -->
+        <item name="android:listChoiceIndicatorMultiple">@drawable/amigo_btn_check_dark</item>
+        <!-- progress bar style -->
+        <item name="android:progressBarStyle">@style/Widget.Amigo.ProgressBar</item>
+        <item name="android:progressBarStyleHorizontal">@style/Widget.Amigo.ProgressBar.Horizontal</item>
+        <item name="android:progressBarStyleSmall">@style/Widget.Amigo.Dark.ProgressBar.Small</item>
+        <item name="android:progressBarStyleSmallTitle">@style/Widget.Amigo.Dark.ProgressBar.Small.Title</item>
+        <item name="android:progressBarStyleLarge">@style/Widget.Amigo.Dark.ProgressBar.Large</item>
+        <item name="android:progressBarStyleInverse">@style/Widget.Amigo.ProgressBar.Inverse</item>
+        <item name="android:progressBarStyleSmallInverse">@style/Widget.Amigo.Dark.ProgressBar.Small.Inverse</item>
+        <item name="android:progressBarStyleLargeInverse">@style/Widget.Amigo.Dark.ProgressBar.Large.Inverse</item>
+        <!-- seek bar style -->
+        <item name="android:seekBarStyle">@style/Widget.Amigo.Dark.SeekBar</item>        
+
+        <item name="android:dropDownSpinnerStyle">@style/Widget.Amigo.Dark.Spinner.DropDown</item>
+        <item name="android:spinnerDropDownItemStyle">@style/Widget.Amigo.Dark.DropDownItem.Spinner</item>
+        <!-- tab widget style -->
+        <item name="android:tabWidgetStyle">@style/Widget.Amigo.Dark.TabWidget</item>
+        <!-- frame list background -->
+        <item name="amigoframeListBackground">@drawable/amigo_frame_list_background_dark</item>
+        <item name="amigoframeListTopBackground">@drawable/amigo_frame_list_top_background_dark</item>
+        <item name="amigoframeListMiddleBackground">@drawable/amigo_frame_list_middle_background_dark</item>
+        <item name="amigoframeListBottomBackground">@drawable/amigo_frame_list_bottom_background_dark</item>
+        <!-- Gionee <daizhimin> <2013-07-29> add for CR00833379 begin --> 
+        <item name="amigooptionMenuListBackground">@drawable/amigo_frame_list_bg_dark</item>
+        <!-- Gionee <lihq> <2013-12-11> modify for CR00873172 begin-->
+        <!-- GUI 3.5 -->
+        <item name="amigooptionMenuMoreBg">@drawable/amigo_magic_menu_more_dark_bg</item>
+        <!-- Gionee <lihq> <2013-12-11> modify for CR00873172 end-->
+        <item name="amigooptionMenuBg">@drawable/amigo_cab_background_bottom_dark</item>
+        <!-- Gionee <daizhimin> <2013-07-29> add for CR00833379 end --> 
+        <!-- Preference styles -->
+        <item name="android:preferenceScreenStyle">@style/AmigoPreference.PreferenceScreen</item>
+        <!-- <item name="android:preferenceFragmentStyle">@style/AmigoPreferenceFragment</item> -->
+        <item name="android:preferenceCategoryStyle">@style/AmigoPreference.Category</item>
+        <item name="android:preferenceStyle">@style/AmigoPreference</item>
+        <item name="android:preferenceInformationStyle">@style/AmigoPreference.Information</item>        
+        <item name="android:checkBoxPreferenceStyle">@style/AmigoPreference.CheckBoxPreference</item>
+        <item name="android:switchPreferenceStyle">@style/AmigoPreference.SwitchPreference</item>
+        <item name="android:yesNoPreferenceStyle">@style/AmigoPreference.DialogPreference.YesNoPreference</item>
+        <item name="android:dialogPreferenceStyle">@style/AmigoPreference.DialogPreference</item>
+        <item name="android:editTextPreferenceStyle">@style/AmigoPreference.DialogPreference.EditTextPreference</item>
+        <item name="android:ringtonePreferenceStyle">@style/AmigoPreference.RingtonePreference</item>
+        <item name="android:preferenceLayoutChild">@layout/amigo_preference_child</item>
+        
+        <!-- Action bar style -->
+        <item name="amigoactionBarStyle">@style/Widget.Amigo.Dark.ActionBar.Solid</item>
+        <item name="android:actionBarTabBarStyle">@style/Widget.Amigo.ActionBar.TabBar</item>
+        <item name="android:actionBarTabTextStyle">@style/Widget.Amigo.Light.ActionBar.TabText</item>
+        <item name="android:actionModeCloseDrawable">@drawable/amigo_ic_ab_back_light</item>
+        <item name="android:actionModeCloseButtonStyle">@style/Widget.Amigo.ActionButton.CloseMode</item>        
+        <item name="android:actionDropDownStyle">@style/Widget.Amigo.Dark.Spinner.DropDown.ActionBar</item>
+        <item name="android:actionModeBackground">@drawable/amigo_cab_background_top_dark</item>
+        <item name="android:actionModeSplitBackground">@drawable/amigo_cab_background_bottom_dark</item>
+        <item name="android:actionBarItemBackground">@drawable/amigo_actionbar_item_background_light</item>
+        <item name="android:actionMenuTextAppearance">@style/TextAppearance.Amigo.Widget.ActionBar.Menu</item>
+        
+        <item name="android:homeAsUpIndicator">@drawable/amigo_ic_ab_back_light</item>
+        <!-- preference category title -->
+        <item name="android:listSeparatorTextViewStyle">@style/Widget.Amigo.TextView.ListSeparator</item>         
+        <!-- menu list item style -->
+        <item name="android:textAppearanceListItemSmall">@style/TextAppearance.Amigo.Medium</item>
+        
+        <item name="android:listDivider">@drawable/amigo_list_divider_dark</item>
+        <!-- list popup style -->
+        <item name="android:listPopupWindowStyle">@style/Widget.Amigo.Dark.ListPopupWindow</item>
+        <item name="android:popupMenuStyle">@style/Widget.Amigo.Dark.ListPopupWindow</item>
+        
+        <item name="android:listChoiceBackgroundIndicator">@drawable/amigo_list_selector_dark</item>
+        
+        <!-- Expandable List View style -->
+        <item name="android:expandableListViewStyle">@style/Widget.Amigo.Dark.ExpandableListView</item>
+        <!-- Dialog attributes -->
+        <item name="amigoalertDialogStyle">@style/AmigoAlertDialog.Dark</item>
+        <item name="android:dialogTheme">@style/Theme.Amigo.Dark.Dialog</item>
+        <item name="android:alertDialogTheme">@style/Theme.Amigo.Dark.Dialog.Alert</item>
+        <!-- Panel attributes -->
+        <item name="android:panelBackground">@drawable/amigo_menu_hardkey_panel_dark</item>
+        <!-- fast scroll attributes -->
+        <item name="android:fastScrollThumbDrawable">@drawable/amigo_fastscroll_thumb</item>
+        <item name="android:fastScrollTrackDrawable">@drawable/amigo_fastscroll_track_light</item>
+        <item name="amigoswitchStyle">@style/AmigoWidgetSwitch</item>
+        <!-- Amigo numberpicker style -->
+        <item name="amigonumberPickerStyle">@style/AmigoWidgetNumberPicker</item>
+        <!-- Amigo datepicker style -->
+        <item name="amigodatePickerStyle">@style/AmigoWidgetDatePicker</item>
+        <!-- Amigo timepicker style -->
+        <item name="amigotimePickerStyle">@style/AmigoWidgetTimePicker</item>
+        <!-- Amigo contextMenu -->
+        <item name="amigolistPreferredItemPaddingStart">@dimen/amigo_preference_child_padding_side</item>
+        <item name="amigolistPreferredItemPaddingEnd">@dimen/amigo_preference_child_padding_side</item>
+        <item name="amigopanelMenuListWidth">@dimen/amigo_panel_Menu_List_Width</item>
+        <!-- Gionee <fenglp> <2013-08-05> add for CR00812456 begin -->
+        <item name="amigosearchViewEditQuery">@drawable/amigo_ic_commit_search_api_holo_dark</item>
+        <!-- Gionee <fenglp> <2013-08-05> add for CR00812456 end -->
+
+        <!-- Gionee <gaoj> <2013-12-06> add for CR00967353 begin -->
+        <item name="selectableMenuItemBackground">@drawable/amigo_menu_item_background_dark</item>
+        <!-- Gionee <gaoj> <2013-12-06> add for CR00967353 end -->
+        <item name="amigoForceTouchPannelBackgroundColor">@android:color/black</item>
+        <item name="amigoForceTouchMenuItemBackgroundColor">@android:color/black</item>
+    </style>
+    
+    <style name="Theme.Amigo.Dark.Dialog">
+        <item name="android:windowAnimationStyle">@style/Animation.Amigo.Dialog</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle.Amigo.Dark</item>
+        <item name="android:windowBackground">@drawable/amigo_menu_dropdown_panel_dark</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+
+        <item name="android:colorBackgroundCacheHint">@null</item>
+
+        <item name="android:buttonBarStyle">@null</item>
+        <item name="android:borderlessButtonStyle">@style/Widget.Amigo.Dark.Button.Borderless</item>
+
+        <item name="android:listPreferredItemPaddingLeft">@dimen/amigo_preference_child_padding_side</item>
+        <item name="android:listPreferredItemPaddingRight">@dimen/amigo_preference_child_padding_side</item>
+        
+        <!-- <item name="android:alertDialogStyle">@style/AmigoAlertDialog.Light</item> -->
+    </style>
+    
+    <style name="Theme.Amigo.Dark.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle.Amigo.Dark</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+    </style>
+    
+    <!-- Variant of the holographic (light) theme with no action bar. -->
+    <style name="Theme.Amigo.Dark.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    
+    <!-- Variant of the holographic (light) theme that has no title bar and fills
+         the entire screen -->
+    <style name="Theme.Amigo.Dark.NoActionBar.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>    
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.demo.amigoactionbar.GnLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <amigoui.widget.AmigoTextView
+        android:id="@+id/list_name"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+        android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+
+    <amigoui.widget.AmigoCheckBox
+        android:id="@+id/list_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/amigo_list_item_tailicon_margin_right"
+        android:focusable="false"
+        android:visibility="gone" />
+
+    <amigoui.widget.AmigoRadioButton
+        android:id="@+id/list_radiobutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/amigo_list_item_tailicon_margin_right"
+        android:focusable="false"
+        android:visibility="gone" />
+
+</com.demo.amigoactionbar.GnLinearLayout>

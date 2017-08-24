@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--//Gionee <lizhipeng> <2016-08-27> modify for CR01762654   -->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"    
+    android:minHeight="20dp" >
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:minWidth="20dp"
+        android:orientation="horizontal" >
+
+        <!-- Gionee <lihq> <2014-04-01> modify for CR00873172 begin -->
+
+        <ImageView
+            android:id="@android:id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingStart="5dp" />
+        <!-- Gionee <lihq> <2014-04-01> modify for CR00873172 end -->
+    </LinearLayout>
+    <!-- weidong begin -->
+
+    <LinearLayout
+        android:id="@+id/amigo_preference_title_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingBottom="6dip"
+                android:paddingTop="6dip" >
+
+                <amigo.widget.AmigoTextView
+                    android:id="@android:id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <amigo.widget.AmigoTextView
+                    android:id="@android:id/summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@android:id/title"
+                    android:layout_below="@android:id/title"
+                    android:maxLines="10"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="?android:attr/textColorSecondary" />
+                
+                
+               <!--  <ImageView 
+				    android:id="@+id/corner"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:paddingLeft="7dip"
+				    android:gravity="center"
+				    android:layout_toRightOf="@android:id/title"
+				    android:layout_gravity="left|center_vertical"       
+				    android:scaleType="fitXY"
+				    android:src="@drawable/gn_corner_src" /> -->
+                
+            </RelativeLayout>
+            
+            <ImageView 
+				    android:id="@+id/corner"
+				   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+				    android:paddingLeft="7dip"
+				    android:gravity="center"
+				    android:layout_toRightOf="@android:id/title"
+				    android:layout_gravity="left|center_vertical"       
+				    android:scaleType="fitXY"
+				    android:src="@null" />
+            
+
+            <LinearLayout
+                android:id="@android:id/widget_frame"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"                
+                android:gravity="center"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout> 
+  

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Gionee <lihq> <2014-04-11> modify for CR00873172 begin -->
+<!-- Gionee <fenglp> 2013-05-28 add for CR00812456 -->
+<!-- Gionee <lihq> <2014-03-13> modify for CR01089538 begin -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:zAdjustment="top" 
+    android:interpolator="@anim/amigo_decelerate_interpolator"
+    android:shareInterpolator="true">
+
+    <translate
+        android:duration="300"
+        android:fromXDelta="100%p"
+        android:toXDelta="0" />
+
+    <!-- <alpha
+        android:duration="@integer/amigo_mediumAnimTime"
+        android:fromAlpha="0.3"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:toAlpha="1.0" /> -->
+
+</set>
+<!-- Gionee <lihq> <2014-03-13> modify for CR01089538 end -->
+<!-- Gionee <lihq> <2014-04-11> modify for CR00873172 end -->

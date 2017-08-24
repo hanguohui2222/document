@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Gionee <fenglp> 2013-06-19 add for CR00812456 -->
+<!-- Gionee <lihq> <2014-03-06> modify for CR00873172 begin-->
+<!-- 
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:zAdjustment="top" >
+
+    <translate
+        android:duration="@integer/amigo_halfLargeAnimTime"
+        android:fromXDelta="25%p"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:toXDelta="-30%p" />
+    <translate
+        android:duration="@integer/amigo_halfLargeAnimTime"
+        android:fromXDelta="-30%p"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:startOffset="@integer/amigo_halfLargeAnimTime"
+        android:toXDelta="-40%p" />
+
+    <scale
+        android:duration="500"
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%p"
+        android:pivotY="50%p"
+        android:toXScale="0.5"
+        android:toYScale="0.5" />
+
+    <alpha
+        android:duration="300"
+        android:fromAlpha="1.0"
+        android:startOffset="200"
+        android:toAlpha="0.0" />
+
+</set>
+ -->
+ <!-- Gionee <lihq> <2014-04-09> modify for CR00873172 begin-->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:zAdjustment="bottom" >
+
+    <scale
+        android:duration="@integer/amigo_shortAnimTime"
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:pivotX="100%p"
+        android:pivotY="50%p"
+        android:toXScale="0.9"
+        android:toYScale="0.9"/>
+    
+    <translate
+        android:duration="@integer/amigo_longAnimTime"
+        android:fromXDelta="0"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:toXDelta="-115%p"/>
+
+</set>
+<!-- Gionee <lihq> <2014-04-09> modify for CR00873172 end-->
+<!-- Gionee <lihq> <2014-03-06> modify for CR00873172 end-->

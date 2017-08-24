@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+  <string name="amigo_app_name">AmigoUI</string>  
+  <string name="amigo_capital_on">TIL</string>  
+  <string name="amigo_capital_off">FRA</string>  
+  <string name="amigo_time_picker_dialog_title">Indstil en tid</string>  
+  <string name="amigo_date_picker_dialog_title">Indstil dato</string>  
+  <string name="amigo_date_time_done">Gjort</string>  
+  <string name="amigo_copy">Kopier</string>  
+  <string name="amigo_paste">Indsæt</string>  
+  <string name="amigo_cut">Klip</string>  
+  <string name="amigo_selectAll">Vælg alle</string>  
+  <string name="amigo_select">Vælg</string>  
+  <string name="amigo_inputMethod">Inputmethod</string>  
+  <string name="amigo_back_button_label">Tilbage</string>  
+  <string name="amigo_next_button_label">Næste</string>  
+  <string name="amigo_skip_button_label">Spring over</string>  
+  <string name="amigo_ok">Ok</string>  
+  <string name="amigo_cancel">Annuller</string>  
+  <string name="amigo_yes">Ok</string>  
+  <string name="amigo_no">Annuller</string>  
+  <string name="amigo_action_mode_done">Gjort</string>  
+  <string name="amigo_action_bar_home_description">Naviger hjem</string>  
+  <string name="amigo_action_bar_up_description">Naviger op</string>  
+  <string name="amigo_smart_full_btn_label">Ok</string>  
+  <string name="amigo_activity_resolver_use_always">Altid</string>  
+  <string name="amigo_activity_resolver_use_once">Kun én gang</string>  
+  <string name="amigo_noApplications">Der er ingen apps, der kan foretage denne handling.</string>
+  <string name="amigo_system_label">Android-system</string>  
+  <string name="amigo_whichApplication">Fuldfør handling ved hjælp af</string>  
+  <string name="amigo_chooseActivity">Vælg en handling</string>
+  <string name="amigo_actionbar_magic_item_more">Mere</string>  
+  <string name="amigo_actionbar_magic_item_close">Luk</string>  
+  <string name="amigo_edit_mode_leftbtn_txt">annuller</string>  
+  <string name="amigo_edit_mode_rightbtn_txt">ok</string>  
+  <string name="amigo_strong_warning">Stærke advarsel</string>
+  <string name="amigo_multichoice_select_text">%1$s vare valgt</string>
+  <string name="amigo_multichoice_select_all">Vælg alle</string>
+  <string name="amigo_multichoice_cancel_select_all">Annuller valgt</string>
+</resources>

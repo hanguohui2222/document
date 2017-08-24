@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources >
+    <!-- Gionee <fenglp> <2013-08-05> add for CR00812456 begin -->
+    <bool name="amigo_action_bar_expanded_action_views_exclusive">false</bool>
+    <!-- Gionee <fenglp> <2013-08-05> add for CR00812456 end -->
+</resources>

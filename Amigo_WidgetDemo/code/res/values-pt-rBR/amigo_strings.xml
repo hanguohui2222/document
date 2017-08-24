@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="amigo_app_name">Interface Amigo</string>
+    
+    <string name="amigo_capital_on">LIG</string>
+    <string name="amigo_capital_off">DES</string>
+    
+    <string name="amigo_time_picker_dialog_title">Configurar hora</string>
+    <string name="amigo_date_picker_dialog_title">Configurar data</string>
+    <string name="amigo_date_time_done">OK</string>
+
+    <string name="amigo_copy">Copiar</string>
+    <string name="amigo_paste">Colar</string>
+    <string name="amigo_cut">Cortar</string>
+    <string name="amigo_selectAll">Selecionar tudo</string>
+    <string name="amigo_select">Selecionar</string>
+    <string name="amigo_inputMethod">Método de entrada</string>
+    
+    <!--  Strings for possible PreferenceActivity Back/Next buttons -->
+    <string name="amigo_back_button_label">Voltar</string>
+    <string name="amigo_next_button_label">Próximo</string>
+    <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
+    <string name="amigo_skip_button_label">Pular</string>    
+    
+    <string name="amigo_ok">OK</string>
+    <string name="amigo_cancel">Cancelar</string>
+    <string name="amigo_yes">OK</string>
+    <string name="amigo_no">Cancelar</string>
+
+    <string name="amigo_action_mode_done">OK</string>
+	<string name="amigo_action_bar_home_description">Ir para o início</string>
+	<string name="amigo_action_bar_up_description">Ir para cima</string>
+	
+	<!-- Gionee <xuhz> <2013-07-19> add for CR00838236 begin -->
+	<!-- String for Smart Guider -->
+    <string name="amigo_smart_full_btn_label">OK</string>
+	<!-- Gionee <xuhz> <2013-07-19> add for CR00838236 end -->
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 begin -->
+    <string name="amigo_activity_resolver_use_always">Sempre</string>
+    <string name="amigo_activity_resolver_use_once">Só uma vez</string>
+
+    <!-- Text to display when there are no activities found to display in the
+         activity chooser. See the "Select an action" title. -->
+    <string name="amigo_noApplications">Nenhum aplicativo pode operar esta ação.</string>
+    <string name="amigo_system_label">Sistema Android</string>
+    <string name="amigo_whichApplication">Completar ação usando</string>
+    <string name="amigo_chooseActivity">Selecionar ação</string>
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 end -->
+    <!-- shaozj begin-->
+    <string name="amigo_actionbar_magic_item_more">Mais</string>
+    <string name="amigo_actionbar_magic_item_close">Fechar</string>
+    <!-- shaozj end-->
+    <!-- weidong begin -->
+    <string name="amigo_edit_mode_leftbtn_txt">Cancelar</string>
+    <string name="amigo_edit_mode_rightbtn_txt">OK</string>
+    <string name="amigo_strong_warning">Aviso</string>
+    <string name="amigo_multichoice_select_text">%1$s item</string>
+    <string name="amigo_multichoice_select_all">Selecionar tudo</string>
+    <string name="amigo_multichoice_cancel_select_all">Cancelar selecionar</string>
+    <!-- weidong end -->
+</resources>

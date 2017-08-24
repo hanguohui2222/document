@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+  <string name="amigo_app_name">AmigoUI</string>  
+  <string name="amigo_capital_on">PÅ</string>  
+  <string name="amigo_capital_off">AV</string>  
+  <string name="amigo_time_picker_dialog_title">Ange tid</string>  
+  <string name="amigo_date_picker_dialog_title">Ange datum</string>  
+  <string name="amigo_date_time_done">Färdig</string>  
+  <string name="amigo_copy">Kopiera</string>  
+  <string name="amigo_paste">Klistra</string>  
+  <string name="amigo_cut">Klippa</string>  
+  <string name="amigo_selectAll">Markera alla</string>  
+  <string name="amigo_select">Välj</string>  
+  <string name="amigo_inputMethod">Inputmethod</string>  
+  <string name="amigo_back_button_label">Bakåt</string>  
+  <string name="amigo_next_button_label">Nästa</string>  
+  <string name="amigo_skip_button_label">Hoppa över</string>  
+  <string name="amigo_ok">OK</string>  
+  <string name="amigo_cancel">Avbryt</string>  
+  <string name="amigo_yes">OK</string>  
+  <string name="amigo_no">Avbryt</string>  
+  <string name="amigo_action_mode_done">Färdig</string>  
+  <string name="amigo_action_bar_home_description">Navigera till startsidan</string>  
+  <string name="amigo_action_bar_up_description">Navigera uppåt</string>  
+  <string name="amigo_smart_full_btn_label">OK</string>  
+  <string name="amigo_activity_resolver_use_always">Alltid</string>  
+  <string name="amigo_activity_resolver_use_once">Bara en gång</string>  
+  <string name="amigo_noApplications">Inga appar kan utföra den här åtgärden.</string>  
+  <string name="amigo_system_label">Android-system</string>  
+  <string name="amigo_whichApplication">Slutför åtgärd genom att använda</string>  
+  <string name="amigo_chooseActivity">Välj en åtgärd</string>  
+  <string name="amigo_actionbar_magic_item_more">Mer</string>  
+  <string name="amigo_actionbar_magic_item_close">Stäng</string>  
+  <string name="amigo_edit_mode_leftbtn_txt">annullera</string>  
+  <string name="amigo_edit_mode_rightbtn_txt">Ok</string>  
+  <string name="amigo_strong_warning">Stark varning</string>
+  <string name="amigo_multichoice_select_text">%1$s element valt</string>
+  <string name="amigo_multichoice_select_all">Välj alla</string>
+  <string name="amigo_multichoice_cancel_select_all">Avbryt val</string>
+</resources>

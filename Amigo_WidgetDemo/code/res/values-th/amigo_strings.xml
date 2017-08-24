@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="amigo_app_name">AmigoUI</string>
+    <string name="amigo_capital_on">เปิด</string>
+    <string name="amigo_capital_off">ปิด</string>
+    <string name="amigo_time_picker_dialog_title">ตั้งเวลา</string>
+    <string name="amigo_date_picker_dialog_title">ตั้งวันที่</string>
+    <string name="amigo_date_time_done">เสร็จสิ้น</string>
+    <string name="amigo_copy">คัดลอก</string>
+    <string name="amigo_paste">วาง</string>
+    <string name="amigo_cut">ตัด</string>
+    <string name="amigo_selectAll">เลือกทั้งหมด</string>
+    <string name="amigo_select">เลือก</string>
+    <string name="amigo_inputMethod">วิธีป้อนข้อมูล</string>
+    <!--  Strings for possible PreferenceActivity Back/Next buttons -->
+    <string name="amigo_back_button_label">กลับ</string>
+    <string name="amigo_next_button_label">ถัดไป</string>
+    <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
+    <string name="amigo_skip_button_label">ข้าม</string>
+    <string name="amigo_ok">ตกลง</string>
+    <string name="amigo_cancel">ยกเลิก</string>
+    <string name="amigo_yes">ตกลง</string>
+    <string name="amigo_no">ยกเลิก</string>
+    <string name="amigo_action_mode_done">เสร็จสิ้น</string>
+    <string name="amigo_action_bar_home_description">นำทางไปหน้าแรก</string>
+    <string name="amigo_action_bar_up_description">นำทางขึ้น</string>
+    <!-- Gionee <xuhz> <2013-07-19> add for CR00838236 begin -->
+    <!-- String for Smart Guider -->
+    <string name="amigo_smart_full_btn_label">ตกลง</string>
+    <!-- Gionee <xuhz> <2013-07-19> add for CR00838236 end -->
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 begin -->
+    <string name="amigo_activity_resolver_use_always">ทุกครั้ง</string>
+    <string name="amigo_activity_resolver_use_once">เฉพาะครั้งนี้</string>
+    <!-- Text to display when there are no activities found to display in the
+         activity chooser. See the "Select an action" title. -->
+    <string name="amigo_noApplications">ไม่มีแอปพลิเคชันใดทำงานนี้ได้</string>
+    <string name="amigo_system_label">ระบบ Android</string>
+    <string name="amigo_whichApplication">ทำงานให้เสร็จโดยใช้</string>
+    <string name="amigo_chooseActivity">เลือกการทำงาน</string>
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 end -->
+    <!-- shaozj begin-->
+    <string name="amigo_actionbar_magic_item_more">เพิ่มเติม</string>
+    <string name="amigo_actionbar_magic_item_close">ปิด</string>
+    <!-- shaozj end-->
+    <!-- weidong begin -->
+    <string name="amigo_edit_mode_leftbtn_txt">ยกเลิก</string>
+    <string name="amigo_edit_mode_rightbtn_txt">บันทึก</string>
+    <string name="amigo_strong_warning">คำเตือนร้ายแรง</string>
+    <string name="amigo_multichoice_select_text">เลือกแล้ว %1$s</string>
+    <string name="amigo_multichoice_select_all">เลือกทั้งหมด</string>
+    <string name="amigo_multichoice_cancel_select_all">ยกเลิกการเลือกทั้งหมด</string>
+    <!-- weidong end -->
+    <!-- gionee maxw add begin -->
+    <string name="unit_year">Y</string>
+    <string name="unit_month">M</string>
+    <string name="unit_day">D</string>
+    <string name="unit_hour">H</string>
+    <string name="unit_minute">M</string>
+    <!-- gionee maxw add end -->
+    <!--  Gionee <dual_weixin> <liuran> <Dec 29, 2015> add for  begin -->
+    <string name="clone_suffix"> การโคลน </string>
+    <!--  Gionee <dual_weixin> <liuran> <Dec 29, 2015> add for  end -->
+    <!-- Text shown by amigo list fragment when waiting for data to display. -->
+    <string name="amigo_loading">กำลังโหลด...</string>
+</resources>

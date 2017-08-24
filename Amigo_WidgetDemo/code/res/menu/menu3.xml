@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/title1"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/title1"
+        android:icon="@drawable/scan"/>
+   <item
+        android:id="@+id/title2"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/new_message"
+        android:icon="@drawable/scan"/>
+   <item
+        android:id="@+id/title3"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/add_new_record"
+        android:icon="@drawable/scan"/>
+   <item
+        android:id="@+id/title4"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/send_error_report"
+        android:icon="@drawable/scan"/>
+</menu>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Gionee <lihq> <2014-04-11> modify for CR00873172 begin -->
+<!-- Gionee <fenglp> 2013-05-28 add for CR00812456 -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:zAdjustment="top" >
+
+    <translate
+        android:duration="300"
+        android:fromXDelta="0%p"
+        android:toXDelta="100%p" />
+    
+
+    <!-- <alpha
+        android:duration="@integer/amigo_mediumAnimTime"
+        android:fromAlpha="1.0"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:toAlpha="0.3" /> -->
+
+</set>
+<!-- Gionee <lihq> <2014-04-11> modify for CR00873172 end -->

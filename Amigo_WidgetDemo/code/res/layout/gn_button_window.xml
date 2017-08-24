@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:amigo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip"
+    android:paddingTop="20dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <amigoui.widget.AmigoButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:text="@string/cancel" />
+
+        <amigoui.widget.AmigoButton
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/amigoButtonHeight"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/ripple_blue"
+            android:colorControlHighlight="@color/green"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <amigoui.widget.AmigoButton
+            android:id="@+id/load_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/amigoButtonHeight"
+            android:layout_marginEnd="6dp"
+            android:enabled="false"
+            android:text="@string/load" />
+    </LinearLayout>
+
+    <include
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        layout="@layout/gn_imageview_ripple"
+        android:visibility="gone" >
+    </include>
+
+    <amigoui.widget.AmigoButton
+        android:id="@+id/corner_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/amigoButtonHeight"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="10dp"
+        amigo:amigo_button_style="6"
+        android:text="@string/corner_btn" />
+
+</LinearLayout>

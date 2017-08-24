@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<amigoui.preference.AmigoPreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:amigo="http://schemas.android.com/apk/res/com.amigo.widgetdemol" >
+
+    <amigoui.preference.AmigoPreferenceButtonCategory
+        amigo:amigokey="test1"
+        amigo:amigoCategoryBtnText="测试"
+        amigo:amigotitle="Test1" >
+        <amigoui.preference.AmigoPreference
+            amigo:amigosummary="preferencepreferencepreferencepreferencepreferencepreferencepreferencepreference"
+            amigo:amigotitle="@string/app_name" />
+
+        <com.demo.preference.GnCornerPreference
+            amigo:amigosummary="GnCornerPreference"
+            amigo:amigotitle="GnCornerPreference" />
+
+        <amigoui.preference.AmigoCheckBoxPreference
+            amigo:amigoicon="@drawable/item_head_icon"
+            amigo:amigosummary="TestSummaryTooLongDisplayEffectTestSummaryTooLongDisplayEffect2"
+            amigo:amigotitle="TestTitleTooLongDisplayEffectTestTitleTooLongDisplayEffect2" />
+
+        <amigoui.preference.AmigoEditTextPreference
+            amigo:amigodialogTitle="dialogTitle"
+            amigo:amigokey="testEditPreference"
+            amigo:amigosummary="EditTextPreferenceSummary"
+            amigo:amigotitle="EditTextPreferenceTitle" />
+    </amigoui.preference.AmigoPreferenceButtonCategory>
+
+    <amigoui.preference.AmigoPreferenceButtonCategory
+        amigo:amigokey="test2"
+        amigo:amigoCategoryBtnText="测试"
+        amigo:amigotitle="Test2" >
+        <amigoui.preference.AmigoSwitchPreference
+            amigo:amigosummary="switchpreference"
+            amigo:amigotitle="@string/app_name" />
+
+        <amigoui.preference.AmigoListPreference
+            amigo:amigodefaultValue="Phone"
+            amigo:amigodefaultResult="Phone"
+            amigo:amigodialogTitle="dialog title"
+            amigo:amigoentries="@array/pref_sms_save_location_choices"
+            amigo:amigoentryValues="@array/pref_sms_save_location_values"
+            amigo:amigokey="pref_key_sms_save_location2"
+            amigo:amigosummary="listpreferencePhonePhonePhonePhonePhonePhonePhoneee"
+            amigo:amigotitle="title" />
+    </amigoui.preference.AmigoPreferenceButtonCategory>
+    <amigoui.preference.AmigoPreferenceCategory
+        amigo:amigokey="test3"
+        amigo:amigotitle="Test3" >
+        <amigoui.preference.AmigoSwitchPreference
+            amigo:amigosummary="switchpreference"
+            amigo:amigotitle="@string/app_name" />
+
+        <amigoui.preference.AmigoListPreference
+            amigo:amigodefaultValue="Phone"
+            amigo:amigodefaultResult="Phone"
+            amigo:amigodialogTitle="dialog title"
+            amigo:amigoentries="@array/pref_sms_save_location_choices"
+            amigo:amigoentryValues="@array/pref_sms_save_location_values"
+            amigo:amigokey="pref_key_sms_save_location"
+            amigo:amigosummary="listpreference"
+            amigo:amigotitle="title" />
+    </amigoui.preference.AmigoPreferenceCategory>
+
+    <amigoui.preference.AmigoCheckBoxAndClickPreference
+        amigo:amigokey="pref_key_check_click"
+        amigo:amigosummary="checkbox and click"
+        amigo:amigotitle="@string/app_name" />
+    
+    <amigoui.preference.AmigoPreference
+        amigo:amigokey="pref_key_version"
+        amigo:amigosummary="amigoFrameworkVersion"
+        amigo:amigotitle="amigoFrameworkVersion" />
+    
+    <amigoui.preference.AmigoPreference
+        amigo:amigokey="pref_key_ua"
+        amigo:amigosummary="pref_key_ua"
+        amigo:amigoShowPreferenceArrow="true"
+        amigo:amigotitle="amigoFrameworkUA" />
+    
+    <amigoui.preference.AmigoPreference
+        amigo:amigokey="pref_key_ua_cxt"
+        amigo:amigosummary="pref_key_ua_cxt"
+        amigo:amigotitle="amigoFrameworkUACxt" />
+    
+    <amigoui.preference.AmigoRingtonePreference
+        amigo:amigokey="default_ringtone"
+        amigo:amigopersistent="false"
+        amigo:amigoringtoneType="ringtone"
+        amigo:amigoshowDefault="false"
+        amigo:amigoshowSilent="true"
+        amigo:amigotitle="testRingTone" />
+    
+    <amigoui.preference.AmigoVolumePreference
+        amigo:amigokey="default_Volume"
+        amigo:amigopersistent="false"
+        amigo:amigostreamType="alarm"
+        amigo:amigoshowDefault="false"
+        amigo:amigoshowSilent="true"
+        amigo:amigotitle="testVolume" />
+    
+</amigoui.preference.AmigoPreferenceScreen>

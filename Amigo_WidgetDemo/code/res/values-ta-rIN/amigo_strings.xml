@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="amigo_app_name">அமிகோUI</string>
+    <string name="amigo_capital_on">ஆன்</string>
+    <string name="amigo_capital_off">ஆஃப்</string>
+    <string name="amigo_time_picker_dialog_title">நேரத்தை செட் செய்யவும்</string>
+    <string name="amigo_date_picker_dialog_title">தேதியை செட் செய்யவும்</string>
+    <string name="amigo_date_time_done">முடிந்தது</string>
+    <string name="amigo_copy">நகல் செய்யவும்</string>
+    <string name="amigo_paste">பேஸ்ட் செய்யவும்</string>
+    <string name="amigo_cut">கட்</string>
+    <string name="amigo_selectAll">அனைத்தும் தேர்வுசெய்க</string>
+    <string name="amigo_select">தேர்ந்தெடுக்கவும்</string>
+    <string name="amigo_inputMethod">உள்ளீடுமுறை</string>
+    <string name="amigo_back_button_label">பேக்</string>
+    <string name="amigo_next_button_label">அடுத்த</string>
+    <string name="amigo_skip_button_label">தாவவும்</string>
+    <string name="amigo_ok">சரி</string>
+    <string name="amigo_cancel">ரத்து செய்யவும்</string>
+    <string name="amigo_yes">சரி</string>
+    <string name="amigo_no">ரத்து செய்யவும்</string>
+    <string name="amigo_action_mode_done">முடிந்தது</string>
+    <string name="amigo_action_bar_home_description">முகப்பு வழிசெலுத்தவும்</string>
+    <string name="amigo_action_bar_up_description">மேல் வழிசெலுத்தவும்</string>
+    <string name="amigo_smart_full_btn_label">சரி</string>
+    <string name="amigo_activity_resolver_use_always">எப்போதும்</string>
+    <string name="amigo_activity_resolver_use_once">ஒருமுறை</string>
+    <string name="amigo_noApplications">இந்த செயலை எந்த ஆப்பும் செய்யாது</string>
+    <string name="amigo_system_label">ஆண்ட்ராய்டு சிஸ்டம்</string>
+    <string name="amigo_whichApplication">செயலின் பயன்பாடு முழுமை பெற செய்யவும்</string>
+    <string name="amigo_chooseActivity">ஒரு செயல்பாட்டை தேர்ந்தெடுக்கவும்</string>
+    <string name="amigo_actionbar_magic_item_more">மேலும்</string>
+    <string name="amigo_actionbar_magic_item_close">மூடவும்</string>
+    <string name="amigo_edit_mode_leftbtn_txt">ரத்து செய்யவும்</string>
+    <string name="amigo_edit_mode_rightbtn_txt">சரி</string>
+    <string name="amigo_strong_warning">வழுவான எச்சரிக்கை</string>
+    <string name="amigo_multichoice_select_text">%1$s உருப்படி தேர்ந்தெடுக்கப்பட்டது</string>
+    <string name="amigo_multichoice_select_all">எல்லாம் தேர்ந்தெடு</string>
+    <string name="amigo_multichoice_cancel_select_all">தேர்ந்தெடு ரத்துசெய்</string>
+</resources>

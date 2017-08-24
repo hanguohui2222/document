@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/title1"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/title2"
+        android:icon="@drawable/gn_multi_mode_delete_material"/>
+   <item
+        android:id="@+id/title2"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/title4"
+        android:icon="@drawable/gn_multi_mode_share_material"/>
+</menu>

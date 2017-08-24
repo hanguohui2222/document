@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources>
+    <!-- amigo_action_bar_title_text_size -->
+    <dimen name="amigo_action_bar_title_text_size">16dp</dimen>
+    <!-- Top margin for action bar subtitles -->
+    <dimen name="amigo_action_bar_subtitle_top_margin">-2dp</dimen>
+    <!-- Bottom margin for action bar subtitles -->
+    <dimen name="amigo_action_bar_subtitle_bottom_margin">4dp</dimen>
+    <dimen name="amigo_action_bar_icon_vertical_padding">4dip</dimen> 
+    <!--shaozj <dimen name="amigo_magicbar_max_listview_height">144dp</dimen>  -->
+    <dimen name="amigo_magicbar_max_listview_height">134dp</dimen> 
+       
+    <!--  Gionee <gaoj> <2013-9-16> add for CR00899138 begin -->
+    <!--shaozj <dimen name="amigo_alert_dialog_list_maxheight">144dp</dimen> -->
+    <dimen name="amigo_alert_dialog_list_maxheight">199dp</dimen>
+    <!--  Gionee <gaoj> <2013-9-16> add for CR00899138 end -->
+    <dimen name="amigo_magicbar_item_padding">70dp</dimen>
+    <dimen name="amigo_single_alert_dialog_list_maxheight">229dp</dimen>
+    <dimen name="amigo_context_menu_list_maxheight">186dp</dimen>
+    
+    <!-- AmigoMenu padding -->
+    <!-- Gionee <gaoj> <2013-12-09> add for CR00967353 begin -->
+    <dimen name="amigo_menu_margin_left">85dp</dimen>
+    <dimen name="amigo_menu_more_margin_left">113dp</dimen>
+    <dimen name="amigo_menu_title_margin_right">179dp</dimen>
+    <!-- Gionee <gaoj> <2013-12-09> add for CR00967353 end -->
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Enabled states -->
+        
+    <item android:state_checked="true"
+          android:drawable="@drawable/amigo_auto_paged_gridview_radio_btn_selected" />
+    <item 
+          android:drawable="@drawable/amigo_auto_paged_gridview_radio_btn_unselected" />
+
+</selector>

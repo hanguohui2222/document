@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+     <string name="amigo_app_name">AmigoUI</string>
+     
+     <string name="amigo_capital_on">הפעל</string>
+     <string name="amigo_capital_off">הפסק</string>
+     
+     <string name="amigo_time_picker_dialog_title">הגדר זמן</string>
+     <string name="amigo_date_picker_dialog_title">הגדר תאריך</string>
+     <string name="amigo_date_time_done">הסתיים</string>
+     
+     <string name="amigo_copy">העתק</string>
+     <string name="amigo_paste">הדבק</string>
+     <string name="amigo_cut">חתוך</string>
+     <string name="amigo_selectAll">בחר הכל</string>
+     <string name="amigo_select">בחר</string>
+     <string name="amigo_inputMethod">סוג קלט</string>
+
+     <!--  Strings for possible PreferenceActivity Back/Next buttons -->
+     <string name="amigo_back_button_label">חזור</string>
+     <string name="amigo_next_button_label">הבא</string>
+     <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
+     <string name="amigo_skip_button_label">דלג</string>    
+     
+     <string name="amigo_ok">אישור</string>
+     <string name="amigo_cancel">בטל</string>
+     <string name="amigo_yes">אישור</string>
+     <string name="amigo_no">בטל</string>
+
+     <string name="amigo_action_mode_done">הסתיים</string>
+     <string name="amigo_action_bar_home_description">נווט לבית</string>
+     <string name="amigo_action_bar_up_description">נווט למעלה</string>
+
+ <!-- Gionee <xuhz> <2013-07-19> add for CR00838236 begin -->
+ <!-- String for Smart Guider -->
+     <string name="amigo_smart_full_btn_label">אשר</string>
+ <!-- Gionee <xuhz> <2013-07-19> add for CR00838236 end -->
+     <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 begin -->
+     <string name="amigo_activity_resolver_use_always">תמיד</string>
+     <string name="amigo_activity_resolver_use_once">פעם אחת</string>
+     <!-- Text to display when there are no activities found to display in the activity chooser. See the "Select an action" title. -->
+     <string name="amigo_noApplications">אין אפליקציה שיכולה לפתוח את הקובץ</string>
+     <string name="amigo_system_label">מערכת הפעלה</string>
+     <string name="amigo_whichApplication">השלם פעולה באמצעות</string>
+     <string name="amigo_chooseActivity">השלם את הפעולה באמצעות</string>
+     <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 end -->
+     <!-- shaozj begin-->
+     <string name="amigo_actionbar_magic_item_more">עוד</string>
+     <string name="amigo_actionbar_magic_item_close">סגור</string>
+     <!-- shaozj end-->
+     <!-- weidong begin -->
+     <string name="amigo_edit_mode_leftbtn_txt">בטל</string>
+     <string name="amigo_edit_mode_rightbtn_txt">שמור</string>
+     <string name="amigo_strong_warning">אזהרה</string>
+     <string name="amigo_multichoice_select_text">%1$s נבחרו</string>
+     <string name="amigo_multichoice_select_all">בחר הכל</string>
+     <string name="amigo_multichoice_cancel_select_all">בטל בחירה</string>
+     <!-- weidong end -->
+     
+     <!-- gionee maxw add begin -->
+     <string name="unit_year">Y</string>
+     <string name="unit_month">M</string>
+     <string name="unit_day">D</string>
+     <string name="unit_hour">H</string>
+     <string name="unit_minute">M</string>
+</resources>

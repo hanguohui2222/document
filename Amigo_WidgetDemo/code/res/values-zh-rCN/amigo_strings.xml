@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources>
+    <string name="amigo_capital_on">开</string>
+    <string name="amigo_capital_off">关</string>
+    
+    <string name="amigo_time_picker_dialog_title">"设置时间"</string>
+    <string name="amigo_date_picker_dialog_title">"设置日期"</string>
+    <string name="amigo_date_time_done">"完成"</string>
+    
+    <string name="amigo_copy">复制</string>
+    <string name="amigo_paste">粘贴</string>
+    <string name="amigo_cut">剪切</string>
+    <string name="amigo_selectAll">全选</string>
+    <string name="amigo_select">选择</string>
+    <string name="amigo_inputMethod">输入法</string>
+    
+    <!--  Strings for possible PreferenceActivity Back/Next buttons -->
+    <string name="amigo_back_button_label">上一步</string>
+    <string name="amigo_next_button_label">下一步</string>
+    <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
+    <string name="amigo_skip_button_label">跳过</string>    
+    
+    <string name="amigo_ok">确定</string>
+    <string name="amigo_cancel">取消</string>
+    <string name="amigo_yes">确定</string>
+    <string name="amigo_no">取消</string>
+
+    <string name="amigo_action_mode_done">完成</string>
+    <string name="amigo_action_bar_home_description">"导航首页"</string>
+    <string name="amigo_action_bar_up_description">"向上导航"</string>
+    
+    <!-- Gionee <xuhz> <2013-07-19> add for CR00838236 begin -->
+	<!-- String for Smart Guider -->
+    <string name="amigo_smart_full_btn_label">我知道了</string>
+	<!-- Gionee <xuhz> <2013-07-19> add for CR00838236 end -->
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 begin -->
+    <string name="amigo_activity_resolver_use_always">"始终"</string>
+    <string name="amigo_activity_resolver_use_once">"仅此一次"</string>
+    <string name="amigo_system_label">"Android 系统"</string>
+    <string name="amigo_whichApplication">"选择要使用的应用"</string>
+    <string name="amigo_noApplications">"没有应用可执行此操作。"</string>
+    <string name="amigo_chooseActivity">"分享到"</string>
+    <!-- Gionee <hanbj> <2013-08-18> add for CR00907636 end -->
+    <!-- shaozj begin-->
+    <string name="amigo_actionbar_magic_item_more">更多</string>
+    <string name="amigo_actionbar_magic_item_close">关闭</string>
+    <!-- shaozj end-->
+    <!-- weidong begin -->
+    <string name="amigo_edit_mode_leftbtn_txt">取消</string>
+    <string name="amigo_edit_mode_rightbtn_txt">确定</string>
+    <string name="amigo_strong_warning">强警告</string>
+    <string name="amigo_multichoice_select_text">已选中 %1$s 项</string>
+    <string name="amigo_multichoice_select_all">全部选择</string>
+    <string name="amigo_multichoice_cancel_select_all">取消全选</string>
+
+    <!-- weidong end -->
+    
+    <!-- gionee maxw add begin -->
+    <string name="unit_year">年</string>
+    <string name="unit_month">月</string>
+    <string name="unit_day">日</string>
+    <string name="unit_hour">时</string>
+    <string name="unit_minute">分</string>
+    <string name="amigo_lunar_calendar">农历</string>
+    <!-- gionee maxw add end -->
+    <!--  Gionee <dual_weixin> <liuran> <Dec 29, 2015> add for  begin -->
+    <string name="clone_suffix">分身</string>
+    <!--  Gionee <dual_weixin> <liuran> <Dec 29, 2015> add for  end -->
+    <string name="amigo_today">今天</string>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="amigo_app_name">AmigoUI</string>
+    <string name="amigo_capital_on">Zap.</string>
+    <string name="amigo_capital_off">Vyp.</string>
+    <string name="amigo_time_picker_dialog_title">Nastavit čas</string>
+    <string name="amigo_date_picker_dialog_title">Nastavit datum</string>  
+    <string name="amigo_date_time_done">Hotovo</string>
+    <string name="amigo_copy">Kopírovat telefonní číslo</string>
+    <string name="amigo_paste">Vložit</string>
+    <string name="amigo_cut">Vyjmout</string>
+    <string name="amigo_selectAll">Vybrat vše</string>
+    <string name="amigo_select">Zvolit</string>
+    <string name="amigo_inputMethod">Způsob vkládání</string>
+    <string name="amigo_back_button_label">Zpět</string>
+    <string name="amigo_next_button_label">"Další"</string>
+    <string name="amigo_skip_button_label">Přeskočit</string>
+    <string name="amigo_ok">"OK"</string>
+    <string name="amigo_cancel">"Zrušit"</string>
+    <string name="amigo_yes">"OK"</string>
+    <string name="amigo_no">"Zrušit"</string>
+    <string name="amigo_action_mode_done">Hotovo</string>
+    <string name="amigo_action_bar_home_description">Přejít na plochu</string>
+    <string name="amigo_action_bar_up_description">Přejít nahoru</string>
+    <string name="amigo_smart_full_btn_label">"OK"</string>
+    <string name="amigo_activity_resolver_use_always">Vždy</string>
+    <string name="amigo_activity_resolver_use_once">Pouze jednou</string>
+    <string name="amigo_noApplications">Tuto činnost nemohou provádět žádné aplikace.</string>
+    <string name="amigo_system_label">Systém Android</string>
+    <string name="amigo_whichApplication">Dokončit akci pomocí aplikace</string>
+    <string name="amigo_chooseActivity">Vybrat činnost</string>
+    <string name="amigo_actionbar_magic_item_more">více...</string>
+    <string name="amigo_actionbar_magic_item_close">Zavřít</string>
+    <string name="amigo_edit_mode_leftbtn_txt">"Zrušit"</string>
+    <string name="amigo_edit_mode_rightbtn_txt">Uložit</string>
+    <string name="amigo_strong_warning">varování</string>
+    <string name="amigo_multichoice_select_text">Vybráno %1$s</string>
+    <string name="amigo_multichoice_select_all">Vybrat vše</string>
+    <string name="amigo_multichoice_cancel_select_all">Odznačit vše</string>
+    <string name="unit_year">Y</string>
+    <string name="unit_month">M</string>
+    <string name="unit_day">"1 den"</string>
+    <string name="unit_hour">"h"</string>
+    <string name="unit_minute">M</string>
+    <string name="clone_suffix">klon</string>  
+    <string name="amigo_loading">Načítání\u2026</string>
+</resources>

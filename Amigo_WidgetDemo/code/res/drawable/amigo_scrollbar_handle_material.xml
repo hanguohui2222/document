@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nine-patch xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/amigo_scrollbar_handle_mtrl_alpha"
+    android:tint="?android:attr/colorControlNormal" />

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Amigo.Light.Button.Small.Translucent" parent="@style/Widget.Amigo.Light.Button.Small">
+        <item name="android:background">@color/amigo_translucent_background</item>
+    </style>
+    
+    <style name="Widget.Amigo.Light.Button.Borderless.Translucent" parent="@style/Widget.Amigo.Light.Button.Borderless">
+        <item name="android:background">@color/amigo_translucent_background</item>
+    </style>
+    
+    <style name="Widget.Amigo.EditText.Translucent">
+        <item name="android:textColor">@color/amigo_text_color_light</item>
+    </style>
+    
+    <style name="Widget.Amigo.Light.Spinner.DropDown.Translucent">
+        <item name="android:popupBackground">@color/amigo_translucent_background</item>
+    </style>
+    
+    <style name="Widget.Amigo.Light.ListPopupWindow.Translucent" parent="@style/Widget.Amigo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@color/amigo_translucent_background</item>
+    </style>
+    
+    <style name="Theme.Amigo.Light.Float.Translucent" parent="@style/Theme.Amigo.Light.Translucent">
+        <item name="android:windowBackground">@color/amigo_translucent_background</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

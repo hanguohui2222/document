@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Gionee <fenglp> 2013-06-19 add for CR00812456 -->
+<!-- Gionee <lihq> <2014-03-06> modify for CR00873172 begin-->
+<!-- 
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:zAdjustment="bottom" >
+
+    <translate
+        android:duration="@integer/amigo_halfLargeAnimTime"
+        android:fromXDelta="30%p"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:toXDelta="-30%p" />
+    <translate
+        android:duration="@integer/amigo_halfLargeAnimTime"
+        android:fromXDelta="-30%p"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:startOffset="@integer/amigo_halfLargeAnimTime"
+        android:toXDelta="30%p" />
+
+    <scale
+        android:duration="@integer/amigo_largeAnimTime"
+        android:fromXScale="0.5"
+        android:fromYScale="0.5"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%p"
+        android:pivotY="50%p"
+        android:toXScale="1.0"
+        android:toYScale="1.0" />
+
+    <alpha
+        android:duration="@integer/amigo_largeAnimTime"
+        android:fromAlpha="0.3"
+        android:toAlpha="1.0" />
+
+</set>
+ -->
+<!-- Gionee <lihq> <2014-04-09> modify for CR00873172 begin-->
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <translate
+        android:duration="@integer/amigo_longAnimTime"
+        android:fromXDelta="-115%p"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:toXDelta="0" />
+
+    <scale
+        android:duration="@integer/amigo_shortAnimTime"
+        android:fromXScale="0.9"
+        android:fromYScale="0.9"
+        android:pivotX="0%p"
+        android:pivotY="50%p"
+        android:toXScale="1.0"
+        android:toYScale="1.0"
+        android:startOffset="@integer/amigo_startOffset"/>
+</set>
+<!-- Gionee <lihq> <2014-04-09> modify for CR00873172 end-->
+<!-- Gionee <lihq> <2014-03-06> modify for CR00873172 end-->

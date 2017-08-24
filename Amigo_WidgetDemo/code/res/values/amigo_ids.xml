@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="amigo_action_bar_title" />
+    <item type="id" name="amigo_action_bar_subtitle" />
+    <item type="id" name="amigo_action_bar_back" />
+    <item type="id" name="amigo_action_bar_icon" />
+    <item type="id" name="amigo_alert_dialog_title" />
+    <item type="id" name="amigo_dialog_cancel_icon" />
+    <item type="id" name="amigo_alert_dialog_icon"  />
+    <item type="id" name="amigo_message"  />
+    <item type="id" name="amigo_pickers"  />
+    <item type="id" name="month_day_layout"  />
+    <item type="id" name="amigo_calendar_view"  />
+    <item type="id" name="amigo_day"  />
+    <item type="id" name="amigo_numberpicker_input"  />
+    <item type="id" name="amigo_month"  />
+    <item type="id" name="amigo_year"  />
+    <item type="id" name="amigo_datePicker"  />
+    <item type="id" name="amigo_timePicker"  />
+    <item type="id" name="amigo_increment"  />
+    <item type="id" name="amigo_decrement"  />
+    <item type="id" name="amigo_progress"  />
+    <item type="id" name="amigo_progress_number"  />
+    <item type="id" name="amigo_progress_percent"  />
+    <item type="id" name="amigo_hour"  />
+    <item type="id" name="amigo_minute"  />
+    <item type="id" name="amigo_amPm"  />
+    <item type="id" name="amigo_toolbar_group"  />
+    <item type="id" name="amigo_toolbar_position_arrow"  />
+    <item type="id" name="amigo_title"  />
+    <item type="id" name="amigo_icon"  />
+    <item type="id" name="amigo_checkbox"  />
+    <item type="id" name="amigo_edittext_container"  />
+    <item type="id" name="amigo_list_footer"  />
+    <item type="id" name="amigo_prefs_frame"  />
+    <item type="id" name="amigo_headers"  />
+    <item type="id" name="amigo_prefs"  />
+    <item type="id" name="amigo_button_bar"  />
+    <item type="id" name="amigo_back_button"  />
+    <item type="id" name="amigo_skip_button"  />
+    <item type="id" name="amigo_next_button"  />
+    <item type="id" name="amigo_seekbar"  />
+    <item type="id" name="amigo_switchWidget"  />
+    <item type="id" name="amigo_contentPanel"  />
+    <item type="id" name="amigo_topPanel"  />
+    <item type="id" name="amigo_buttonPanel"  />
+    <item type="id" name="amigo_customPanel"  />
+    <item type="id" name="amigo_custom"  />
+    <item type="id" name="amigo_titleDivider"  />
+    <item type="id" name="amigo_titleDividerTop"  />
+    <item type="id" name="amigo_cancel"  />
+    <item type="id" name="amigo_title_template"  />
+    <item type="id" name="amigo_alertTitle"  />
+    <item type="id" name="amigo_scrollView"  />
+    <item type="id" name="amigo_button1"  />
+    <item type="id" name="amigo_button2"  />
+    <item type="id" name="amigo_button3"  />
+    <item type="id" name="amigo_text1"  />
+    <item type="id" name="amigo_magic_bar_bg"  />
+    <item type="id" name="amigo_overlap"  />
+    <item type="id" name="amigo_magic_bar"  />
+    <item type="id" name="amigo_magicbar_shadow"  />
+    <item type="id" name="amigo_magicbar_tab"  />
+    <item type="id" name="amigo_icon0"  />
+    <item type="id" name="amigo_icon1"  />
+    <item type="id" name="amigo_icon2"  />
+    <item type="id" name="amigo_icon3"  />
+    <item type="id" name="amigo_icon4"  />
+    <item type="id" name="amigo_divider"  />
+    <item type="id" name="amigo_listview"  />
+    <item type="id" name="amigo_magic_listitem_textview"  />
+    <item type="id" name="amigo_magic_listitem_checkbox"  />
+    <item type="id" name="amigo_action_bar_container"  />
+    <item type="id" name="amigo_action_bar"  />
+    <item type="id" name="amigo_up"  />
+    <item type="id" name="amigo_action_bar_intellgent_container"  />
+    <item type="id" name="amigo_content"  />
+    <item type="id" name="amigo_shortcut"  />
+    <item type="id" name="amigo_action_bar_overlay_layout"  />
+    <item type="id" name="amigo_action_context_bar"  />
+    <item type="id" name="amigo_split_action_bar"  />
+    <item type="id" name="amigo_action_mode_close_button"  />
+    <item type="id" name="amigo_home"  />
+    <item type="id" name="amigo_empty_view"  />
+    <item type="id" name="amigo_action_menu_presenter"  />
+    <item type="id" name="amigo_search_button"  />
+    <item type="id" name="amigo_search_src_text"  />
+    <item type="id" name="amigo_search_edit_frame"  />
+    <item type="id" name="amigo_search_plate"  />
+    <item type="id" name="amigo_search_background"  />
+    <item type="id" name="amigo_search_go_btn"  />
+    <item type="id" name="amigo_search_close_btn"  />
+    <item type="id" name="amigo_search_voice_btn"  />
+    <item type="id" name="amigo_edit_query"  />
+    <item type="id" name="amigo_resolver_grid"  />
+    <item type="id" name="amigo_button_always"  />
+    <item type="id" name="amigo_button_once"  />
+    <item type="id" name="amigo_actionbar_container_stub"  />
+    <item type="id" name="amigo_substance_bar"  />
+    <item type="id" name="amigo_time_picker"  />
+    <item type="id" name="amigo_search_bar"  />
+    <item type="id" name="amigo_magicbar_backgroud"  />
+    <item type="id" name="amigo_expandable_list_group_divider"  />
+    <item type="id" name="amigo_preference_title_layout"  />
+    <item type="id" name="amigo_right_button"  />
+    <item type="id" name="amigo_multichoice_selectedCount"  />
+    <item type="id" name="amigo_multichoice_selectall"  />
+    <item type="id" name="tabHost"  />
+    <item type="id" name="title_tv"  />
+    <item type="id" name="amigo_month_day_layout" />
+    <item type="id" name="amigo_magic_listpublic_textview" />
+    <item type="id" name="amigo_magic_listpublic_checkbox" />
+    <item type="id" name="amigo_customView" />
+    <item type="id" name="amigo_menuIcon" />
+    <item type="id" name="amigo_menuTitle" />
+    <item type="id" name="amigo_forcetouch_custom_view" />
+    <item type="id" name="amigo_forcetouch_indicator" />
+    <item type="id" name="amigo_submenuIcon" />
+    <item type="id" name="amigo_menuIconContainer" />
+    <item type="id" name="amigo_submenuIcon_layout"/>
+
+    <item type="id" name="amigo_lunar_mode_rl"/>
+    <item type="id" name="amigo_lunar_mode_cb"/>
+    <item type="id" name="amigo_auto_matic"/>
+    <item type="id" name="amigo_parentPanel"/>
+    <item type="id" name="amigo_button_item"/>
+    <item name="amigo_category_divider" type="id"/>
+    <item name="amigo_preference_divider" type="id"/>
+    <item name="amigo_preference_bottom_line" type="id"/>
+    <item name="amigo_preference_result" type="id"/>
+    <item name="amigo_preference_arrow" type="id"/>
+    <item name="amigo_btn3_divider" type="id"/>
+    <item name="amigo_magicbar_tab_divider" type="id"/>
+    <item name="amigo_btn2_divider" type="id"/>
+    <item name="amigo_dialog_multichoice_divider" type="id"/>
+    <item name="amigo_dialog_button1" type="id"/>
+    <item name="amigo_dialog_button2" type="id"/>
+    <item name="amigo_dialog_button3" type="id"/>
+    <item name="amigo_expandable_divider" type="id"/>
+    <item name="amigo_dialog_singlechoice_divider" type="id"/>
+    <item name="amigo_category_btn" type="id"/>
+    <item name="amigo_category_btn_container" type="id"/>
+    <item name="amigo_tail_icon" type="id"/>
+    <item name="amigo_internalEmpty" type="id"/>
+    <item name="amigo_checkbox_key_tag" type="id"/>
+    <item name="amigo_dialog_list_view" type="id"/>
+
+    <item name="amigo_timeday_frame" type="id"/>
+    <item name="amigo_day_spinner" type="id"/>
+    <item name="amigo_time_spinner" type="id"/>
+    <item name="amigo_lunar_switch" type="id"/>
+    <item name="amigo_time_day_spinner" type="id"/>
+    <item name="amigo_menu_list" type="id"/>
+    <item name="amigo_menu_scrollview" type="id"/>
+    <item name="amigo_qr_code_btn" type="id"/>
+</resources>

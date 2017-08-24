@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Enabled states -->
+        
+    <item android:state_checked="false" android:state_window_focused="false"
+          android:state_enabled="true"
+           android:color="@color/amigo_text_color_light" />
+
+    <item android:state_checked="false"
+          android:state_enabled="true"
+           android:color="@color/amigo_text_color_light" />
+    
+
+
+    <!-- Disabled states -->
+
+    <item android:state_checked="false" android:state_window_focused="false"
+          android:color="@color/amigo_text_color_light" />
+
+
+    <item android:state_checked="false"  android:color="@color/amigo_text_color_light" />
+    
+
+</selector>

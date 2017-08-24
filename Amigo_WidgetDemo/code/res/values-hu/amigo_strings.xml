@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+  <string name="amigo_app_name">Amigo UI</string>  
+    <string name="amigo_capital_on">ON</string>  
+    <string name="amigo_capital_off">OFF</string>  
+  <string name="amigo_time_picker_dialog_title">Óra beállítása</string>  
+  <string name="amigo_date_picker_dialog_title">Dátum beállítása</string>  
+  <string name="amigo_date_time_done">Kész</string>  
+  <string name="amigo_copy">Másol</string>  
+  <string name="amigo_paste">Ragaszt</string>  
+  <string name="amigo_cut">Vágás</string>  
+  <string name="amigo_selectAll">Összes kiválasztása</string>  
+  <string name="amigo_select">Választ</string>  
+  <string name="amigo_inputMethod">Beviteli mód</string>  
+  <string name="amigo_back_button_label">Vissza</string>  
+  <string name="amigo_next_button_label">Következő</string>  
+  <string name="amigo_skip_button_label">Ugrás</string>  
+  <string name="amigo_ok">OK</string>  
+  <string name="amigo_cancel">Lemond</string>  
+  <string name="amigo_yes">OK</string>  
+  <string name="amigo_no">Lemond</string>  
+  <string name="amigo_action_mode_done">Kész</string>  
+  <string name="amigo_action_bar_home_description">Haza bőngészés</string>  
+  <string name="amigo_action_bar_up_description">Bőngészés fel</string>  
+  <string name="amigo_smart_full_btn_label">OK</string>  
+  <string name="amigo_activity_resolver_use_always">Mindig</string>  
+  <string name="amigo_activity_resolver_use_once">Egyszer</string>  
+  <string name="amigo_noApplications">Egy alkalmazás sem tudja végrehajtani ezt a műveletet.</string>  
+  <string name="amigo_system_label">Android rendszer</string>  
+  <string name="amigo_whichApplication">Művelet végrehajtása a</string>  
+  <string name="amigo_chooseActivity">Válasszon egy műveletet</string>
+    <string name="amigo_actionbar_magic_item_more">Egyebek</string>  
+    <string name="amigo_actionbar_magic_item_close">Bezár</string>  
+    <string name="amigo_edit_mode_leftbtn_txt">Mégse</string>  
+    <string name="amigo_edit_mode_rightbtn_txt">Mentés</string>  
+    <string name="amigo_strong_warning">Figyelmeztetés</string>  
+    <string name="amigo_multichoice_select_text">%1$s cikk</string>  
+    <string name="amigo_multichoice_select_all">Az összes kijelölése</string>  
+    <string name="amigo_multichoice_cancel_select_all">Összes kijelölés törlése</string>  
+    <string name="unit_year">É</string>  
+    <string name="unit_month">H</string>  
+    <string name="unit_day">N</string>  
+    <string name="unit_hour">Ó</string>  
+    <string name="unit_minute">P</string>  
+    <string name="clone_suffix">klónozás</string>  
+    <string name="amigo_loading">Betöltés\u2026</string>
+</resources>

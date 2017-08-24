@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="amigo_app_name">অ্যামিগোUI</string>
+    <string name="amigo_capital_on">অন</string>
+    <string name="amigo_capital_off">অফ</string>
+    <string name="amigo_time_picker_dialog_title">টাইম সেট করুন</string>
+    <string name="amigo_date_picker_dialog_title">তারিখ সেট করুন</string>
+    <string name="amigo_date_time_done">সম্পন্ন</string>
+    <string name="amigo_copy">কপি করুন</string>
+    <string name="amigo_paste">পেস্ট করুন</string>
+    <string name="amigo_cut">কাট</string>
+    <string name="amigo_selectAll">সবগুলো নির্বাচন করুন</string>
+    <string name="amigo_select">নির্বাচন</string>
+    <string name="amigo_inputMethod">ইনপুট পদ্ধতি</string>
+    <string name="amigo_back_button_label">পেছোন</string>
+    <string name="amigo_next_button_label">পরের</string>
+    <string name="amigo_skip_button_label">বাদ দিন</string>
+    <string name="amigo_ok">ওকে</string>
+    <string name="amigo_cancel">বাতিল করুন</string>
+    <string name="amigo_yes">ওকে</string>
+    <string name="amigo_no">বাতিল করুন</string>
+    <string name="amigo_action_mode_done">সম্পন্ন</string>
+    <string name="amigo_action_bar_home_description">হোম স্ক্রিনে নেভিগেট করুন</string>
+    <string name="amigo_action_bar_up_description">ওপরে নেভিগেট করুন</string>
+    <string name="amigo_smart_full_btn_label">ওকে</string>
+    <string name="amigo_activity_resolver_use_always">সবসময়</string>
+    <string name="amigo_activity_resolver_use_once">একবার</string>
+    <string name="amigo_noApplications">কোনো অ্যাপ এই কাজটি করতে পারবে না</string>
+    <string name="amigo_system_label">অ্যাণ্ড্রয়েড সিস্টেম</string>
+    <string name="amigo_whichApplication">ব্যবহার করে কাজটা শেষ করুন</string>
+    <string name="amigo_chooseActivity">একটি ক্রিয়া বেছে নিন</string>
+    <string name="amigo_actionbar_magic_item_more">আরো</string>
+    <string name="amigo_actionbar_magic_item_close">বন্ধ করুন</string>
+    <string name="amigo_edit_mode_leftbtn_txt">বাতিল করুন</string>
+    <string name="amigo_edit_mode_rightbtn_txt">ওকে</string>
+    <string name="amigo_strong_warning">স্টোরেজ সতর্কতা</string>
+    <string name="amigo_multichoice_select_text">%1$s নির্বাচিত</string>
+    <string name="amigo_multichoice_select_all">সবগুলি নির্বাচন</string>
+    <string name="amigo_multichoice_cancel_select_all">সবগুলো অনির্বাচিত</string>
+</resources>

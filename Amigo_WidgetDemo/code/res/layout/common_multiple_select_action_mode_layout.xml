@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <amigoui.widget.AmigoTextView
+        android:id="@+id/textSelectedCount"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/selectall"
+        android:gravity="center_vertical"
+        android:text="@string/multiple_select_text"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="20dip"
+        android:textSize="20sp" />
+
+    <amigoui.widget.AmigoButton
+        android:id="@+id/selectall"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:text="@string/multiple_select_all" />
+
+</RelativeLayout>

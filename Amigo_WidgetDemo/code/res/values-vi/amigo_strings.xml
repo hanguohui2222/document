@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources>
+    <string name="amigo_app_name">AmigoUI</string>
+    
+    <string name="amigo_capital_on">Bật</string>
+    <string name="amigo_capital_off">Tắt</string>
+    
+    <string name="amigo_time_picker_dialog_title">Thiết lập thời gian</string>
+    <string name="amigo_date_picker_dialog_title">Thiết lập ngày tháng năm</string>
+    <string name="amigo_date_time_done">Xong</string>
+
+    <string name="amigo_copy">Sao chép</string>
+    <string name="amigo_paste">Dán</string>
+    <string name="amigo_cut">Cắt</string>
+    <string name="amigo_selectAll">Chọn tất cả</string>
+    <string name="amigo_select">Chọn</string>
+    <string name="amigo_inputMethod">Phương thức nhập</string>
+    
+    <!--  Strings for possible PreferenceActivity Back/Next buttons -->
+    <string name="amigo_back_button_label">Trở về</string>
+    <string name="amigo_next_button_label">Tiếp</string>
+    <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
+    <string name="amigo_skip_button_label">Bỏ qua</string>    
+    
+    <string name="amigo_ok">OK</string>
+    <string name="amigo_cancel">Hủy bỏ</string>
+    <string name="amigo_yes">OK</string>
+    <string name="amigo_no">Hủy bỏ</string>
+
+    <string name="amigo_action_mode_done">Xong</string>
+	<string name="amigo_action_bar_home_description">Chuyển về màn hình chính</string>
+	<string name="amigo_action_bar_up_description">Chuyển lên trên</string>
+	
+	<!-- Gionee <xuhz> <2013-07-19> add for CR00838236 begin -->
+	<!-- String for Smart Guider -->
+    <string name="amigo_smart_full_btn_label">OK</string>
+	<!-- Gionee <xuhz> <2013-07-19> add for CR00838236 end -->
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 begin -->
+    <string name="amigo_activity_resolver_use_always">Luôn Chọn</string>
+    <string name="amigo_activity_resolver_use_once">Chỉ một lần</string>
+
+    <!-- Text to display when there are no activities found to display in the
+         activity chooser. See the "Select an action" title. -->
+    <string name="amigo_noApplications">Không có ứng dụng nào có thể thực hiện thao tác này.</string>
+    <string name="amigo_system_label">Hệ thống Android</string>
+    <string name="amigo_whichApplication">Hoàn thành thao tác bằng</string>
+    <string name="amigo_chooseActivity">Chọn một thao tác</string>
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 end -->
+    <!-- shaozj begin-->
+    <string name="amigo_actionbar_magic_item_more">Thêm</string>
+    <string name="amigo_actionbar_magic_item_close">Đóng</string>
+    <!-- shaozj end-->
+    <!-- weidong begin -->
+    <string name="amigo_edit_mode_leftbtn_txt">Hủy bỏ</string>
+    <string name="amigo_edit_mode_rightbtn_txt">ok</string>
+    <string name="amigo_strong_warning">Cảnh báo</string>
+    <string name="amigo_multichoice_select_text">Đã chọn %1$s </string>
+    <string name="amigo_multichoice_select_all">Chọn tất cả</string>
+    <string name="amigo_multichoice_cancel_select_all">Hủy bỏ</string>
+    <!-- weidong end -->
+    <string name="clone_suffix"> Bản sao </string>
+    <string name="amigo_loading">Đang tải\u2026</string>
+</resources>

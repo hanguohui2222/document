@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="amigo_app_name">अमीगोUI</string>
+    
+    <string name="amigo_capital_on">ऑन</string>
+    <string name="amigo_capital_off">ऑफ</string>
+    
+    <string name="amigo_time_picker_dialog_title">समय सेट करें</string>
+    <string name="amigo_date_picker_dialog_title">तिथि सेट करें</string>
+    <string name="amigo_date_time_done">संपन्न</string>
+
+    <string name="amigo_copy">कॉपी</string>
+    <string name="amigo_paste">पेस्ट</string>
+    <string name="amigo_cut">कट</string>
+    <string name="amigo_selectAll">सभी चुनें</string>
+    <string name="amigo_select">चुनें</string>
+    <string name="amigo_inputMethod">इनपुट विधि</string>
+    
+    <string name="amigo_back_button_label"> वापस </string>
+    <string name="amigo_next_button_label"> अगला </string>
+    <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
+    <string name="amigo_skip_button_label"> स्किप </string>    
+    
+    <string name="amigo_ok">ओके</string>
+    <string name="amigo_cancel">रद्द करें</string>
+    <string name="amigo_yes">ओके</string>
+    <string name="amigo_no">रद्द करें</string>
+
+    <string name="amigo_action_mode_done">संपन्न</string>
+    <string name="amigo_action_bar_home_description">नेविगेट होम</string>
+    <string name="amigo_action_bar_up_description">नेविगेट ऊपर</string>
+	
+	<!-- Gionee <xuhz> <2013-07-19> add for CR00838236 begin -->
+	<!-- String for Smart Guider -->
+    <string name="amigo_smart_full_btn_label">ओके</string>
+	<!-- Gionee <xuhz> <2013-07-19> add for CR00838236 end -->
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 begin -->
+    <string name="amigo_activity_resolver_use_always">हमेशा</string>
+    <string name="amigo_activity_resolver_use_once">केवल एक बार</string>
+
+    <string name="amigo_noApplications">कोई भी ऐप यह कार्यवाही नहीं कर सकता.</string>
+    <string name="amigo_system_label">एंड्राइड सिस्टम</string>
+    <string name="amigo_whichApplication">कृपया संपन्न करने के लिये सहायक चुनें</string>
+    <string name="amigo_chooseActivity">एक क्रिया चुनें</string>
+    <string name="amigo_actionbar_magic_item_more">अधिक</string>
+    <string name="amigo_actionbar_magic_item_close">बंद करें</string>
+    <string name="amigo_edit_mode_leftbtn_txt">रद्द करें</string>
+    <string name="amigo_edit_mode_rightbtn_txt">ओके</string>
+    <string name="amigo_strong_warning">कड़ी चेतावनी</string>
+    <string name="amigo_multichoice_select_text">%1$s आइटम चयनित</string>
+    <string name="amigo_multichoice_select_all">सब चुनें</string>
+    <string name="amigo_multichoice_cancel_select_all">चयन रद्द करें</string>
+</resources>

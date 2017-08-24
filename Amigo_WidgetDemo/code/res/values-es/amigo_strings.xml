@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+  <string name="amigo_app_name">Amigo UI</string>
+  <string name="amigo_capital_on">ON</string>  
+  <string name="amigo_capital_off">OFF</string>  
+  <string name="amigo_time_picker_dialog_title">Configurar hora</string>
+  <string name="amigo_date_picker_dialog_title">Configurar fecha</string>
+  <string name="amigo_date_time_done">Hecho</string>
+  <string name="amigo_copy">Copiar</string>
+  <string name="amigo_paste">Pegar</string>  
+  <string name="amigo_cut">Cortar</string>  
+  <string name="amigo_selectAll">Seleccionar todo</string>  
+  <string name="amigo_select">Seleccionar</string>  
+  <string name="amigo_inputMethod">Introducción</string>  
+  <string name="amigo_back_button_label">Atrás</string>  
+  <string name="amigo_next_button_label">Siguiente</string>  
+  <string name="amigo_skip_button_label">Saltar</string>  
+  <string name="amigo_ok">OK</string>  
+  <string name="amigo_cancel">Cancelar</string>  
+  <string name="amigo_yes">OK</string>  
+  <string name="amigo_no">Cancelar</string>  
+  <string name="amigo_action_mode_done">Hecho</string>  
+  <string name="amigo_action_bar_home_description">Volver a la Home</string>  
+  <string name="amigo_action_bar_up_description">Página anterior</string>  
+  <string name="amigo_smart_full_btn_label">OK</string>  
+  <string name="amigo_activity_resolver_use_always">Siempre</string>  
+  <string name="amigo_activity_resolver_use_once">Sólo una vez</string>  
+    <string name="amigo_noApplications">Ninguna aplicación puede realizar esta acción.</string>  
+  <string name="amigo_system_label">Sistema Operativo Android</string>  
+  <string name="amigo_whichApplication">Completa la acción con</string>  
+  <string name="amigo_chooseActivity">Elegir una acción</string>  
+  <string name="amigo_actionbar_magic_item_more">Más</string>  
+  <string name="amigo_actionbar_magic_item_close">Cerrar</string>  
+  <string name="amigo_edit_mode_leftbtn_txt">Cancelar</string>  
+  <string name="amigo_edit_mode_rightbtn_txt">OK</string>  
+  <string name="amigo_strong_warning">Atención</string>
+  <string name="amigo_multichoice_select_text">%1$s ítems</string>
+  <string name="amigo_multichoice_select_all">Seleccionar todo</string>
+  <string name="amigo_multichoice_cancel_select_all">Eliminar selección</string>
+    <string name="unit_year">A</string>  
+    <string name="unit_month">M</string>  
+    <string name="unit_day">D</string>  
+    <string name="unit_hour">H</string>  
+    <string name="unit_minute">M</string>  
+    <string name="clone_suffix">clon</string>  
+    <string name="amigo_loading">Cargando\u2026</string>
+</resources>

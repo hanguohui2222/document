@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="amigo_app_name">DiscoveryUI</string>
+    
+    <string name="amigo_capital_on">Açık</string>
+    <string name="amigo_capital_off">Kapalı</string>
+    
+    <string name="amigo_time_picker_dialog_title">Zamanı ayarla</string>
+    <string name="amigo_date_picker_dialog_title">Tarihi ayarla</string>
+    <string name="amigo_date_time_done">Tamam</string>
+
+    <string name="amigo_copy">Kopyala</string>
+    <string name="amigo_paste">Yapıştır</string>
+    <string name="amigo_cut">Kes</string>
+    <string name="amigo_selectAll">Tümünü seç</string>
+    <string name="amigo_select">Seç</string>
+    <string name="amigo_inputMethod">Giriş methodu</string>
+    
+    <!--  Strings for possible PreferenceActivity Back/Next buttons -->
+    <string name="amigo_back_button_label">Geri</string>
+    <string name="amigo_next_button_label">İleri</string>
+    <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
+    <string name="amigo_skip_button_label">Geç</string>    
+    
+    <string name="amigo_ok">Tamam</string>
+    <string name="amigo_cancel">İptal</string>
+    <string name="amigo_yes">Tamam</string>
+    <string name="amigo_no">İptal</string>
+
+    <string name="amigo_action_mode_done">Bitti</string>
+	<string name="amigo_action_bar_home_description">Eve götür</string>
+	<string name="amigo_action_bar_up_description">Gexir</string>
+	
+	<!-- Gionee <xuhz> <2013-07-19> add for CR00838236 begin -->
+	<!-- String for Smart Guider -->
+    <string name="amigo_smart_full_btn_label">Tamam</string>
+	<!-- Gionee <xuhz> <2013-07-19> add for CR00838236 end -->
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 begin -->
+    <string name="amigo_activity_resolver_use_always">Her zaman</string>
+    <string name="amigo_activity_resolver_use_once">Yalnızca bir kez</string>
+
+    <!-- Text to display when there are no activities found to display in the
+         activity chooser. See the "Select an action" title. -->
+    <string name="amigo_noApplications">Hiçbir uygulama bu işlemi gerçekleştiremez.</string>
+    <string name="amigo_system_label">Android Sistemi</string>
+    <string name="amigo_whichApplication">Şununla tamamla:</string>
+    <string name="amigo_chooseActivity">Seçim yapın</string>
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 end -->
+    <!-- shaozj begin-->
+    <string name="amigo_actionbar_magic_item_more">Diğer</string>
+    <string name="amigo_actionbar_magic_item_close">Kapat</string>
+    <!-- shaozj end-->
+    <!-- weidong begin -->
+    <string name="amigo_edit_mode_leftbtn_txt">İptal</string>
+    <string name="amigo_edit_mode_rightbtn_txt">Bitti</string>
+    <string name="amigo_strong_warning">Güçlü uyarısı</string>
+    <string name="amigo_multichoice_select_text">Seç %1$s madde</string>
+    <string name="amigo_multichoice_select_all">Tümünü seç</string>
+    <string name="amigo_multichoice_cancel_select_all">Seç iptal et</string>
+    <!-- weidong end -->
+    
+    <!-- gionee maxw add begin -->
+    <string name="unit_year">Y</string>
+    <string name="unit_month">M</string>
+    <string name="unit_day">D</string>
+    <string name="unit_hour">Sa</string>
+    <string name="unit_minute">Dk</string>
+    <!-- gionee maxw add end -->
+    <!--  Gionee <dual_weixin> <liuran> <Dec 29, 2015> add for  begin -->
+    <string name="clone_suffix"> clone </string>
+    <!--  Gionee <dual_weixin> <liuran> <Dec 29, 2015> add for  end -->
+</resources>
+

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources>
+    <string name="amigo_app_name">AmigoUI</string>
+    
+    <string name="amigo_capital_on">Hidup</string>
+    <string name="amigo_capital_off">Mati</string>
+    
+    <string name="amigo_time_picker_dialog_title">Atur waktu</string>
+    <string name="amigo_date_picker_dialog_title">Atur tanggal</string>
+    <string name="amigo_date_time_done">Selesai</string>
+
+    <string name="amigo_copy">Salin</string>
+    <string name="amigo_paste">Tempel</string>
+    <string name="amigo_cut">Potong</string>
+    <string name="amigo_selectAll">Pilih semua</string>
+    <string name="amigo_select">Pilih</string>
+    <string name="amigo_inputMethod">Metode masukan</string>
+    
+    <!--  Strings for possible PreferenceActivity Back/Next buttons -->
+    <string name="amigo_back_button_label">Kembali</string>
+    <string name="amigo_next_button_label">Lanjut</string>
+    <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
+    <string name="amigo_skip_button_label">Batal</string>    
+    
+    <string name="amigo_ok">OKE</string>
+    <string name="amigo_cancel">Batal</string>
+    <string name="amigo_yes">OKE</string>
+    <string name="amigo_no">Batal</string>
+
+    <string name="amigo_action_mode_done">Selesai</string>
+	<string name="amigo_action_bar_home_description">Navigasi awal</string>
+	<string name="amigo_action_bar_up_description">Navigasi atas</string>
+	
+	<!-- Gionee <xuhz> <2013-07-19> add for CR00838236 begin -->
+	<!-- String for Smart Guider -->
+    <string name="amigo_smart_full_btn_label">OKE</string>
+	<!-- Gionee <xuhz> <2013-07-19> add for CR00838236 end -->
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 begin -->
+    <string name="amigo_activity_resolver_use_always">Selalu</string>
+    <string name="amigo_activity_resolver_use_once">Hanya sekali</string>
+
+    <!-- Text to display when there are no activities found to display in the
+         activity chooser. See the "Select an action" title. -->
+    <string name="amigo_noApplications">Tidak ada aplikasi dapat melakukan tindakan ini.</string>
+    <string name="amigo_system_label">Sistem Android</string>
+    <string name="amigo_whichApplication">Selesaikan tindakan menggunakan</string>
+    <string name="amigo_chooseActivity">Pilih tindakan</string>
+    <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 end -->
+	<!-- shaozj begin-->
+    <string name="amigo_actionbar_magic_item_more">Lainnya</string>
+    <string name="amigo_actionbar_magic_item_close">Tutup</string>
+    <!-- shaozj end-->
+    <!-- weidong begin -->
+    <string name="amigo_edit_mode_leftbtn_txt">Batal</string>
+    <string name="amigo_edit_mode_rightbtn_txt">Simpan</string>
+    <string name="amigo_strong_warning">peringatan keras</string>
+    <string name="amigo_multichoice_select_text">%1$s Pilihan</string>
+    <string name="amigo_multichoice_select_all">Pilih semua</string>
+    <string name="amigo_multichoice_cancel_select_all">Tidak dipilih semua</string>
+    <!-- weidong end -->
+    <string name="unit_year">T</string>
+    <string name="unit_month">B</string>
+    <string name="unit_day">H</string>
+    <string name="unit_hour">J</string>
+    <string name="unit_minute">M</string>
+    <string name="clone_suffix"> klon </string>
+    <string name="amigo_loading">Memuat\u2026</string>
+</resources>

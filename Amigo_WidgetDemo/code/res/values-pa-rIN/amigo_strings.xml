@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="amigo_app_name">ਅਮੀਗੋUI</string>
+    <string name="amigo_capital_on">ਆਨ</string>
+    <string name="amigo_capital_off">ਆਫ</string>
+    <string name="amigo_time_picker_dialog_title">ਟਾਈਮ ਸੈਟ ਕਰੋ</string>
+    <string name="amigo_date_picker_dialog_title">ਦਿਨਾਂਕ ਸੈਟ ਕਰੋ</string>
+    <string name="amigo_date_time_done">ਹੋ ਗਿਆ</string>
+    <string name="amigo_copy">ਕਾਪੀ</string>
+    <string name="amigo_paste">ਪੇਸਟ</string>
+    <string name="amigo_cut">ਕੱਟ</string>
+    <string name="amigo_selectAll">ਸਾਰੇ ਚੁਣੋ</string>
+    <string name="amigo_select">ਚੁਣੋ</string>
+    <string name="amigo_inputMethod">ਇਨਪੁਟਵਿਧੀ</string>
+    <string name="amigo_back_button_label">ਵਾਪਸ ਜਾਓ</string>
+    <string name="amigo_next_button_label">ਅੱਗੇ ਜਾਓ</string>
+    <string name="amigo_skip_button_label">ਸਕਿਪ</string>
+    <string name="amigo_ok">ਓਕੇ</string>
+    <string name="amigo_cancel">ਕੈਂਸਿਲ ਕਰੋ</string>
+    <string name="amigo_yes">ਓਕੇ</string>
+    <string name="amigo_no">ਕੈਂਸਿਲ ਕਰੋ</string>
+    <string name="amigo_action_mode_done">ਹੋ ਗਿਆ</string>
+    <string name="amigo_action_bar_home_description">ਨੇਵੀਗੇਟ ਹੋਮ</string>
+    <string name="amigo_action_bar_up_description">ਨੇਵੀਗੇਟ ਉੱਪਰ</string>
+    <string name="amigo_smart_full_btn_label">ਓਕੇ</string>
+    <string name="amigo_activity_resolver_use_always">ਹਮੇਸ਼ਾ</string>
+    <string name="amigo_activity_resolver_use_once">ਸਿਰਫ ਇਕ ਵਾਰ</string>
+    <string name="amigo_noApplications">ਕੋਈ ਵੀ ਮੌਜੂਦ ਐਪ ਇਹ ਕਿਰਿਆ ਨਹੀਂ ਕਰ ਸਕਦੀ</string>
+    <string name="amigo_system_label">ਐਂਡਰਾਇਡ ਸਿਸਟਮ</string>
+    <string name="amigo_whichApplication">ਕਿਰਪਾ ਕਰਕੇ ਪੂਰਾ ਕਰਨ ਦੇ ਲਈ ਸਹਾਇਕ ਚੁਣੋਂ</string>
+    <string name="amigo_chooseActivity">ਇਕ ਕਿਰਿਆ ਚੁਣੋ</string>
+    <string name="amigo_actionbar_magic_item_more">ਜ਼ਿਆਦਾ</string>
+    <string name="amigo_actionbar_magic_item_close">ਬੰਦ ਕਰੋ</string>
+    <string name="amigo_edit_mode_leftbtn_txt">ਕੈਂਸਿਲ ਕਰੋ</string>
+    <string name="amigo_edit_mode_rightbtn_txt">ਓਕੇ</string>
+    <string name="amigo_strong_warning">ਸਖਤ ਚੇਤਾਵਨੀ</string>
+    <string name="amigo_multichoice_select_text">%1$s ਆਇਟਮ ਚੁਣੋ</string>
+    <string name="amigo_multichoice_select_all">ਸਾਰੇ ਚੁਣੋ</string>
+    <string name="amigo_multichoice_cancel_select_all">ਚੋਣ ਰੱਦ ਕਰੋ</string>
+</resources>

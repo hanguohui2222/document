@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="amigo_app_name">AmigoUI</string>
+  <string name="amigo_capital_on">آن</string>
+  <string name="amigo_capital_off">آف</string>
+  <string name="amigo_time_picker_dialog_title">وقت سیٹ کریں</string>
+  <string name="amigo_date_picker_dialog_title">تاریخ سیٹ کریں</string>
+  <string name="amigo_date_time_done">اختتام</string>
+  <string name="amigo_copy">کاپی کریں</string>
+  <string name="amigo_paste">پیسٹ کریں</string>
+  <string name="amigo_cut">کٹ کریں</string>
+  <string name="amigo_selectAll">تمام کو منتخب کریں</string>
+  <string name="amigo_select">منتخب کریں</string>
+  <string name="amigo_inputMethod">ان پٹ طریقہ</string>
+  <!--  Strings for possible PreferenceActivity Back/Next buttons -->
+  <string name="amigo_back_button_label">واپس جائیں</string>
+  <string name="amigo_next_button_label">اگلا</string>
+  <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
+  <string name="amigo_skip_button_label">چھوڑیں</string>
+  <string name="amigo_ok">اوکے</string>
+  <string name="amigo_cancel">منسوخ کریں</string>
+  <string name="amigo_yes">اوکے</string>
+  <string name="amigo_no">منسوخ کریں</string>
+  <string name="amigo_action_mode_done">اختتام</string>
+  <string name="amigo_action_bar_home_description">ہوم نیویگیٹ کریں</string>
+  <string name="amigo_action_bar_up_description">اوپر نیویگیٹ کریں</string>
+  <!-- Gionee <xuhz> <2013-07-19> add for CR00838236 begin -->
+  <!-- String for Smart Guider -->
+  <string name="amigo_smart_full_btn_label">اوکے</string>
+  <!-- Gionee <xuhz> <2013-07-19> add for CR00838236 end -->
+  <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 begin -->
+  <string name="amigo_activity_resolver_use_always">ہمیشہ</string>
+  <string name="amigo_activity_resolver_use_once">صرف ایک مرتبہ</string>
+  <!-- Text to display when there are no activities found to display in the
+         activity chooser. See the "Select an action" title. -->
+  <string name="amigo_noApplications">کوئ بھی ایپ یہ کارروائی نہیں کر سکتی ہے.</string>
+  <string name="amigo_system_label">Android سسٹم</string>
+  <string name="amigo_whichApplication">اسکے استعمال سے کارروائی مکمل کریں</string>
+  <string name="amigo_chooseActivity">کارروائی منتخب کریں</string>
+  <!-- Gionee <hanbj> <2013-09-18> add for CR00907636 end -->
+  <!-- shaozj begin-->
+  <string name="amigo_actionbar_magic_item_more">مزید</string>
+  <string name="amigo_actionbar_magic_item_close">بند کریں</string>
+  <!-- shaozj end-->
+  <!-- weidong begin -->
+  <string name="amigo_edit_mode_leftbtn_txt">منسوخ کریں</string>
+  <string name="amigo_edit_mode_rightbtn_txt">محفوظ کریں</string>
+  <string name="amigo_strong_warning">سخت انتباہ</string>
+  <string name="amigo_multichoice_select_text">%1$s منتخب کۓ ہوۓ ہیں</string>
+  <string name="amigo_multichoice_select_all">تمام کو منتخب کریں</string>
+  <string name="amigo_multichoice_cancel_select_all">تمام کو غیرمنتخب کریں</string>
+  <!-- weidong end -->
+  <!-- gionee maxw add begin -->
+  <string name="unit_year">Y</string>
+  <string name="unit_month">M</string>
+  <string name="unit_day">D</string>
+  <string name="unit_hour">H</string>
+  <string name="unit_minute">M</string>
+  <!-- gionee maxw add end -->
+  <!--  Gionee <dual_weixin> <liuran> <Dec 29, 2015> add for  begin -->
+  <string name="clone_suffix"> کلون </string>
+  <!--  Gionee <dual_weixin> <liuran> <Dec 29, 2015> add for  end -->
+</resources>

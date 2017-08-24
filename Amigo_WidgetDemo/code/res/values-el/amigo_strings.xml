@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="amigo_capital_on">Ενεργ.</string>
+    <string name="amigo_capital_off">Απενεργ.</string>
+    <string name="amigo_time_picker_dialog_title">Ρύθμιση ώρας</string>
+    <string name="amigo_date_picker_dialog_title">Ρύθμιση ημερομ.</string>
+    <string name="amigo_date_time_done">Έγινε</string>
+    <string name="amigo_copy">Αντιγραφή</string>
+    <string name="amigo_paste">Επικόλληση</string>
+    <string name="amigo_cut">Αφαίρεση</string>
+    <string name="amigo_selectAll">επιλογή όλων</string>
+    <string name="amigo_select">επιλογή</string>
+    <string name="amigo_inputMethod">μέθοδος εισαγωγής</string>
+    <string name="amigo_back_button_label">Πίσω</string>
+    <string name="amigo_next_button_label">Επόμενο</string>
+    <string name="amigo_skip_button_label">Παράλειψη</string>
+    <string name="amigo_ok">ΟΚ</string>
+    <string name="amigo_cancel">Ακύρωση</string>
+    <string name="amigo_yes">ΟΚ</string>
+    <string name="amigo_no">Ακύρωση</string>
+    <string name="amigo_action_mode_done">Έγινε</string>
+    <string name="amigo_action_bar_home_description">Προχώρησε στη βάση</string>
+    <string name="amigo_action_bar_up_description">Προχώρησε επάνω</string>
+    <string name="amigo_smart_full_btn_label">ΟΚ</string>
+    <string name="amigo_activity_resolver_use_always">Πάντα</string>
+    <string name="amigo_activity_resolver_use_once">Μόνο μία φορά</string>
+    <string name="amigo_noApplications">Δεν είναι δυνατή αυτή η ενέργεια από καμία εφαρμογή</string>
+    <string name="amigo_system_label">Σύστημα Android</string>
+    <string name="amigo_whichApplication">Εκτέλεση ενέργειας με</string>
+    <string name="amigo_chooseActivity">Επιλογή ενέργειας</string>
+    <string name="amigo_app_name">Amigo UI</string>  
+    <string name="amigo_actionbar_magic_item_more">Περισσότερα</string>  
+    <string name="amigo_actionbar_magic_item_close">Κλείσιμο</string>  
+    <string name="amigo_edit_mode_leftbtn_txt">ακύρωση</string>  
+    <string name="amigo_edit_mode_rightbtn_txt">ok</string>  
+    <string name="amigo_strong_warning">σημαντική προειδοποίηση</string>
+    <string name="amigo_multichoice_select_text">επιλέχθηκαν %1$s στοιχεία</string>
+    <string name="amigo_multichoice_select_all">επιλογή όλων</string>
+    <string name="amigo_multichoice_cancel_select_all">ακύρωση επιλογής</string>
+</resources>

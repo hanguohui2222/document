@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- animation time -->
+    <integer name="amigo_shortAnimTime">200</integer>
+    <integer name="amigo_mediumAnimTime">250</integer>
+    <integer name="amigo_longAnimTime">100</integer>
+    <integer name="amigo_halfLargeAnimTime">400</integer>    
+    <integer name="amigo_largeAnimTime">800</integer>
+    <!-- Gionee <lihq> <2014-04-09> add for CR00873172 begin -->
+    <integer name="amigo_startOffset">300</integer>
+    <!-- Gionee <lihq> <2014-04-09> add for CR00873172 end -->
+    <!-- Dialog title height -->
+    <dimen name="amigo_alert_dialog_title_height">48dip</dimen>
+    
+    <!-- Gionee <lihq> <2013-12-04> modify for CR00873172 begin -->
+    <!-- GUI 3.5 48dip-->
+    <dimen name="amigo_alert_dialog_button_bar_height">52dip</dimen> 
+    <!-- Gionee <lihq> <2013-12-04> modify for CR00873172 end -->
+    <!-- weidong begin -->
+    <!-- <dimen name="amigo_alert_dialog_title_margin_left">14dip</dimen> -->
+    <dimen name="amigo_alert_dialog_title_margin_left">20dip</dimen>
+    <!-- weidong end -->  
+    <!-- Alert Dialog button 距离弹出框间距 -->  
+    <dimen name="amigo_alert_dialog_button_button_padding">6dip</dimen>   
+    <!-- weidong begin -->
+    <!-- <dimen name="amigo_alert_dialog_panel_margin">2dip</dimen> --> 
+    <dimen name="amigo_alert_dialog_panel_margin">0dip</dimen>  
+    <!-- weidong end -->
+    <!--  Gionee <weidong> <2015-4-2> add for CR01461208 begin context menu item height is 52,so five line is 286-->
+    <dimen name="amigo_alert_dialog_list_maxheight">254dp</dimen>
+    <dimen name="amigo_context_menu_list_maxheight">279dp</dimen>
+    <dimen name="amigo_single_alert_dialog_list_maxheight">@dimen/amigo_context_menu_list_maxheight</dimen>
+    <!--  Gionee <weidong> <2015-4-2> add for CR01461208 end -->    
+    
+    <!-- RecycleListView max height -->
+    <dimen name="amigo_recyclelistview_maxheight">270dip</dimen>
+    <!-- Quick Contact Badge -->
+    <dimen name="amigo_quickcontact_padding_left">6dip</dimen>
+    <dimen name="amigo_quickcontact_padding_right">6dip</dimen>
+    <dimen name="amigo_quickcontact_padding_top">4dip</dimen>
+    <dimen name="amigo_quickcontact_padding_bottom">8dip</dimen>
+    <!-- Preference fragment padding, sides -->
+    <dimen name="amigo_preference_child_padding_side">16dip</dimen>
+    <dimen name="amigo_preference_icon_minWidth">0dp</dimen>
+    <dimen name="amigo_preference_item_padding_side">10dip</dimen>
+    <dimen name="amigo_preference_item_title_padding_top">15dip</dimen>
+    <dimen name="amigo_preference_item_widget_frame_width">64dip</dimen>
+    <!--weidong begin  -->
+    <!-- <dimen name="amigo_preference_fragment_padding_left">8dp</dimen>
+    <dimen name="amigo_preference_fragment_padding_right">8dp</dimen> -->
+    <dimen name="amigo_preference_fragment_padding_left">0dp</dimen>
+    <dimen name="amigo_preference_fragment_padding_right">0dp</dimen>
+    <!--weidong end  -->
+    <dimen name="amigo_preference_fragment_padding_top">0dp</dimen>
+    <dimen name="amigo_preference_fragment_padding_bottom">4dp</dimen>
+    <dimen name="amigo_preference_title_padding">5dp</dimen>
+    <!-- toast default offset y -->
+    <dimen name="amigo_toast_y_offset">60dip</dimen>
+    <!-- amigo_action_bar_title_text_size -->
+    <!-- Gionee <zhangxx> <2103-11-12> modify for CR00951338 begin -->
+    <!-- <dimen name="amigo_action_bar_title_text_size">20dp</dimen> -->
+    <dimen name="amigo_action_bar_title_text_size">18dp</dimen>
+    <!-- Gionee <zhangxx> <2103-11-12> modify for CR00951338 end -->    
+    <dimen name="amigo_actionbar_sub_title_text_size">12dp</dimen>
+    <!-- switch dimens -->
+    <dimen name="amigo_switch_thumb_Text_Padding">8dip</dimen>
+    <dimen name="amigo_switch_minwidth">64dip</dimen>
+    
+    <dimen name="amigo_dropdownitem_icon_width">32dip</dimen>
+    <dimen name="amigo_dropdownitem_text_padding_left">8dip</dimen>
+    <dimen name="amigo_dropdownitem_text_padding_right">8dip</dimen>
+    <dimen name="amigo_search_view_preferred_width">320dip</dimen>
+    <dimen name="amigo_search_view_text_min_width">160dip</dimen>
+
+    <!-- Weight of the left pane in a multi-pane preference layout. -->
+    <integer name="amigo_preferences_left_pane_weight">4</integer>
+    <!-- Weight of the right pane in a multi-pane preference layout. So the split is 40:60 -->
+    <integer name="amigo_preferences_right_pane_weight">6</integer>    
+    <integer name="amigo_preference_screen_header_scrollbarStyle">0x09000000</integer> <!-- outsideOverlay -->    
+    <integer name="amigo_preference_fragment_scrollbarStyle">0x09000000</integer> <!-- outsideOverlay -->
+    <!-- Preference fragment padding, sides -->
+    <dimen name="amigo_preference_fragment_padding_side">16dp</dimen>
+    <!-- Preference widget area width (to the left of the text) -->
+    <dimen name="amigo_preference_widget_width">48dp</dimen> 
+
+     <!-- Gionee <daizhimin> <2013-07-04> add for CR00833379 begin --> 
+    <dimen name="amigo_magicbar_icon_height">32dp</dimen>
+    <dimen name="amigo_magicbar_title_size">14sp</dimen>
+    <dimen name="amigo_magicbar_item_height">48dp</dimen>
+    <dimen name="amigo_magicbar_item_padding">20dp</dimen>
+    <dimen name="amigo_magicbar_item_padding_land">76dp</dimen>
+    <dimen name="amigo_magicbar_item1_padding">26dp</dimen>
+    <dimen name="amigo_magicbar_item2_padding">118dp</dimen>
+    <dimen name="amigo_magicbar_item2_text_padding">108dp</dimen>
+    <dimen name="amigo_magicbar_item3_padding">82dp</dimen>
+    <dimen name="amigo_magicbar_item3_padding_land">166dp</dimen>
+    <dimen name="amigo_magicbar_text_width">54dp</dimen>
+    <!-- <dimen name="amigo_magicbar_title_mode_height">75dp</dimen> -->
+    <dimen name="amigo_magicbar_title_mode_height">48dp</dimen>
+    <!--shaozj <dimen name="amigo_magicbar_list_item_height">48dp</dimen> -->
+    <dimen name="amigo_magicbar_list_item_height">50dp</dimen>
+    <dimen name="amigo_temp_pading">2dp</dimen> 
+    <!--shaozj <dimen name="amigo_magicbar_max_listview_height">240dp</dimen> -->
+    <dimen name="amigo_magicbar_max_listview_height">225dp</dimen> 
+    <!-- <dimen name="amigo_magicbar_listview_left_right_margin">8dp</dimen> --> 
+    <dimen name="amigo_magicbar_listview_left_right_margin">0dp</dimen>
+    <!--shaozj <dimen name="amigo_magicbar_listview_bottom_margin">8dp</dimen> -->
+    <dimen name="amigo_magicbar_listview_bottom_margin">0dp</dimen>
+    <!-- Gionee <daizhimin> <2013-07-04> add for CR00833379 end --> 
+    
+    <!-- for ActionBar -->
+    <dimen name="amigo_action_bar_stacked_tab_max_width">180dp</dimen>
+    <dimen name="amigo_action_bar_icon_vertical_padding">8dip</dimen>
+    <dimen name="amigo_action_bar_subtitle_top_margin">-3dip</dimen>
+    <!-- shaozj begin -->
+    <dimen name="amigo_actionbar_tabbar_padding">0dp</dimen>
+    <dimen name="amigo_actionbar_height">48dp</dimen>
+    <dimen name="amigo_actionbar_tabbar_height">@dimen/amigo_actionbar_height</dimen>
+    <!-- shaozj end -->
+    
+    <!-- Gionee <xuhz> <2013-07-19> add for CR00838236 begin -->
+	<!-- String for Smart Guider -->
+    <dimen name="amigo_smart_full_btn_bottom_margin">60dip</dimen>
+	<!-- Gionee <xuhz> <2013-07-19> add for CR00838236 end -->
+    <dimen name="amigo_loading_button_small_size">14dp</dimen>
+    
+    <!-- Progress Dialog -->
+    <!-- Gionee <lihq> <2013-08-26> add for CR00873172 begin -->
+    <dimen name="amigo_progress_dialog_padding">20dp</dimen>
+    <dimen name="amigo_progress_dialog_text_margin_top">16dp</dimen>
+    <!-- Gionee <lihq> <2013-08-26> add for CR00873172 end -->
+    
+    <!-- Gionee <gaoj> <2013-9-11> add for CR00899138 begin -->
+    <dimen name="amigo_magicbar_title_bottom_padding">6dip</dimen>
+    <!-- <dimen name="amigo_magicbar_listview_top_margin">4dip</dimen> -->
+    <dimen name="amigo_magicbar_listview_top_margin">0dip</dimen>
+    <dimen name="amigo_edit_text_size">16sp</dimen>
+    <!-- Gionee <gaoj> <2013-9-11> add for CR00899138 end -->
+    
+    <dimen name="amigo_large_text_size">22sp</dimen>
+    <dimen name="amigo_medium_text_size">18sp</dimen>
+    <dimen name="amigo_medium_second_text_size">14sp</dimen>
+    <dimen name="amigo_small_text_size">10sp</dimen>
+    
+    <dimen name="amigo_large_inverse_text_size">22sp</dimen>
+    <dimen name="amigo_medium_inverse_text_size">18sp</dimen>
+    <dimen name="amigo_medium_second_inverse_text_size">14sp</dimen>
+    <dimen name="amigo_small_inverse_text_size">10sp</dimen>
+    
+    <dimen name="amigo_light_large_text_size">22sp</dimen>
+    <dimen name="amigo_light_medium_text_size">18sp</dimen>
+    <dimen name="amigo_light_medium_second_text_size">14sp</dimen>
+    <dimen name="amigo_light_small_text_size">10sp</dimen>
+    
+    <dimen name="amigo_light_large_inverse_text_size">22sp</dimen>
+    <dimen name="amigo_light_medium_inverse_text_size">18sp</dimen>
+    <dimen name="amigo_light_medium_second_inverse_text_size">14sp</dimen>
+    <dimen name="amigo_light_small_inverse_text_size">10sp</dimen>
+    
+    <dimen name="amigo_popupmenu_large_text_size">18sp</dimen>
+    <dimen name="amigo_dialogwindow_title_text_size">18sp</dimen>
+    <dimen name="amigo_button_small_text_size">12sp</dimen>
+    <dimen name="amigo_spinneritem_text_size">14sp</dimen>
+    <dimen name="amigo_textview_listseparator_text_size">14sp</dimen>
+    <dimen name="amigo_actionbar_tabtext_text_size">14sp</dimen>
+    
+    <!-- Gionee <gaoj> <2013-9-27> add for CR00899138 begin -->
+    <dimen name="amigo_datepicker_vertical">10dip</dimen>
+    <dimen name="amigo_datepicker_horizontal">102dip</dimen>
+    <!-- Gionee <gaoj> <2013-9-27> add for CR00899138 end -->
+    
+    <!-- Gionee <gaoj> <2013-11-01> added for CR00833450 begin -->
+    <dimen name="amigo_expandablelistview_child_item">64dip</dimen>
+    <dimen name="amigo_expandablelistview_item_padding">8dip</dimen>
+    <!-- Gionee <gaoj> <2013-11-01> added for CR00833450 end -->
+    
+    <!-- AmigoEditText padding -->
+    <!-- Gionee <gaoj> <2013-11-07> add for CR00943435 begin -->
+    <dimen name="amigo_edit_text_margin_bottom">28dp</dimen>
+    <dimen name="amigo_edit_text_margin_left">20dp</dimen>
+    <!-- Gionee <gaoj> <2013-11-07> add for CR00943435 end -->
+    
+    <!-- AmigoMenu padding -->
+    <!-- Gionee <gaoj> <2013-12-06> add for CR00967353 begin -->
+    <dimen name="amigo_menu_margin_left">30dp</dimen>
+    <dimen name="amigo_menu_more_margin_left">24dp</dimen>
+    <dimen name="amigo_menu_more_margin_right">14dp</dimen>
+    <dimen name="amigo_menu_title_margin_right">90dp</dimen>
+    <dimen name="amigo_magicbar_icon_bg_height">58dp</dimen>
+    <!--shaozj <dimen name="amigo_magicbar_icon_bg_height">52dp</dimen> -->
+    <dimen name="amigo_magicbar_button_min_width">84dp</dimen>
+    <dimen name="amigo_menu_title_text_size">10sp</dimen>
+    <!-- Gionee <gaoj> <2013-12-06> add for CR00967353 end -->
+    
+    <!-- weidong begin -->
+    <dimen name="amigo_textSizeAlertDialogListItem">16sp</dimen>
+    <dimen name="amigo_AlertDialogListItemHeight">50dp</dimen>
+    <dimen name="amigo_AlertDialogButtonHeight">52dp</dimen>
+    <dimen name="amigo_textSizeAlertDialogBtn">14sp</dimen>
+    <dimen name="amigo_textSizeAlertDialogTitle">18dp</dimen>
+    <dimen name="amigo_panel_Menu_List_Width">250dp</dimen>
+    <dimen name="amigo_search_Result_List_Item_Height">58dp</dimen>
+    <dimen name="amigo_item_Padding">8dip</dimen>
+    <dimen name="amigo_progressBar_Padding">32dip</dimen>
+    <dimen name="no_space">0dp</dimen>
+    <dimen name="amigo_dropDown_Vertical_Offset">-6dp</dimen>
+    <dimen name="amigo_internal_Max_Height">180dp</dimen>
+    <integer name="amigo_completion_Threshold">2</integer>
+    <dimen name="amigo_dialog_title_bottom_margin">4dp</dimen>
+    <!-- weidong end -->
+    <!-- weidong begin -->
+    <dimen name="amigo_list_item_level1_text_size">18sp</dimen>
+    <dimen name="amigo_list_item_level2_text_size">12sp</dimen>
+    <dimen name="amigo_list_item_level2_min_text_width">20dp</dimen>
+    <dimen name="amigo_list_item_margin_left">16dp</dimen>
+    <dimen name="amigo_list_item_margin_top_bottom">12dp</dimen>
+    <dimen name="amigo_list_item_tailicon_margin_right">16dp</dimen>
+    <dimen name="amigo_list_item_tailtext_margin_right">20dp</dimen>
+    <dimen name="amigo_list_item_tailtext_margin_left">5dp</dimen>
+    <dimen name="amigo_edit_mode_text_size">18sp</dimen>
+    <dimen name="amigo_button_default_text_size">20sp</dimen>
+    <dimen name="amigo_button_height">40dp</dimen>
+
+    <!-- Default insets (outer padding) around buttons -->
+    <dimen name="amigo_button_inset_vertical_material">3dp</dimen>
+    <dimen name="amigo_button_inset_horizontal_material">@dimen/amigo_control_inset_material</dimen>
+    <!-- Default inner padding within buttons -->
+    <dimen name="amigo_button_padding_vertical_material">@dimen/amigo_control_padding_material</dimen>
+    <dimen name="amigo_button_padding_horizontal_material">8dp</dimen>
+    <!-- Default insets (outer padding) around controls -->
+    <dimen name="amigo_control_inset_material">2dp</dimen>
+    <!-- Default inner padding within controls -->
+    <dimen name="amigo_control_padding_material">4dp</dimen>
+    <!-- Default rounded corner for controls -->
+    <dimen name="amigo_button_inside_corner_material">3dp</dimen>
+    <dimen name="amigo_control_corner_material">4dp</dimen>
+    <dimen name="amigo_listPreferredItemHeight">64dp</dimen>
+    <dimen name="amigo_preferencePreferredItemHeight">56dp</dimen>
+    <!-- weidong end -->
+    
+    <!-- gionee maxw add begin -->
+    <dimen name="alphabetindex_max_touchble_width">20dip</dimen>
+    <!-- gionee maxw add end -->
+    
+    <dimen name="amigo_forcetouch_indicator_margin">20dp</dimen>
+    <dimen name="amigo_forcetouch_preview_radius">8dp</dimen>
+    
+    <!-- Gionee <weidong> <2016-04-22> modify for CR01683201 begin -->
+    <dimen name="amigo_actionbar_elevation">2dp</dimen>
+    <!-- Gionee <weidong> <2016-04-22> modify for CR01683201 end -->
+    
+    <dimen name="amigo_edittext_padding_lr">8dp</dimen>
+    <dimen name="amigo_edittext_padding_tb">5dp</dimen>
+    <dimen name="amigo_global_theme_actionbar_elevation">3dp</dimen>
+	
+    <dimen name="amigo_button_stroke_width">2px</dimen>
+    <dimen name="amigo_preference_margin_right">14dp</dimen>
+    <dimen name="amigo_preference_category_height">40dp</dimen>
+    <dimen name="amigo_divider_height">2px</dimen>
+    <dimen name="amigo_preference_text_margin_right">8dp</dimen>
+    <dimen name="amigo_category_btn_text_size">12dp</dimen>
+    <dimen name="amigo_category_btn_widith">50dp</dimen>
+    <dimen name="amigo_category_btn_height">24dp</dimen>
+    <dimen name="amigo_category_btn_container_widith">78dp</dimen>
+    <dimen name="amigo_category_btn_container_height">40dp</dimen>
+    <dimen name="amigo_category_btn_inset">2dp</dimen>
+    <dimen name="amigo_category_btn_padding">5dp</dimen>
+    <dimen name="amigo_category_btn_radius">10dp</dimen>
+    <dimen name="amigo_expandable_list_item_content_margin_right">14dp</dimen>
+    <dimen name="amigo_alert_dialog_msg_margin_top">10dip</dimen>
+    <dimen name="amigo_alert_dialog_msg_margin_bottom">20dip</dimen>
+    <dimen name="amigo_alert_dialog_msg_min_height">78dip</dimen>
+    
+    <dimen name="amigo_magicbar_bottom_padding">6dp</dimen>
+    <dimen name="amigo_magicbar_start_end_padding">5dp</dimen>
+    <dimen name="amigo_magicbar_bg_corner">@dimen/amigo_magicbar_bottom_padding</dimen>
+    <dimen name="amigo_round_corner_button_height">40dp</dimen>
+    <dimen name="amigo_round_corner_button_min_width">144dp</dimen>
+    <dimen name="amigo_round_corner_button__corner_radius">20dp</dimen>
+    <dimen name="amigo_round_corner_button__inner_corner_radius">19dp</dimen>
+    
+    <dimen name="amigo_timeday_picker_vertical">24dip</dimen>
+    <dimen name="amigo_timeday_picker_horizontal">24dip</dimen>
+    <dimen name="amigo_magicbar_icon_btn_height">48dp</dimen>
+    <dimen name="amigo_magicbar_icon_and_text_padding">-3dp</dimen>
+    <dimen name="amigo_magicbar_list_text_size">16sp</dimen>
+    <dimen name="amigo_searchview_edittext_bg_corner">@dimen/amigo_magicbar_bottom_padding</dimen>
+    <dimen name="amigo_searchview_edittext_height">32dp</dimen>
+    <dimen name="amigo_searchview_edittext_margin_end">16dp</dimen>
+    <dimen name="amigo_searchview_text_size">14dp</dimen>
+    <dimen name="amigo_edittext_bg_corner">2dp</dimen>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <style name="TextAppearance.Amigo.Dark.Widget.ActionBar.Title" parent="@style/TextAppearance.Amigo.Light.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/amigo_actionbar_title_color_light</item>
+    </style>
+
+    <style name="TextAppearance.Amigo.Dark.Widget.ActionBar.Subtitle" parent="@style/TextAppearance.Amigo.Light.Widget.ActionBar.Subtitle">
+        <item name="android:textColor">@color/amigo_actionbar_title_color_light</item>
+    </style>
+    
+    <style name="TextAppearance.Amigo.Dark.DialogWindowTitle" parent="@android:style/TextAppearance.Holo.DialogWindowTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/amigo_alert_dialog_title_light</item>
+    </style>    
+    
+    <style name="Widget.Amigo.Dark.Button" parent="@style/Widget.Amigo.Light.Button">
+        <item name="android:background">@drawable/amigo_btn_default_dark</item>
+        <item name="android:textColor">@color/amigo_primary_text_dark</item> 
+    </style>
+    
+    <style name="Widget.Amigo.Dark.Button.Small" parent="@style/Widget.Amigo.Light.Button.Small">
+        <item name="android:background">@drawable/amigo_btn_default_small_dark</item>
+    </style>
+    
+    <style name="Widget.Amigo.Dark.Button.Borderless" parent="@style/Widget.Amigo.Dark.Button"></style>
+    
+    <style name="Widget.Amigo.Dark.ProgressBar.Small" parent="@style/Widget.Amigo.Light.ProgressBar.Small">
+        <item name="android:indeterminateDrawable">@drawable/amigo_progress_small_dark</item>
+    </style>
+
+    <style name="Widget.Amigo.Dark.ProgressBar.Large" parent="@style/Widget.Amigo.Light.ProgressBar.Large">
+        <item name="android:indeterminateDrawable">@drawable/amigo_progress_large_dark</item>
+    </style>  
+        
+    <style name="Widget.Amigo.Dark.ProgressBar.Small.Title"></style>
+    <style name="Widget.Amigo.Dark.ProgressBar.Small.Inverse"></style>
+    <style name="Widget.Amigo.Dark.ProgressBar.Large.Inverse"></style>
+    
+    <style name="Widget.Amigo.Dark.SeekBar" parent="@style/Widget.Amigo.Light.SeekBar">
+        <item name="android:progressDrawable">@drawable/amigo_scrubber_progress_horizontal_dark</item>
+        <item name="android:indeterminateDrawable">@drawable/amigo_scrubber_progress_horizontal_dark</item>
+        <item name="android:thumb">@drawable/amigo_scrubber_control_selector_dark</item>
+    </style>    
+        
+    <style name="Widget.Amigo.Dark.Spinner" parent="@style/Widget.Amigo.Light.Spinner">
+        <item name="android:background">@drawable/amigo_spinner_background_dark</item>
+        <item name="android:dropDownSelector">@drawable/amigo_list_selector_dark</item>
+        <item name="android:popupBackground">@drawable/amigo_menu_dropdown_panel_dark</item>
+    </style>
+    
+    <style name="Widget.Amigo.Dark.Spinner.DropDown"></style>  
+    
+    <style name="Widget.Amigo.Dark.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/amigo_spinner_ab_light</item>
+        <item name="android:dropDownWidth">304dip</item>
+    </style>     
+    
+    <style name="Widget.Amigo.Dark.DropDownItem" parent="@style/Widget.Amigo.Light.DropDownItem">
+        <item name="android:textAppearance">@style/TextAppearance.Amigo.Medium</item>
+    </style>    
+    
+    <style name="Widget.Amigo.Dark.DropDownItem.Spinner"></style>
+    
+    <style name="Widget.Amigo.Dark.TabWidget" parent="@style/Widget.Amigo.Light.TabWidget">
+    </style>
+    
+    <style name="Widget.Amigo.Dark.ActionBar" parent="@style/Widget.Amigo.Light.ActionBar">
+        <item name="amigotitleTextStyle">@style/TextAppearance.Amigo.Dark.Widget.ActionBar.Title</item>
+        <item name="amigosubtitleTextStyle">@style/TextAppearance.Amigo.Dark.Widget.ActionBar.Subtitle</item>
+        <item name="amigobackground">@drawable/amigo_cab_background_top_dark</item>
+        <item name="amigobackgroundStacked">@drawable/amigo_cab_background_top_dark</item>
+        <item name="amigobackgroundSplit">@drawable/amigo_cab_background_bottom_dark</item>
+        <item name="amigoprogressBarStyle">@style/Widget.Amigo.ProgressBar.Horizontal</item>
+        <item name="amigoindeterminateProgressStyle">@style/Widget.Amigo.ProgressBar</item>
+    </style>
+    
+    <style name="Widget.Amigo.Dark.ActionBar.Solid">
+        <item name="amigodivider">?android:attr/dividerVertical</item>
+        <item name="amigoprogressBarPadding">@dimen/amigo_progressBar_Padding</item>
+        <item name="amigoitemPadding">@dimen/amigo_item_Padding</item>
+    </style>
+    
+    <style name="Widget.Amigo.Dark.ListPopupWindow" parent="@style/Widget.Amigo.Light.ListPopupWindow">
+        <item name="android:dropDownSelector">@drawable/amigo_list_selector_dark</item>
+        <item name="android:popupBackground">@drawable/amigo_menu_dropdown_panel_dark</item>
+    </style>
+    
+    <style name="Widget.Amigo.Dark.ExpandableListView" parent="@style/Widget.Amigo.Light.ExpandableListView">
+        <item name="android:groupIndicator">@drawable/amigo_expander_group_dark</item>
+    </style>
+    
+    <style name="AmigoAlertDialog.Dark">
+        <item name="amigofullDark">@drawable/amigo_dialog_full_dark</item>
+        <item name="amigotopDark">@drawable/amigo_dialog_top_dark</item>
+        <item name="amigocenterDark">@drawable/amigo_dialog_middle_dark</item>
+        <item name="amigobottomDark">@drawable/amigo_dialog_bottom_dark</item>
+        <item name="amigofullBright">@drawable/amigo_dialog_full_dark</item>
+        <item name="amigotopBright">@drawable/amigo_dialog_top_dark</item>
+        <item name="amigocenterBright">@drawable/amigo_dialog_middle_dark</item>
+        <item name="amigobottomBright">@drawable/amigo_dialog_bottom_dark</item>
+        <item name="amigobottomMedium">@drawable/amigo_dialog_bottom_dark</item>
+        <item name="amigocenterMedium">@drawable/amigo_dialog_middle_dark</item>        
+    </style>    
+    
+    <style name="DialogWindowTitle.Amigo.Dark" parent="@style/DialogWindowTitle">
+        <item name="android:textAppearance">@style/TextAppearance.Amigo.Dark.DialogWindowTitle</item>
+    </style>
+</resources>

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+   <item
+        android:id="@+id/title1"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/delete"
+        android:icon="@drawable/gn_magic_menu_cut"/>
+
+</menu>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/headicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_marginLeft="@dimen/amigo_list_item_margin_left"        
+        android:background="@drawable/item_head_icon" />
+
+    <LinearLayout
+        android:id="@+id/textlayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/amigo_list_item_margin_left"
+        android:layout_marginRight="@dimen/amigo_list_item_tailtext_margin_right"
+        android:layout_marginBottom="@dimen/amigo_list_item_margin_top_bottom"
+        android:layout_marginTop="@dimen/amigo_list_item_margin_top_bottom"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/textlevel1"
+            style="?attr/amigoListItemStyleLevel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/textlevel2"
+            style="?attr/amigoListItemStyleLevel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/amigo_list_item_level2_min_text_width"
+            android:text="@string/type_level2" />
+
+        <amigoui.widget.AmigoTextView
+            android:id="@+id/textlevel3"
+            style="?attr/amigoListItemStyleLevel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/amigo_list_item_level2_min_text_width"
+            android:text="@string/type_level2" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tailicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/amigo_list_item_tailicon_margin_right"
+        android:background="@drawable/item_tail_icon" />
+
+</LinearLayout>

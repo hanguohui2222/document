@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+     Gionee <zhangxx> <2013-06-20> add for amigoframework.
+ -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+  <string name="amigo_app_name">AmigoUI</string>  
+  <string name="amigo_capital_on">ON</string>  
+  <string name="amigo_capital_off">OFF</string>  
+  <string name="amigo_time_picker_dialog_title">Aseta aika</string>  
+  <string name="amigo_date_picker_dialog_title">Aseta päivä</string>  
+  <string name="amigo_date_time_done">Valmis</string>  
+  <string name="amigo_copy">kopioi</string>  
+  <string name="amigo_paste">kiinnitä</string>  
+  <string name="amigo_cut">leikkaa</string>  
+  <string name="amigo_selectAll">valitse kaikki</string>  
+  <string name="amigo_select">valitse</string>  
+  <string name="amigo_inputMethod">syöttötapa</string>  
+  <string name="amigo_back_button_label">Takaisin</string>  
+  <string name="amigo_next_button_label">Seuraava</string>  
+  <string name="amigo_skip_button_label">Ohita</string>  
+  <string name="amigo_ok">OK</string>  
+  <string name="amigo_cancel">Hylkää</string>  
+  <string name="amigo_yes">OK</string>  
+  <string name="amigo_no">Hylkää</string>  
+  <string name="amigo_action_mode_done">Valmis</string>  
+  <string name="amigo_action_bar_home_description">Siirry etusivulle</string>  
+  <string name="amigo_action_bar_up_description">Siirry ylös</string>  
+  <string name="amigo_smart_full_btn_label">OK</string>  
+  <string name="amigo_activity_resolver_use_always">Aina</string>  
+  <string name="amigo_activity_resolver_use_once">Vain kerran</string>  
+  <string name="amigo_noApplications">Yksikään sovellus ei voi suorittaa tätä toimintoa.</string>  
+  <string name="amigo_system_label">Android-järjestelmä</string>  
+  <string name="amigo_whichApplication">Tee toiminto käyttäen</string>  
+  <string name="amigo_chooseActivity">Valitse toiminto</string>  
+  <string name="amigo_actionbar_magic_item_more">Lisää</string>  
+  <string name="amigo_actionbar_magic_item_close">Sulje</string>  
+  <string name="amigo_edit_mode_leftbtn_txt">hylkää</string>  
+  <string name="amigo_edit_mode_rightbtn_txt">OK</string>  
+  <string name="amigo_strong_warning">Vahva varoitus</string>
+  <string name="amigo_multichoice_select_text">%1$s elementti valittu</string>
+  <string name="amigo_multichoice_select_all">Valitse kaikki</string>
+  <string name="amigo_multichoice_cancel_select_all">Peruuta valinta</string>
+</resources>

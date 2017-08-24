@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Amigo.Light.Button.Translucent">
+        <item name="android:background">@drawable/amigo_btn_translucent_bg_ripple</item>
+        <item name="android:textColor">@color/amigo_btn_text_color_translucent</item>
+    </style>
+    
+    <style name="Widget.Amigo.Light.ActionBar.Solid.Translucent">
+        <item name="amigodivider">?android:attr/dividerVertical</item>
+        <item name="amigoprogressBarPadding">@dimen/amigo_progressBar_Padding</item>
+        <item name="amigoitemPadding">@dimen/amigo_item_Padding</item>
+        <item name="amigobackground">@color/amigo_translucent_background</item>
+        <item name="amigobackgroundStacked">@color/amigo_translucent_background</item>
+        <item name="amigobackgroundSplit">@color/amigo_translucent_background</item>
+    </style>
+    
+    <style name="AmigoListItemLevel1.Translucent">
+        <item name="android:textColor">@color/amigo_text_color_light</item>
+        <item name="android:textSize">@dimen/amigo_list_item_level1_text_size</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    
+    <style name="AmigoListItemLevel2.Translucent">
+        <item name="android:textColor">@color/amigo_bright_foreground_tertiary_light</item>
+        <item name="android:textSize">@dimen/amigo_list_item_level2_text_size</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    
+    <style name="Widget.Amigo.ActionBar.TabBar.Translucent">
+        <item name="amigobackgroundStacked">@color/amigo_translucent_background</item>
+        <item name="android:background">@color/amigo_translucent_background</item>
+    </style>
+    
+    <style name="AmigoAlphabetIndexViewStyle.Translucent">
+        <item name="amigoEnableSectionColor">@color/amigo_content_color_secondary_on_backgroud_c2_translucent</item>
+        <item name="amigoDisableSectionColor">@color/amigo_content_color_thirdly_on_backgroud_c3_translucent</item>
+        <item name="amigoShowingLetterColor">@color/amigo_accent_color_g1</item>
+    </style>
+    
+    <style name="Theme.Amigo.SplashLight.Translucent" parent="@style/Theme.Amigo.Light.SplashLight">
+        <item name="android:windowBackground">@drawable/amigo_background_dark</item>
+    </style>
+</resources>
