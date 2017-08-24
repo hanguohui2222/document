@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<amigoui.preference.AmigoPreferenceScreen
+    xmlns:amigo="http://schemas.android.com/apk/res-auto"
+    amigo:amigokey="parent"
+    amigo:amigotitle="@string/settings">
+
+    <amigoui.preference.AmigoPreferenceCategory
+        amigo:amigokey="preferences_login_category"
+        amigo:amigotitle="@string/login">
+        <amigoui.preference.AmigoPreferenceScreen
+            amigo:amigoicon="@drawable/user_icon"
+            amigo:amigokey="preferences_login"
+            amigo:amigosummary="@string/login_tips"
+            amigo:amigotitle="@string/login">
+
+        </amigoui.preference.AmigoPreferenceScreen>
+    </amigoui.preference.AmigoPreferenceCategory>
+
+    <amigoui.preference.AmigoPreferenceCategory
+        amigo:amigokey="preferences_travel_method"
+        amigo:amigotitle="@string/travel_method_setting">
+        <amigoui.preference.AmigoListPreference
+            amigo:amigodefaultValue="@string/travel_default_method_value"
+            amigo:amigodialogTitle="@string/travel_method"
+            amigo:amigoentries="@array/travel_method_entry"
+            amigo:amigoentryValues="@array/travel_method_value"
+            amigo:amigokey="preference_default_travel_method"
+            amigo:amigosummary="@string/travel_method_drive"
+            amigo:amigotitle="@string/default_travel_method" />
+
+    </amigoui.preference.AmigoPreferenceCategory>
+
+    <!--  <amigo.preference.AmigoPreferenceCategory
+          amigo:amigokey="preferences_broadcast_setting"
+          amigo:amigotitle="@string/broadcast_setting">
+
+          <amigo.preference.AmigoSwitchPreference
+              amigo:amigodefaultValue="true"
+              amigo:amigokey="preference_events_broadcast_enable"
+              amigo:amigopersistent="true"
+              amigo:amigosummary="@string/broadcast_summary"
+              amigo:amigotitle="@string/broadcast_setting" />
+
+          <amigo.preference.AmigoPreferenceScreen
+              amigo:amigokey="preferences_modify_broadcast_time"
+              amigo:amigosummary="@string/default_broadcast_time_summary"
+              amigo:amigotitle="@string/default_broadcast_time"/>
+      </amigo.preference.AmigoPreferenceCategory>-->
+
+    <amigoui.preference.AmigoPreferenceCategory
+        amigo:amigokey="preferences_remind_setting"
+        amigo:amigotitle="@string/remind_setting">
+
+        <amigoui.preference.AmigoSwitchPreference
+            amigo:amigodefaultValue="true"
+            amigo:amigokey="preference_events_remind_enable"
+            amigo:amigopersistent="true"
+            amigo:amigosummary="@string/intelligent_remind_summary"
+            amigo:amigotitle="@string/remind_setting" />
+
+        <amigoui.preference.AmigoPreferenceScreen
+            amigo:amigokey="preferences_modify_ring"
+            amigo:amigosummary="@string/default_ring"
+            amigo:amigotitle="@string/notification_ring">
+
+        </amigoui.preference.AmigoPreferenceScreen>
+
+    </amigoui.preference.AmigoPreferenceCategory>
+
+    <amigoui.preference.AmigoPreferenceCategory
+        amigo:amigokey="preferences_func_setting"
+        amigo:amigotitle="@string/function_setting">
+        <amigoui.preference.AmigoSwitchPreference
+            amigo:amigodefaultValue="true"
+            amigo:amigokey="preference_show_express_status"
+            amigo:amigopersistent="true"
+            amigo:amigosummary="@string/express_status_summary"
+            amigo:amigotitle="@string/display_express_status" />
+
+    </amigoui.preference.AmigoPreferenceCategory>
+
+    <amigoui.preference.AmigoPreferenceCategory
+        amigo:amigokey="preferences_func_setting"
+        amigo:amigotitle="@string/protect">
+        <amigoui.preference.AmigoSwitchPreference
+            amigo:amigodefaultValue="false"
+            amigo:amigokey="preference_private_protect"
+            amigo:amigopersistent="true"
+            amigo:amigotitle="@string/pass_protect" />
+        <amigoui.preference.AmigoSwitchPreference
+            amigo:amigodefaultValue="true"
+            amigo:amigokey="preference_show_widget"
+            amigo:amigopersistent="true"
+            amigo:amigotitle="@string/widget_show_schedule" />
+
+    </amigoui.preference.AmigoPreferenceCategory>
+
+</amigoui.preference.AmigoPreferenceScreen>
+

@@ -65,7 +65,7 @@ public class SettingActivity extends PasswordPreferenceBaseActivity implements I
     protected void onCreate(Bundle arg0) {
         // TODO Auto-generated method stub
         super.onCreate(arg0);
-        //addPreferencesFromResource(R.xml.activity_setting);
+        addPreferencesFromResource(R.xml.activity_setting);
         mSettingModel = SettingModel.getInstance(this);
         mLoginModel = new LoginModel(getApplicationContext());
         initActionBar();
