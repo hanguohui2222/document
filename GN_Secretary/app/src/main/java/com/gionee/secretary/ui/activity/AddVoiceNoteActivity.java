@@ -1941,64 +1941,47 @@ public class AddVoiceNoteActivity extends PasswordBaseActivity implements IMscRe
         if (mListenerInputView.getisShowingSoftInput()) {
             imm.hideSoftInputFromWindow(etContent.getWindowToken(), 0);
         }
-        View localView = LayoutInflater.from(this).inflate(R.layout.action_select_camera, null, false);
-        TextView selectImage = (TextView) localView.findViewById(R.id.select_images);
-        TextView selectCamera = (TextView) localView.findViewById(R.id.select_camera);
-        selectImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (dialog != null && dialog.isShowing()) {
-                    dialog.dismiss();
-                }
-                try {
-                    isFromPickImage = true;
-                    Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                    intent.setType("image/*");
-                    startActivityForResult(intent, 1);
-                } catch (Exception e) {
-                    isFromPickImage = false;
-                    e.printStackTrace();
-                    showFreezeForApp();
-                }
-            }
-        });
-        selectCamera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (dialog != null && dialog.isShowing()) {
-                    dialog.dismiss();
-                }
-                try {
-                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    currentImagePath = mImgPath + System.currentTimeMillis() + ".png";
-                    File mPhotoFile = new File(currentImagePath);
-                    //Build.VERSION_CODES.N = 24
-                    if (Build.VERSION.SDK_INT >= 24) {
-                        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                        Uri contentUri = FileProvider.getUriForFile(AddVoiceNoteActivity.this, "com.gionee.secretary.fileprovider", mPhotoFile);
-                        intent.putExtra(MediaStore.EXTRA_OUTPUT, contentUri);
-                    } else {
-                        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mPhotoFile));
-                    }
-                    startActivityForResult(intent, 2);
-                    //将currentImagePath保存到sp中，防止被回收后导致图片插入失败
-                    saveCurrentImagePath(currentImagePath);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    showFreezeForApp();
-                }
-            }
-        });
         AmigoAlertDialog.Builder builder = new AmigoAlertDialog.Builder(this);
-        builder.setView(localView);
-        builder.setNegativeButton("取消", null);
-        dialog = builder.create();
-        mHandler.postDelayed(new Runnable() {
+        builder.setTitle("添加图片");
+        builder.setItems(new String[]{"照片图库","拍照"}, new DialogInterface.OnClickListener() {
             @Override
-            public void run() {
-                dialog.show();
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if(i == 0){//照片图库
+                    try {
+                        isFromPickImage = true;
+                        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                        intent.setType("image/*");
+                        startActivityForResult(intent, 1);
+                    } catch (Exception e) {
+                        isFromPickImage = false;
+                        e.printStackTrace();
+                        showFreezeForApp();
+                    }
+                }else if(i == 1){
+                    try {
+                        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                        currentImagePath = mImgPath + System.currentTimeMillis() + ".png";
+                        File mPhotoFile = new File(currentImagePath);
+                        //Build.VERSION_CODES.N = 24
+                        if (Build.VERSION.SDK_INT >= 24) {
+                            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                            Uri contentUri = FileProvider.getUriForFile(AddVoiceNoteActivity.this, "com.gionee.secretary.fileprovider", mPhotoFile);
+                            intent.putExtra(MediaStore.EXTRA_OUTPUT, contentUri);
+                        } else {
+                            intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mPhotoFile));
+                        }
+                        startActivityForResult(intent, 2);
+                        //将currentImagePath保存到sp中，防止被回收后导致图片插入失败
+                        saveCurrentImagePath(currentImagePath);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        showFreezeForApp();
+                    }
+                }
             }
-        }, 200);
+        });
+        dialog = builder.create();
+        dialog.show();
     }
 
     private void saveCurrentImagePath(String path) {
