@@ -57,7 +57,7 @@
             android:value="5F03F209561FE3DC4E1681C90A042127804694E86D15EA3D25C176DD3FC8CE47" />
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="6be23ccc316d67036f39c01ec70de06f" />
+            android:value="e4b2465c0f1e42df2e6a35ef80da2e91" />
         <meta-data
             android:name="com.ted.sdk.appkey"
             android:value="d946585803c6223ff2f84367c1ba7771" />

@@ -13,7 +13,6 @@ import com.gionee.secretary.db.SecretarySQLite;
 import com.gionee.secretary.module.settings.PasswordModel;
 import com.gionee.secretary.utils.LogUtils;
 import com.gionee.secretary.receiver.PasswordLockReceiver;
-import com.squareup.leakcanary.LeakCanary;
 import com.ted.android.core.SmsParserEngine;
 import com.ted.sdk.yellow.CtaDataBus;
 
