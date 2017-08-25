@@ -13,7 +13,7 @@ import com.gionee.secretary.db.SecretarySQLite;
 import com.gionee.secretary.module.settings.PasswordModel;
 import com.gionee.secretary.utils.LogUtils;
 import com.gionee.secretary.receiver.PasswordLockReceiver;
-//import com.squareup.leakcanary.LeakCanary;
+import com.squareup.leakcanary.LeakCanary;
 import com.ted.android.core.SmsParserEngine;
 import com.ted.sdk.yellow.CtaDataBus;
 
@@ -38,12 +38,12 @@ public class SecretaryApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        /*if (LeakCanary.isInAnalyzerProcess(this)) {
+        if (LeakCanary.isInAnalyzerProcess(this)) {
             // This process is dedicated to LeakCanary for heap analysis.
             // You should not init your app in this process.
             return;
         }
-        LeakCanary.install(this);*/
+        LeakCanary.install(this);
         /*if (FeatureOption.GN_APK_CHAMELEON_COLOR_ENABLE) {
             ChameleonColorManager.getInstance().register(this);
         }*/

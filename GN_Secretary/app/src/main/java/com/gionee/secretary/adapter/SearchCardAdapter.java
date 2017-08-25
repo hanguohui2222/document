@@ -59,6 +59,8 @@ import com.google.gson.Gson;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import static com.gionee.secretary.constants.Constants.URI_END_TAG_LENGTH;
+
 /**
  * Created by zhuboqin on 10/05/16.
  */
@@ -1023,6 +1025,7 @@ public class SearchCardAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
                 int start = m.start();
                 buf.append(content.substring(startIndex, start));
                 String matchStr = m.group();
+                matchStr = matchStr.substring(0,matchStr.length() - URI_END_TAG_LENGTH);
                 String endStr = matchStr.substring(matchStr.length() - 3, matchStr.length());
                 //清单图标的路径
                 if (endStr.equalsIgnoreCase("png") || endStr.equalsIgnoreCase("jpg")

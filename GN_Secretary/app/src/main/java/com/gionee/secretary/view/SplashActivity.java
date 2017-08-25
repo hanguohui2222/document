@@ -49,11 +49,11 @@ public class SplashActivity extends AmigoActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(Constants.EVENT_SETUP, true);
         editor.commit();
-        if (isAppRunning()) {
+        /*if (isAppRunning()) {
             LogUtils.e("SplashActivity","isAppRunning");
             finish();
             return;
-        }
+        }*/
         setContentView(R.layout.activity_launch);
         getAmigoActionBar().hide();
         mBg = (LinearLayout) findViewById(R.id.iv_bg);
