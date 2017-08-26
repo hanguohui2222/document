@@ -31,6 +31,7 @@ import com.gionee.secretary.R;
 import amigoui.app.AmigoAlertDialog;
 import amigoui.widget.AmigoTextView;
 
+import com.gionee.secretary.SecretaryApplication;
 import com.gionee.secretary.constants.Constants;
 import com.gionee.secretary.ui.viewInterface.IPasswordVerifyView;
 import com.gionee.secretary.utils.DisplayUtils;
@@ -223,6 +224,11 @@ public class VerifyPassWordActivity extends AmigoActivity implements IPasswordVe
         //added by luorw for  GNSPR #67676 20170220 begin
         unregisterPasswordFreezeReceiver();
         //added by luorw for  GNSPR #67676 20170220 end
+        mCommonHandler.removeCallbacks(runnable);
+        passwordInputView = null;
+        imm = null;
+//        RefWatcher refWatcher = SecretaryApplication.getRefWatcher(this);
+//        refWatcher.watch(this);
     }
 
     @Override
@@ -238,14 +244,7 @@ public class VerifyPassWordActivity extends AmigoActivity implements IPasswordVe
             resetInputView.setVisibility(View.INVISIBLE);
             confirmInputView.setVisibility(View.INVISIBLE);
             // added by liyu Fixed #77068 start
-            mCommonHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    // added by liyu Fixed #75302 start
-                    imm.showSoftInput(passwordInputView, InputMethodManager.SHOW_IMPLICIT);
-                    // added by liyu Fixed #75302 end
-                }
-            }, 380);
+            mCommonHandler.postDelayed(runnable, 380);
             // added by liyu Fixed #77068 end
 
         } else {
@@ -261,6 +260,15 @@ public class VerifyPassWordActivity extends AmigoActivity implements IPasswordVe
         isFromStart = intent.getIntExtra("isFromStart", 0);
         isResetPassWord = false;
     }
+
+    private Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            // added by liyu Fixed #75302 start
+            imm.showSoftInput(passwordInputView, InputMethodManager.SHOW_IMPLICIT);
+            // added by liyu Fixed #75302 end
+        }
+    };
 
     @Override
     protected void onPause() {

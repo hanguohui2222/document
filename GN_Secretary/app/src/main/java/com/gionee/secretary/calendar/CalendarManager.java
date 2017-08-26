@@ -42,7 +42,6 @@ import android.os.Handler;
 public class CalendarManager {
     private Calendar selectedCalendar;// 目标calendar 表示点击之后的对象
     private ICalendarView mCalendarView;
-    private static CalendarManager instance;
     private FragmentManager mFragmentManager;
     private static final int PAGE_MONTH = 0;
     private static final int PAGE_WEEK = 1;
@@ -59,23 +58,12 @@ public class CalendarManager {
     private int todayLine;
     private Map<Integer, MonthViewAdapter> monthViewAdapters = new HashMap();
 
-    private CalendarManager(ICalendarView calendarView) {
+    public CalendarManager(ICalendarView calendarView, FragmentManager fragmentManager, Context context) {
         selectedCalendar = Calendar.getInstance();
         initCalendar = Calendar.getInstance();
         mCalendarView = calendarView;
-        Activity activity = (Activity) calendarView;
-        mFragmentManager = activity.getFragmentManager();
-        mDao = ScheduleInfoDao.getInstance(activity.getApplicationContext());
-    }
-
-    ;
-
-    public static void initInstance(ICalendarView calendarView) {
-        instance = new CalendarManager(calendarView);
-    }
-
-    public static CalendarManager getInstance() {
-        return instance;
+        mFragmentManager = fragmentManager;
+        mDao = ScheduleInfoDao.getInstance(context.getApplicationContext());
     }
 
     public void onDateChanged() {

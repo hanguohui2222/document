@@ -240,12 +240,12 @@
             <intent-filter>
                 <action android:name="com.gionee.secretary.HIDESCHEDLE" />
             </intent-filter>
-            <intent-filter>
+<!--            <intent-filter>
                 <action android:name="android.intent.action.TIME_SET" />
             </intent-filter>
             <intent-filter>
                 <action android:name="gn_calendar_datechange" />
-            </intent-filter>
+            </intent-filter>-->
             <intent-filter>
                 <action android:name="com.gionee.secretary.refresh.mainui" />
             </intent-filter>

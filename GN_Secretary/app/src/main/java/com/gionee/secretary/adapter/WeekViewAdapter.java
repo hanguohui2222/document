@@ -51,8 +51,8 @@ public class WeekViewAdapter extends BaseAdapter {
 
     private Context mActivity;
 
-    public WeekViewAdapter(Context a, Calendar cal) {
-        mCalendarManager = CalendarManager.getInstance();
+    public WeekViewAdapter(Context a, Calendar cal,CalendarManager calendarManager) {
+        mCalendarManager = calendarManager;
         calStartDate = cal;
         mActivity = a;
         datas = getDates();

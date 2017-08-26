@@ -55,13 +55,16 @@ public class ScrollLayout extends FrameLayout {
         init(context);
     }
 
+    public void setmCalendarManager(CalendarManager calendarManager){
+        this.mCalendarManager = calendarManager;
+    }
+
     private void init(Context context) {
         this.context = context;
         MONTH_TOP_PX = DensityUtils.dip2px(context, MONTH_TOP_DIP);
 //		WEEK_HEIGHT_PX = DensityUtils.dip2px(context, WEEK_HEIGHT_DIP);
         redY = DensityUtils.dip2px(context, 10);
         layoutTop = -MONTH_TOP_PX - redY;
-        mCalendarManager = CalendarManager.getInstance();
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
 //		initChildViewDragHelper();
         mViewDragHelper = ViewDragHelper.create(this, new ViewDragHelper.Callback() {

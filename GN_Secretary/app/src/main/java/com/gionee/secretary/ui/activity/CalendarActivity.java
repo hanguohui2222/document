@@ -37,6 +37,7 @@ import com.gionee.secretary.adapter.WeekViewAdapter;
 import com.gionee.secretary.bean.BaseSchedule;
 import com.gionee.secretary.bean.ExpressSchedule;
 import com.gionee.secretary.calendar.CalendarManager;
+import com.gionee.secretary.ui.fragment.MonthFragment;
 import com.gionee.secretary.utils.DensityUtils;
 import com.gionee.secretary.ui.viewInterface.ICalendarView;
 import com.gionee.secretary.utils.DisplayUtils;
@@ -81,7 +82,7 @@ public class CalendarActivity extends PasswordBaseActivity implements View.OnCli
     private FrameLayout fl_1;
     private FrameLayout fl_2;
     private AmigoActionBar mActionBar;
-    private CalendarManager mCalendarManager;
+    public CalendarManager mCalendarManager;
     private CanotSlidingViewpager weekView;
     private ViewPagerAdapter mViewPagerAdapter;
     private ScrollLayout mScrollLayout;
@@ -125,8 +126,7 @@ public class CalendarActivity extends PasswordBaseActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         LogUtils.e(TAG, "calendar---oncreated");
-        CalendarManager.initInstance(this);
-        mCalendarManager = CalendarManager.getInstance();
+        mCalendarManager = new CalendarManager(this,getFragmentManager(),this);
         setContentView(R.layout.activity_calendar);
         initActionBar();
         mMainPresenter = new MainPresenter(this, this);
@@ -188,13 +188,22 @@ public class CalendarActivity extends PasswordBaseActivity implements View.OnCli
         IntentFilter filter = new IntentFilter();
         filter.addAction(Constants.REFRESH_FOR_MAIN_UI);
         filter.addAction(Intent.ACTION_DATE_CHANGED);
+        filter.addAction(Intent.ACTION_TIME_CHANGED);
+        filter.addAction("gn_calendar_datechange");
         registerReceiver(mRefreshUIReceiver, filter);
     }
 
     private BroadcastReceiver mRefreshUIReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            updateSchedule(mCalendarManager.getCalendar());
+            String action = intent.getAction();
+            if("gn_calendar_datechange".equals(action) || Intent.ACTION_TIME_CHANGED.equals(action)){
+                if (mCalendarManager != null){
+                    mCalendarManager.onDateChanged();
+                }
+            }else{
+                updateSchedule(mCalendarManager.getCalendar());
+            }
         }
     };
 
@@ -264,7 +273,7 @@ public class CalendarActivity extends PasswordBaseActivity implements View.OnCli
             WeekView view = weekViews.get(position);
             if (view == null) {
                 view = (WeekView) View.inflate(CalendarActivity.this, R.layout.fragment_week_page, null);
-                view.setPositionAndCalendar(position, mCalendarManager.initCalendar);
+                view.setPositionAndCalendar(position, mCalendarManager.initCalendar,mCalendarManager);
                 view.setWeekViewCallback(CalendarActivity.this);
                 weekViews.put(position, view);
             }
@@ -352,6 +361,7 @@ public class CalendarActivity extends PasswordBaseActivity implements View.OnCli
     private void initViews() {
         weekView = (CanotSlidingViewpager) findViewById(R.id.week_view);
         mScrollLayout = (ScrollLayout) findViewById(R.id.scroll_layout);
+        mScrollLayout.setmCalendarManager(mCalendarManager);
         iv_today = (ImageView) findViewById(R.id.iv_today);
         mScrollLayout.setScrollLayoutCallback(this);
         mCalendarManager.showCalendarView();

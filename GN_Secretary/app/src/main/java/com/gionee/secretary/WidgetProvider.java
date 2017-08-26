@@ -97,12 +97,14 @@ public class WidgetProvider extends AppWidgetProvider {
 		super.onReceive(context, intent);
 		String action = intent.getAction();
 		LogUtils.i(TAG,"SM"+"Widget onReceive and action=" + action);
-		if ("android.intent.action.TIME_SET".equals(action) || "gn_calendar_datechange".equals(action)){
-			CalendarManager cm = CalendarManager.getInstance();
-			if (cm != null){
-				cm.onDateChanged();
-			}
-		}
+        //modified by luorw for 内存优化,改成Activity内的动态注册 begin
+//		if ("android.intent.action.TIME_SET".equals(action) || "gn_calendar_datechange".equals(action)){
+//			CalendarManager cm = CalendarManager.getInstance();
+//			if (cm != null){
+//				cm.onDateChanged();
+//			}
+//		}
+        //modified by luorw for 内存优化,改成Activity内的动态注册 end
 		if ("com.gionee.secretary.HIDESCHEDLE".equals(action)){
 			if (intent.getBooleanExtra("hide", false)){
 				hideSchedule(context);

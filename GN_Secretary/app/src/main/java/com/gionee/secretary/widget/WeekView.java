@@ -44,12 +44,12 @@ public class WeekView extends GridView implements AdapterView.OnItemClickListene
         // TODO Auto-generated constructor stub
     }
 
-    public void initView() {
-        mCalendarManager = CalendarManager.getInstance();
+    public void initView(CalendarManager calendarManager) {
+        mCalendarManager = calendarManager;
 //		Calendar cal = Calendar.getInstance();
 //		cal.setTime(initCalendar.getTime());
         targetCalendar = mCalendarManager.getSelectWeekCalendar(initCalendar, position);
-        mWeekTabAdapter = new WeekViewAdapter(context, targetCalendar);
+        mWeekTabAdapter = new WeekViewAdapter(context, targetCalendar,mCalendarManager);
         setAdapter(mWeekTabAdapter);
         setOnItemClickListener(this);
         // mEnentsViewPagerAdapter = new
@@ -59,10 +59,10 @@ public class WeekView extends GridView implements AdapterView.OnItemClickListene
 //		setSelection();
     }
 
-    public void setPositionAndCalendar(int position, Calendar initCalendar) {
+    public void setPositionAndCalendar(int position, Calendar initCalendar,CalendarManager calendarManager) {
         this.position = position;
         this.initCalendar = initCalendar;
-        initView();
+        initView(calendarManager);
         invalidate();
     }
 

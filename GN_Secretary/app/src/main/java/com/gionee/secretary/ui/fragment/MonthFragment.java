@@ -14,6 +14,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import com.gionee.secretary.R;
 import com.gionee.secretary.adapter.MonthViewAdapter;
 import com.gionee.secretary.calendar.CalendarManager;
+import com.gionee.secretary.ui.activity.CalendarActivity;
 import com.gionee.secretary.widget.CanotSlidingViewpager;
 
 /**
@@ -29,7 +30,7 @@ public class MonthFragment extends Fragment implements ViewPager.OnPageChangeLis
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_month, null);
-        mCalendarManager = CalendarManager.getInstance();
+        mCalendarManager = ((CalendarActivity)getActivity()).mCalendarManager;
         mViewPager = (CanotSlidingViewpager) view.findViewById(R.id.viewpager);
 //        mRv = (RecyclerView)view.findViewById(R.id.rv);
 //        line = (View)view.findViewById(R.id.line);

@@ -88,8 +88,8 @@ public class MonthViewAdapter extends BaseAdapter {
     private Activity mActivity;
 
     // construct
-    public MonthViewAdapter(Activity a, Calendar cal) {
-        mCalendarManager = CalendarManager.getInstance();
+    public MonthViewAdapter(Activity a, Calendar cal,CalendarManager calendarManager) {
+        mCalendarManager = calendarManager;
         calStartDate = cal;
         mActivity = a;
         dates = getDates();
