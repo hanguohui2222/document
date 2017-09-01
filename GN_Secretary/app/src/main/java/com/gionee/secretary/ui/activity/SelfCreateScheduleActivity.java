@@ -35,6 +35,7 @@ import com.gionee.secretary.utils.ACache;
 import com.gionee.secretary.utils.DateUtils;
 import com.gionee.secretary.utils.LogUtils;
 import com.gionee.secretary.utils.RemindUtils;
+import com.gionee.secretary.utils.SecretaryUtils;
 import com.gionee.secretary.utils.TimeUtils;
 import com.gionee.secretary.utils.WidgetUtils;
 import com.gionee.secretary.ui.viewInterface.ISelfCreateScheduleView;
@@ -83,10 +84,11 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
     LinearLayout mAddressLayout;
     AmigoTextView mStartDate;
     AmigoTextView mEndDate;
+    private AmigoNumberPicker mDayPicker;
+    private AmigoNumberPicker mHourPicker;
+    private AmigoNumberPicker MinutePicker;
 
     String citycode;
-    private ACache mACache;
-    private double[] mEnds = new double[2];
     private int scheduleId;
     SelfCreateSchedule selfCreateSchedule;
     private final static int SAVE_SUCCESS = 0;
@@ -131,7 +133,6 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_schedule_main);
-        mACache = ACache.get(this);
         initview();
         initdata();
         initListener();
@@ -182,6 +183,12 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
         if (selfCreateSchedule != null) {
             selfCreateSchedule.setAddressRemark(mAddressRemark);
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        mSelfCreateSchedulePresenter.detachView();
+        super.onDestroy();
     }
 
     private void updateEditEvent(Intent intent) {
@@ -249,13 +256,13 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
             }
             Intent intent = new Intent();
             intent.setClass(selfCreateScheduleActivity, CalendarActivity.class);
-            if (selfCreateScheduleActivity.isValidContext() && selfCreateScheduleActivity.pd != null && selfCreateScheduleActivity.pd.isShowing()) {
+            if (SecretaryUtils.isValidContext(selfCreateScheduleActivity) && selfCreateScheduleActivity.pd != null && selfCreateScheduleActivity.pd.isShowing()) {
                 selfCreateScheduleActivity.pd.dismiss();
             }
             switch (msg.what) {
                 case SAVE_SUCCESS:
                     Toast.makeText(selfCreateScheduleActivity.getApplicationContext(), R.string.savesuccess, Toast.LENGTH_LONG).show();
-                    if (selfCreateScheduleActivity.isForeground(selfCreateScheduleActivity, Constants.SELF_CREATE_CLASS_NAME)) {
+                    if (SecretaryUtils.isForeground(selfCreateScheduleActivity, Constants.SELF_CREATE_CLASS_NAME)) {
                         selfCreateScheduleActivity.finish();
                         selfCreateScheduleActivity.overridePendingTransition(R.anim.left_in, R.anim.right_out);
                     } else {
@@ -281,29 +288,7 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
     }
 
 
-    private boolean isForeground(Context context, String className) {
-        if (context == null || TextUtils.isEmpty(className)) {
-            return false;
-        }
-        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-        List<ActivityManager.RunningTaskInfo> list = am.getRunningTasks(1);
-        if (list != null && list.size() > 0) {
-            ComponentName cpn = list.get(0).topActivity;
-            if (className.equals(cpn.getClassName())) {
-                return true;
-            }
-        }
-        return false;
-    }
 
-    private boolean isValidContext() {
-        Activity a = this;
-        if (a.isDestroyed() || a.isFinishing()) {
-            return false;
-        } else {
-            return true;
-        }
-    }
 
     private void updateUI() {
         Intent data = getIntent();
@@ -403,41 +388,6 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
         mWholeDay.setOnClickListener(this);
     }
 
-    /**
-     * 获取历史查询
-     */
-    private void getHistory() {
-        boolean isHave = false;
-        String name = mAddress.getText().toString();
-        LogUtils.e(TAG, "address name2 = " + name);
-        List<AddressBean> list = (List<AddressBean>) mACache.getAsObject(Constants.HISTORY_ADDRESS);
-        if (null == list) {
-            list = new ArrayList<>();
-        }
-        if (!name.equals("")) {
-            for (int i = 0; i < list.size(); i++) {
-
-                if (list.get(i).getName().equals(name)) {
-
-                    isHave = true;
-                    break;
-                } else {
-
-                    isHave = false;
-                }
-            }
-            if (!isHave) {
-                LogUtils.e(TAG, "isHave = " + isHave);
-                AddressBean addressBean = new AddressBean();
-                addressBean.setName(name);
-                addressBean.setmLatitude(mEnds[0]);
-                addressBean.setmLongitude(mEnds[1]);
-                addressBean.setDesc(desc);
-                list.add(addressBean);
-            }
-            mACache.put(Constants.HISTORY_ADDRESS, (Serializable) list);
-        }
-    }
 
     /**
      * 显示提醒设置对话框
@@ -477,9 +427,7 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
         builder.show();
     }
 
-    private AmigoNumberPicker mDayPicker;
-    private AmigoNumberPicker mHourPicker;
-    private AmigoNumberPicker MinutePicker;
+
 
     private void showUserDefinedTimeDialog() {
         AmigoAlertDialog.Builder builder = new AmigoAlertDialog.Builder(this);
@@ -571,21 +519,13 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
         int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         AmigoDatePickerDialog lunarDialog = new AmigoDatePickerDialog(this, dateListener, year, month, day);
-        if (isChinese()) {
+        if (SecretaryUtils.isChinese(this)) {
             lunarDialog.showLunarModeSwitch();
         }
         lunarDialog.show();
     }
 
-    /**
-     * 当前系统语言是否为简体中文
-     *
-     * @return
-     */
-    private boolean isChinese() {
-        String locale = getResources().getConfiguration().locale.getCountry();
-        return "CN".equals(locale);
-    }
+
 
     /**
      * 显示农历日期时间设置对话框
@@ -595,7 +535,7 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
      */
     private void showLunarDateTimePickerDialog(DateTimeListener dateTimeListener, Calendar calendar) {
         AmigoDateTimePickerDialog d = new AmigoDateTimePickerDialog(this, dateTimeListener, calendar);
-        if (isChinese()) {
+        if (SecretaryUtils.isChinese(this)) {
             d.showLunarModeSwitch();
         }
         d.show();
@@ -884,17 +824,7 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
         builder.show();
     }
 
-    /**
-     * Hide Soft Input  隐藏软键盘
-     */
-    private void hideSoftInput() {
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        LogUtils.d("liyh", "SelfCreateScheduleActivity. hideSoftInput()." + "immActive=" + imm.isActive());
-        if (imm.isActive()) {
-            imm.hideSoftInputFromWindow(mEtTitle.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-            imm.hideSoftInputFromInputMethod(mDescription.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-        }
-    }
+
 
     private void save() {
         SystemClock.sleep(1000);//不让闪太快，显示保存过程
@@ -942,14 +872,14 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
             mSchedule.setDate(starttime);
             mSchedule.setEndtime(endTime);
             //add by zhengjl at 2017-1-19 for GNSPR #65250 begin
-            mSchedule.setRemindDate(getRemindTimeLong(remindTime, mRemind.getText().toString()));
+            mSchedule.setRemindDate(SecretaryUtils.getRemindTimeLong(this,remindTime, mRemind.getText().toString(),mDayPicker,mHourPicker,MinutePicker));
             //add by zhengjl at 2017-1-19 for GNSPR #65250 end
             mSchedule.setPeriod(endTime.getTime() - starttime.getTime());
         } catch (ParseException e) {
             e.printStackTrace();
             LogUtils.e(TAG, "save() error:" + e);
         }
-        mSchedule.setIsSmartRemind(getIsSmart(mRemind.getText().toString()));
+        mSchedule.setIsSmartRemind(SecretaryUtils.getIsSmart(this,mRemind.getText().toString()));
         mSchedule.setAllDay(mWholeDay.isChecked());
         mSchedule.setTripMode(mTripMode);
         mSchedule.setType(Constants.SELF_CREATE_TYPE);
@@ -965,59 +895,6 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
         WidgetUtils.updateWidget(this);
     }
 
-    private long getRemindTimeLong(Date startTime, String remindType) {
-        long event = startTime.getTime();
-        long remindtime = -1;
-        if (this.getResources().getString(R.string.not_remind).equals(remindType)) {
-            remindtime = -1;
-        } else if (remindType.contains(this.getResources().getString(R.string.on_time))) {
-            remindtime = event;
-            LogUtils.e(TAG, "remindtime = " + remindtime);
-        } else if (this.getResources().getString(R.string.ten_min_ago).equals(remindType) || this.getResources().getString(R.string.smart_remind).equals(remindType)) {
-            long porid = 10 * 60 * 1000;
-            remindtime = event - porid;
-        } else if (this.getResources().getString(R.string.half_hour_ago).equals(remindType)) {
-            long porid = 30 * 60 * 1000;
-            remindtime = event - porid;
-        } else if (this.getResources().getString(R.string.one_hour_ago).equals(remindType)) {
-            long porid = 1 * 60 * 60 * 1000;
-            remindtime = event - porid;
-        } else if (this.getResources().getString(R.string.one_day_ago).equals(remindType)) {
-            long porid = 1 * 24 * 60 * 60 * 1000;
-            remindtime = event - porid;
-        } else {
-            //自定义提醒
-            int day = 0;
-            int hour = 0;
-            int minute = 0;
-            if (mDayPicker == null && !"".equals(remindType)) {
-                String remind = remindType;
-                remind = remind.replace(getResources().getString(R.string.defined_day), ":").replace(getResources().getString(R.string.defined_hour), ":").replace(getResources().getString(R.string.defined_minute), "");
-                if (remind.split(":").length != 0) {
-                    day = Integer.parseInt(remind.split(":")[0]);
-                    hour = Integer.parseInt(remind.split(":")[1]);
-                    minute = Integer.parseInt(remind.split(":")[2]);
-                }
-            } else {
-                day = mDayPicker.getValue();
-                hour = mHourPicker.getValue();
-                minute = MinutePicker.getValue();
-            }
-            long porid = day * 24 * 60 * 60 * 1000 + hour * 60 * 60 * 1000 + minute * 60 * 1000;
-            remindtime = event - porid;
-        }
-        return remindtime;
-    }
-
-    private int getIsSmart(String remindType) {
-        if (this.getResources().getString(R.string.not_remind).equals(remindType)) {
-            return Constants.NOT_REMIND;
-        } else if (this.getResources().getString(R.string.smart_remind).equals(remindType)) {
-            return Constants.SMART_REMIND;
-        } else {
-            return Constants.GENERAL_REMIND;
-        }
-    }
 
     private SelfCreateSchedule getCurrentSchedule() {
         Date currentDate = null;
@@ -1063,7 +940,7 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
         selfCreateSchedule.setAddress(mAddress.getText().toString());
         selfCreateSchedule.setAddressRemark(mAddressRemark);
         selfCreateSchedule.setDescription(mDescription.getText().toString());
-        selfCreateSchedule.setIsSmartRemind(getIsSmart(mRemind.getText().toString()));
+        selfCreateSchedule.setIsSmartRemind(SecretaryUtils.getIsSmart(this,mRemind.getText().toString()));
         try {
             currentDate = format.parse(startbuilder.toString());
             remindDate = format.parse(remindBuilder.toString());
@@ -1076,7 +953,7 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
             e.printStackTrace();
             LogUtils.e(TAG, "getCurrentSchedule() error=" + e);
         }
-        selfCreateSchedule.setRemindDate(getRemindTimeLong(remindDate, mRemind.getText().toString()));
+        selfCreateSchedule.setRemindDate(SecretaryUtils.getRemindTimeLong(this,remindDate, mRemind.getText().toString(),mDayPicker,mHourPicker,MinutePicker));
         LogUtils.d("liyu", "getCurrentSchedule=" + RemindUtils.time2String(selfCreateSchedule.getRemindDate()));
         selfCreateSchedule.setAllDay(mWholeDay.isChecked());
         selfCreateSchedule.setTripMode(mTripMode);
@@ -1116,10 +993,7 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
                 activity.isChangedRemindTime = !activity.mRemind.getText().toString().equals(activity.lastRemindTime);
                 activity.selfCreateSchedule = activity.getCurrentSchedule();
                 RemindUtils.cancelScheduleAlarm(activity, activity.selfCreateSchedule);
-                LogUtils.d(TAG, "UpdateScheduleThread." + "****isRepeatEvent=" + activity.isRepeateEvent() + "****" +
-                        " isChangedRemidPeriod=" + activity.isChangedRemindPeriod + ";isChangedStartTime=" + activity.isChangedStartTime +
-                        ";isChangedRemindTime=" + activity.isChangedRemindTime);
-                if (activity.isRepeateEvent()) {
+                if (SecretaryUtils.isRepeateEvent(activity,activity.mRecycle.getText().toString())) {
                     //编辑重复性事件
                     if (activity.isChangedRemindPeriod || activity.isChangedStartTime || activity.isChangedRemindTime || activity.isChangedEndTime) {
                         //删除重建日程
@@ -1158,15 +1032,7 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
         }
     }
 
-    private boolean isRepeateEvent() {
-        boolean mIsRepeateEvent = false;
-        if (!this.getResources().getString(R.string.once).equals(mRecycle.getText().toString())) {
-            mIsRepeateEvent = true;//自建日程 非一次性事件
-        } else {
-            mIsRepeateEvent = false;//自建日程 一次性事件
-        }
-        return mIsRepeateEvent;
-    }
+
 
     @Override
     public void onClick(View v) {
@@ -1228,8 +1094,8 @@ public class SelfCreateScheduleActivity extends PasswordBaseActivity implements 
             Toast.makeText(this,"请输入日程标题或内容",Toast.LENGTH_SHORT).show();
             return;
         }
-        getHistory();
-        hideSoftInput();  //保存前隐藏软键盘，防止保存成功后闪屏  (Fix bug GNSPR #66334 by liyh)
+        mSelfCreateSchedulePresenter.getHistory(mAddress.getText().toString());
+        SecretaryUtils.hideSoftInput(this,mEtTitle,mDescription);  //保存前隐藏软键盘，防止保存成功后闪屏  (Fix bug GNSPR #66334 by liyh)
         if (scheduleId > 0) {
             pd = new AmigoProgressDialog(SelfCreateScheduleActivity.this);
             pd.setCanceledOnTouchOutside(false);

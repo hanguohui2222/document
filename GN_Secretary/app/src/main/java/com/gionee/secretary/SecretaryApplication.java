@@ -6,11 +6,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Handler;
 //import com.autonavi.v2.protocol.RequestManager;
 //import com.gionee.featureoption.FeatureOption;
 import com.gionee.secretary.db.SecretaryDBOpenHelper;
 import com.gionee.secretary.db.SecretarySQLite;
 import com.gionee.secretary.module.settings.PasswordModel;
+import com.gionee.secretary.utils.ACache;
 import com.gionee.secretary.utils.LogUtils;
 import com.gionee.secretary.receiver.PasswordLockReceiver;
 import com.ted.android.core.SmsParserEngine;
@@ -27,6 +29,9 @@ public class SecretaryApplication extends Application {
     public static boolean isLocked = false;
     public static String mPackageName;
     private BroadcastReceiver mReceiver = new PasswordLockReceiver();
+    private static Handler mHandler;
+    private static SecretaryApplication application;
+    private static ACache aCache;
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -54,6 +59,24 @@ public class SecretaryApplication extends Application {
         mPackageName = getApplicationContext().getPackageName();
         //added by luorw for M2017 Bug #35139 20161129
         setLockStatus();
+        application = this;
+        mHandler = new Handler();
+        aCache = ACache.get(this);
+    }
+
+    public static Handler getHandler() {
+        if (mHandler == null) {
+            mHandler = new Handler();
+        }
+        return mHandler;
+    }
+
+    public static SecretaryApplication getIntstance() {
+        return application;
+    }
+
+    public static ACache getACache() {
+        return aCache;
     }
 
     /**
