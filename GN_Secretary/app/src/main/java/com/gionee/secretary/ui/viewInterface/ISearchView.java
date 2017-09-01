@@ -18,6 +18,7 @@ public interface ISearchView {
 
     void isToLoadMore(boolean isToLoadMore);
 
-    //add by zhengjl at 2017-2-15 for 搜索优化
-    void updateView(int type);
+    void showScheduleAndNote();
+
+    void showHistory();
 }

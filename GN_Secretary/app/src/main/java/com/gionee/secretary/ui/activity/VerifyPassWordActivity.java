@@ -221,6 +221,7 @@ public class VerifyPassWordActivity extends AmigoActivity implements IPasswordVe
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        mPasswordVerifyPresenter.detachView();
         //added by luorw for  GNSPR #67676 20170220 begin
         unregisterPasswordFreezeReceiver();
         //added by luorw for  GNSPR #67676 20170220 end

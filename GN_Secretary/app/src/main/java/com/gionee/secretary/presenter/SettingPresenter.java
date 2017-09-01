@@ -43,10 +43,9 @@ import com.gionee.secretary.R;
 /**
  * Created by liyy on 16-11-30.
  */
-public class SettingPresenter {
+public class SettingPresenter extends BasePresenterImpl<ISettingView>{
     private static final String TAG = "secretary";
     public Context mContext;
-    private ISettingView mSettingView;
     private PasswordModel mPasswordModel;
     private SettingModel mSettingModel;
 
@@ -60,7 +59,7 @@ public class SettingPresenter {
 
     public SettingPresenter(Context context, ISettingView settingView) {
         this.mContext = context;
-        this.mSettingView = settingView;
+        attachView(settingView);
         mSettingModel = SettingModel.getInstance(context);
         mPasswordModel = PasswordModel.getInstance(mContext);
 
@@ -78,9 +77,9 @@ public class SettingPresenter {
     public void checkoutPasswordSwitch() {
         boolean lockSwitch = mPasswordModel.getLockSwitch();
         if (lockSwitch) {
-            mSettingView.openPasswordSwitch();
+            mView.openPasswordSwitch();
         } else {
-            mSettingView.closePasswordSwitch();
+            mView.closePasswordSwitch();
         }
     }
 
@@ -177,7 +176,7 @@ public class SettingPresenter {
             YouJuAgent.onEvent(mContext, Constants.EVENT_ID, Constants.YOUJU_PASSWORD);
             Intent intent = new Intent(mContext, SettingPasswordActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_USER_ACTION);
-            ((Activity) mSettingView).startActivityForResult(intent, SET_PASSWORD_AND_LOCK_SWITCH);
+            ((Activity) mView).startActivityForResult(intent, SET_PASSWORD_AND_LOCK_SWITCH);
 
 
         } else {
@@ -185,7 +184,7 @@ public class SettingPresenter {
             Intent intent = new Intent(mContext, VerifyPassWordActivity.class);
             intent.putExtra(Constants.EXTRA_CLOSE_PASSWORD_SWITCH, true);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_USER_ACTION);
-            ((Activity) mSettingView).startActivityForResult(intent, CLOSE_LOCK_SWITCH);
+            ((Activity) mView).startActivityForResult(intent, CLOSE_LOCK_SWITCH);
         }
     }
 
@@ -258,11 +257,11 @@ public class SettingPresenter {
         intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, ringtoneUri);
 
         //将当前选中的音频名字带过去 intent.putExtra(Constants.EXTRA_CLOSE_PASSWORD_SWITCH, true);
-        ((Activity) mSettingView).startActivityForResult(intent, SET_NOTIFICATION_RING);
+        ((Activity) mView).startActivityForResult(intent, SET_NOTIFICATION_RING);
     }
 
     public void updateTravelModePreferenceSummery() {
-        mSettingView.updateTravelModePreferenceSummery(getDefaultTravelMode());
+        mView.updateTravelModePreferenceSummery(getDefaultTravelMode());
     }
 
     private void updateAlarm(boolean remindSwitch) {
@@ -318,8 +317,8 @@ public class SettingPresenter {
 
             } else {
                 LogUtils.i(TAG, "settingPWD....error");
-                mSettingView.closePasswordSwitch();
-                mSettingView.showToast(R.string.fail_pw);
+                mView.closePasswordSwitch();
+                mView.showToast(R.string.fail_pw);
             }
 
         } else if (requestCode == CLOSE_LOCK_SWITCH) {
@@ -328,8 +327,8 @@ public class SettingPresenter {
                 LogUtils.i(TAG, "closePWD....LockSwitch...false");
                 mPasswordModel.updateLockSwitch(false);
                 mPasswordModel.updateLockState(false);
-                mSettingView.closePasswordSwitch();
-                mSettingView.showToast(R.string.close_pw);
+                mView.closePasswordSwitch();
+                mView.showToast(R.string.close_pw);
             } else if (resultCode == -2) {
                 LogUtils.i(TAG, "closePWD....-2");
                 String pwd = data.getStringExtra(Constants.EXTRA_PASSWORD);
@@ -340,13 +339,13 @@ public class SettingPresenter {
                 if (!isNoSwitch()) {
                     RequestPermission();
                 }
-                mSettingView.closePasswordSwitch();
+                mView.closePasswordSwitch();
             } else {
                 LogUtils.i(TAG, "closePWD....error");
-                mSettingView.openPasswordSwitch();
+                mView.openPasswordSwitch();
                 //modified by luorw for 60611 20170207 begin
                 if (data == null || !data.getBooleanExtra("isClosePw", false)) {
-                    mSettingView.showToast(R.string.close_pw_error);
+                    mView.showToast(R.string.close_pw_error);
                 }
                 //modified by luorw for 60611 20170207 end
             }
@@ -360,7 +359,7 @@ public class SettingPresenter {
                 mSettingModel.setDefaultRingtoneTitle(ringtoneTitle);
                 mSettingModel.setDefaultRingtoneUri(pickedUri.toString());
 
-                mSettingView.updateNotifyRingPreferenceSummery(ringtoneTitle);
+                mView.updateNotifyRingPreferenceSummery(ringtoneTitle);
             } else {
 //                mSettingView.showToast(R.string.fail_set_ringtone);
             }
@@ -410,8 +409,8 @@ public class SettingPresenter {
                     public void onClick(DialogInterface dialog, int which) {
                         LogUtils.i(TAG, "closePWD....LockSwitch...false");
                         mPasswordModel.updateLockSwitch(false);
-                        mSettingView.closePasswordSwitch();
-                        mSettingView.showToast(R.string.close_pw);
+                        mView.closePasswordSwitch();
+                        mView.showToast(R.string.close_pw);
                     }
                 })
                 .show();

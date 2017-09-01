@@ -258,6 +258,12 @@ public class SettingActivity extends PasswordPreferenceBaseActivity implements I
 
     }
 
+    @Override
+    protected void onDestroy() {
+        mSettingPresenter.detachView();
+        super.onDestroy();
+    }
+
     //added by luorw for GNSPR #102711 20170823 begin
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {

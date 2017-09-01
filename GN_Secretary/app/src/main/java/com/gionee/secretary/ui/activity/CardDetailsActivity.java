@@ -120,6 +120,12 @@ public class CardDetailsActivity extends PasswordBaseActivity implements ICardDe
 //        registerLongScreenShotReceiver();
     }
 
+    @Override
+    protected void onDestroy() {
+        mCardDetailPresenter.detachView();
+        super.onDestroy();
+    }
+
     private void isFromNotification() {
         Intent intent = getIntent();
         if(intent == null)

@@ -69,62 +69,12 @@ public class SearchActivity extends PasswordBaseActivity implements ILoadFooterV
     private static final int MAX_TITLE_EXT_LENGTH = 50;
 
 
-    //add by zhengjl at 2017-2-15 for 优化搜索 not begin
-    private SearchHandler mHandler;
-    private static final int QUERY_SCHDULE_AND_NOTE = 1;
-    private static final int QUERY_HISTORY = 2;
-
-    private static class SearchHandler extends Handler {
-
-        private final SoftReference<SearchActivity> mActivity;
-
-        public SearchHandler(SearchActivity activity) {
-            mActivity = new SoftReference<SearchActivity>(activity);
-        }
-
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            SearchActivity activity = mActivity.get();
-            if (activity == null) {
-                return;
-            }
-            switch (msg.what) {
-                case QUERY_SCHDULE_AND_NOTE:
-
-                    //Log.e("zjl","QUERY_SCHDULE_AND_NOTE...result:" + activity.mSearchPresent.getSearchResult().size());
-                    if (activity.mSearchPresent.getSearchResult().size() == 0) {
-                        activity.showEmpty();
-                    } else {
-                        activity.hideEmpty();
-                        activity.mSearchContentCardAdapter.initNoteCard();
-                        activity.mSearchContentCardAdapter.initSchduleCard();
-                        activity.mSearchContentCardAdapter.notifyDataSetChanged();
-                    }
-                    break;
-                case QUERY_HISTORY:
-                    //Log.e("zjl","QUERY_HISTORY...result:" + activity.mSearchPresent.getSearchTextHistoryResult().size());
-                    if (activity.mSearchPresent.getSearchTextHistoryResult().size() == 0) {
-                        activity.hideSearchHistory();
-                    } else {
-                        activity.showSearchHistory(activity.mSearchPresent.getSearchTextHistoryResult());
-                    }
-
-                    break;
-            }
-
-        }
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_main);
         initActionBar();
         initViews();
-
-        //add by zhengjl at 2017-2-15 for 优化搜索 not begin
-        mHandler = new SearchHandler(this);
         //add by zhengjl at 2017-2-15 for 优化搜索 not begin
         mSearchPresent = new SearchPresenter(this);
 
@@ -133,6 +83,27 @@ public class SearchActivity extends PasswordBaseActivity implements ILoadFooterV
         /*modify by zhengjl for  GNSPR #65753 not end*/
         mSearchPresent.initSearcherAdapter();
 
+    }
+
+    @Override
+    public void showScheduleAndNote() {
+        if (mSearchPresent.getSearchResult().size() == 0) {
+            showEmpty();
+        } else {
+            hideEmpty();
+            mSearchContentCardAdapter.initNoteCard();
+            mSearchContentCardAdapter.initSchduleCard();
+            mSearchContentCardAdapter.notifyDataSetChanged();
+        }
+    }
+
+    @Override
+    public void showHistory() {
+        if (mSearchPresent.getSearchTextHistoryResult().size() == 0) {
+            hideSearchHistory();
+        } else {
+            showSearchHistory(mSearchPresent.getSearchTextHistoryResult());
+        }
     }
 
     protected void onResume() {
@@ -155,6 +126,11 @@ public class SearchActivity extends PasswordBaseActivity implements ILoadFooterV
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        mSearchPresent.detachView();
+        super.onDestroy();
+    }
 
     private void initViews() {
         mSearchTextHistoryListView = (ListView) findViewById(R.id.search_text_history);
@@ -411,24 +387,6 @@ public class SearchActivity extends PasswordBaseActivity implements ILoadFooterV
     }
 
 
-    /**
-     * 根据type参数，将查询之后的结果更新到视图
-     *
-     * @param type 1/2 查询日程和备忘/查询历史记录
-     */
-    @Override
-    public void updateView(int type) {
-        if (type == 1) {
-            Message message = new Message();
-            message.what = QUERY_SCHDULE_AND_NOTE;
-            mHandler.sendMessage(message);
-        } else {
-            Message message = new Message();
-            message.what = QUERY_HISTORY;
-            mHandler.sendMessage(message);
-        }
-
-    }
 
     @Override
     public void hideSearchHistory() {

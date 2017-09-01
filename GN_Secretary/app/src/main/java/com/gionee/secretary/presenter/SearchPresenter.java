@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 
+import com.gionee.secretary.SecretaryApplication;
 import com.gionee.secretary.bean.BaseNoteSchedule;
 import com.gionee.secretary.bean.BaseSchedule;
 import com.gionee.secretary.bean.ExpressSchedule;
@@ -20,11 +21,10 @@ import com.gionee.secretary.ui.viewInterface.ISearchView;
 import com.gionee.secretary.utils.DateUtils;
 import com.gionee.secretary.utils.LogUtils;
 
-public class SearchPresenter {
+public class SearchPresenter extends BasePresenterImpl<ISearchView>{
 
     private ScheduleInfoDao mScheduleInfoDao;
     private SearchHistoryDao mSearchTextHistoryDao;
-    private ISearchView mSearchView;
     private Context mContext;
     private SharedPreferences mSharedPreferences;
     private boolean isShowExpress;
@@ -35,7 +35,7 @@ public class SearchPresenter {
     private VoiceNoteDao mVoiceNoteInfoDao;
 
     public SearchPresenter(ISearchView searchView) {
-        mSearchView = searchView;
+        attachView(searchView);
         mContext = (Context) searchView;
 
         intDao();
@@ -80,7 +80,12 @@ public class SearchPresenter {
             public void run() {
 //				LogUtils.e("zjl","query search history thread run...");
                 qureryAllSearchTextHistory();
-                mSearchView.updateView(2);
+                SecretaryApplication.getHandler().post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mView.showHistory();
+                    }
+                });
             }
         }).start();
 		/*
@@ -99,7 +104,7 @@ public class SearchPresenter {
     }
 
     public void initSearcherAdapter() {
-        mSearchView.initSearcherAdapter(mSearchContentList, mExpressSchedules);
+        mView.initSearcherAdapter(mSearchContentList, mExpressSchedules);
     }
 
     private void qureryAllSearchTextHistory() {
@@ -169,7 +174,12 @@ public class SearchPresenter {
             public void run() {
 //				 LogUtils.e("zjl","thread...run...");
                 querySchedulesAndNote(tempName, searchContentPage);
-                mSearchView.updateView(1);
+                SecretaryApplication.getHandler().post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mView.showScheduleAndNote();
+                    }
+                });
             }
         }).start();
 
@@ -206,7 +216,7 @@ public class SearchPresenter {
         LogUtils.i("liyy22", "note....:" + note.size() + "  ,note:" + searchContentPage);
 
         if (selfCreateSchedules.size() <= 0 && note.size() <= 0) {
-            mSearchView.isToLoadMore(false);
+            mView.isToLoadMore(false);
         }
 
         filterExcludeExpress(selfCreateSchedules);
@@ -229,7 +239,7 @@ public class SearchPresenter {
         LogUtils.i("liyy", "selfCreateSchedules....:" + selfCreateSchedules.size() + "  ,mSearchContentPage:" + searchContentPage);
 
         if (selfCreateSchedules.size() <= 0) {
-            mSearchView.isToLoadMore(false);
+            mView.isToLoadMore(false);
         } else {
 
             if (isShowExpress) {
