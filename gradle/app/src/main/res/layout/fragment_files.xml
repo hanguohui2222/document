@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/navi_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/first_dir"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:background="@drawable/file_dir_bg"
+                android:textColor="#cc000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/second_dir"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:background="@drawable/file_dir_bg"
+                android:textColor="#cc000000"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1.5px"
+            android:src="@color/tab_navigation_color"></ImageView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#fafafa"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/documentlistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="64dp"
+            android:focusable="true"
+            android:visibility="gone"></ListView>
+
+        <ListView
+            android:id="@+id/compresslistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="64dp"
+            android:focusable="true"
+            android:visibility="gone"></ListView>
+
+        <ListView
+            android:id="@+id/ebooklistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="64dp"
+            android:focusable="true"
+            android:visibility="gone"></ListView>
+
+        <ListView
+            android:id="@+id/apklistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="64dp"
+            android:focusable="true"
+            android:visibility="gone"></ListView>
+        <LinearLayout
+            android:id="@+id/layout_no_files"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="125dp"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/img_record_none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/blank_page_bg"/>
+            <TextView
+                android:id="@+id/tv_none_files"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_local_files"
+                android:textSize="16sp"
+                android:textColor="#33000000"
+                />
+        </LinearLayout>
+    </FrameLayout>
+
+    <GridView
+        android:id="@+id/grid_file"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:layout_marginTop="27dp"
+        android:verticalSpacing="32dp"/>
+</LinearLayout>

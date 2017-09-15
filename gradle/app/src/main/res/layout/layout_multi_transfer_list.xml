@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_transfer"
+    android:layout_width="match_parent"
+    android:layout_height="285dp"
+    android:orientation="vertical"
+    android:paddingRight="15dp"
+    android:paddingLeft="15dp"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#f3f3f3"
+        >
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_total_progress"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:text="@string/process"-->
+            <!--android:textColor="#66000000"-->
+            <!--android:textSize="14sp" />-->
+
+        <com.gionee.hotspottransmission.animation.NumberProgressBar
+            android:id="@+id/number_progressbar"
+            style="@style/NumberProgressBar_Default"
+            custom:progress_current="0"
+            android:layout_width="200dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" 
+            android:layout_toRightOf="@id/send_device_name"/>
+
+        <TextView
+            android:id="@+id/send_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="middle"
+            android:lines="3"
+            android:maxEms="4"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="@string/self_device"
+            android:textColor="@color/orange_bg"/>
+
+        <TextView
+            android:id="@+id/receive_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="middle"
+            android:lines="3"
+            android:maxEms="4"
+            android:text="@string/self_device"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/orange_bg"
+            android:layout_marginRight="35dp"
+            />
+        <ImageView
+            android:id="@+id/cancel_transfer_multi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/egos_button_normal_cancel"
+            android:textSize="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right|center_vertical"
+            />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_file_transfering"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#fafafa" />
+</LinearLayout>

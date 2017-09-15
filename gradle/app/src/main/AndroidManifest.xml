@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gionee.hotspottransmission"
+    android:versionCode="20000030"
+    android:versionName="1.0.2.b">
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="23"/>
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.gionee.youju.statistics.permission.READ_PROVIDER" />
+    // 读取有据统计provider的权限
+    <uses-permission android:name="com.gionee.youju.statistics.permission.WRITE_PROVIDER" />
+    //写有据统计provider的权限,界面统计需要的权限
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+
+    <application
+        android:name=".TransmissionApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/AmigoActivityTheme">
+        <activity
+            android:name=".view.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.LaunchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AmigoSplashActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.SenderActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+                <data android:mimeType="video/*" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="text/x-vcard" />
+                <data android:mimeType="text/html" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="x-mixmedia/*" />
+                <data android:mimeType="image/*" />
+                <data android:mimeType="video/*" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="text/x-vcard" />
+                <data android:mimeType="text/html" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.ReceiverActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".receiver.HotspotBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".receiver.WifiBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".service.GroupClientService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.GroupOwnerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".view.InviteFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.BaseTransferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.SelectFilesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.GoTransferActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.GcTransferActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.GoMultiTransferActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.GcMultiTransferActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ImageShowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".history.view.FileRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".history.view.SpecReceivedFileActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".service.BaseService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".view.GroupTransferActivity" />
+
+        <service
+            android:name=".service.GoMultiService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.GcMultiService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+
+</manifest>

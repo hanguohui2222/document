@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.gionee.hotspottransmission.view.viewholder.TransferScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.gionee.hotspottransmission.view.viewholder.TransferScrollContent
+            android:id="@+id/scrollView_multi_receive_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/blank_page_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="160dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/blank_page_bg" />
+
+                <TextView
+                    android:id="@+id/tv_blank_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/blank_page_text"
+                    android:textColor="#33000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </com.gionee.hotspottransmission.view.viewholder.TransferScrollContent>
+    </com.gionee.hotspottransmission.view.viewholder.TransferScrollView>
+
+    <include layout="@layout/layout_transfer_menu" />
+</LinearLayout>

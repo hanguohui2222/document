@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/send_files"
+        android:showAsAction="ifRoom"
+        android:title="@string/send_files"
+        android:visible="true"
+        android:icon="@drawable/menu_send_files_selector"/>
+</menu>

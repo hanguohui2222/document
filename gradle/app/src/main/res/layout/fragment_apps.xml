@@ -1,0 +1,8 @@
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/apps_gridview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="27dp"
+    android:verticalSpacing="10dp"
+    android:numColumns="4">
+</GridView>

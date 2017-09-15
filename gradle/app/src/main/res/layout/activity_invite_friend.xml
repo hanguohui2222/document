@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingBottom="70dp"
+    >
+    <TextView
+        android:id="@+id/tv_bt_str"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/bluetooth_share"
+        android:layout_marginTop="65dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="10dp"
+        android:textSize="16sp"
+        android:textColor="#cc000000"
+        />
+
+    <Button
+        android:id="@+id/bt_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:text="@string/btn_bluetooth_share"
+        android:textColor="#ff9000"
+        android:background="@drawable/btn_share_by_bt_selector"
+        />
+
+</LinearLayout>

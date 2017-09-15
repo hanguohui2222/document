@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:layout_gravity="bottom"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/menu_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="?android:attr/selectableItemBackgroundBorderless">
+
+        <ImageView
+            android:id="@+id/iv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/menu_send_files_selector" />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_send"
+            android:layout_marginTop="3dp"
+            android:text="@string/send_files"
+            android:textColor="#cc000000"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/menu_clear_files_selector" />
+
+        <TextView
+            android:id="@+id/tv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_clear"
+            android:layout_marginTop="3dp"
+            android:text="@string/file_transfer_cancel_all"
+            android:textColor="#66000000"
+            android:textSize="10dp" />
+    </RelativeLayout>
+</RelativeLayout>

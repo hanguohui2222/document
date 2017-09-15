@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/selected_files"
+        android:showAsAction="ifRoom"
+        android:title="@string/selected_files"
+        android:icon="@drawable/menu_selected_files_selector"/>
+    <item
+        android:id="@+id/send_files"
+        android:showAsAction="ifRoom"
+        android:title="@string/send"
+        android:icon="@drawable/menu_send_files_selector"/>
+    <item
+        android:id="@+id/clear_selected_files"
+        android:showAsAction="ifRoom"
+        android:title="@string/clear_selected_files"
+        android:visible="false"
+        android:icon="@drawable/menu_clear_files_selector"/>
+</menu>

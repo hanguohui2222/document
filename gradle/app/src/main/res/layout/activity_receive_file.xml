@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_no_file"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="125dp"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/img_record_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/blank_page_bg"/>
+        <TextView
+            android:id="@+id/tv_record_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_local_files"
+            android:textSize="16sp"
+            android:textColor="#33000000"
+            />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/list_receive"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:groupIndicator="@null"
+        />
+
+
+</FrameLayout>

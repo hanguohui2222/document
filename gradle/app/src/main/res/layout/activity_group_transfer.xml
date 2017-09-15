@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_top_layout_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="@string/group_transfer"
+            android:textColor="@color/home_title_text_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="114dp"
+        android:layout_marginTop="151dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_home_receive_selector"
+            android:onClick="createGroup"
+            android:text="@string/create_group"
+            android:textColor="#ff9000"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_home_receive_selector"
+            android:onClick="joinGroup"
+            android:text="@string/join_group"
+            android:textColor="#ff9000"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

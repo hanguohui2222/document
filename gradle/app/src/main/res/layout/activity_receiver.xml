@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/activity_radar_scan_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/activity_radar_scan_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/receiver_searching"
+            android:textSize="16sp"
+            android:layout_marginTop="60dp"
+            android:textColor="#cc000000" />
+        <com.gionee.hotspottransmission.animation.RadarScanView
+            android:id="@+id/activity_radar_scan_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.gionee.hotspottransmission.animation.RadarScanView>
+
+        <TextView
+            android:id="@+id/activity_radar_scan_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:layout_marginBottom="60dp"
+            android:textColor="#cc000000" />
+
+        <com.gionee.hotspottransmission.animation.RandomTextView
+            android:id="@+id/activity_radar_rand_textview"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:background="@color/transparent">
+        </com.gionee.hotspottransmission.animation.RandomTextView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/activity_radar_rocket_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/activity_radar_rocket_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rocket_body" />
+
+        <ImageView
+            android:id="@+id/activity_radar_rocket_fire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/activity_radar_rocket_body"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/rocket_fire" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

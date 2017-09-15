@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="select_files_tab">
+        <item>文件</item>
+        <item>应用</item>
+        <item>图片</item>
+        <item>音乐</item>
+        <item>视频</item>
+    </string-array>
+    <string-array name="records_tab">
+        <item>设备</item>
+        <item>收到的文件</item>
+        <item>历史</item>
+    </string-array>
+    <string-array name="files_types">
+        <item>文档</item>
+        <item>压缩文件</item>
+        <item>电子书</item>
+        <item>安装包</item>
+    </string-array>
+    <string-array name="transfer_tab">
+        <item>发送</item>
+        <item>接收</item>
+    </string-array>
+</resources>

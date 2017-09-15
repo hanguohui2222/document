@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/item_iv_app_info_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/default_image"/>
+        <ImageView
+            android:id="@+id/item_iv_app_checkbox_bg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/item_iv_app_checkbox_bg"
+            android:visibility="gone"/>
+
+        <CheckBox
+            android:id="@+id/item_app_checkbox"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="bottom|right"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_marginRight="4dp"
+            android:focusableInTouchMode="false"
+            ></CheckBox>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/item_tv_app_info_appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#cc000000"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textSize="14sp" />
+</LinearLayout>
+
+

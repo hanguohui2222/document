@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="orange_bg">#ff9000</color>
+    <color name="white">#ffffff</color>
+    <color name="device_color">#6e6e6e</color>
+    <color name="file_name_color">#cc000000</color>
+    <color name="file_size_color">#66000000</color>
+    <color name="file_send_failed_color">#ff0000</color>
+    <color name="home_title_text_color">#ffffff</color>
+    <color name="home_top_layout_color">#f4a845</color>
+    <color name="home_bottom_layout_color">#fdfdfd</color>
+    <color name="file_send_cancel_color">#cc000000</color>
+    <color name="actionbar_background_color">#efefef</color>
+    <color name="actionbar_title_color">#cc000000</color>
+    <color name="tab_navigation_color">#cacaca</color>
+    <color name="transparent">#00000000</color>
+    <color name="menu_enable_text_color">#cc000000</color>
+    <color name="menu_disable_text_color">#66000000</color>
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="vertical"
+    android:minHeight="64dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        >
+        <ImageView
+            android:id="@+id/record_file_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/default_image" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="16dip"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/record_file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:textColor="#cc000000"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <TextView
+                android:id="@+id/record_file_size"
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:textColor="#66000000"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/record_file_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#cc000000"
+            android:textSize="16sp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="64dp"
+        android:background="#d7d7d7"
+        />
+
+</LinearLayout>

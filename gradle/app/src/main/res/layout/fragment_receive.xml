@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/loading_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/blank_page_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="54dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_blank_page"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/blank_page_bg" />
+
+        <TextView
+            android:id="@+id/tv_blank_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/blank_page_text_for_receive"
+            android:textColor="#33000000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="54dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="#f3f3f3"
+            android:paddingLeft="42dp"
+            android:paddingRight="42dp">
+
+            <TextView
+                android:id="@+id/tv_total_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/process"
+                android:textColor="#66000000"
+                android:textSize="14sp" />
+
+            <com.gionee.hotspottransmission.animation.NumberProgressBar
+                android:id="@+id/number_progressbar"
+                style="@style/NumberProgressBar_Default"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                custom:progress_current="0" />
+
+            <TextView
+                android:id="@+id/send_device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="30dp"
+                android:ellipsize="middle"
+                android:lines="3"
+                android:text="@string/self_device" />
+
+            <TextView
+                android:id="@+id/receive_device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="30dp"
+                android:ellipsize="middle"
+                android:lines="3"
+                android:text="@string/self_device" />
+
+        </FrameLayout>
+
+        <ListView
+            android:id="@+id/lv_file_transfering"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#fafafa"
+            android:minHeight="64dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/menu_bg">
+
+        <RelativeLayout
+            android:id="@+id/rl_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:id="@+id/iv_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/menu_send_files_selector" />
+
+            <TextView
+                android:id="@+id/tv_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_send"
+                android:layout_marginTop="3dp"
+                android:text="@string/send_files"
+                android:textColor="#cc000000"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/menu_clear_files_selector" />
+
+            <TextView
+                android:id="@+id/tv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_clear"
+                android:layout_marginTop="3dp"
+                android:text="@string/file_transfer_cancel_all"
+                android:textColor="#66000000"
+                android:textSize="10dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

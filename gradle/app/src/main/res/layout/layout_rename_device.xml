@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:focusable="false">
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#ededed"
+        android:focusable="false">
+        <EditText
+            android:id="@+id/phone_name"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:background="@null"
+            android:textColor="@color/file_name_color"
+            android:focusable="true"
+            android:singleLine="true"
+            />
+
+        <ImageView
+            android:id="@+id/clear_button"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/egos_button_normal_cancel"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginRight="4dp"
+            />
+    </LinearLayout>
+</LinearLayout> 

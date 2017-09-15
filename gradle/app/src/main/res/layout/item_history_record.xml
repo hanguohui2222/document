@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="false"
+    android:focusable="false"
+    >
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="64dp"
+        android:background="#d7d7d7"/>
+
+    <TextView
+        android:id="@+id/tv_history_title_date"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="14sp"
+        android:textColor="#cc000000"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:paddingLeft="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_history_title_disc"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="12sp"
+        android:textColor="#ff9000"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        />
+
+   <!-- <LinearLayout
+        android:id="@+id/ll_history_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    </LinearLayout>-->
+
+    <include
+        layout="@layout/item_history_file"
+        />
+
+</LinearLayout>
