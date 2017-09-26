@@ -39,6 +39,8 @@ public class MultiSendRunnable implements Runnable {
     private BaseSendData mSendData;
     private ServerSocket mServerSocket;
     private boolean isTransferAlive;
+    private InputStream inputStream;
+    private OutputStream outputStream;
 
     public MultiSendRunnable(Context context, Handler handler, String key) {
         isTransferAlive = true;
@@ -57,24 +59,35 @@ public class MultiSendRunnable implements Runnable {
 
     private void work() {
         MultiCommandInfo requestInfo = null;
+        Socket socket = null;
+        try {
+            LogUtil.i("luorw , MultiSendRunnable,服务端： 传输ServerSocket 正在运行");
+            socket = mServerSocket.accept();
+            LogUtil.i("luorw , MultiSendRunnable:   建立传输ServerSocket 成功");
+            inputStream = socket.getInputStream();
+            outputStream = socket.getOutputStream();
+        } catch (Exception e) {
+            LogUtil.i("luorw , MultiSendRunnable,服务端： Exception = "+e.getMessage());
+            e.printStackTrace();
+        }
         while (isTransferAlive) {
             //读取客户端请求的文件描述
             try {
-                LogUtil.i("luorw , MultiSendRunnable,服务端： 传输ServerSocket 正在运行");
-                Socket socket = mServerSocket.accept();
-                LogUtil.i("luorw , MultiSendRunnable:   建立传输ServerSocket 成功");
-                requestInfo = getRequestInfo(socket.getInputStream());
+                requestInfo = getRequestInfo();
                 if (requestInfo == null) {
                     LogUtil.i("luorw , MultiSendRunnable:   传输请求内容:  requestInfo null");
                     continue;
                 }
                 LogUtil.i("luorw , MultiSendRunnable:   传输请求内容:  " + requestInfo.toString());
-                switch (requestInfo.command) {
-                    case Constants.RECEIVER_REQUEST_FILE:
-                        //发送文件
-                        mSendData = FileMultiSendData.getInstance().getFileSendData(mKey);
-                        sendFile(requestInfo.requestIndex, socket);
-                        break;
+                if(Constants.RECEIVER_REQUEST_FILE == requestInfo.command){
+                    mSendData = FileMultiSendData.getInstance().getFileSendData(mKey);
+                    sendFile(requestInfo.requestIndex, socket);
+                }
+                if(Constants.RECEIVER_RECEIVE_OVER == requestInfo.command){
+                    LogUtil.i("luorw , MultiSendRunnable:   收到接收方接收完毕的命令，退出发送循环  ");
+                    isTransferAlive = false;
+                    refreshUI(-1, Constants.SENDER_TRANSFER_ALL_COMPLETE);
+                    break;
                 }
             } catch (Exception e) {
                 LogUtil.i("luorw , MultiSendRunnable,Exception发送： e = " + e.getMessage());
@@ -98,15 +111,22 @@ public class MultiSendRunnable implements Runnable {
                 }
             }
         }
+        try {
+            inputStream.close();
+            outputStream.close();
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
      * 获取对方请求的信息
      *
-     * @param inputStream
+     * @param
      * @return
      */
-    private MultiCommandInfo getRequestInfo(InputStream inputStream) {
+    private MultiCommandInfo getRequestInfo() {
         MultiCommandInfo rInfo = null;
         try {
             LogUtil.i("luorw , MultiSendRunnable,发送端： 读取对方请求文件的信息");
@@ -122,7 +142,8 @@ public class MultiSendRunnable implements Runnable {
 
     private void sendFile(int index ,Socket socket) throws IOException {
         LogUtil.i("luorw , MultiSendRunnable,服务端:   开始发送文件 index=" + index);
-        OutputStream outputStream = socket.getOutputStream();
+        long begin = System.currentTimeMillis();
+        LogUtil.i("luorwTime,MultiSendRunnable , 发送文件 , " + index + " begin = " + begin + " , socket = "+socket);
         mFileInfo = mSendData.getFileSendList().get(index);
         if (mFileInfo.getState() == Constants.FILE_TRANSFER_CANCEL) {
             return;
@@ -134,13 +155,11 @@ public class MultiSendRunnable implements Runnable {
         LogUtil.i("luorw , MultiSendRunnable,SEND_FILE,mFileInfo = " + mFileInfo + " , .getUriString() = " + mFileInfo.getUriString() + ",size = " + mFileInfo.
                 getFileSize());
         InputStream is = mContext.getContentResolver().openInputStream(Uri.parse(mFileInfo.getUriString()));
-        BufferedInputStream bis = new BufferedInputStream(is);
-        BufferedOutputStream bos = new BufferedOutputStream(outputStream);
         int length = 2048;
         byte[] buff = new byte[length];
         int len = 0;
         long transferSize = 0;
-        while ((len = bis.read(buff)) != -1) {
+        while ((len = is.read(buff)) != -1) {
             if (mSendData.isCancelAllSend()) {
                 LogUtil.i("luorw , MultiSendRunnable,服务端:  receive: 全部取消");
                 mFileInfo.setState(Constants.FILE_TRANSFER_CANCEL);
@@ -151,20 +170,22 @@ public class MultiSendRunnable implements Runnable {
                 mSendData.updateAllFileSize(mFileInfo.getFileSize() - transferSize);
                 break;
             }
-            bos.write(buff, 0, len);
+            outputStream.write(buff, 0, len);
+            outputStream.flush();
             transferSize += len;
             mSendData.setFileTransferSize(index, transferSize);
             mSendData.setTotalTransferedSize(len);
         }
         is.close();
-        bos.flush();
-        bos.close();
         if (mFileInfo.getState() != Constants.FILE_TRANSFER_CANCEL) {
             mSendData.setmCurrentSendIndex(-1);
             LogUtil.i("luorw , MultiSendRunnable 服务端:  发送文件name=" + mFileInfo.getFileName() + "成功");
             mFileInfo.setState(Constants.FILE_TRANSFER_SUCCESS);
         }
         LogUtil.i("luorw , MultiSendRunnable,服务端:  发送文件index=" + index + "成功");
+        long end = System.currentTimeMillis();
+        LogUtil.i("luorwTime,MultiSendRunnable,发送文件 , " + index + " end = " + end);
+        LogUtil.i("luorwTime,MultiSendRunnable,发送文件 , " + index + " 耗时 = " + (end - begin));
     }
 
     public void updateInfo(int dis) {

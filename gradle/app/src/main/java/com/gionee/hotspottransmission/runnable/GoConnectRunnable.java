@@ -74,6 +74,7 @@ public class GoConnectRunnable implements Runnable {
             bufferedReader.close();
             socket.close();
             DeviceSp.getInstance().saveDeviceIp(mContext, hostIp);
+            DeviceSp.getInstance().saveHostIp(mContext,hostIp);
             if (mIGoStatusCallBack != null) {
                 mIGoStatusCallBack.onWifiConnected(msg.split(",")[1]);
                 mIGoStatusCallBack.online(msg.split(",")[2]);
@@ -103,6 +104,7 @@ public class GoConnectRunnable implements Runnable {
                 }
                 LogUtil.i("luorw111 , GoConnectRunnable,receive : online = " + info[2]);
                 DeviceSp.getInstance().saveDeviceIp(mContext, info[4]);
+                DeviceSp.getInstance().saveHostIp(mContext,info[4]);
             }
         } catch (IOException e) {
             LogUtil.i("luorw111 , GoConnectRunnable ,online, IOException = " + e.getMessage());

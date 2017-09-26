@@ -127,6 +127,8 @@ public class ReceiverTransferRunnable implements Runnable {
     }
 
     private void receive(FileInfo fileInfo, int index, Socket socket) throws Exception {
+        long begin = System.currentTimeMillis();
+        LogUtil.i("luorwTime,ReceiverTransferRunnable,接收文件 , " + index + " begin = " + begin);
         FileReceiveData.getInstance().setmCurrentReceiveIndex(index);
         LogUtil.i("ReceiverTransferRunnable,客户端：  开始接收文件 and index= " + index);
         //请求文件
@@ -201,6 +203,9 @@ public class ReceiverTransferRunnable implements Runnable {
             FileUtil.removeFileByPath(fileInfo.getFilePath());
         }
         //added by luorw for  GNSPR #18822 end
+        long end = System.currentTimeMillis();
+        LogUtil.i("luorwTime,ReceiverTransferRunnable,接收文件 , " + index + " end = " + end);
+        LogUtil.i("luorwTime,ReceiverTransferRunnable,接收文件 , " + index + " 耗时 = " + (end - begin));
     }
 
     public void over() {

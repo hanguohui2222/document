@@ -141,13 +141,18 @@ public class GroupClientService extends BaseService {
         }
     }
 
-    public void search(boolean isResearch) {
-        if (!mIsStartScan || isResearch) {
-            mWifiMgr.startScan();
-            mHandler.sendEmptyMessageDelayed(Constants.ON_SCAN_REPEAT, 10000);
+    public void search(final boolean isResearch) {
+        ThreadPoolManager.getInstance().executeRunnable(new Runnable() {
+            @Override
+            public void run() {
+                if (!mIsStartScan || isResearch) {
+                    mWifiMgr.startScan();
+                    mHandler.sendEmptyMessageDelayed(Constants.ON_SCAN_REPEAT, 3000);
 //            mHandler.sendEmptyMessageDelayed(Constants.ON_RESCAN_ENABLE, 30000);
-            mIsStartScan = true;
-        }
+                    mIsStartScan = true;
+                }
+            }
+        });
     }
 
     /**

@@ -132,6 +132,8 @@ public class SenderTransferRunnable implements Runnable {
      */
     private void sendFileByRequestInfo(RequestInfo requestInfo, Socket socket) throws IOException, FileNotFoundException {
         LogUtil.i("SenderTransferRunnable,服务端:   开始发送文件 index=" + requestInfo.index);
+        long begin = System.currentTimeMillis();
+        LogUtil.i("luorwTime,SenderTransferRunnable , 发送文件 , " + requestInfo.index + " begin = " + begin);
         int index = requestInfo.index;
         OutputStream outputStream = socket.getOutputStream();
         mFileInfo = FileSendData.getInstance().getFileSendList().get(index);
@@ -175,6 +177,9 @@ public class SenderTransferRunnable implements Runnable {
             mFileInfo.setState(Constants.FILE_TRANSFER_SUCCESS);
         }
         LogUtil.i("SenderTransferRunnable,服务端:  发送文件index=" + index + "成功");
+        long end = System.currentTimeMillis();
+        LogUtil.i("luorwTime,SenderTransferRunnable,发送文件 , " + index + " end = " + end);
+        LogUtil.i("luorwTime,SenderTransferRunnable,发送文件 , " + index + " 耗时 = " + (end - begin));
     }
 
     public void updateInfo(int dis) {

@@ -43,6 +43,9 @@ public class MultiReceiveRunnable implements Runnable {
     private String mKey;
     private String mIp;
     private BaseReceiveData mReceiveData;
+    private OutputStream os;
+    private InputStream is;
+    private Socket mSocket;
 
     public MultiReceiveRunnable(Context context, Handler handler, IMultiTransferService transferServiceCallBack, String key) {
         this.mContext = context.getApplicationContext();
@@ -51,7 +54,7 @@ public class MultiReceiveRunnable implements Runnable {
         this.mKey = key;
         mReceiveData = FileMultiReceiveData.getInstance().getFileReceiveData(mKey);
         mIp = SocketChannel.getInstance().mAddresses.get(mKey);
-        LogUtil.i("luorw,MultiReceiveRunnable:   开始下载文件 , mKey = "+mKey + " , ip = "+mIp);
+        LogUtil.i("luorw,MultiReceiveRunnable:   开始下载文件 , mKey = " + mKey + " , ip = " + mIp);
     }
 
     @Override
@@ -62,9 +65,18 @@ public class MultiReceiveRunnable implements Runnable {
     private void work() {
         isDownLoad = true;
         fileInfos = mReceiveData.getFileReceiveList();
-        LogUtil.i("luorw,MultiReceiveRunnable:   开始下载文件 , fileInfos = "+fileInfos);
+        LogUtil.i("luorw,MultiReceiveRunnable:   开始下载文件 , fileInfos = " + fileInfos);
         if (fileInfos == null || fileInfos.size() == 0) {
             return;
+        }
+        mSocket = mTransferServiceCallBack.getReceiveFileSocket(mIp);
+        LogUtil.i("luorw,MultiReceiveRunnable,接收文件socket连接成功,socket = " + mSocket);
+        try {
+            os = mSocket.getOutputStream();
+            is = mSocket.getInputStream();
+        } catch (Exception e) {
+            LogUtil.i("luorw,MultiReceiveRunnable:   开始下载文件 , Exception = " + e.getMessage());
+            e.printStackTrace();
         }
         for (int i = 0; i < fileInfos.size(); i++) {
             if (!isDownLoad) {
@@ -81,11 +93,14 @@ public class MultiReceiveRunnable implements Runnable {
             }
             fileInfo.setState(Constants.FILE_TRANSFERING);
             refreshUI(i, Constants.RECEIVER_UPDATE_TRANSFER_PROGRESS);
-            Socket socket = mTransferServiceCallBack.getReceiveFileSocket(mIp);
-            LogUtil.i("luorw,MultiReceiveRunnable,接收文件socket连接成功,socket = " + socket);
             try {
-                requestFile(socket , i);
-                receive(fileInfo, i , socket);
+                long begin = System.currentTimeMillis();
+                LogUtil.i("luorwTime,MultiReceiveRunnable,接收文件 , " + i + " begin = " + begin);
+                requestFile(i);
+                receive(fileInfo, i);
+                long end = System.currentTimeMillis();
+                LogUtil.i("luorwTime,MultiReceiveRunnable,接收文件 , " + i + " end = " + end);
+                LogUtil.i("luorwTime,MultiReceiveRunnable,接收文件 , " + i + " 耗时 = " + (end - begin));
             } catch (Exception e) {
                 LogUtil.i("luorw , MultiReceiveRunnable,接收: e = " + e.getMessage());
                 if (fileInfo.getState() != Constants.FILE_TRANSFER_CANCEL && !mReceiveData.isCancelAllReceive()) {
@@ -135,7 +150,7 @@ public class MultiReceiveRunnable implements Runnable {
         return isAvailable;
     }
 
-    private void receive(FileInfo fileInfo, int index , Socket socket) throws Exception {
+    private void receive(FileInfo fileInfo, int index) throws Exception {
         mReceiveData.setmCurrentReceiveIndex(index);
         LogUtil.i("luorw , MultiReceiveRunnable,客户端：  开始接收文件 and index= " + index);
         //接收文件
@@ -148,35 +163,73 @@ public class MultiReceiveRunnable implements Runnable {
             dirs.mkdirs();
         file.createNewFile();
         FileOutputStream fos = new FileOutputStream(file);
-        BufferedOutputStream bos = new BufferedOutputStream(fos);
-        InputStream is = socket.getInputStream();
-        BufferedInputStream bis = new BufferedInputStream(is);
-        int buffSize = 2048;
-        byte[] buff = new byte[buffSize];
-        int len = 0;
+//        BufferedOutputStream bos = new BufferedOutputStream(fos);
+//        InputStream is = socket.getInputStream();
+//        BufferedInputStream bis = new BufferedInputStream(is);
+
+//        int buffSize = 2048;
+//        byte[] buff = new byte[buffSize];
+//        int len = 0;
+//        long mTransferSize = 0;
+//        while ((len = is.read(buff)) != -1) {
+//            if (FileReceiveData.getInstance().isCancelAllReceive()) {
+//                LogUtil.i("luorw , MultiReceiveRunnable,客户端:  receive: 全部取消");
+//                fileInfo.setState(Constants.FILE_TRANSFER_CANCEL);
+//            }
+//            if (fileInfo.getState() == Constants.FILE_TRANSFER_CANCEL/* || isCurrentReceiveFail*/) {
+//                LogUtil.i("luorw , 客户端:  receive: 取消 ， isCurrentReceiveFail = " /*+ isCurrentReceiveFail*/);
+//                mReceiveData.updateAllFileSize(fileInfo.getFileSize() - mTransferSize);
+//                //传输失败的文件要删除掉
+//                FileUtil.removeFileByPath(fileInfo.getFilePath());
+////                isCurrentReceiveFail = false;
+//                break;
+//            }
+//            fos.write(buff, 0, len);
+//            fos.flush();
+//            mTransferSize += len;
+//            mReceiveData.setFileTransferSize(index, mTransferSize);
+//            mReceiveData.setTotalTransferedSize(len);
+//        }
+
+        byte buf[] = new byte[2048];
+        int len;
+        int length = 2048;
         long mTransferSize = 0;
-        while ((len = bis.read(buff)) != -1) {
-            if (FileReceiveData.getInstance().isCancelAllReceive()) {
-                LogUtil.i("luorw , MultiReceiveRunnable,客户端:  receive: 全部取消");
-                fileInfo.setState(Constants.FILE_TRANSFER_CANCEL);
-            }
-            if (fileInfo.getState() == Constants.FILE_TRANSFER_CANCEL/* || isCurrentReceiveFail*/) {
-                LogUtil.i("luorw , 客户端:  receive: 取消 ， isCurrentReceiveFail = " /*+ isCurrentReceiveFail*/);
-                mReceiveData.updateAllFileSize(fileInfo.getFileSize() - mTransferSize);
-                //传输失败的文件要删除掉
-                FileUtil.removeFileByPath(fileInfo.getFilePath());
-//                isCurrentReceiveFail = false;
+        long restLen = fileInfo.getFileSize();
+
+        while (true) {
+            if (restLen <= 0) {
+                LogUtil.i("luorw ,MultiReceiveRunnable,copyDataFromReceiveFile-------restLen <= 0;break");
                 break;
             }
-            bos.write(buff, 0, len);
-            mTransferSize += len;
-            mReceiveData.setFileTransferSize(index, mTransferSize);
-            mReceiveData.setTotalTransferedSize(len);
+            if ((len = is.read(buf, 0, length)) != -1) {
+                fos.write(buf, 0, len);
+                mTransferSize += len;
+                restLen -= len;
+
+                if (FileReceiveData.getInstance().isCancelAllReceive()) {
+                    LogUtil.i("luorw , MultiReceiveRunnable,客户端:  receive: 全部取消");
+                    fileInfo.setState(Constants.FILE_TRANSFER_CANCEL);
+                }
+                if (fileInfo.getState() == Constants.FILE_TRANSFER_CANCEL/* || isCurrentReceiveFail*/) {
+                    LogUtil.i("luorw , 客户端:  receive: 取消 ， isCurrentReceiveFail = " /*+ isCurrentReceiveFail*/);
+                    mReceiveData.updateAllFileSize(fileInfo.getFileSize() - mTransferSize);
+                    //传输失败的文件要删除掉
+                    FileUtil.removeFileByPath(fileInfo.getFilePath());
+//                isCurrentReceiveFail = false;
+                    break;
+                }
+                if (restLen <= length) {
+                    length = (int) restLen;
+                }
+                mReceiveData.setFileTransferSize(index, mTransferSize);
+                mReceiveData.setTotalTransferedSize(len);
+            } else {
+                LogUtil.i("luorw ,MultiReceiveRunnable,read inputStream end or failed.");
+                break;
+            }
         }
-        bos.flush();
-        bos.close();
-        bis.close();
-        socket.close();
+        fos.close();
         LogUtil.i("luorw , MultiReceiveRunnable,客户端:   接受文件成功 and TransferLen= " + mTransferSize);
         if (fileInfo.getState() != Constants.FILE_TRANSFER_CANCEL && mTransferSize == fileInfo.getFileSize()) {
             mReceiveData.setmCurrentReceiveIndex(-1);
@@ -206,23 +259,34 @@ public class MultiReceiveRunnable implements Runnable {
 
     public void over() {
         LogUtil.i("luorw , MultiReceiveRunnable,receive over");
-        mTransferServiceCallBack.createWriteCommand(mKey,new MultiCommandInfo(Constants.RECEIVER_RECEIVE_OVER));
         refreshUI(-1, Constants.RECEIVER_TRANSFER_ALL_COMPLETE);
     }
 
-    private void requestFile(Socket socket , int index){
+    private void requestFile(int index) {
         LogUtil.i("luorw , MultiReceiveRunnable,requestFile----------------");
         MultiCommandInfo multiCommandInfo = new MultiCommandInfo();
         multiCommandInfo.command = Constants.RECEIVER_REQUEST_FILE;
         multiCommandInfo.requestIndex = index;
         try {
-            OutputStream os = socket.getOutputStream();
             ObjectOutputStream oos = new ObjectOutputStream(os);
             oos.writeObject(multiCommandInfo);
         } catch (IOException e) {
+            LogUtil.i("luorw , MultiReceiveRunnable,requestFile----------e------" + e.getMessage());
             e.printStackTrace();
         }
+    }
 
+    private void sendReceiveOverCommand() {
+        LogUtil.i("luorw , MultiReceiveRunnable,sendReceiveOverCommand----------------");
+        MultiCommandInfo multiCommandInfo = new MultiCommandInfo();
+        multiCommandInfo.command = Constants.RECEIVER_RECEIVE_OVER;
+        try {
+            ObjectOutputStream oos = new ObjectOutputStream(os);
+            oos.writeObject(multiCommandInfo);
+        } catch (IOException e) {
+            LogUtil.i("luorw , MultiReceiveRunnable,sendReceiveOverCommand----------e------" + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     private void refreshUI(int index, int what) {
@@ -231,5 +295,15 @@ public class MultiReceiveRunnable implements Runnable {
         msg.what = what;
         msg.obj = mKey;
         mHandler.sendMessage(msg);
+        if(what == Constants.RECEIVER_TRANSFER_ALL_COMPLETE){
+            sendReceiveOverCommand();
+            try {
+                is.close();
+                os.close();
+                mSocket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

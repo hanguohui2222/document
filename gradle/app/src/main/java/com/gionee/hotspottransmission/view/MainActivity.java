@@ -4,8 +4,10 @@ import android.annotation.TargetApi;
 import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.view.ViewCompat;
 import android.view.KeyEvent;
 import android.view.View;
@@ -33,6 +35,7 @@ public class MainActivity extends AmigoActivity implements View.OnClickListener 
     private RelativeLayout rl_group_transfer;
     private RelativeLayout rl_invite_friend;
     private long exitTime = 0;
+    private static final int REQUEST_CODE_ASK_WRITE_SETTINGS = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,18 @@ public class MainActivity extends AmigoActivity implements View.OnClickListener 
         initActionBar();
         initViews();
         setListener();
+        getWriteSettingPermission();
+    }
+
+    private void getWriteSettingPermission(){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!Settings.System.canWrite(this)) {
+                Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS,
+                        Uri.parse("package:" + getPackageName()));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivityForResult(intent, REQUEST_CODE_ASK_WRITE_SETTINGS);
+            }
+        }
     }
 
     @Override

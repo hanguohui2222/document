@@ -106,10 +106,10 @@ public class MultiCommandRunnable {
                             refreshUI(multiCommandInfo.requestIndex, Constants.SENDER_TRANSFER_CANCEL_ALL, key);
                             LogUtil.i("luorw,MultiCommandRunnable:   收到RECEIVER_CANCEL_ALL");
                             break;
-                        case Constants.RECEIVER_RECEIVE_OVER:
-                            refreshUI(-1, Constants.SENDER_TRANSFER_ALL_COMPLETE, key);
-                            LogUtil.i("luorw,MultiCommandRunnable:   收到RECEIVER_RECEIVE_OVER");
-                            break;
+//                        case Constants.RECEIVER_RECEIVE_OVER:
+//                            refreshUI(-1, Constants.SENDER_TRANSFER_ALL_COMPLETE, key);
+//                            LogUtil.i("luorw,MultiCommandRunnable:   收到RECEIVER_RECEIVE_OVER");
+//                            break;
                     }
                 } catch (ClassNotFoundException e) {
                     LogUtil.i("luorw,MultiCommandRunnable:  ClassNotFoundException命令Socket 错误 " + e.getMessage());
@@ -226,9 +226,9 @@ public class MultiCommandRunnable {
                         FileMultiReceiveData.getInstance().getFileReceiveData(key).setAllReceiveComplete(false);
                         LogUtil.i("luorw , MultiCommandRunnable:  RECEIVER_REQUEST_FILE , index = " + mCommandInfo.requestIndex);
                         break;
-                    case Constants.RECEIVER_RECEIVE_OVER:
-                        LogUtil.i("luorw , MultiCommandRunnable:  RECEIVER_RECEIVE_OVER");
-                        break;
+//                    case Constants.RECEIVER_RECEIVE_OVER:
+//                        LogUtil.i("luorw , MultiCommandRunnable:  RECEIVER_RECEIVE_OVER");
+//                        break;
                     case Constants.SENDER_CANCEL_ALL:
                         mCommandInfo.responseIndex = FileMultiSendData.getInstance().getFileSendData(key).getmCurrentSendIndex();
                         LogUtil.i("luorw , MultiCommandRunnable:  SENDER_CANCEL_ALL");

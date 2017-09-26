@@ -59,6 +59,7 @@ public class GoMultiService extends MultiBaseService {
         super.onDestroy();
         closeAllCommandSocket();
         mMultiBroadcastRunnable.closeSocket();
+        ThreadPoolManager.getInstance().shutdown();
     }
 
     @Override

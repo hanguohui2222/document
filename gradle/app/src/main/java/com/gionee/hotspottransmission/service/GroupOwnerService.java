@@ -2,8 +2,11 @@ package com.gionee.hotspottransmission.service;
 
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.Uri;
 import android.os.Binder;
+import android.os.Build;
 import android.os.IBinder;
+import android.provider.Settings;
 
 import com.gionee.hotspottransmission.constants.Constants;
 import com.gionee.hotspottransmission.callback.IGoStatusCallBack;
@@ -66,11 +69,11 @@ public class GroupOwnerService extends BaseService {
     /**
      * 注册热点的状态监听，并启动热点
      */
-    public void workForScan(boolean isGroupTransfer) {
+    public void workForScan(HotspotManager hotspotMgr) {
         registerReceiver(mReceiver, mFilter);
         isRegisterReceiver = true;
-        mHotspotMgr = new HotspotManager();
-        mHotspotMgr.openHotspot(this, FileUtil.getPasswordForHotspot(isGroupTransfer));
+        mHotspotMgr = hotspotMgr;
+//        mHotspotMgr.openHotspot(this, FileUtil.getPasswordForHotspot(isGroupTransfer));
     }
 
     /**
@@ -82,20 +85,6 @@ public class GroupOwnerService extends BaseService {
         createSendCommand();
         createReceiveCommand();
     }
-
-//    private static final int REQUEST_CODE_ASK_WRITE_SETTINGS = 1;
-//    private void getPermissionAndOpenAp(){
-//        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//            if (!Settings.System.canWrite(this)) {
-//                Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS,
-//                        Uri.parse("package:" + getPackageName()));
-//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                startActivityForResult(intent, REQUEST_CODE_ASK_WRITE_SETTINGS);
-//            } else {
-//                HotspotManager.openHotspot(this,"11111111");
-//            }
-//        }
-//    }
 
     /**
      * 响应所有监听执行的指令

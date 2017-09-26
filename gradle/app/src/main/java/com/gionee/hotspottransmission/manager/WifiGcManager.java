@@ -11,6 +11,8 @@ import android.net.wifi.WifiManager;
 import android.os.SystemClock;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.util.Log;
+
 import com.gionee.hotspottransmission.constants.Constants;
 import com.gionee.hotspottransmission.utils.FileUtil;
 import com.gionee.hotspottransmission.utils.LogUtil;
@@ -289,6 +291,9 @@ public class WifiGcManager {
                     result.set(j, temp);
                 }
             }
+        }
+        for (ScanResult s : result){
+            Log.e("hangh","ScanResult s = " + s.toString());
         }
         return result;
     }

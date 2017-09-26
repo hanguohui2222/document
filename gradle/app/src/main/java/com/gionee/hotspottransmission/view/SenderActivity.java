@@ -1,14 +1,21 @@
 package com.gionee.hotspottransmission.view;
 
+import android.Manifest;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.SystemClock;
+import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -146,7 +153,9 @@ public class SenderActivity extends AmigoActivity implements IGoStatusCallBack {
         public void onServiceConnected(ComponentName name, IBinder service) {
             mGoService = ((GroupOwnerService.GoServiceBinder) service).getService();
             mGoService.setmIGoStatusCallBack(SenderActivity.this);
-            mGoService.workForScan(isGroupTransfer);
+            mHotspotMgr = new HotspotManager();
+            mGoService.workForScan(mHotspotMgr);
+            getPermissionAndOpenAp();
         }
 
         @Override
@@ -154,6 +163,30 @@ public class SenderActivity extends AmigoActivity implements IGoStatusCallBack {
 
         }
     };
+
+    private static final int REQUEST_CODE_ASK_WRITE_SETTINGS = 1;
+    private HotspotManager mHotspotMgr;
+    private void getPermissionAndOpenAp(){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!Settings.System.canWrite(this)) {
+                Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS,
+                        Uri.parse("package:" + getPackageName()));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivityForResult(intent, REQUEST_CODE_ASK_WRITE_SETTINGS);
+            } else {
+                mHotspotMgr.openHotspot(SenderActivity.this, FileUtil.getPasswordForHotspot(isGroupTransfer));
+            }
+        }else{
+            mHotspotMgr.openHotspot(SenderActivity.this, FileUtil.getPasswordForHotspot(isGroupTransfer));
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == REQUEST_CODE_ASK_WRITE_SETTINGS){
+            mHotspotMgr.openHotspot(SenderActivity.this, FileUtil.getPasswordForHotspot(isGroupTransfer));
+        }
+    }
 
     private void initViews() {
         mRippleLayout = (RippleLayout) findViewById(R.id.ripple_layout);

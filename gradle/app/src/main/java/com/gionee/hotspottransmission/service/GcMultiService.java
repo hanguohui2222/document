@@ -60,6 +60,7 @@ public class GcMultiService extends MultiBaseService {
     public void onDestroy() {
         LogUtil.i("luorw1 , GcMultiService , onDestroy-----mMultiBroadcastRunnable---closeSocket--");
         mMultiBroadcastRunnable.closeSocket();
+        ThreadPoolManager.getInstance().shutdown();
     }
 
     @Override
